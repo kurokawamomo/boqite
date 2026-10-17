@@ -1,0 +1,906 @@
+{
+  "unit": {
+    "id": "b2-u12",
+    "course": "boki2",
+    "chapter": 12,
+    "title": "有価証券と投資"
+  },
+  "nodes": [
+    {
+      "id": "b2-u12-n1",
+      "title": "売買目的有価証券の売買",
+      "meta": {
+        "goal": "取得、売却、端数利息を書ける。分記法も書ける",
+        "topic": "売買目的有価証券の売買",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "売買目的有価証券",
+          "有価証券売却益",
+          "有価証券売却損",
+          "有価証券利息"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u12-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "売買の目的で、シラタマ工業の株式 100 株を1株 ¥5,000 で買い、売買手数料 ¥3,000 とあわせて、小切手を振り出して支払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "有価証券",
+                "amount": 503000
+              }
+            ],
+            "credit": [
+              {
+                "account": "当座預金",
+                "amount": 503000
+              }
+            ],
+            "accountOptions": [
+              "受取配当金",
+              "当座預金",
+              "有価証券",
+              "支払手数料",
+              "有価証券売却損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "株式を買うためにかかった手数料は、株式の取得原価に足します。500,000 + 3,000 = 503,000 円が、借方（左）の有価証券です。",
+          "newAccounts": [
+            "有価証券"
+          ]
+        },
+        {
+          "id": "b2-u12-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "帳簿価額 ¥503,000 の株式 100 株を、1株 ¥5,400 で売却し、代金は普通預金に振り込まれた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 540000
+              }
+            ],
+            "credit": [
+              {
+                "account": "有価証券",
+                "amount": 503000
+              },
+              {
+                "account": "有価証券売却益",
+                "amount": 37000
+              }
+            ],
+            "accountOptions": [
+              "有価証券売却益",
+              "受取配当金",
+              "有価証券評価益",
+              "普通預金",
+              "有価証券",
+              "有価証券売却損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売った代金 540,000 円と帳簿価額 503,000 円の差 37,000 円が、貸方（右）の有価証券売却益です。",
+          "newAccounts": [
+            "有価証券売却益"
+          ]
+        },
+        {
+          "id": "b2-u12-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "売買の目的で、額面 ¥1,000,000 の社債を、額面 ¥100 につき ¥98.50 で買った。端数利息 ¥4,000 とあわせて、小切手を振り出して支払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "有価証券",
+                "amount": 985000
+              },
+              {
+                "account": "有価証券利息",
+                "amount": 4000
+              }
+            ],
+            "credit": [
+              {
+                "account": "当座預金",
+                "amount": 989000
+              }
+            ],
+            "accountOptions": [
+              "受取利息",
+              "有価証券売却益",
+              "当座預金",
+              "支払利息",
+              "有価証券",
+              "有価証券利息"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "社債の代金は、1,000,000 × 98.5/100 = 985,000 円です。端数利息は、前の持ち主に払った利息のぶんなので、有価証券には入れず、借方（左）の有価証券利息にします。",
+          "newAccounts": [
+            "有価証券利息"
+          ]
+        },
+        {
+          "id": "b2-u12-n1-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "帳簿価額 ¥300,000 の株式を、¥270,000 で売却し、代金は現金で受け取った。損益は、売却損として分けて記帳する（分記法）。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 270000
+              },
+              {
+                "account": "有価証券売却損",
+                "amount": 30000
+              }
+            ],
+            "credit": [
+              {
+                "account": "有価証券",
+                "amount": 300000
+              }
+            ],
+            "accountOptions": [
+              "有価証券",
+              "有価証券売却益",
+              "受取配当金",
+              "現金",
+              "有価証券評価損",
+              "有価証券売却損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "安く売ったぶんの損 30,000 円は、有価証券から直接引かず、借方（左）の有価証券売却損に分けて書きます。有価証券は、帳簿価額のまま貸方（右）で消えます。",
+          "newAccounts": [
+            "有価証券売却損"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2-u12-n2",
+      "title": "時価評価",
+      "meta": {
+        "goal": "決算で時価と帳簿価額の差を、評価損益に出せる",
+        "topic": "有価証券の時価評価",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "有価証券評価益",
+          "有価証券評価損"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u12-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、売買目的の株式（帳簿価額 ¥503,000）の時価が ¥520,000 になっていた。時価で評価する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "有価証券",
+                "amount": 17000
+              }
+            ],
+            "credit": [
+              {
+                "account": "有価証券評価益",
+                "amount": 17000
+              }
+            ],
+            "accountOptions": [
+              "有価証券評価損",
+              "有価証券評価益",
+              "有価証券",
+              "有価証券売却益",
+              "受取配当金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "時価が帳簿価額より 520,000 − 503,000 = 17,000 円高いので、有価証券を増やし、貸方（右）の有価証券評価益にします。",
+          "newAccounts": [
+            "有価証券評価益"
+          ]
+        },
+        {
+          "id": "b2-u12-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、売買目的の株式（帳簿価額 ¥600,000）の時価が ¥570,000 になっていた。時価で評価する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "有価証券評価損",
+                "amount": 30000
+              }
+            ],
+            "credit": [
+              {
+                "account": "有価証券",
+                "amount": 30000
+              }
+            ],
+            "accountOptions": [
+              "有価証券評価損",
+              "有価証券売却損",
+              "有価証券評価益",
+              "支払手数料",
+              "有価証券"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "時価が下がった 30,000 円を、借方（左）の有価証券評価損にして、貸方（右）で有価証券の帳簿価額を下げます。",
+          "newAccounts": [
+            "有価証券評価損"
+          ]
+        },
+        {
+          "id": "b2-u12-n2-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、売買目的の株式を銘柄ごとに時価で評価する。A社株式は帳簿価額 ¥400,000 が時価 ¥430,000、B社株式は帳簿価額 ¥250,000 が時価 ¥235,000 になっている。評価益と評価損を、1つの仕訳にまとめる。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "有価証券",
+                "amount": 30000
+              },
+              {
+                "account": "有価証券評価損",
+                "amount": 15000
+              }
+            ],
+            "credit": [
+              {
+                "account": "有価証券評価益",
+                "amount": 30000
+              },
+              {
+                "account": "有価証券",
+                "amount": 15000
+              }
+            ],
+            "accountOptions": [
+              "有価証券売却益",
+              "受取配当金",
+              "有価証券評価損",
+              "有価証券評価益",
+              "有価証券",
+              "有価証券売却損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "A社は 30,000 円の益、B社は 15,000 円の損です。有価証券の増減と、評価益 30,000 円、評価損 15,000 円を、それぞれ借方（左）と貸方（右）に書きます。"
+        },
+        {
+          "id": "b2-u12-n2-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、売買目的の株式（帳簿価額 ¥2,150,000）の時価が ¥2,230,000 になっていた。有価証券評価益はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 80000
+          },
+          "explanation": "時価 2,230,000 から帳簿価額 2,150,000 を引いた 80,000 円が、評価益です。時価が上がれば益、下がれば損になります。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u12-n3",
+      "title": "満期保有目的債券",
+      "meta": {
+        "goal": "償却原価法（定額法）で、期末の帳簿価額を出せる",
+        "topic": "満期保有目的債券の償却原価法",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "満期保有目的債券"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u12-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "満期まで持つ目的で、額面 ¥1,000,000 の社債を ¥970,000 で買い、代金は当座預金から払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "満期保有目的債券",
+                "amount": 970000
+              }
+            ],
+            "credit": [
+              {
+                "account": "当座預金",
+                "amount": 970000
+              }
+            ],
+            "accountOptions": [
+              "当座預金",
+              "その他有価証券",
+              "有価証券",
+              "満期保有目的債券",
+              "有価証券利息"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "満期まで持つつもりで買った債券は、満期保有目的債券です。払った 970,000 円が、取得原価として借方（左）に入ります。",
+          "newAccounts": [
+            "満期保有目的債券"
+          ]
+        },
+        {
+          "id": "b2-u12-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "上の社債の利息 ¥10,000（年1%）が、普通預金に振り込まれた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 10000
+              }
+            ],
+            "credit": [
+              {
+                "account": "有価証券利息",
+                "amount": 10000
+              }
+            ],
+            "accountOptions": [
+              "受取利息",
+              "普通預金",
+              "有価証券利息",
+              "有価証券売却益",
+              "満期保有目的債券"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "債券の利息は、貸方（右）の有価証券利息です。預金の利息の受取利息とは、名前を分けます。"
+        },
+        {
+          "id": "b2-u12-n3-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、満期保有目的債券（額面 ¥1,000,000、取得価額 ¥970,000、満期まで5年）の額面と取得価額の差額を、定額法で配分する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "満期保有目的債券",
+                "amount": 6000
+              }
+            ],
+            "credit": [
+              {
+                "account": "有価証券利息",
+                "amount": 6000
+              }
+            ],
+            "accountOptions": [
+              "有価証券",
+              "有価証券評価益",
+              "満期保有目的債券",
+              "受取利息",
+              "有価証券利息"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "額面との差 30,000 円を、満期までの 5 年で配分します。30,000 ÷ 5 = 6,000 円を、債券の帳簿価額に足し、貸方（右）の有価証券利息にします。"
+        },
+        {
+          "id": "b2-u12-n3-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "満期保有目的債券（額面 ¥1,000,000、償却ずみで帳簿価額 ¥1,000,000）が満期になり、普通預金に償還された。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 1000000
+              }
+            ],
+            "credit": [
+              {
+                "account": "満期保有目的債券",
+                "amount": 1000000
+              }
+            ],
+            "accountOptions": [
+              "有価証券",
+              "有価証券利息",
+              "普通預金",
+              "満期保有目的債券",
+              "有価証券売却益"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "満期になると、額面の金額が戻ります。毎年、少しずつ帳簿価額を上げてきたので、償還の金額と帳簿価額は同じになり、損益は出ません。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u12-n4",
+      "title": "子会社株式と関連会社株式",
+      "meta": {
+        "goal": "取得原価で計上し、時価評価しないことを説明できる",
+        "topic": "子会社株式と関連会社株式",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "子会社株式",
+          "関連会社株式"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u12-n4-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "子会社とする目的で、B社の株式 80% を ¥3,200,000 で取得し、買入手数料 ¥50,000 とあわせて、当座預金から払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "子会社株式",
+                "amount": 3250000
+              }
+            ],
+            "credit": [
+              {
+                "account": "当座預金",
+                "amount": 3250000
+              }
+            ],
+            "accountOptions": [
+              "有価証券",
+              "当座預金",
+              "関連会社株式",
+              "子会社株式",
+              "支払手数料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "株式を取得するためにかかった手数料は、取得原価に足します。3,200,000 + 50,000 = 3,250,000 円が、子会社株式です。",
+          "newAccounts": [
+            "子会社株式"
+          ]
+        },
+        {
+          "id": "b2-u12-n4-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "関連会社とする目的で、C社の株式 25% を ¥1,500,000 で取得し、普通預金から払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "関連会社株式",
+                "amount": 1500000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 1500000
+              }
+            ],
+            "accountOptions": [
+              "有価証券",
+              "子会社株式",
+              "普通預金",
+              "関連会社株式",
+              "その他有価証券"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "経営に影響を与えられる会社の株式は、関連会社株式です。子会社株式と同じように、取得原価で借方（左）に置きます。",
+          "newAccounts": [
+            "関連会社株式"
+          ]
+        },
+        {
+          "id": "b2-u12-n4-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、子会社株式を時価で評価するか？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "時価で評価し、評価差額を純資産に計上する",
+              "償却原価法で評価する",
+              "時価評価はせず、取得原価のままにする",
+              "時価で評価し、評価損益を損益計算書に計上する"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "子会社株式と関連会社株式は、売るつもりのない株式なので、時価が変わっても評価しません。取得原価のままです。"
+        },
+        {
+          "id": "b2-u12-n4-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "子会社から、配当金 ¥120,000 が普通預金に振り込まれた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 120000
+              }
+            ],
+            "credit": [
+              {
+                "account": "受取配当金",
+                "amount": 120000
+              }
+            ],
+            "accountOptions": [
+              "受取利息",
+              "普通預金",
+              "受取配当金",
+              "子会社株式",
+              "有価証券利息"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "株式の持ち主として受け取る配当金は、貸方（右）の受取配当金です。債券の利息の有価証券利息とは、別の科目です。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u12-n5",
+      "title": "その他有価証券",
+      "meta": {
+        "goal": "全部純資産直入法で、評価差額金に出せる",
+        "topic": "その他有価証券の評価差額金",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "その他有価証券",
+          "その他有価証券評価差額金"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u12-n5-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "長期に保有する目的で、D社の株式を ¥800,000（手数料込み）で買い、普通預金から払った。売買目的でも、子会社や関連会社の株式でもない。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "その他有価証券",
+                "amount": 800000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 800000
+              }
+            ],
+            "accountOptions": [
+              "子会社株式",
+              "有価証券",
+              "普通預金",
+              "満期保有目的債券",
+              "その他有価証券"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売買目的でも、満期保有でも、子会社や関連会社でもない株式は、その他有価証券です。取得原価で借方（左）に置きます。",
+          "newAccounts": [
+            "その他有価証券"
+          ]
+        },
+        {
+          "id": "b2-u12-n5-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、その他有価証券（帳簿価額 ¥800,000）の時価が ¥860,000 になっていた。時価で評価し、全部純資産直入法で処理する。税効果は考えない。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "その他有価証券",
+                "amount": 60000
+              }
+            ],
+            "credit": [
+              {
+                "account": "その他有価証券評価差額金",
+                "amount": 60000
+              }
+            ],
+            "accountOptions": [
+              "その他有価証券評価差額金",
+              "有価証券",
+              "有価証券売却益",
+              "有価証券評価益",
+              "その他有価証券"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "時価が上がった 60,000 円は、損益ではなく、貸方（右）の純資産の科目、その他有価証券評価差額金に入れます。",
+          "newAccounts": [
+            "その他有価証券評価差額金"
+          ]
+        },
+        {
+          "id": "b2-u12-n5-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、その他有価証券（帳簿価額 ¥800,000）の時価が ¥740,000 になっていた。時価で評価し、全部純資産直入法で処理する。税効果は考えない。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "その他有価証券評価差額金",
+                "amount": 60000
+              }
+            ],
+            "credit": [
+              {
+                "account": "その他有価証券",
+                "amount": 60000
+              }
+            ],
+            "accountOptions": [
+              "その他有価証券評価差額金",
+              "有価証券",
+              "有価証券評価損",
+              "その他有価証券",
+              "有価証券売却損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "時価が下がった 60,000 円も、損益にせず、借方（左）の純資産の科目、その他有価証券評価差額金で受けます。"
+        },
+        {
+          "id": "b2-u12-n5-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "期首になった。前の期の決算で、その他有価証券の評価益 ¥60,000 を、その他有価証券評価差額金に計上している。これを元に戻す（洗替え）。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "その他有価証券評価差額金",
+                "amount": 60000
+              }
+            ],
+            "credit": [
+              {
+                "account": "その他有価証券",
+                "amount": 60000
+              }
+            ],
+            "accountOptions": [
+              "有価証券",
+              "有価証券売却益",
+              "有価証券評価益",
+              "その他有価証券評価差額金",
+              "その他有価証券"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "期首に評価を元に戻して、帳簿価額を取得原価に戻します。評価差額金を借方（左）で消し、その他有価証券を貸方（右）で減らします。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u12-n6",
+      "title": "見分ける（有価証券）",
+      "meta": {
+        "goal": "有価証券の4分類を、保有の目的から選べる",
+        "topic": "有価証券の4分類の見分け",
+        "minQuestions": 6,
+        "nodeType": "discriminate",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u12-n6-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "値上がり益を得る目的で、短期間に売買する株式を置く科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "有価証券",
+              "満期保有目的債券",
+              "子会社株式",
+              "その他有価証券"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "短期の売買を目的にしたものは、売買目的有価証券で、科目は有価証券です。保有の目的で、科目名が決まります。"
+        },
+        {
+          "id": "b2-u12-n6-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "満期まで持ち続けるつもりで買った社債を置く科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "その他有価証券",
+              "有価証券",
+              "満期保有目的債券",
+              "子会社株式"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "満期まで持ち続ける目的の債券は、満期保有目的債券です。売ることを考えていないので、時価では評価しません。"
+        },
+        {
+          "id": "b2-u12-n6-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "議決権のある株式の過半数を持ち、経営を支配している会社の株式を置く科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "関連会社株式",
+              "その他有価証券",
+              "有価証券",
+              "子会社株式"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "経営を支配している会社の株式は、子会社株式です。支配までいかず、影響を与える程度の関連会社株式とは別です。"
+        },
+        {
+          "id": "b2-u12-n6-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "売買目的でも、満期保有目的でもなく、子会社や関連会社の株式でもない、長期に持つ株式を置く科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "有価証券",
+              "子会社株式",
+              "その他有価証券",
+              "満期保有目的債券"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "ほかの3つに当てはまらない有価証券が、その他有価証券です。決算では時価で評価し、差額は純資産に入れます。"
+        },
+        {
+          "id": "b2-u12-n6-q5",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "次の有価証券と、決算での評価の方法を結びなさい。"
+          },
+          "task": {
+            "kind": "match",
+            "pairs": [
+              [
+                "売買目的の有価証券",
+                "時価で評価し、評価損益を損益にする"
+              ],
+              [
+                "満期保有目的債券",
+                "額面との差額を、償却原価法で配分する"
+              ],
+              [
+                "子会社株式",
+                "取得原価のままにする"
+              ],
+              [
+                "その他有価証券",
+                "時価で評価し、差額を純資産に入れる"
+              ]
+            ]
+          },
+          "explanation": "保有の目的が、評価の方法を決めます。売るためのものは損益に、売らないものは取得原価か償却原価に、その中間は純資産に入れます。"
+        },
+        {
+          "id": "b2-u12-n6-q6",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、時価との差額を、損益計算書に計上するのはどれ？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "売買目的の有価証券",
+              "子会社株式",
+              "その他有価証券",
+              "満期保有目的債券"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "売るために持っているものだけが、時価の変化を損益にします。その他有価証券の差額は、損益ではなく、純資産に入ります。"
+        }
+      ]
+    }
+  ]
+}

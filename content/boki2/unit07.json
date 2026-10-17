@@ -1,0 +1,1000 @@
+{
+  "unit": {
+    "id": "b2-u07",
+    "course": "boki2",
+    "chapter": 7,
+    "title": "リース（2027年度の新しい処理）"
+  },
+  "nodes": [
+    {
+      "id": "b2-u07-n1",
+      "title": "借りて使う",
+      "meta": {
+        "goal": "リースで借りたものを、使用権資産とリース負債に置く理由を言える。3級の賃貸借との違いが分かる",
+        "topic": "使用権資産とリース負債",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "使用権資産",
+          "リース負債"
+        ],
+        "isNew": true
+      },
+      "questions": [
+        {
+          "id": "b2-u07-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "リースの借り手が、借りた物を使う権利を置く科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "前払金",
+              "備品",
+              "使用権資産",
+              "未収入金"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "新しいリースの会計では、借りた物そのものではなく、借りて使う権利を資産にします。その科目が使用権資産です。"
+        },
+        {
+          "id": "b2-u07-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "リースの借り手が、リース料を将来払う義務を置く科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "リース負債",
+              "買掛金",
+              "借入金",
+              "未払金"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "リース料を払う義務は、リース負債という専用の科目に置きます。商品の仕入の買掛金や、商品以外の未払金とは別です。"
+        },
+        {
+          "id": "b2-u07-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "リースの借り手が、使用権資産とリース負債を貸借対照表に載せる理由として、もっとも近いものは？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "リース料が毎年同じ金額だから",
+              "リース料は必ず現金で払うから",
+              "借りた物の所有権が、すぐ借り手に移るから",
+              "借りて使う権利が会社の財産で、払う義務が会社の借りにあたるから"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "借りた物を長く使える権利は、会社にとって財産です。リース料を払う約束は、借金と同じ重さの義務なので、両方を帳簿に載せます。"
+        },
+        {
+          "id": "b2-u07-n1-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "次の科目と、その意味を結びなさい。"
+          },
+          "task": {
+            "kind": "match",
+            "pairs": [
+              [
+                "使用権資産",
+                "借りた物を使う権利"
+              ],
+              [
+                "リース負債",
+                "リース料を将来払う義務"
+              ],
+              [
+                "使用権資産減価償却累計額",
+                "使用権資産から引く、償却の合計"
+              ],
+              [
+                "支払リース料",
+                "短期や少額のリースの料金の費用"
+              ]
+            ]
+          },
+          "explanation": "リースの科目は、権利、義務、償却の合計、費用の4つに分かれます。使用権資産と使用権資産減価償却累計額は、組みで使います。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u07-n2",
+      "title": "利子込み法",
+      "meta": {
+        "goal": "開始、支払、決算の仕訳を、利子込み法で書ける",
+        "topic": "リースの利子込み法",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": true
+      },
+      "questions": [
+        {
+          "id": "b2-u07-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "×1年4月1日に、事務機器のリース契約を結び、使用を始めた。リース期間は5年、リース料は年 ¥240,000（毎年3月末払い）で、総額は ¥1,200,000 である。利子込み法で処理する。開始時の仕訳。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "使用権資産",
+                "amount": 1200000
+              }
+            ],
+            "credit": [
+              {
+                "account": "リース負債",
+                "amount": 1200000
+              }
+            ],
+            "accountOptions": [
+              "備品",
+              "未払金",
+              "支払リース料",
+              "リース負債",
+              "使用権資産"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "利子込み法では、払う予定の総額 1,200,000 円を、そのまま使用権資産とリース負債にします。借方（左）が使用権資産、貸方（右）がリース負債です。",
+          "newAccounts": [
+            "使用権資産",
+            "リース負債"
+          ]
+        },
+        {
+          "id": "b2-u07-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "リース料 ¥240,000 を普通預金から払った。利子込み法で処理している。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "リース負債",
+                "amount": 240000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 240000
+              }
+            ],
+            "accountOptions": [
+              "支払リース料",
+              "使用権資産",
+              "普通預金",
+              "リース負債",
+              "支払利息"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "利子込み法では、払った全額でリース負債を減らします。利息だけを別に費用にする仕訳は、書きません。"
+        },
+        {
+          "id": "b2-u07-n2-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、使用権資産 ¥1,200,000 を、リース期間5年の定額法（残存価額ゼロ）で減価償却する。間接法で記帳する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 240000
+              }
+            ],
+            "credit": [
+              {
+                "account": "使用権資産減価償却累計額",
+                "amount": 240000
+              }
+            ],
+            "accountOptions": [
+              "支払リース料",
+              "減価償却費",
+              "使用権資産減価償却累計額",
+              "リース負債",
+              "使用権資産"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "1,200,000 ÷ 5 = 240,000 円が、1年ぶんの減価償却費（借方（左））です。減らす先は、使用権資産ではなく、貸方（右）の累計額です。",
+          "newAccounts": [
+            "使用権資産減価償却累計額"
+          ]
+        },
+        {
+          "id": "b2-u07-n2-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "利子込み法で処理しているリース（総額 ¥1,200,000、年 ¥240,000 を5年払い）がある。2回目のリース料を払ったあとの、リース負債の残高はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 720000
+          },
+          "explanation": "開始時の 1,200,000 円から、2 回払った 240,000 × 2 = 480,000 円を引きます。残りは 720,000 円です。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u07-n3",
+      "title": "利子抜き法",
+      "meta": {
+        "goal": "利息を定額法で配分して、開始、支払、決算の仕訳を書ける",
+        "topic": "リースの利子抜き法",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": true
+      },
+      "questions": [
+        {
+          "id": "b2-u07-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "×1年4月1日に、事務機器のリース契約を結び、使用を始めた。リース期間は5年、リース料は年 ¥400,000（毎年3月末払い）で、総額 ¥2,000,000 のうち利息相当額が ¥250,000 である。利子抜き法で処理する。開始時の仕訳。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "使用権資産",
+                "amount": 1750000
+              }
+            ],
+            "credit": [
+              {
+                "account": "リース負債",
+                "amount": 1750000
+              }
+            ],
+            "accountOptions": [
+              "未払金",
+              "前払利息",
+              "使用権資産",
+              "備品",
+              "リース負債"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "利子抜き法では、利息を除いた金額を資産と負債にします。2,000,000 − 250,000 = 1,750,000 円が、使用権資産とリース負債です。"
+        },
+        {
+          "id": "b2-u07-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "第1回のリース料 ¥400,000 を、普通預金から払った。利息相当額 ¥250,000 は5年間で均等に配分し、その1年ぶんを支払利息にする。利子抜き法で処理している。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "リース負債",
+                "amount": 350000
+              },
+              {
+                "account": "支払利息",
+                "amount": 50000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 400000
+              }
+            ],
+            "accountOptions": [
+              "支払利息",
+              "前払利息",
+              "普通預金",
+              "リース負債",
+              "使用権資産",
+              "支払リース料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "払った 400,000 円のうち、利息は 250,000 ÷ 5 = 50,000 円です。残りの 350,000 円が元本なので、借方（左）でリース負債を減らします。"
+        },
+        {
+          "id": "b2-u07-n3-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、使用権資産 ¥1,750,000 を、リース期間5年の定額法（残存価額ゼロ）で減価償却する。間接法で記帳する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 350000
+              }
+            ],
+            "credit": [
+              {
+                "account": "使用権資産減価償却累計額",
+                "amount": 350000
+              }
+            ],
+            "accountOptions": [
+              "使用権資産減価償却累計額",
+              "リース負債",
+              "減価償却費",
+              "支払リース料",
+              "使用権資産"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "利息を除いた 1,750,000 円を 5 年で割った 350,000 円が、1年ぶんの減価償却費です。借方（左）が費用、貸方（右）が累計額です。"
+        },
+        {
+          "id": "b2-u07-n3-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "利子抜き法で処理しているリース（使用権資産とリース負債 ¥1,750,000、年のリース料 ¥400,000、年の利息 ¥50,000）の、第1回のリース料を払ったあとのリース負債の残高はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1400000
+          },
+          "explanation": "第1回のリース料のうち、元本にあたるのは 400,000 − 50,000 = 350,000 円です。1,750,000 − 350,000 = 1,400,000 円が、残りのリース負債です。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u07-n4",
+      "title": "短期リースと少額リース",
+      "meta": {
+        "goal": "賃貸借処理（支払リース料）で書ける",
+        "topic": "短期・少額リースの賃貸借処理",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "支払リース料"
+        ],
+        "isNew": true
+      },
+      "questions": [
+        {
+          "id": "b2-u07-n4-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "事務所のスペースを、短期の賃貸借契約で借りている。賃貸借処理を行う。今月の家賃 ¥90,000 を現金で払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支払リース料",
+                "amount": 90000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 90000
+              }
+            ],
+            "accountOptions": [
+              "使用権資産",
+              "リース負債",
+              "支払リース料",
+              "支払家賃",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "2級では、不動産の賃借料も、賃貸借処理のときは支払リース料の科目を使います。3級の支払家賃は、使いません。",
+          "newAccounts": [
+            "支払リース料"
+          ]
+        },
+        {
+          "id": "b2-u07-n4-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "リース期間 10か月、購入オプションなしの短期リースで、備品を借りている。賃貸借処理を行う。リース料 ¥60,000 を普通預金から払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支払リース料",
+                "amount": 60000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 60000
+              }
+            ],
+            "accountOptions": [
+              "支払リース料",
+              "リース負債",
+              "使用権資産",
+              "普通預金",
+              "支払家賃"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "短期リースは、使用権資産に置かず、払ったときに費用にしてよいことになっています。借方（左）は、支払リース料です。"
+        },
+        {
+          "id": "b2-u07-n4-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "金額の小さい少額リースで、プリンターを借りている。賃貸借処理を行う。リース料 ¥50,000 を現金で払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支払リース料",
+                "amount": 50000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 50000
+              }
+            ],
+            "accountOptions": [
+              "使用権資産",
+              "支払家賃",
+              "支払リース料",
+              "リース負債",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "リースする物の金額が小さいときも、短期リースと同じように、賃貸借処理でかまいません。借方（左）は、支払リース料です。"
+        },
+        {
+          "id": "b2-u07-n4-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "少額リースの対象となるコピー機のリース料 ¥35,000 を、小切手を振り出して払った。賃貸借処理を行う。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支払リース料",
+                "amount": 35000
+              }
+            ],
+            "credit": [
+              {
+                "account": "当座預金",
+                "amount": 35000
+              }
+            ],
+            "accountOptions": [
+              "使用権資産",
+              "リース負債",
+              "当座預金",
+              "支払家賃",
+              "支払リース料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "払う手段が小切手でも、リース料の処理は変わりません。借方（左）は支払リース料、貸方（右）は減った当座預金です。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u07-n5",
+      "title": "不動産の賃借",
+      "meta": {
+        "goal": "賃貸借処理と使用権資産の、2通りで書ける。支払家賃ではなく支払リース料を使う",
+        "topic": "不動産の賃借のリース処理",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": true
+      },
+      "questions": [
+        {
+          "id": "b2-u07-n5-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "店舗を、短期の賃貸借契約で借りている。賃貸借処理を行う。今月の家賃 ¥150,000 を普通預金から払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支払リース料",
+                "amount": 150000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 150000
+              }
+            ],
+            "accountOptions": [
+              "リース負債",
+              "支払家賃",
+              "普通預金",
+              "使用権資産",
+              "支払リース料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "賃貸借処理を選んだときは、不動産の賃借でも、借方（左）は支払リース料です。2級では、支払家賃の科目を使いません。"
+        },
+        {
+          "id": "b2-u07-n5-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "×1年4月1日に、事務所の賃貸借契約（3年、家賃は年 ¥1,200,000 を毎年3月末払い）を結んだ。総額 ¥3,600,000 のうち利息相当額は ¥300,000 で、利子抜き法により、使用権資産として処理する。開始時の仕訳。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "使用権資産",
+                "amount": 3300000
+              }
+            ],
+            "credit": [
+              {
+                "account": "リース負債",
+                "amount": 3300000
+              }
+            ],
+            "accountOptions": [
+              "建物",
+              "リース負債",
+              "未払金",
+              "使用権資産",
+              "差入保証金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "不動産を借りるときも、使用権資産で処理する方法があります。利息を除いた 3,600,000 − 300,000 = 3,300,000 円を、資産と負債にします。"
+        },
+        {
+          "id": "b2-u07-n5-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "事務所の賃貸借を賃貸借処理するとき、借方に使う科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "支払リース料",
+              "支払家賃",
+              "使用権資産",
+              "リース負債"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "2級以上では、賃貸借処理にしても、支払家賃や支払地代ではなく、支払リース料に統一します。"
+        },
+        {
+          "id": "b2-u07-n5-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、事務所の使用権資産 ¥3,300,000 を、リース期間3年の定額法（残存価額ゼロ）で減価償却する。間接法で記帳する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 1100000
+              }
+            ],
+            "credit": [
+              {
+                "account": "使用権資産減価償却累計額",
+                "amount": 1100000
+              }
+            ],
+            "accountOptions": [
+              "リース負債",
+              "使用権資産減価償却累計額",
+              "支払リース料",
+              "減価償却費",
+              "使用権資産"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "3,300,000 ÷ 3 = 1,100,000 円が、1年ぶんの減価償却費（借方（左））です。不動産を借りたときも、償却の考え方は同じです。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u07-n6",
+      "title": "リースの1年",
+      "meta": {
+        "goal": "開始、支払、償却、期末を、1つの勘定でつなげて記入できる",
+        "topic": "リースの勘定記入の通し",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": true
+      },
+      "questions": [
+        {
+          "id": "b2-u07-n6-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "×1年4月1日にリース契約を結び、使用権資産とリース負債 ¥1,750,000 を計上した。リース料は年 ¥400,000（毎年3月末払い）、年の利息は ¥50,000 で、利子抜き法で処理している。リース負債の勘定を、最初の期の終わりの締め切りまで完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "リース負債"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "3/31",
+                      "counterAccount": null,
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "3/31",
+                      "counterAccount": "次期繰越",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "cells": {
+                      "date": null,
+                      "counterAccount": null,
+                      "amount": null
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "4/1",
+                      "counterAccount": "使用権資産",
+                      "amount": 1750000
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": null,
+                      "counterAccount": null,
+                      "amount": 1750000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.counterAccount",
+                "input": "account_picker",
+                "answer": "普通預金",
+                "accountOptions": [
+                  "普通預金",
+                  "減価償却費",
+                  "使用権資産",
+                  "支払利息"
+                ]
+              },
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 350000
+              },
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 1400000
+              },
+              {
+                "ref": "d3.amount",
+                "input": "numpad",
+                "answer": 1750000
+              }
+            ]
+          },
+          "explanation": "最初の期の終わりに、元本のぶん 400,000 − 50,000 = 350,000 円を、普通預金で払ってリース負債を減らします。借方（左）の残りの 1,400,000 円を次期繰越として、貸方（右）の 1,750,000 円とそろえます。"
+        },
+        {
+          "id": "b2-u07-n6-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "リース契約を結んで2年目の決算。使用権資産 ¥1,750,000 は、リース期間5年の定額法（残存価額ゼロ、間接法）で償却している。1年目に計上した累計額は ¥350,000 である。使用権資産減価償却累計額の勘定を、2年目の締め切りまで完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "使用権資産減価償却累計額"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "3/31",
+                      "counterAccount": "次期繰越",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": null,
+                      "counterAccount": null,
+                      "amount": null
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "4/1",
+                      "counterAccount": "前期繰越",
+                      "amount": 350000
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "3/31",
+                      "counterAccount": null,
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c3",
+                    "cells": {
+                      "date": null,
+                      "counterAccount": null,
+                      "amount": 700000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "c2.counterAccount",
+                "input": "account_picker",
+                "answer": "減価償却費",
+                "accountOptions": [
+                  "減価償却費",
+                  "リース負債",
+                  "次期繰越",
+                  "使用権資産"
+                ]
+              },
+              {
+                "ref": "c2.amount",
+                "input": "numpad",
+                "answer": 350000
+              },
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 700000
+              },
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 700000
+              }
+            ]
+          },
+          "explanation": "2年目も、1,750,000 ÷ 5 = 350,000 円を、減価償却費として貸方（右）に積みます。前期から繰り越した 350,000 円との合計 700,000 円を、借方（左）の次期繰越としてそろえます。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u07-n7",
+      "title": "見分ける（リース）",
+      "meta": {
+        "goal": "リース負債と未払金、使用権資産と備品、支払リース料と支払家賃を見分けられる",
+        "topic": "リースまわりの科目の見分け",
+        "minQuestions": 6,
+        "nodeType": "discriminate",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": true
+      },
+      "questions": [
+        {
+          "id": "b2-u07-n7-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "リースで借りた事務機器を、使う権利として置く科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "リース負債",
+              "備品",
+              "使用権資産",
+              "前払金"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "借りた物を使う権利は使用権資産、自分で買って所有する事務機器は備品です。所有と使用権の違いを、科目名で見分けます。"
+        },
+        {
+          "id": "b2-u07-n7-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "リース料を将来払う義務を置く科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "買掛金",
+              "未払金",
+              "リース負債",
+              "支払リース料"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "リース料を払う義務の専用の科目が、リース負債です。支払リース料は、払ったときに費用にする科目なので、義務を置く科目ではありません。"
+        },
+        {
+          "id": "b2-u07-n7-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "事務機器を、自分で買って所有することにした。借方に使う科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "リース負債",
+              "使用権資産",
+              "支払リース料",
+              "備品"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "買って所有する物は備品です。借りて使う権利のときだけ、使用権資産を使います。"
+        },
+        {
+          "id": "b2-u07-n7-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "短期リースを賃貸借処理するとき、リース料を払って費用にする科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "支払家賃",
+              "リース負債",
+              "支払リース料",
+              "減価償却費"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "短期リースや少額リースを賃貸借処理するときは、払ったリース料を支払リース料にします。家賃という名前が付いていても、同じです。"
+        },
+        {
+          "id": "b2-u07-n7-q5",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "次の場面と、使う科目を結びなさい。"
+          },
+          "task": {
+            "kind": "match",
+            "pairs": [
+              [
+                "リース開始時の借方（左）",
+                "使用権資産"
+              ],
+              [
+                "リース開始時の貸方（右）",
+                "リース負債"
+              ],
+              [
+                "決算で借方（左）に置く償却の費用",
+                "減価償却費"
+              ],
+              [
+                "決算で貸方（右）に置く償却の累計",
+                "使用権資産減価償却累計額"
+              ]
+            ]
+          },
+          "explanation": "開始時は、権利と義務を同じ額だけ置きます。決算では、権利のほうを、費用と累計額で少しずつ減らしていきます。"
+        },
+        {
+          "id": "b2-u07-n7-q6",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "リース期間 10か月で、購入オプションのない備品のリースがある。借り手の処理として、認められるものは？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "賃貸借処理（支払リース料）でよい",
+              "必ず備品として資産に置く",
+              "仕訳をしない",
+              "必ず使用権資産とリース負債に置く"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "12か月以内で購入オプションのない短期リースは、使用権資産に置かず、払ったときに費用にしてもかまいません。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,736 @@
+{
+  "unit": {
+    "id": "b2-u09",
+    "course": "boki2",
+    "chapter": 9,
+    "title": "費目別計算"
+  },
+  "nodes": [
+    {
+      "id": "b2-u09-n1",
+      "title": "材料の購入原価",
+      "meta": {
+        "goal": "副費を含めた材料の購入原価を、予定配賦も含めて計算できる",
+        "topic": "材料の購入原価",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "かもめ化成は、材料400kgを1kgあたり280円で買い入れた。引取運賃は10,000円、保険料は20,000円だった。材料の購入原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 142000
+          },
+          "explanation": "購入代価に、引取運賃や保険料などの付随費用（材料副費）を足したものが購入原価です。",
+          "source": "generated",
+          "id": "b2-u09-n1-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "たちばな陶器は、材料400kgを1kgあたり410円で買い入れた。引取運賃は25,000円、保険料は12,000円だった。材料の購入原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 201000
+          },
+          "explanation": "購入代価に、引取運賃や保険料などの付随費用（材料副費）を足したものが購入原価です。",
+          "source": "generated",
+          "id": "b2-u09-n1-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "材料の購入代価が1,150,000円のとき、材料副費を購入代価の5％で予定配賦すると、予定配賦額は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 57500
+          },
+          "explanation": "購入代価に予定配賦率を掛けたものが、材料副費の予定配賦額です。",
+          "source": "generated",
+          "id": "b2-u09-n1-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "材料副費の予定配賦額が57,500円、実際の発生額が62,500円だった。差額（金額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 5000
+          },
+          "explanation": "予定配賦額と実際発生額の差が、材料副費配賦差異です。",
+          "source": "generated",
+          "id": "b2-u09-n1-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "やまぶき電機は、材料720,000円を掛けで買い入れ、引取運賃10,000円を現金で払った。副費は購入原価に含める。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "材料",
+                "amount": 730000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 720000
+              },
+              {
+                "account": "現金",
+                "amount": 10000
+              }
+            ],
+            "accountOptions": [
+              "製造間接費",
+              "買掛金",
+              "現金",
+              "材料",
+              "仕掛品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "引取運賃は材料の購入原価に含めるので、借方（左）の材料は合計額です。貸方（右）は、買掛金と現金に分かれます。",
+          "source": "original",
+          "id": "b2-u09-n1-q5",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u09-n2",
+      "title": "材料の消費高",
+      "meta": {
+        "goal": "先入先出法、移動平均法、総平均法、予定価格で、消費高を計算できる",
+        "topic": "材料の消費高",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "ほたる鋳工の材料の記録。月初200kg（1kgあたり260円）、5日に300kg（1kgあたり370円）購入、10日に350kg払出し、15日に150kg（1kgあたり260円）購入、20日に130kg払出し。移動平均法で、当月の消費高は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 152190
+          },
+          "explanation": "購入のたびに平均単価を出し直し、払出しにその単価を掛けて足します。",
+          "source": "generated",
+          "id": "b2-u09-n2-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あおば製作所の材料の記録。月初100kg（1kgあたり360円）、5日に100kg（1kgあたり360円）購入、10日に150kg払出し、15日に200kg（1kgあたり320円）購入、20日に120kg払出し。先入先出法で、当月の消費高は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 94400
+          },
+          "explanation": "古い在庫から先に払い出したものとして、単価の違う層を順に使います。",
+          "source": "generated",
+          "id": "b2-u09-n2-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "やまぶき電機の材料の記録。月初150kg（1kgあたり240円）、5日に150kg（1kgあたり160円）購入、10日に60kg払出し、15日に200kg（1kgあたり310円）購入、20日に390kg払出し。総平均法で、当月の消費高は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 109800
+          },
+          "explanation": "月初と当月購入の合計金額を合計数量で割って平均単価を出し、消費数量に掛けます。",
+          "source": "generated",
+          "id": "b2-u09-n2-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "材料の予定価格は1kgあたり180円、実際の消費単価は1kgあたり170円で、当月に450kg消費した。予定価格による消費高は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 81000
+          },
+          "explanation": "消費した数量に予定価格を掛けたものが、予定価格による消費高です。",
+          "source": "generated",
+          "id": "b2-u09-n2-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "材料の予定価格は1kgあたり180円、実際の消費単価は1kgあたり170円で、当月に450kg消費した。材料消費価格差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 4500
+          },
+          "explanation": "予定価格による消費高と実際の消費高の差が、材料消費価格差異です。",
+          "source": "generated",
+          "id": "b2-u09-n2-q5",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u09-n3",
+      "title": "棚卸減耗（材料）",
+      "meta": {
+        "goal": "消費数量の計算（継続記録法と棚卸計算法）と、棚卸減耗費を書ける",
+        "topic": "材料の棚卸減耗",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [
+          "棚卸減耗費"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "材料について、月初の数量が200kg、当月の購入が1,550kg、月末の実地棚卸数量が600kgである。棚卸計算法で求める当月の消費数量は何kgか。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1150
+          },
+          "explanation": "棚卸計算法では、月初に当月の購入を足し、月末の実地数量を引いたものを消費数量とみなします。",
+          "source": "generated",
+          "id": "b2-u09-n3-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "材料について、月初の数量が250kg、当月の購入が950kg、月末の実地棚卸数量が450kgである。棚卸計算法で求める当月の消費数量は何kgか。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 750
+          },
+          "explanation": "棚卸計算法では、月初に当月の購入を足し、月末の実地数量を引いたものを消費数量とみなします。",
+          "source": "generated",
+          "id": "b2-u09-n3-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "材料の帳簿棚卸数量は400kg、実地棚卸数量は380kg、1kgあたりの単価は220円である。棚卸減耗損は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 4400
+          },
+          "explanation": "帳簿の数量と実地の数量の差に単価を掛けたものが棚卸減耗損です。",
+          "source": "generated",
+          "id": "b2-u09-n3-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "材料の帳簿棚卸数量は600kg、実地棚卸数量は565kg、1kgあたりの単価は150円である。棚卸減耗損は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 5250
+          },
+          "explanation": "帳簿の数量と実地の数量の差に単価を掛けたものが棚卸減耗損です。",
+          "source": "generated",
+          "id": "b2-u09-n3-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "こはる食品工業で、材料の棚卸減耗損20,000円を計上し、これは製造間接費として処理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "棚卸減耗損",
+                "amount": 20000
+              }
+            ],
+            "credit": [
+              {
+                "account": "材料",
+                "amount": 20000
+              }
+            ],
+            "accountOptions": [
+              "棚卸減耗損",
+              "材料",
+              "製造間接費",
+              "仕掛品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "数が減った材料の帳簿を直すので、借方（左）は棚卸減耗損、貸方（右）は材料です。",
+          "source": "original",
+          "id": "b2-u09-n3-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ほたる鋳工で、材料の棚卸減耗損10,000円を、製造間接費に振り替えた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "製造間接費",
+                "amount": 10000
+              }
+            ],
+            "credit": [
+              {
+                "account": "棚卸減耗損",
+                "amount": 10000
+              }
+            ],
+            "accountOptions": [
+              "製造間接費",
+              "棚卸減耗損",
+              "仕掛品",
+              "材料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "正常な減耗は製造のために避けられない費用なので、製造間接費に集めます。借方（左）は製造間接費、貸方（右）は棚卸減耗損です。",
+          "source": "original",
+          "id": "b2-u09-n3-q6",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u09-n4",
+      "title": "労務費",
+      "meta": {
+        "goal": "直接工と間接工、消費賃金、予定賃率と賃率差異を書ける",
+        "topic": "労務費と賃率差異",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [
+          "賃率差異"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "直接工の予定賃率は1時間あたり1,950円で、当月の直接作業時間は190時間だった。直接労務費（消費賃金のうち直接作業分）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 370500
+          },
+          "explanation": "予定賃率に直接作業時間を掛けたものが、直接労務費です。",
+          "source": "generated",
+          "id": "b2-u09-n4-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "直接工の予定賃率は1時間あたり1,800円で、当月の直接作業時間は220時間だった。直接労務費（消費賃金のうち直接作業分）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 396000
+          },
+          "explanation": "予定賃率に直接作業時間を掛けたものが、直接労務費です。",
+          "source": "generated",
+          "id": "b2-u09-n4-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "直接工の賃率は1時間あたり1,950円。当月の直接作業110時間、間接作業40時間、手待時間20時間だった。間接労務費にあたる賃金は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 117000
+          },
+          "explanation": "間接作業と手待時間の賃金は、製造間接費に集める間接労務費です。",
+          "source": "generated",
+          "id": "b2-u09-n4-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "直接工の賃率は1時間あたり1,800円。当月の直接作業110時間、間接作業45時間、手待時間5時間だった。間接労務費にあたる賃金は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 90000
+          },
+          "explanation": "間接作業と手待時間の賃金は、製造間接費に集める間接労務費です。",
+          "source": "generated",
+          "id": "b2-u09-n4-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "当月の賃金の支払高1,100,000円、前月末の未払高50,000円、当月末の未払高200,000円のとき、当月の消費賃金は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1250000
+          },
+          "explanation": "支払高から前月の未払分を引き、当月末の未払分を足します。",
+          "source": "generated",
+          "id": "b2-u09-n4-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "予定賃率は1時間あたり1200円、実際賃率は1110円、当月の直接作業時間は300時間だった。賃率差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 27000
+          },
+          "explanation": "予定賃率と実際賃率の差に作業時間を掛けたものが賃率差異です。",
+          "source": "generated",
+          "id": "b2-u09-n4-q6",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "かもめ化成は、当月の賃金の予定消費高に対し、実際の賃金が20,000円多かった。差額を賃率差異として処理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "賃率差異",
+                "amount": 20000
+              }
+            ],
+            "credit": [
+              {
+                "account": "賃金",
+                "amount": 20000
+              }
+            ],
+            "accountOptions": [
+              "製造間接費",
+              "賃率差異",
+              "賃金",
+              "仕掛品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "予定より実際が多いぶんは不利な差異で、借方（左）の賃率差異に書きます。貸方（右）は賃金です。",
+          "source": "original",
+          "id": "b2-u09-n4-q7",
+          "sanitized": true,
+          "newAccounts": [
+            "賃率差異"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2-u09-n5",
+      "title": "経費",
+      "meta": {
+        "goal": "測定経費、支払経費、月割経費、発生経費を分けて、消費高を計算できる",
+        "topic": "経費の消費高",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "工場の電力の当月の使用量は2,600kWh、1kWhあたりの単価は32円である。測定経費として計上する電力料は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 83200
+          },
+          "explanation": "使用量を計器で測り、単価を掛けた金額が電力料の消費高です。",
+          "source": "generated",
+          "id": "b2-u09-n5-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "工場の電力の当月の使用量は1,600kWh、1kWhあたりの単価は40円である。測定経費として計上する電力料は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 64000
+          },
+          "explanation": "使用量を計器で測り、単価を掛けた金額が電力料の消費高です。",
+          "source": "generated",
+          "id": "b2-u09-n5-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "外注加工賃の当月の支払高が290,000円、前月末の未払高が10,000円、当月末の未払高が20,000円である。当月の消費高は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 300000
+          },
+          "explanation": "支払高から前月末の未払高を引き、当月末の未払高を足します。",
+          "source": "generated",
+          "id": "b2-u09-n5-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "外注加工賃の当月の支払高が220,000円、前月末の未払高が20,000円、当月末の未払高が10,000円である。当月の消費高は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 210000
+          },
+          "explanation": "支払高から前月末の未払高を引き、当月末の未払高を足します。",
+          "source": "generated",
+          "id": "b2-u09-n5-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "工場の建物にかける火災保険料は、1年分600,000円である。月割経費として、当月の消費高は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 50000
+          },
+          "explanation": "年間の金額を12か月で割って、当月の分とします。",
+          "source": "original",
+          "id": "b2-u09-n5-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "いずみ樹脂は、工場の当月の電力料20,000円を、製造間接費として消費した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "製造間接費",
+                "amount": 20000
+              }
+            ],
+            "credit": [
+              {
+                "account": "電力料",
+                "amount": 20000
+              }
+            ],
+            "accountOptions": [
+              "電力料",
+              "仕掛品",
+              "製造間接費",
+              "材料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "間接経費の電力料は、製造間接費に集めます。借方（左）は製造間接費、貸方（右）は電力料です。",
+          "source": "original",
+          "id": "b2-u09-n5-q6",
+          "sanitized": true,
+          "newAccounts": [
+            "電力料"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "わかくさ縫製は、特定の製品のための外注加工賃30,000円を、直接経費として消費した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕掛品",
+                "amount": 30000
+              }
+            ],
+            "credit": [
+              {
+                "account": "外注加工賃",
+                "amount": 30000
+              }
+            ],
+            "accountOptions": [
+              "外注加工賃",
+              "製造間接費",
+              "仕掛品",
+              "材料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "特定の製品に結びつく外注加工賃は直接経費で、仕掛品に入れます。借方（左）は仕掛品、貸方（右）は外注加工賃です。",
+          "source": "original",
+          "id": "b2-u09-n5-q7",
+          "sanitized": true,
+          "newAccounts": [
+            "外注加工賃"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2-u09-n6",
+      "title": "見分ける（費目）",
+      "meta": {
+        "goal": "直接費か間接費か、どの費目かを、取引文から選べる",
+        "topic": "費目の見分け",
+        "minQuestions": 6,
+        "nodeType": "discriminate",
+        "examPart": 4,
+        "examSub": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "次の費用は、どの費目に入れるか。\n機械の動力に使った、当月の電力量に応じた電力料"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "発生経費",
+              "月割経費",
+              "支払経費",
+              "測定経費"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "使用量を計器で測って計算するので、測定経費です。",
+          "source": "original",
+          "id": "b2-u09-n6-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "次の費用は、どの費目に入れるか。\n外部の業者に払った、特定の製品の加工代"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "間接労務費",
+              "間接経費",
+              "直接材料費",
+              "直接経費"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "特定の製品に直接結びつく経費なので、直接経費です。",
+          "source": "original",
+          "id": "b2-u09-n6-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "次の費用は、どの費目に入れるか。\n工場で使う消耗工具の当月の費用"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "間接材料費",
+              "間接経費",
+              "直接材料費",
+              "間接労務費"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "製品との結びつきが直接わからない材料なので、間接材料費です。",
+          "source": "original",
+          "id": "b2-u09-n6-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "次の費用は、どの費目に入れるか。\n工場の事務員に払った賃金"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "間接労務費",
+              "間接材料費",
+              "直接労務費",
+              "間接経費"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "特定の製品に結びつかない賃金なので、間接労務費です。",
+          "source": "original",
+          "id": "b2-u09-n6-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "次の費用は、どの費目に入れるか。\n直接工の手待時間の賃金"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "直接経費",
+              "間接労務費",
+              "間接経費",
+              "直接労務費"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "手待時間は製品づくりに使っていない時間なので、間接労務費です。",
+          "source": "original",
+          "id": "b2-u09-n6-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "次の費用は、どの費目に入れるか。\n工場の火災保険料（1年分を月割で計上）"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "測定経費",
+              "発生経費",
+              "支払経費",
+              "月割経費"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "年間の金額を月ごとに割って計上するので、月割経費です。",
+          "source": "original",
+          "id": "b2-u09-n6-q6",
+          "sanitized": true
+        }
+      ]
+    }
+  ]
+}

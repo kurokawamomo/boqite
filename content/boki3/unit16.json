@@ -1,0 +1,978 @@
+{
+  "unit": {
+    "id": "b3-u16",
+    "course": "boki3",
+    "chapter": 16,
+    "title": "帳簿をそろえる"
+  },
+  "nodes": [
+    {
+      "id": "b3-u16-n1",
+      "title": "仕訳帳と総勘定元帳",
+      "meta": {
+        "goal": "諸口を使って転記できる",
+        "topic": "仕訳帳と総勘定元帳の転記",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [
+          "諸口"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u16-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "4月5日、ヤマダ商会から商品 ¥300,000 を仕入れ、¥100,000 を現金で払い、残りは掛けとした。仕訳帳の記入を完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "journal_book",
+              "data": {
+                "header": {
+                  "title": "仕訳帳",
+                  "folio": "1"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "date": "×1年 4月5日",
+                      "summary": "（仕 入）",
+                      "folio": "20",
+                      "debit": 300000,
+                      "credit": null
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "date": null,
+                      "summary": null,
+                      "folio": null,
+                      "debit": null,
+                      "credit": null
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "date": null,
+                      "summary": "（現 金）",
+                      "folio": "1",
+                      "debit": null,
+                      "credit": 100000
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r4",
+                    "cells": {
+                      "date": null,
+                      "summary": null,
+                      "folio": "30",
+                      "debit": null,
+                      "credit": null
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r5",
+                    "cells": {
+                      "date": null,
+                      "summary": "ヤマダ商会から商品を仕入れた",
+                      "folio": null,
+                      "debit": null,
+                      "credit": null
+                    },
+                    "role": "narration",
+                    "ruledAfter": "single"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r2.summary",
+                "input": "chips",
+                "answer": "諸 口",
+                "options": [
+                  "（現 金）",
+                  "（売掛金）",
+                  "（仕 入）",
+                  "諸 口"
+                ]
+              },
+              {
+                "ref": "r4.summary",
+                "input": "chips",
+                "answer": "（買掛金）",
+                "options": [
+                  "（仕 入）",
+                  "（売掛金）",
+                  "（現 金）",
+                  "（買掛金）"
+                ]
+              },
+              {
+                "ref": "r4.credit",
+                "input": "numpad",
+                "answer": 200000
+              }
+            ]
+          },
+          "explanation": "貸方が現金と買掛金の2つにわかれるとき、仕訳帳の摘要には「諸口」と書いて、複数の相手がいることを示します。掛けのぶんは 300,000 − 100,000 = 200,000 円です。"
+        },
+        {
+          "id": "b3-u16-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "仕訳帳に下の記入がある。これを仕入勘定に転記する。相手科目が2つあるときの書き方に注意。",
+            "document": {
+              "type": "journal_book",
+              "data": {
+                "header": {
+                  "title": "仕訳帳",
+                  "folio": "1"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "date": "×1年 4月5日",
+                      "summary": "（仕 入）",
+                      "folio": "20",
+                      "debit": 300000,
+                      "credit": null
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "date": null,
+                      "summary": "諸 口",
+                      "folio": null,
+                      "debit": null,
+                      "credit": null
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "date": null,
+                      "summary": "（現 金）",
+                      "folio": "1",
+                      "debit": null,
+                      "credit": 100000
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r4",
+                    "cells": {
+                      "date": null,
+                      "summary": "（買掛金）",
+                      "folio": "30",
+                      "debit": null,
+                      "credit": 200000
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r5",
+                    "cells": {
+                      "date": null,
+                      "summary": "ヤマダ商会から商品を仕入れた",
+                      "folio": null,
+                      "debit": null,
+                      "credit": null
+                    },
+                    "role": "narration",
+                    "ruledAfter": "single"
+                  }
+                ]
+              }
+            }
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "general_ledger",
+              "data": {
+                "layout": "bilateral",
+                "header": {
+                  "subject": "仕 入",
+                  "folio": "20"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "×1年 4/1",
+                      "summary": "現 金",
+                      "folio": "1",
+                      "amount": 80000
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "4/5",
+                      "summary": null,
+                      "folio": "1",
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "4/12",
+                      "summary": null,
+                      "folio": "1",
+                      "amount": 10000
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d2.summary",
+                "input": "chips",
+                "answer": "諸 口",
+                "options": [
+                  "現 金",
+                  "買掛金",
+                  "売掛金",
+                  "諸 口"
+                ]
+              },
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 300000
+              },
+              {
+                "ref": "c1.summary",
+                "input": "chips",
+                "answer": "買掛金",
+                "options": [
+                  "買掛金",
+                  "現 金",
+                  "諸 口",
+                  "売掛金"
+                ]
+              }
+            ]
+          },
+          "explanation": "転記では、仕訳帳の借方 300,000 を仕入勘定の借方に写します。相手が複数あるので、相手科目の欄は「諸口」です。"
+        }
+      ]
+    },
+    {
+      "id": "b3-u16-n2",
+      "title": "どの帳簿に書くか",
+      "meta": {
+        "goal": "1つの取引について、記入する補助簿を全部選べる",
+        "topic": "補助簿の選択",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u16-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品を掛けで仕入れた。仕訳帳と総勘定元帳のほかに、記入する補助簿はどれ？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "仕入帳、買掛金元帳、商品有高帳",
+              "売上帳、売掛金元帳、商品有高帳",
+              "仕入帳、現金出納帳、商品有高帳",
+              "仕入帳、買掛金元帳、当座預金出納帳"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "仕入れたことは仕入帳、掛けなので相手ごとの借りは買掛金元帳、品物が増えたことは商品有高帳に書きます。"
+        },
+        {
+          "id": "b3-u16-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品を現金で売り上げた。仕訳帳と総勘定元帳のほかに、記入する補助簿はどれ？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "売上帳、当座預金出納帳、商品有高帳",
+              "売上帳、現金出納帳、商品有高帳",
+              "仕入帳、現金出納帳、商品有高帳",
+              "売上帳、売掛金元帳、商品有高帳"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "売ったことは売上帳、お金を現金で受け取ったことは現金出納帳、品物が減ったことは商品有高帳です。掛けではないので、売掛金元帳には書きません。"
+        },
+        {
+          "id": "b3-u16-n2-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "得意先から、売掛金の回収として他人が振り出した小切手を受け取った。仕訳帳と総勘定元帳のほかに、記入する補助簿はどれ？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "当座預金出納帳、売掛金元帳",
+              "現金出納帳、買掛金元帳",
+              "売上帳、売掛金元帳",
+              "現金出納帳、売掛金元帳"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "他人振出の小切手は現金として扱うので、現金出納帳です。相手ごとの売掛金が減るので、売掛金元帳にも書きます。"
+        },
+        {
+          "id": "b3-u16-n2-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "仕入先への買掛金を、小切手を振り出して支払った。仕訳帳と総勘定元帳のほかに、記入する補助簿はどれ？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "現金出納帳、買掛金元帳",
+              "仕入帳、買掛金元帳",
+              "当座預金出納帳、買掛金元帳",
+              "当座預金出納帳、売掛金元帳"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "自分で小切手を振り出すと、当座預金が減ります。相手ごとの借りが減るので、買掛金元帳にも書きます。"
+        },
+        {
+          "id": "b3-u16-n2-q5",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "事務用のパソコンを ¥180,000 で買い、代金は月末に払うことにした。仕訳帳と総勘定元帳のほかに、記入する補助簿はどれ？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "買掛金元帳",
+              "商品有高帳",
+              "固定資産台帳",
+              "仕入帳"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "パソコンは商品ではなく備品なので、商品の補助簿には書かず、固定資産台帳に載せます。買掛金は商品の借りなので、ここでは使いません。"
+        },
+        {
+          "id": "b3-u16-n2-q6",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "次の帳簿と、その帳簿に書く内容を結びなさい。"
+          },
+          "task": {
+            "kind": "match",
+            "pairs": [
+              [
+                "売掛金元帳",
+                "得意先ごとの売掛金の増減と残高"
+              ],
+              [
+                "商品有高帳",
+                "商品ごとの受け払いの数量と単価"
+              ],
+              [
+                "固定資産台帳",
+                "備品の取得と減価償却"
+              ],
+              [
+                "小口現金出納帳",
+                "小口現金の支払いと補給"
+              ]
+            ]
+          },
+          "explanation": "補助簿は、仕訳帳や総勘定元帳には載らない細かい内訳を見るためのものです。誰の、何の、といった切り口で分かれています。"
+        }
+      ]
+    },
+    {
+      "id": "b3-u16-n3",
+      "title": "勘定記入を通す",
+      "meta": {
+        "goal": "期首から期中、締め切りまで、1つの勘定に通しで書ける",
+        "topic": "勘定記入の通し",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [
+          "前期繰越",
+          "次期繰越"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u16-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。売掛金は、前期から ¥400,000 を繰り越し、当期は掛け売上が ¥1,200,000、現金での回収が ¥1,050,000 だった。売掛金の勘定を、締め切りまで完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "売掛金"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "4/1",
+                      "counterAccount": "前期繰越",
+                      "amount": 400000
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "期中",
+                      "counterAccount": null,
+                      "amount": 1200000
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "cells": {
+                      "date": null,
+                      "counterAccount": null,
+                      "amount": null
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "期中",
+                      "counterAccount": "現金",
+                      "amount": 1050000
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "3/31",
+                      "counterAccount": "次期繰越",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c3",
+                    "cells": {
+                      "date": null,
+                      "counterAccount": null,
+                      "amount": 1600000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d2.counterAccount",
+                "input": "account_picker",
+                "answer": "売上",
+                "accountOptions": [
+                  "売上",
+                  "仕入",
+                  "損益",
+                  "現金"
+                ]
+              },
+              {
+                "ref": "c2.amount",
+                "input": "numpad",
+                "answer": 550000
+              },
+              {
+                "ref": "d3.amount",
+                "input": "numpad",
+                "answer": 1600000
+              }
+            ]
+          },
+          "explanation": "売掛金は、売ると増えて回収すると減ります。借方の合計は 400,000 + 1,200,000 = 1,600,000 円で、貸方も同じ額にそろえるため、足りない 550,000 円を「次期繰越」として貸方に入れます。"
+        },
+        {
+          "id": "b3-u16-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。買掛金は、前期から ¥250,000 を繰り越し、当期は掛け仕入が ¥900,000、当座預金からの支払いが ¥780,000 だった。買掛金の勘定を、締め切りまで完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "買掛金"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "期中",
+                      "counterAccount": "当座預金",
+                      "amount": 780000
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "3/31",
+                      "counterAccount": "次期繰越",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "cells": {
+                      "date": null,
+                      "counterAccount": null,
+                      "amount": 1150000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "4/1",
+                      "counterAccount": null,
+                      "amount": 250000
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "期中",
+                      "counterAccount": "仕入",
+                      "amount": 900000
+                    }
+                  },
+                  {
+                    "key": "c3",
+                    "cells": {
+                      "date": null,
+                      "counterAccount": null,
+                      "amount": null
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 370000
+              },
+              {
+                "ref": "c1.counterAccount",
+                "input": "chips",
+                "answer": "前期繰越",
+                "options": [
+                  "損益",
+                  "次期繰越",
+                  "諸口",
+                  "前期繰越"
+                ]
+              },
+              {
+                "ref": "c3.amount",
+                "input": "numpad",
+                "answer": 1150000
+              }
+            ]
+          },
+          "explanation": "買掛金は、仕入れると増えて払うと減る貸方の科目です。貸方の合計 250,000 + 900,000 = 1,150,000 円に借方をそろえるため、足りない 370,000 円を借方に「次期繰越」として入れます。"
+        }
+      ]
+    },
+    {
+      "id": "b3-u16-n4",
+      "title": "空欄に入る語",
+      "meta": {
+        "goal": "勘定、帳簿、伝票の空欄に入る語句を選べる",
+        "topic": "語句の空欄補充",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u16-n4-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "4月の現金の動き。1日に前月から ¥150,000 を繰り越し、5日に商品 ¥90,000 を仕入れ、10日に売掛金 ¥80,000 を回収し、15日に給料 ¥60,000 を払い、20日に商品 ¥120,000 を現金で売り、月末に残りを次期へ繰り越した。現金勘定の空欄に入る語を選ぶ。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "現 金"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "4/1",
+                      "counterAccount": "前期繰越",
+                      "amount": 150000
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "4/10",
+                      "counterAccount": null,
+                      "amount": 80000
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "cells": {
+                      "date": "4/20",
+                      "counterAccount": "売上",
+                      "amount": 120000
+                    }
+                  },
+                  {
+                    "key": "d4",
+                    "cells": {
+                      "date": null,
+                      "counterAccount": null,
+                      "amount": 350000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "4/5",
+                      "counterAccount": null,
+                      "amount": 90000
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "4/15",
+                      "counterAccount": "給料",
+                      "amount": 60000
+                    }
+                  },
+                  {
+                    "key": "c3",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": null,
+                      "amount": 200000
+                    }
+                  },
+                  {
+                    "key": "c4",
+                    "cells": {
+                      "date": null,
+                      "counterAccount": null,
+                      "amount": 350000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d2.counterAccount",
+                "input": "chips",
+                "answer": "売掛金",
+                "options": [
+                  "買掛金",
+                  "売上",
+                  "仕入",
+                  "売掛金"
+                ]
+              },
+              {
+                "ref": "c1.counterAccount",
+                "input": "chips",
+                "answer": "仕入",
+                "options": [
+                  "買掛金",
+                  "売上",
+                  "給料",
+                  "仕入"
+                ]
+              },
+              {
+                "ref": "c3.counterAccount",
+                "input": "chips",
+                "answer": "次期繰越",
+                "options": [
+                  "次期繰越",
+                  "前期繰越",
+                  "損益",
+                  "諸口"
+                ]
+              }
+            ]
+          },
+          "explanation": "勘定の摘要には「相手の科目」を書きます。最後の行は、残りを次の期へ送るので「次期繰越」です。"
+        },
+        {
+          "id": "b3-u16-n4-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "ミナミ商店との4月の取引。1日に前月の売掛金 ¥120,000 があり、8日に商品 ¥200,000 を掛けで売り、20日に ¥150,000 の入金があった。売掛金元帳の空欄に入る語を選ぶ。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "customer_ledger",
+              "data": {
+                "header": {
+                  "title": "売掛金元帳",
+                  "subject": "ミナミ商店"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "date": "4/1",
+                      "summary": "前月繰越",
+                      "folio": null,
+                      "debit": 120000,
+                      "credit": null,
+                      "side": "借",
+                      "balance": 120000
+                    },
+                    "role": "opening"
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "date": "4/8",
+                      "summary": null,
+                      "folio": "1",
+                      "debit": 200000,
+                      "credit": null,
+                      "side": "借",
+                      "balance": 320000
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "date": "4/20",
+                      "summary": null,
+                      "folio": "2",
+                      "debit": null,
+                      "credit": 150000,
+                      "side": "借",
+                      "balance": 170000
+                    }
+                  },
+                  {
+                    "key": "r4",
+                    "cells": {
+                      "date": "4/30",
+                      "summary": null,
+                      "folio": null,
+                      "debit": null,
+                      "credit": 170000,
+                      "side": null,
+                      "balance": null
+                    },
+                    "role": "carryforward"
+                  },
+                  {
+                    "key": "r5",
+                    "cells": {
+                      "date": null,
+                      "summary": null,
+                      "folio": null,
+                      "debit": 320000,
+                      "credit": 320000,
+                      "side": null,
+                      "balance": null
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  },
+                  {
+                    "key": "r6",
+                    "cells": {
+                      "date": "5/1",
+                      "summary": "前月繰越",
+                      "folio": null,
+                      "debit": 170000,
+                      "credit": null,
+                      "side": "借",
+                      "balance": 170000
+                    },
+                    "role": "opening"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r2.summary",
+                "input": "chips",
+                "answer": "売り上げ",
+                "options": [
+                  "入 金",
+                  "返 品",
+                  "次月繰越",
+                  "売り上げ"
+                ]
+              },
+              {
+                "ref": "r3.summary",
+                "input": "chips",
+                "answer": "入 金",
+                "options": [
+                  "前月繰越",
+                  "売り上げ",
+                  "返 品",
+                  "入 金"
+                ]
+              },
+              {
+                "ref": "r4.summary",
+                "input": "chips",
+                "answer": "次月繰越",
+                "options": [
+                  "次月繰越",
+                  "前月繰越",
+                  "売り上げ",
+                  "入 金"
+                ]
+              }
+            ]
+          },
+          "explanation": "売掛金元帳には、売ったときと、お金が入ったときが並びます。残高を次の月へ運ぶ行は「次月繰越」、次の月の最初の行は「前月繰越」です。"
+        },
+        {
+          "id": "b3-u16-n4-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "6月12日、得意先へ商品 ¥90,000 を掛けで売り上げた。振替伝票の空欄に、科目と金額を入れる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "slip",
+              "data": {
+                "slipType": "transfer",
+                "header": {
+                  "title": "振替伝票",
+                  "period": "×1年6月12日"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "debitAccount": null,
+                      "debitAmount": 90000,
+                      "creditAccount": null,
+                      "creditAmount": null
+                    }
+                  }
+                ],
+                "slipNo": "301"
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.debitAccount",
+                "input": "account_picker",
+                "answer": "売掛金",
+                "accountOptions": [
+                  "売掛金",
+                  "現金",
+                  "買掛金",
+                  "売上"
+                ]
+              },
+              {
+                "ref": "r1.creditAccount",
+                "input": "account_picker",
+                "answer": "売上",
+                "accountOptions": [
+                  "売上",
+                  "前受金",
+                  "仕入",
+                  "売掛金"
+                ]
+              },
+              {
+                "ref": "r1.creditAmount",
+                "input": "numpad",
+                "answer": 90000
+              }
+            ]
+          },
+          "explanation": "掛けで売ったので、借方は売掛金、貸方は売上です。振替伝票は、仕訳をそのまま書く伝票なので、借方と貸方の金額は同じになります。"
+        }
+      ]
+    }
+  ]
+}

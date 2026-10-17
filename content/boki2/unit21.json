@@ -1,0 +1,1062 @@
+{
+  "unit": {
+    "id": "b2-u21",
+    "course": "boki2",
+    "chapter": 21,
+    "title": "標準原価計算"
+  },
+  "nodes": [
+    {
+      "id": "b2-u21-n1",
+      "title": "標準と実際",
+      "meta": {
+        "goal": "標準原価と実際原価の違い、差異の意味を言える",
+        "topic": "標準原価と実際原価",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 5,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "標準原価計算の言葉を、意味と組み合わせてください。"
+          },
+          "task": {
+            "kind": "match",
+            "pairs": [
+              [
+                "標準原価",
+                "あらかじめ決めた、あるべき原価"
+              ],
+              [
+                "実際原価",
+                "実際にかかった原価"
+              ],
+              [
+                "原価差異",
+                "標準原価と実際原価の差"
+              ],
+              [
+                "不利差異",
+                "実際が標準より多くかかった差異"
+              ]
+            ]
+          },
+          "explanation": "標準と実際の差が原価差異です。実際が標準より多くかかれば不利差異、少なければ有利差異です。",
+          "source": "original",
+          "id": "b2-u21-n1-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "標準原価は、何を決めるために設定するか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "実際にかかった原価の記録",
+              "製品1個あたりに、あるべき原価の目標",
+              "工場の人数",
+              "売れた製品の数"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "標準原価は、能率的な操業でかかるはずの原価を、前もって決めた目標です。",
+          "source": "original",
+          "id": "b2-u21-n1-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "実際原価が標準原価より少なかった。この原価差異はどう呼ぶか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "予算差異",
+              "操業度差異",
+              "不利差異",
+              "有利差異"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "標準より少ない原価で済んだので、有利な差異です。",
+          "source": "original",
+          "id": "b2-u21-n1-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "標準原価計算で、原価差異を分析する目的として最もふさわしいものはどれか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "材料の仕入先を決める",
+              "差が出た原因を調べ、原価を管理する",
+              "売上を増やす",
+              "税金を計算する"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "差異の原因を調べて、次の改善につなげるために分析します。",
+          "source": "original",
+          "id": "b2-u21-n1-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "材料の標準単価が1kgあたり200円、実際の単価が1kgあたり220円だった。単価の面から見た差異は、有利か不利か。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "有利差異",
+              "判断できない",
+              "差異なし",
+              "不利差異"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "実際の単価が標準より高いので、不利な差異です。",
+          "source": "original",
+          "id": "b2-u21-n1-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "標準原価の設定で、標準の消費量や作業時間を決める際に前提とするものはどれか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "決めずに実績で記帳する",
+              "過去の最悪の水準",
+              "実際の平均だけ",
+              "能率的な作業のもとで、あるべき水準"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "標準は、能率的な作業でかかるべき量や時間をもとに決めます。",
+          "source": "original",
+          "id": "b2-u21-n1-q6",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u21-n2",
+      "title": "2つの記帳方法",
+      "meta": {
+        "goal": "パーシャル・プランとシングル・プランで、記帳を書き分けられる",
+        "topic": "パーシャル・プランとシングル・プラン",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "パーシャル・プランで記帳しているわかくさ縫製は、完成品の標準原価1,750,000円の製品を、製品勘定へ振り替えた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "製品",
+                "amount": 1750000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕掛品",
+                "amount": 1750000
+              }
+            ],
+            "accountOptions": [
+              "売上原価",
+              "材料",
+              "仕掛品",
+              "製品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "パーシャル・プランでは、完成品を標準原価で製品へ移します。借方（左）は製品、貸方（右）は仕掛品です。",
+          "source": "generated",
+          "id": "b2-u21-n2-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "パーシャル・プランで記帳しているふじなみ機械は、完成品の標準原価2,450,000円の製品を、製品勘定へ振り替えた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "製品",
+                "amount": 2450000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕掛品",
+                "amount": 2450000
+              }
+            ],
+            "accountOptions": [
+              "仕掛品",
+              "材料",
+              "製品",
+              "売上原価"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "パーシャル・プランでは、完成品を標準原価で製品へ移します。借方（左）は製品、貸方（右）は仕掛品です。",
+          "source": "generated",
+          "id": "b2-u21-n2-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "シングル・プランで記帳しているみなと金属は、材料を消費した。標準消費量は130kg、実際消費量は155kg、標準単価は1kgあたり300円である。数量差異は不利で、材料費は標準単価で記帳する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕掛品",
+                "amount": 39000
+              },
+              {
+                "account": "数量差異",
+                "amount": 7500
+              }
+            ],
+            "credit": [
+              {
+                "account": "材料",
+                "amount": 46500
+              }
+            ],
+            "accountOptions": [
+              "製品",
+              "材料",
+              "価格差異",
+              "数量差異",
+              "仕掛品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "標準の消費分は仕掛品、多く使った分は不利な数量差異で、借方（左）に書きます。貸方（右）は実際に使った量の材料です。",
+          "source": "generated",
+          "id": "b2-u21-n2-q3",
+          "sanitized": true,
+          "newAccounts": [
+            "数量差異"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "シングル・プランで記帳しているふじなみ機械は、材料を消費した。標準消費量は120kg、実際消費量は135kg、標準単価は1kgあたり110円である。数量差異は不利で、材料費は標準単価で記帳する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕掛品",
+                "amount": 13200
+              },
+              {
+                "account": "数量差異",
+                "amount": 1650
+              }
+            ],
+            "credit": [
+              {
+                "account": "材料",
+                "amount": 14850
+              }
+            ],
+            "accountOptions": [
+              "製品",
+              "材料",
+              "仕掛品",
+              "数量差異",
+              "価格差異"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "標準の消費分は仕掛品、多く使った分は不利な数量差異で、借方（左）に書きます。貸方（右）は実際に使った量の材料です。",
+          "source": "generated",
+          "id": "b2-u21-n2-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "シングル・プランで記帳しているあかね繊維は、材料330kgを1kgあたり270円の掛けで買い入れた。標準単価は1kgあたり260円で、材料は標準単価で記帳する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "材料",
+                "amount": 85800
+              },
+              {
+                "account": "価格差異",
+                "amount": 3300
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 89100
+              }
+            ],
+            "accountOptions": [
+              "仕掛品",
+              "価格差異",
+              "材料",
+              "買掛金",
+              "数量差異"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "材料は標準単価で借方（左）に書き、実際との高い分が不利な価格差異です。貸方（右）は実際の代金の買掛金です。",
+          "source": "original",
+          "id": "b2-u21-n2-q5",
+          "sanitized": true,
+          "newAccounts": [
+            "価格差異"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2-u21-n3",
+      "title": "材料費と労務費の差異",
+      "meta": {
+        "goal": "価格差異、数量差異、賃率差異、作業時間差異を求められる",
+        "topic": "材料費と労務費の差異",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 5,
+        "introduces": [
+          "価格差異",
+          "数量差異",
+          "作業時間差異"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "材料の標準単価は1kgあたり120円、実際単価は1kgあたり125円、実際の消費量は600kgである。価格差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 3000
+          },
+          "explanation": "価格差異は、標準単価と実際単価の差に、実際の消費量を掛けます。",
+          "source": "generated",
+          "id": "b2-u21-n3-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "材料の標準単価は1kgあたり230円、実際単価は1kgあたり250円、実際の消費量は200kgである。価格差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 4000
+          },
+          "explanation": "価格差異は、標準単価と実際単価の差に、実際の消費量を掛けます。",
+          "source": "generated",
+          "id": "b2-u21-n3-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "材料の標準単価は1kgあたり290円、標準消費量は250kg、実際の消費量は290kgである。数量差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 11600
+          },
+          "explanation": "数量差異は、標準消費量と実際消費量の差に、標準単価を掛けます。",
+          "source": "generated",
+          "id": "b2-u21-n3-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "材料の標準単価は1kgあたり300円、標準消費量は350kg、実際の消費量は340kgである。数量差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 3000
+          },
+          "explanation": "数量差異は、標準消費量と実際消費量の差に、標準単価を掛けます。",
+          "source": "generated",
+          "id": "b2-u21-n3-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "直接工の標準賃率は1時間あたり1000円、実際賃率は1090円、実際の作業時間は250時間である。賃率差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 22500
+          },
+          "explanation": "賃率差異は、標準賃率と実際賃率の差に、実際の作業時間を掛けます。",
+          "source": "generated",
+          "id": "b2-u21-n3-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "直接工の標準賃率は1時間あたり1600円、実際賃率は1700円、実際の作業時間は650時間である。賃率差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 65000
+          },
+          "explanation": "賃率差異は、標準賃率と実際賃率の差に、実際の作業時間を掛けます。",
+          "source": "generated",
+          "id": "b2-u21-n3-q6",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "直接工の標準賃率は1時間あたり1850円、標準作業時間は300時間、実際の作業時間は350時間である。作業時間差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 92500
+          },
+          "explanation": "作業時間差異は、標準時間と実際時間の差に、標準賃率を掛けます。",
+          "source": "generated",
+          "id": "b2-u21-n3-q7",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "標準の消費量より、実際の消費量が多かった。数量差異は有利か不利か。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "差異なし",
+              "不利差異",
+              "有利差異",
+              "価格差異になる"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "標準より多くの材料を使ったので、不利な数量差異です。",
+          "source": "original",
+          "id": "b2-u21-n3-q8",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "価格差異と数量差異で、金額を求めるときに使う単価はどれか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "どちらも実際単価×数量の差",
+              "どちらも標準単価の差×標準数量",
+              "価格差異は数量の差×標準単価、数量差異は単価の差×実際数量",
+              "価格差異は標準単価と実際単価の差×実際数量、数量差異は数量の差×標準単価"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "価格差異は単価の差に実際数量を、数量差異は数量の差に標準単価を掛けます。",
+          "source": "original",
+          "id": "b2-u21-n3-q9",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u21-n4",
+      "title": "製造間接費の差異",
+      "meta": {
+        "goal": "予算差異、操業度差異、能率差異を求められる",
+        "topic": "製造間接費の差異分析",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 5,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "かもめ化成の製造間接費の標準原価計算（公式法変動予算、3分法）。月間の固定費予算13,200円、変動費率は1時間あたり250円、基準操業度2,200時間、当月の標準作業時間1,900時間、実際の作業時間2,100時間、実際の製造間接費503,200円。予算差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 35000
+          },
+          "explanation": "予算差異は、予算許容額と実際発生額の差です。予算許容額は固定費に変動費率×実際時間を足します。",
+          "source": "generated",
+          "id": "b2-u21-n4-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ほたる鋳工の製造間接費の標準原価計算（公式法変動予算、3分法）。月間の固定費予算10,000円、変動費率は1時間あたり150円、基準操業度2,000時間、当月の標準作業時間1,800時間、実際の作業時間1,900時間、実際の製造間接費305,000円。操業度差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 500
+          },
+          "explanation": "操業度差異は、固定費率に、実際操業度と基準操業度の差を掛けます。",
+          "source": "generated",
+          "id": "b2-u21-n4-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "つばめ精機の製造間接費の標準原価計算（公式法変動予算、3分法）。月間の固定費予算14,000円、変動費率は1時間あたり190円、基準操業度2,000時間、当月の標準作業時間1,800時間、実際の作業時間1,900時間、実際の製造間接費405,000円。能率差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 19700
+          },
+          "explanation": "能率差異は、標準配賦率（変動費率＋固定費率）に、標準時間と実際時間の差を掛けます。",
+          "source": "generated",
+          "id": "b2-u21-n4-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ひのき家具の製造間接費の標準原価計算（公式法変動予算、3分法）。月間の固定費予算6,000円、変動費率は1時間あたり190円、基準操業度1,200時間、当月の標準作業時間900時間、実際の作業時間1,000時間、実際の製造間接費161,000円。実際の作業時間が標準作業時間より長い。能率差異は有利か不利か。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "有利差異",
+              "不利差異",
+              "差異なし",
+              "予算差異になる"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "標準より長い時間がかかったので、不利な能率差異です。",
+          "source": "original",
+          "id": "b2-u21-n4-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造間接費の3分法で分ける3つの差異はどれか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "予算差異、操業度差異、能率差異",
+              "操業度差異、賃率差異、数量差異",
+              "予算差異、価格差異、能率差異",
+              "価格差異、数量差異、賃率差異"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "製造間接費の差異は、予算差異と操業度差異と能率差異に分けます。",
+          "source": "original",
+          "id": "b2-u21-n4-q5",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u21-n5",
+      "title": "差異の処理",
+      "meta": {
+        "goal": "売上原価に加減する処理を書ける",
+        "topic": "標準原価差異の処理",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 4,
+        "examSub": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "ももたに製菓は、決算で、不利な価格差異（借方残高）15,000円を、売上原価に加えた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売上原価",
+                "amount": 15000
+              }
+            ],
+            "credit": [
+              {
+                "account": "価格差異",
+                "amount": 15000
+              }
+            ],
+            "accountOptions": [
+              "製品",
+              "数量差異",
+              "価格差異",
+              "売上原価"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "不利な差異は借方（左）に残っているので、売上原価に足します。借方（左）は売上原価、貸方（右）は価格差異です。",
+          "source": "generated",
+          "id": "b2-u21-n5-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ほたる鋳工は、決算で、不利な価格差異（借方残高）10,000円を、売上原価に加えた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売上原価",
+                "amount": 10000
+              }
+            ],
+            "credit": [
+              {
+                "account": "価格差異",
+                "amount": 10000
+              }
+            ],
+            "accountOptions": [
+              "価格差異",
+              "数量差異",
+              "売上原価",
+              "製品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "不利な差異は借方（左）に残っているので、売上原価に足します。借方（左）は売上原価、貸方（右）は価格差異です。",
+          "source": "generated",
+          "id": "b2-u21-n5-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "こはる食品工業は、決算で、有利な数量差異（貸方残高）5,000円を、売上原価から引いた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "数量差異",
+                "amount": 5000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上原価",
+                "amount": 5000
+              }
+            ],
+            "accountOptions": [
+              "数量差異",
+              "売上原価",
+              "価格差異",
+              "製品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "有利な差異は貸方（右）に残っているので、売上原価から引きます。借方（左）は数量差異、貸方（右）は売上原価です。",
+          "source": "generated",
+          "id": "b2-u21-n5-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "さくら木工は、決算で、有利な数量差異（貸方残高）50,000円を、売上原価から引いた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "数量差異",
+                "amount": 50000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上原価",
+                "amount": 50000
+              }
+            ],
+            "accountOptions": [
+              "売上原価",
+              "価格差異",
+              "製品",
+              "数量差異"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "有利な差異は貸方（右）に残っているので、売上原価から引きます。借方（左）は数量差異、貸方（右）は売上原価です。",
+          "source": "generated",
+          "id": "b2-u21-n5-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あおば製作所は、決算で、不利な賃率差異35,000円と、不利な作業時間差異40,000円を、売上原価に加えた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売上原価",
+                "amount": 75000
+              }
+            ],
+            "credit": [
+              {
+                "account": "賃率差異",
+                "amount": 35000
+              },
+              {
+                "account": "作業時間差異",
+                "amount": 40000
+              }
+            ],
+            "accountOptions": [
+              "価格差異",
+              "作業時間差異",
+              "賃率差異",
+              "売上原価",
+              "製品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "不利な差異2つを売上原価に足します。借方（左）は売上原価、貸方（右）は賃率差異と作業時間差異です。",
+          "source": "original",
+          "id": "b2-u21-n5-q5",
+          "sanitized": true,
+          "newAccounts": [
+            "作業時間差異"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "あおば製作所は、決算で、不利な予算差異25,000円（借方残高）と、有利な能率差異10,000円（貸方残高）を、売上原価で調整して振り替えた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売上原価",
+                "amount": 15000
+              },
+              {
+                "account": "能率差異",
+                "amount": 10000
+              }
+            ],
+            "credit": [
+              {
+                "account": "予算差異",
+                "amount": 25000
+              }
+            ],
+            "accountOptions": [
+              "売上原価",
+              "製品",
+              "操業度差異",
+              "能率差異",
+              "予算差異"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "不利な差異は売上原価に足し、有利な差異は引くので、差額だけが売上原価に加わります。借方（左）は売上原価と能率差異、貸方（右）は予算差異です。",
+          "source": "original",
+          "id": "b2-u21-n5-q6",
+          "sanitized": true,
+          "newAccounts": [
+            "能率差異",
+            "予算差異"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2-u21-n6",
+      "title": "勘定記入（標準原価計算）",
+      "meta": {
+        "goal": "仕掛品勘定に、標準と差異を記入できる",
+        "topic": "標準原価計算の勘定記入",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "パーシャル・プランで記帳するわかくさ縫製の仕掛品勘定を完成させる。月初仕掛品110,000円（標準原価）、当月の実際の投入は材料540,000円、賃金410,000円、製造間接費280,000円。完成品の標準原価は1,185,000円、月末仕掛品は標準原価150,000円。借方と貸方の差額は、原価差異として貸方に記入する。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "仕掛品"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "前月繰越",
+                      "counterAccount": "前期繰越",
+                      "amount": 110000
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "材料",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "賃金",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d4",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "製造間接費",
+                      "amount": 280000
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "製品",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "次期繰越",
+                      "amount": 150000
+                    }
+                  },
+                  {
+                    "key": "c3",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "原価差異",
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 540000
+              },
+              {
+                "ref": "d3.amount",
+                "input": "numpad",
+                "answer": 410000
+              },
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 1185000
+              },
+              {
+                "ref": "c3.amount",
+                "input": "numpad",
+                "answer": 5000
+              }
+            ]
+          },
+          "explanation": "パーシャル・プランは、借方（左）に実際の投入を書き、貸方（右）に完成品の標準原価を書きます。差額は、不利な差異として原価差異に出ます。",
+          "source": "original",
+          "id": "b2-u21-n6-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "パーシャル・プランで記帳するつばめ精機の仕掛品勘定を完成させる。月初仕掛品90,000円（標準原価）、当月の実際の投入は材料430,000円、賃金230,000円、製造間接費180,000円。完成品の標準原価は805,000円、月末仕掛品は標準原価70,000円。借方と貸方の差額は、原価差異として貸方に記入する。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "仕掛品"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "前月繰越",
+                      "counterAccount": "前期繰越",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "材料",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "賃金",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d4",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "製造間接費",
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "製品",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "次期繰越",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c3",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "原価差異",
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 90000
+              },
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 430000
+              },
+              {
+                "ref": "d3.amount",
+                "input": "numpad",
+                "answer": 230000
+              },
+              {
+                "ref": "d4.amount",
+                "input": "numpad",
+                "answer": 180000
+              },
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 805000
+              },
+              {
+                "ref": "c2.amount",
+                "input": "numpad",
+                "answer": 70000
+              },
+              {
+                "ref": "c3.amount",
+                "input": "numpad",
+                "answer": 55000
+              }
+            ]
+          },
+          "explanation": "パーシャル・プランは、借方（左）に実際の投入を書き、貸方（右）に完成品の標準原価を書きます。差額は、不利な差異として原価差異に出ます。",
+          "source": "original",
+          "id": "b2-u21-n6-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "パーシャル・プランの仕掛品勘定で、借方の合計（月初仕掛品と当月の実際投入の合計）が1,700,000円、貸方の完成品（標準原価）が1,560,000円、月末仕掛品が100,000円だった。原価差異は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 40000
+          },
+          "explanation": "借方の合計から、完成品と月末仕掛品の標準原価を引いた額が、原価差異です。",
+          "source": "generated",
+          "id": "b2-u21-n6-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "パーシャル・プランの仕掛品勘定で、借方の合計（月初仕掛品と当月の実際投入の合計）が1,215,000円、貸方の完成品（標準原価）が1,080,000円、月末仕掛品が100,000円だった。原価差異は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 35000
+          },
+          "explanation": "借方の合計から、完成品と月末仕掛品の標準原価を引いた額が、原価差異です。",
+          "source": "generated",
+          "id": "b2-u21-n6-q4",
+          "sanitized": true
+        }
+      ]
+    }
+  ]
+}

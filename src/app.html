@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"
+		/>
+		<meta name="text-scale" content="scale" />
+		<meta name="theme-color" content="#f6f6f5" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-title" content="Boqite" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+		<link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+		<link rel="manifest" href="/manifest.webmanifest" />
+		<style>
+			:root {
+				--safe-area-inset-top: env(safe-area-inset-top, 0px);
+				--safe-area-inset-right: env(safe-area-inset-right, 0px);
+				--safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+				--safe-area-inset-left: env(safe-area-inset-left, 0px);
+			}
+		</style>
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>

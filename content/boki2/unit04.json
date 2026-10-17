@@ -1,0 +1,885 @@
+{
+  "unit": {
+    "id": "b2-u04",
+    "course": "boki2",
+    "chapter": 4,
+    "title": "商品売買と棚卸"
+  },
+  "nodes": [
+    {
+      "id": "b2-u04-n1",
+      "title": "仕入割戻",
+      "meta": {
+        "goal": "仕入割戻を受けたときの処理を、買掛金の減額と仕入の減額で書ける",
+        "topic": "仕入割戻",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "仕入割戻"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u04-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "仕入先ヨシノ商店から、一定の数量を仕入れたことによる割戻 ¥15,000 を受けた。割戻は買掛金から差し引く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "買掛金",
+                "amount": 15000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕入",
+                "amount": 15000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "買掛金",
+              "売掛金",
+              "仕入",
+              "雑益"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "割戻は、あとから仕入の値段が下がったのと同じです。借方（左）の買掛金が減り、貸方（右）で仕入が減ります。"
+        },
+        {
+          "id": "b2-u04-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "仕入先から、仕入割戻 ¥12,000 が普通預金に振り込まれた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 12000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕入",
+                "amount": 12000
+              }
+            ],
+            "accountOptions": [
+              "仕入",
+              "普通預金",
+              "雑益",
+              "売上",
+              "売掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "戻ってきたお金は、収益ではなく、仕入の値引きです。借方（左）の普通預金が増え、貸方（右）で仕入が減ります。"
+        },
+        {
+          "id": "b2-u04-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "仕入先から ¥25,000 の割戻を受けた。買掛金 ¥125,000 は、割戻のぶんを差し引いて、残りを現金で支払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "買掛金",
+                "amount": 125000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕入",
+                "amount": 25000
+              },
+              {
+                "account": "現金",
+                "amount": 100000
+              }
+            ],
+            "accountOptions": [
+              "仕入",
+              "普通預金",
+              "売上",
+              "雑益",
+              "買掛金",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "買掛金 125,000 円は、割戻 25,000 円と現金 100,000 円で消えます。割戻のぶんは、貸方（右）の仕入の減少として書きます。"
+        },
+        {
+          "id": "b2-u04-n1-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "当期の総仕入高は ¥800,000、仕入戻し高は ¥30,000、仕入割戻は ¥20,000 だった。純仕入高はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 750000
+          },
+          "explanation": "返品と割戻は、どちらも仕入の値段を下げます。800,000 − 30,000 − 20,000 = 750,000 円が、純仕入高です。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u04-n2",
+      "title": "総平均法",
+      "meta": {
+        "goal": "総平均法の払出単価で、商品有高帳を記入できる（先入先出法と移動平均法は復習）",
+        "topic": "総平均法の商品有高帳",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u04-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "消しゴムの5月の受け払い。払出単価は総平均法で計算し、売上の行の単価は月末に決まる。5月1日の繰越は 100個（1個 ¥200）、10日に 200個を1個 ¥230、20日に 200個を1個 ¥250 で仕入れ、15日に 150個、28日に 230個を売った。商品有高帳を完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "inventory_ledger",
+              "data": {
+                "method": "total_average",
+                "header": {
+                  "title": "商品有高帳",
+                  "subject": "消しゴム"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "date": "5/1",
+                      "summary": "前月繰越",
+                      "received": [],
+                      "shipped": [],
+                      "balance": [
+                        {
+                          "quantity": 100,
+                          "unitPrice": 200,
+                          "amount": 20000
+                        }
+                      ]
+                    },
+                    "role": "opening"
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "date": "5/10",
+                      "summary": "仕 入",
+                      "received": [
+                        {
+                          "quantity": 200,
+                          "unitPrice": 230,
+                          "amount": 46000
+                        }
+                      ],
+                      "shipped": [],
+                      "balance": []
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "date": "5/15",
+                      "summary": "売 上",
+                      "received": [],
+                      "shipped": [
+                        {
+                          "quantity": 150,
+                          "unitPrice": null,
+                          "amount": null
+                        }
+                      ],
+                      "balance": []
+                    }
+                  },
+                  {
+                    "key": "r4",
+                    "cells": {
+                      "date": "5/20",
+                      "summary": "仕 入",
+                      "received": [
+                        {
+                          "quantity": 200,
+                          "unitPrice": 250,
+                          "amount": 50000
+                        }
+                      ],
+                      "shipped": [],
+                      "balance": []
+                    }
+                  },
+                  {
+                    "key": "r5",
+                    "cells": {
+                      "date": "5/28",
+                      "summary": "売 上",
+                      "received": [],
+                      "shipped": [
+                        {
+                          "quantity": 230,
+                          "unitPrice": 232,
+                          "amount": null
+                        }
+                      ],
+                      "balance": []
+                    }
+                  },
+                  {
+                    "key": "r6",
+                    "cells": {
+                      "date": "5/31",
+                      "summary": "次月繰越",
+                      "received": [],
+                      "shipped": [
+                        {
+                          "quantity": 120,
+                          "unitPrice": 232,
+                          "amount": null
+                        }
+                      ],
+                      "balance": []
+                    },
+                    "role": "carryforward"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r3.shipped.0.unitPrice",
+                "input": "numpad",
+                "answer": 232
+              },
+              {
+                "ref": "r3.shipped.0.amount",
+                "input": "numpad",
+                "answer": 34800
+              },
+              {
+                "ref": "r5.shipped.0.amount",
+                "input": "numpad",
+                "answer": 53360
+              },
+              {
+                "ref": "r6.shipped.0.amount",
+                "input": "numpad",
+                "answer": 27840
+              }
+            ]
+          },
+          "explanation": "総平均法の払出単価は、月の合計で出します。(20,000 + 46,000 + 50,000) ÷ 500 個 = 232 円で、売った 150個は 34,800 円、230個は 53,360 円、月末の 120個は 27,840 円です。"
+        },
+        {
+          "id": "b2-u04-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "クリアファイルの5月の受け払い。払出単価は総平均法で計算し、売上の行の単価は月末に決まる。5月1日の繰越は 100枚（1枚 ¥300）、10日に 100枚を1枚 ¥320、20日に 200枚を1枚 ¥340 で仕入れ、15日に 150枚、28日に 130枚を売った。商品有高帳を完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "inventory_ledger",
+              "data": {
+                "method": "total_average",
+                "header": {
+                  "title": "商品有高帳",
+                  "subject": "クリアファイル"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "date": "5/1",
+                      "summary": "前月繰越",
+                      "received": [],
+                      "shipped": [],
+                      "balance": [
+                        {
+                          "quantity": 100,
+                          "unitPrice": 300,
+                          "amount": 30000
+                        }
+                      ]
+                    },
+                    "role": "opening"
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "date": "5/10",
+                      "summary": "仕 入",
+                      "received": [
+                        {
+                          "quantity": 100,
+                          "unitPrice": 320,
+                          "amount": 32000
+                        }
+                      ],
+                      "shipped": [],
+                      "balance": []
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "date": "5/15",
+                      "summary": "売 上",
+                      "received": [],
+                      "shipped": [
+                        {
+                          "quantity": 150,
+                          "unitPrice": null,
+                          "amount": null
+                        }
+                      ],
+                      "balance": []
+                    }
+                  },
+                  {
+                    "key": "r4",
+                    "cells": {
+                      "date": "5/20",
+                      "summary": "仕 入",
+                      "received": [
+                        {
+                          "quantity": 200,
+                          "unitPrice": 340,
+                          "amount": 68000
+                        }
+                      ],
+                      "shipped": [],
+                      "balance": []
+                    }
+                  },
+                  {
+                    "key": "r5",
+                    "cells": {
+                      "date": "5/28",
+                      "summary": "売 上",
+                      "received": [],
+                      "shipped": [
+                        {
+                          "quantity": 130,
+                          "unitPrice": 325,
+                          "amount": null
+                        }
+                      ],
+                      "balance": []
+                    }
+                  },
+                  {
+                    "key": "r6",
+                    "cells": {
+                      "date": "5/31",
+                      "summary": "次月繰越",
+                      "received": [],
+                      "shipped": [
+                        {
+                          "quantity": 120,
+                          "unitPrice": 325,
+                          "amount": null
+                        }
+                      ],
+                      "balance": []
+                    },
+                    "role": "carryforward"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r3.shipped.0.unitPrice",
+                "input": "numpad",
+                "answer": 325
+              },
+              {
+                "ref": "r3.shipped.0.amount",
+                "input": "numpad",
+                "answer": 48750
+              },
+              {
+                "ref": "r5.shipped.0.amount",
+                "input": "numpad",
+                "answer": 42250
+              },
+              {
+                "ref": "r6.shipped.0.amount",
+                "input": "numpad",
+                "answer": 39000
+              }
+            ]
+          },
+          "explanation": "払出単価は (30,000 + 32,000 + 68,000) ÷ 400 枚 = 325 円です。売った 150枚は 48,750 円、130枚は 42,250 円、月末の 120枚は 39,000 円になります。"
+        },
+        {
+          "id": "b2-u04-n2-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "上の商品の月末の在庫は、総平均法でいくら？ 月初 100個（1個 ¥200）、10日に 200個を1個 ¥230、20日に 200個を1個 ¥250 で仕入れ、380個を売った。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 27840
+          },
+          "explanation": "月末の在庫は 500 − 380 = 120 個で、232 × 120 = 27,840 円です。月初と仕入の合計 116,000 円から、売上原価 88,160 円を引いても同じです。"
+        },
+        {
+          "id": "b2-u04-n2-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "総平均法と移動平均法で、払出単価を決めるタイミングの違いは？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "どちらも月末にまとめて決める",
+              "総平均法は仕入のたびに、移動平均法は月末にまとめて決める",
+              "どちらも売上のたびに決める",
+              "総平均法は月末（期末）にまとめて、移動平均法は仕入のたびに決める"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "総平均法は、月の終わりに全部まとめて平均します。移動平均法は、仕入れるたびに平均しなおします。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u04-n3",
+      "title": "棚卸減耗",
+      "meta": {
+        "goal": "帳簿と実地の数量の差を、原価性の有無で売上原価か営業外費用に分けて書ける",
+        "topic": "棚卸減耗",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "棚卸減耗損"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u04-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、期末商品の帳簿は ¥200,000（400個、1個 ¥500）で、繰越商品に直してある。実地棚卸の数量は 390個だった。棚卸減耗損を計上する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "棚卸減耗損",
+                "amount": 5000
+              }
+            ],
+            "credit": [
+              {
+                "account": "繰越商品",
+                "amount": 5000
+              }
+            ],
+            "accountOptions": [
+              "雑損",
+              "棚卸減耗損",
+              "繰越商品",
+              "仕入",
+              "商品評価損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "帳簿より実際の商品が 10個少なく、10 × 500 = 5,000 円の損です。借方（左）の棚卸減耗損にして、貸方（右）の繰越商品を減らします。",
+          "newAccounts": [
+            "棚卸減耗損"
+          ]
+        },
+        {
+          "id": "b2-u04-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "期末商品の帳簿棚卸数量は 600個、実地棚卸数量は 570個で、原価は1個 ¥800 だった。棚卸減耗損はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 24000
+          },
+          "explanation": "減った数量 600 − 570 = 30個に、原価 800 円を掛けます。30 × 800 = 24,000 円です。"
+        },
+        {
+          "id": "b2-u04-n3-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "棚卸減耗損 ¥5,000 は、毎期ふつうに生じる程度のもの（原価性がある）なので、売上原価に含めるため仕入勘定へ振り替える。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 5000
+              }
+            ],
+            "credit": [
+              {
+                "account": "棚卸減耗損",
+                "amount": 5000
+              }
+            ],
+            "accountOptions": [
+              "商品評価損",
+              "雑損",
+              "棚卸減耗損",
+              "繰越商品",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "毎期ふつうに生じる減耗は、売った商品の原価の一部と考えます。借方（左）の仕入へ移すと、売上原価に含まれます。"
+        },
+        {
+          "id": "b2-u04-n3-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "期首商品 ¥200,000、当期純仕入高 ¥1,500,000、期末商品の帳簿棚卸高 ¥250,000、棚卸減耗損 ¥10,000（原価性がある）。売上原価はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1460000
+          },
+          "explanation": "売上原価は、期首 + 仕入 − 期末（帳簿）で 1,450,000 円です。原価性のある棚卸減耗損 10,000 円を足した 1,460,000 円が、損益計算書の売上原価になります。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u04-n4",
+      "title": "評価替",
+      "meta": {
+        "goal": "商品評価損を計算し、棚卸減耗と同時に起きた場合の順序を守れる",
+        "topic": "商品評価損",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "商品評価損"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u04-n4-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、期末商品は実地棚卸の数量が 390個で、原価は1個 ¥500 だが、時価（正味売却価額）は1個 ¥450 に下がっている。商品評価損を計上する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "商品評価損",
+                "amount": 19500
+              }
+            ],
+            "credit": [
+              {
+                "account": "繰越商品",
+                "amount": 19500
+              }
+            ],
+            "accountOptions": [
+              "雑損",
+              "仕入",
+              "棚卸減耗損",
+              "商品評価損",
+              "繰越商品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "評価損は、実際にある 390個について、1個あたり 500 − 450 = 50 円の下がりを掛けて出します。390 × 50 = 19,500 円です。",
+          "newAccounts": [
+            "商品評価損"
+          ]
+        },
+        {
+          "id": "b2-u04-n4-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、期末商品の帳簿棚卸数量は 400個、実地棚卸数量は 390個で、原価は1個 ¥500、正味売却価額は1個 ¥450 である。棚卸減耗損と商品評価損を、まとめて1つの仕訳で計上する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "棚卸減耗損",
+                "amount": 5000
+              },
+              {
+                "account": "商品評価損",
+                "amount": 19500
+              }
+            ],
+            "credit": [
+              {
+                "account": "繰越商品",
+                "amount": 24500
+              }
+            ],
+            "accountOptions": [
+              "商品評価損",
+              "棚卸減耗損",
+              "雑損",
+              "繰越商品",
+              "仕入",
+              "商品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "先に減耗を数量で出します（10個 × 500 = 5,000 円）。評価損は実際に残る 390個で出し（19,500 円）、合計 24,500 円を貸方（右）の繰越商品から減らします。"
+        },
+        {
+          "id": "b2-u04-n4-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "期末商品の実地棚卸数量は 520個、原価は1個 ¥900、正味売却価額は1個 ¥840 だった。商品評価損はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 31200
+          },
+          "explanation": "1個あたり 900 − 840 = 60 円下がっています。実地の 520個に掛けて、60 × 520 = 31,200 円です。"
+        },
+        {
+          "id": "b2-u04-n4-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品評価損 ¥19,500 は、売上原価に含めて表示するため、仕入勘定へ振り替える。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 19500
+              }
+            ],
+            "credit": [
+              {
+                "account": "商品評価損",
+                "amount": 19500
+              }
+            ],
+            "accountOptions": [
+              "棚卸減耗損",
+              "繰越商品",
+              "商品評価損",
+              "仕入",
+              "雑損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売上原価に含めると決めたときは、借方（左）の仕入へ移します。貸方（右）の商品評価損が消えます。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u04-n5",
+      "title": "月次による処理",
+      "meta": {
+        "goal": "月次で売上原価を計算する場合の処理を書ける",
+        "topic": "月次の売上原価の計算",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u04-n5-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "月次決算で、月初の商品 ¥100,000 を、売上原価を計算するため仕入勘定へ振り替える（三分法）。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 100000
+              }
+            ],
+            "credit": [
+              {
+                "account": "繰越商品",
+                "amount": 100000
+              }
+            ],
+            "accountOptions": [
+              "売上原価",
+              "仕入",
+              "繰越商品",
+              "商品",
+              "損益"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "月の売上原価は、月初の商品に仕入を足し、月末の商品を引いて出します。まず月初の商品を、借方（左）の仕入へ移します。"
+        },
+        {
+          "id": "b2-u04-n5-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "月次決算で、月末の商品 ¥120,000 を、繰越商品に振り替える（三分法）。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "繰越商品",
+                "amount": 120000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕入",
+                "amount": 120000
+              }
+            ],
+            "accountOptions": [
+              "仕入",
+              "商品",
+              "売上原価",
+              "損益",
+              "繰越商品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "月末に残っている商品は、売れていないので費用から外します。借方（左）の繰越商品に置き、貸方（右）で仕入を減らします。"
+        },
+        {
+          "id": "b2-u04-n5-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。月次決算を2月末まで行っており、繰越商品は2月末の商品 ¥150,000 になっている。3月の売上原価を計算するため、この ¥150,000 を仕入勘定へ振り替える。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 150000
+              }
+            ],
+            "credit": [
+              {
+                "account": "繰越商品",
+                "amount": 150000
+              }
+            ],
+            "accountOptions": [
+              "売上原価",
+              "商品",
+              "損益",
+              "繰越商品",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "決算の直前の繰越商品は、期首商品ではなく2月末の商品です。3月に売る材料なので、借方（左）の仕入へ移します。"
+        },
+        {
+          "id": "b2-u04-n5-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "月次決算。月初商品 ¥100,000、当月仕入 ¥400,000、月末商品 ¥120,000 のとき、当月の売上原価はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 380000
+          },
+          "explanation": "売上原価は、月初商品 + 当月仕入 − 月末商品です。100,000 + 400,000 − 120,000 = 380,000 円です。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u04-n6",
+      "title": "売上原価と売上総利益",
+      "meta": {
+        "goal": "棚卸減耗と評価損を含む売上原価と売上総利益を計算できる",
+        "topic": "棚卸減耗・評価損を含む売上原価",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u04-n6-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "当期の売上高 ¥2,400,000、期首商品 ¥150,000、当期純仕入高 ¥1,700,000、期末商品の帳簿棚卸高 ¥200,000。棚卸減耗損 ¥6,000 と商品評価損 ¥9,000 はどちらも原価性があり、売上原価に含める。売上原価はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1665000
+          },
+          "explanation": "期首 + 仕入 − 期末 = 150,000 + 1,700,000 − 200,000 = 1,650,000 円です。これに、減耗損 6,000 円と評価損 9,000 円を足した 1,665,000 円が売上原価です。"
+        },
+        {
+          "id": "b2-u04-n6-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "当期の売上高 ¥2,400,000、売上原価 ¥1,665,000。売上総利益はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 735000
+          },
+          "explanation": "売上総利益は、売上高から売上原価を引いた、商品を売ったもうけです。2,400,000 − 1,665,000 = 735,000 円です。"
+        }
+      ]
+    }
+  ]
+}

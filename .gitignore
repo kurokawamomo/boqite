@@ -1,0 +1,34 @@
+node_modules
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+.envrc
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Artifact
+.spec
+
+# Playwright QA
+.playwright/
+.playwright-cli/
+
+# /md プレビュー生成物
+docs/*.html

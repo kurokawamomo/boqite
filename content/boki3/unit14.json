@@ -1,0 +1,666 @@
+{
+  "unit": {
+    "id": "b3-u14",
+    "course": "boki3",
+    "chapter": 14,
+    "title": "税金"
+  },
+  "nodes": [
+    {
+      "id": "b3-u14-n1",
+      "title": "固定資産税と印紙",
+      "meta": {
+        "goal": "租税公課で書ける",
+        "topic": "租税公課",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u14-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "店舗の敷地にかかる固定資産税 ¥85,000 を、納付書で現金納付した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "租税公課",
+                "amount": 85000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 85000
+              }
+            ],
+            "accountOptions": [
+              "支払手数料",
+              "土地",
+              "未払金",
+              "租税公課",
+              "法人税、住民税及び事業税",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "固定資産税は、会社が毎年払う税金のひとつです。会社にかかる税金のうち、利益にかかるもの以外は租税公課にまとめます。"
+        },
+        {
+          "id": "b3-u14-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "事業用の建物にかかる固定資産税 ¥42,500 を、普通預金から納付した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "租税公課",
+                "amount": 42500
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 42500
+              }
+            ],
+            "accountOptions": [
+              "建物",
+              "支払手数料",
+              "普通預金",
+              "未払金",
+              "仮払金",
+              "租税公課"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "建物の購入代金ではなく、持っていること自体にかかる税金です。費用なので租税公課です。"
+        },
+        {
+          "id": "b3-u14-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "市から事業所の固定資産税の納税通知書が届き、年税額 ¥120,000 が決まった。納付はまだしていない。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "租税公課",
+                "amount": 120000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払金",
+                "amount": 120000
+              }
+            ],
+            "accountOptions": [
+              "租税公課",
+              "現金",
+              "未払法人税等",
+              "固定資産売却損",
+              "仮受金",
+              "未払金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "税額が決まった時点で、払う義務ができています。まだ払っていないので、貸方は未払金です。"
+        },
+        {
+          "id": "b3-u14-n1-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "さきに納税通知書を受け取って未払金にしていた固定資産税 ¥120,000 を、現金で納付した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "未払金",
+                "amount": 120000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 120000
+              }
+            ],
+            "accountOptions": [
+              "支払手数料",
+              "仮払金",
+              "未払法人税等",
+              "未払金",
+              "租税公課",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "費用はすでに租税公課で立てています。いまは、払う義務をお金で返しただけです。"
+        }
+      ]
+    },
+    {
+      "id": "b3-u14-n2",
+      "title": "消費税",
+      "meta": {
+        "goal": "税抜方式で仮払と仮受を書き、決算で納付額を出せる",
+        "topic": "消費税（税抜方式）",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "仮払消費税",
+          "仮受消費税",
+          "未払消費税"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u14-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品 ¥50,000（税抜）を掛けで仕入れた。消費税は10%で、税抜方式で処理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 50000
+              },
+              {
+                "account": "仮払消費税",
+                "amount": 5000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 55000
+              }
+            ],
+            "accountOptions": [
+              "未払消費税",
+              "未払金",
+              "租税公課",
+              "買掛金",
+              "仕入",
+              "仮受消費税",
+              "仮払消費税"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "買掛金は税込の 55,000 円です。税のぶん 5,000 円は、あとで納める消費税から差し引けるので、費用にせず仮払消費税に置きます。",
+          "newAccounts": [
+            "仮払消費税"
+          ]
+        },
+        {
+          "id": "b3-u14-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品 ¥80,000（税抜）を掛けで売り上げた。消費税は10%で、税抜方式で処理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 88000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 80000
+              },
+              {
+                "account": "仮受消費税",
+                "amount": 8000
+              }
+            ],
+            "accountOptions": [
+              "仮受消費税",
+              "未払消費税",
+              "売上",
+              "仮払消費税",
+              "租税公課",
+              "売掛金",
+              "前受金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売掛金は税込の 88,000 円で、うち 8,000 円は、お客さんから預かった消費税です。国へ納めるお金なので、売上にせず仮受消費税にします。",
+          "newAccounts": [
+            "仮受消費税"
+          ]
+        },
+        {
+          "id": "b3-u14-n2-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、仮受消費税が ¥420,000、仮払消費税が ¥310,000 になっている。納める消費税を未払消費税として計上する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仮受消費税",
+                "amount": 420000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仮払消費税",
+                "amount": 310000
+              },
+              {
+                "account": "未払消費税",
+                "amount": 110000
+              }
+            ],
+            "accountOptions": [
+              "仮受消費税",
+              "未払消費税",
+              "租税公課",
+              "売上",
+              "未払法人税等",
+              "未払金",
+              "仮払消費税"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "預かった 420,000 から、払ってある 310,000 を引いた 110,000 円が、国に納める額です。2つの仮の箱を空にして、差額を未払消費税に残します。",
+          "newAccounts": [
+            "未払消費税"
+          ]
+        },
+        {
+          "id": "b3-u14-n2-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で未払消費税に計上してあった ¥110,000 を、普通預金から納付した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "未払消費税",
+                "amount": 110000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 110000
+              }
+            ],
+            "accountOptions": [
+              "仮払消費税",
+              "現金",
+              "仮受消費税",
+              "未払消費税",
+              "租税公課",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "納める義務を、お金で果たしました。費用ではないので、租税公課にはしません。"
+        },
+        {
+          "id": "b3-u14-n2-shohizei-s801",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算にあたり、仮払消費税170,000円と仮受消費税210,000円を相殺し、差額を納付額として処理する。税抜方式で記帳している。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仮受消費税",
+                "amount": 210000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仮払消費税",
+                "amount": 170000
+              },
+              {
+                "account": "未払消費税",
+                "amount": 40000
+              }
+            ],
+            "accountOptions": [
+              "仕入",
+              "売上",
+              "買掛金",
+              "売掛金",
+              "仮払消費税",
+              "仮受消費税",
+              "未払消費税"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "預かった消費税(仮受)210,000円から、払った消費税(仮払)170,000円を引いた40,000円が納める額だよ。仮受と仮払を消して、納める分を未払消費税（負債）に置くよ。",
+          "generated": {
+            "generator": "b3-u14-n2-shohizei",
+            "seed": 801
+          }
+        },
+        {
+          "id": "b3-u14-n2-shohizei-s802",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品36,000円（税抜）を掛けで仕入れた。消費税は10%で、税抜方式で記帳する。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 36000
+              },
+              {
+                "account": "仮払消費税",
+                "amount": 3600
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 39600
+              }
+            ],
+            "accountOptions": [
+              "仕入",
+              "売上",
+              "買掛金",
+              "売掛金",
+              "仮払消費税",
+              "仮受消費税",
+              "未払消費税"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "消費税は36,000円×10%＝3,600円。税抜方式では仕入は税を含めず、払う消費税は仮払消費税（資産）で借方。買掛金は税込の39,600円だよ。",
+          "generated": {
+            "generator": "b3-u14-n2-shohizei",
+            "seed": 802
+          }
+        },
+        {
+          "id": "b3-u14-n2-shohizei-s803",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品47,000円（税抜）を掛けで売り上げた。消費税は10%で、税抜方式で記帳する。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 51700
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 47000
+              },
+              {
+                "account": "仮受消費税",
+                "amount": 4700
+              }
+            ],
+            "accountOptions": [
+              "仕入",
+              "売上",
+              "買掛金",
+              "売掛金",
+              "仮払消費税",
+              "仮受消費税",
+              "未払消費税"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "消費税は47,000円×10%＝4,700円。税抜方式では売上は税を含めず、預かる消費税は仮受消費税（負債）で貸方。売掛金は税込の51,700円だよ。",
+          "generated": {
+            "generator": "b3-u14-n2-shohizei",
+            "seed": 803
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-u14-n3",
+      "title": "法人税等",
+      "meta": {
+        "goal": "中間納付と決算の確定額を書ける。納付書を読める",
+        "topic": "法人税等の中間納付と確定",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "仮払法人税等",
+          "未払法人税等",
+          "法人税",
+          "住民税及び事業税"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u14-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "法人税、住民税及び事業税の中間申告をして、¥250,000 を普通預金から納付した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仮払法人税等",
+                "amount": 250000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 250000
+              }
+            ],
+            "accountOptions": [
+              "法人税、住民税及び事業税",
+              "未払法人税等",
+              "仮払消費税",
+              "仮払法人税等",
+              "租税公課",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "中間のときは、まだ今期の税額が決まっていません。だから費用にせず、先に払ったお金として仮払法人税等に置きます。",
+          "newAccounts": [
+            "仮払法人税等"
+          ]
+        },
+        {
+          "id": "b3-u14-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、当期の法人税、住民税及び事業税が ¥640,000 と確定した。中間申告で ¥250,000 を納付ずみ（仮払法人税等で処理）。残りは未払とする。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "法人税、住民税及び事業税",
+                "amount": 640000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仮払法人税等",
+                "amount": 250000
+              },
+              {
+                "account": "未払法人税等",
+                "amount": 390000
+              }
+            ],
+            "accountOptions": [
+              "未払法人税等",
+              "租税公課",
+              "仮払法人税等",
+              "未払金",
+              "普通預金",
+              "法人税、住民税及び事業税",
+              "仮払消費税"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "税額 640,000 円が今期の費用です。すでに払った 250,000 を仮払法人税等から外し、残りの 390,000 円はまだ払っていないので、未払法人税等にします。",
+          "newAccounts": [
+            "法人税、住民税及び事業税",
+            "未払法人税等"
+          ]
+        },
+        {
+          "id": "b3-u14-n3-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "確定申告をして、下の領収済通知書のとおり法人税等を普通預金から納付した。決算で未払法人税等に計上してある。",
+            "document": {
+              "type": "tax_notice",
+              "data": {
+                "header": {
+                  "title": "領収済通知書"
+                },
+                "taxType": "法人税",
+                "filingType": "確定申告",
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "label": "本税",
+                      "amount": 390000
+                    }
+                  }
+                ],
+                "total": 390000,
+                "fiscalPeriod": "×2年4月1日から×3年3月31日まで",
+                "paidOn": "×3年5月30日"
+              }
+            }
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "未払法人税等",
+                "amount": 390000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 390000
+              }
+            ],
+            "accountOptions": [
+              "未払法人税等",
+              "仮払法人税等",
+              "法人税、住民税及び事業税",
+              "未払金",
+              "租税公課",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "「確定申告」の納付書なので、決算で未払法人税等にしてあるぶんをお金で払います。費用はすでに立てたので、もう一度は立てません。"
+        },
+        {
+          "id": "b3-u14-n3-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "下の領収済通知書のとおり、中間申告で法人税等を普通預金から納付した。",
+            "document": {
+              "type": "tax_notice",
+              "data": {
+                "header": {
+                  "title": "領収済通知書"
+                },
+                "taxType": "法人税",
+                "filingType": "中間申告",
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "label": "本税",
+                      "amount": 280000
+                    }
+                  }
+                ],
+                "total": 280000,
+                "fiscalPeriod": "×2年4月1日から×3年3月31日まで",
+                "paidOn": "×2年11月28日"
+              }
+            }
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仮払法人税等",
+                "amount": 280000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 280000
+              }
+            ],
+            "accountOptions": [
+              "法人税、住民税及び事業税",
+              "未払金",
+              "租税公課",
+              "仮払法人税等",
+              "未払法人税等",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "「中間申告」の納付書です。今期の税額はまだ確定していないので、仮払法人税等に置きます。"
+        }
+      ]
+    }
+  ]
+}

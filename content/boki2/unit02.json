@@ -1,0 +1,964 @@
+{
+  "unit": {
+    "id": "b2-u02",
+    "course": "boki2",
+    "chapter": 2,
+    "title": "現金預金と債権の譲渡"
+  },
+  "nodes": [
+    {
+      "id": "b2-u02-n1",
+      "title": "銀行勘定調整表",
+      "meta": {
+        "goal": "企業と銀行の残高の差の原因を分け、修正する仕訳を選べる",
+        "topic": "銀行勘定調整表",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u02-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "銀行から、得意先ハマナス商店の売掛金 ¥120,000 の振り込みがあったとの通知が届いた。当社の帳簿には、まだ記入していなかった。当社の帳簿を直す仕訳。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "当座預金",
+                "amount": 120000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売掛金",
+                "amount": 120000
+              }
+            ],
+            "accountOptions": [
+              "普通預金",
+              "売掛金",
+              "前受金",
+              "売上",
+              "当座預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "通知を受けるまで、帳簿に載せていなかった入金です。帳簿の当座預金を増やすので借方（左）、売掛金が減るので貸方（右）に書きます。"
+        },
+        {
+          "id": "b2-u02-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "当座預金の口座から、借入金の利息 ¥6,000 が引き落とされていたが、当社の帳簿には記入していなかった。当社の帳簿を直す仕訳。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支払利息",
+                "amount": 6000
+              }
+            ],
+            "credit": [
+              {
+                "account": "当座預金",
+                "amount": 6000
+              }
+            ],
+            "accountOptions": [
+              "借入金",
+              "未払利息",
+              "支払利息",
+              "当座預金",
+              "支払手数料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "銀行に引き落とされた費用を、帳簿にも載せます。費用の支払利息が借方（左）、減った当座預金が貸方（右）です。"
+        },
+        {
+          "id": "b2-u02-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "買掛金 ¥54,000 を当座預金から支払ったが、帳簿には ¥45,000 と誤って記入していた。誤りを直す仕訳。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "買掛金",
+                "amount": 9000
+              }
+            ],
+            "credit": [
+              {
+                "account": "当座預金",
+                "amount": 9000
+              }
+            ],
+            "accountOptions": [
+              "普通預金",
+              "現金",
+              "当座預金",
+              "仕入",
+              "買掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "実際は 54,000 円を払ったのに、45,000 円しか記録していません。足りない 9,000 円ぶんを、借方（左）の買掛金と貸方（右）の当座預金に追加します。"
+        },
+        {
+          "id": "b2-u02-n1-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "当座預金の勘定残高と、銀行が示す残高が一致しなかった。次のうち、当社の帳簿を直す仕訳が必要なものはどれ？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "得意先からの振り込みが、通知が届くまで帳簿に未記入だった",
+              "銀行側で、締め日の翌日に入金が記録されていた",
+              "夜間金庫に入れた売上代金が、銀行では翌営業日の入金になっていた",
+              "銀行の営業時間外に預け入れた現金が、まだ銀行の残高に入っていなかった"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "帳簿に載せていなかったものだけが、当社の仕訳で直すものです。時間外の預け入れや締め日のずれは、銀行の側の記録が遅れているだけなので、仕訳はいりません。"
+        },
+        {
+          "id": "b2-u02-n1-q5",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "当座預金勘定の残高は ¥520,000 である。調べると、売掛金の振り込み ¥70,000 と、手数料 ¥2,000 の引き落としが、帳簿に未記入だった。銀行の残高証明書の残高は ¥558,000 で、差は営業時間外の預け入れだけである。銀行勘定調整表を完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "bank_reconciliation",
+              "data": {
+                "header": {
+                  "title": "銀行勘定調整表"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "label": "当座預金勘定の残高",
+                      "amount": 520000
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "label": "加算 振り込み入金の未記帳",
+                      "amount": 70000
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "cells": {
+                      "label": "減算 手数料の引き落としの未記帳",
+                      "amount": 2000
+                    }
+                  },
+                  {
+                    "key": "d4",
+                    "cells": {
+                      "label": "修正後の残高",
+                      "amount": null
+                    },
+                    "role": "total"
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "label": "銀行の残高証明書の残高",
+                      "amount": 558000
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "label": "加算 営業時間外の預け入れ",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c3",
+                    "cells": {
+                      "label": "調整後の残高",
+                      "amount": null
+                    },
+                    "role": "total"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d4.amount",
+                "input": "numpad",
+                "answer": 588000
+              },
+              {
+                "ref": "c2.amount",
+                "input": "numpad",
+                "answer": 30000
+              },
+              {
+                "ref": "c3.amount",
+                "input": "numpad",
+                "answer": 588000
+              }
+            ]
+          },
+          "explanation": "企業側は 520,000 + 70,000 − 2,000 = 588,000 円に直します。銀行側は、時間外の預け入れ 30,000 円を足すと 588,000 円になり、左右がそろいます。"
+        },
+        {
+          "id": "b2-u02-n1-q6",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "当座預金勘定の残高は ¥640,000 である。調べると、売掛金の振り込み ¥95,000 と、借入金の利息 ¥15,000 の引き落としが、帳簿に未記入だった。銀行の残高証明書の残高は ¥700,000 で、差は営業時間外の預け入れだけである。銀行勘定調整表を完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "bank_reconciliation",
+              "data": {
+                "header": {
+                  "title": "銀行勘定調整表"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "label": "当座預金勘定の残高",
+                      "amount": 640000
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "label": "加算 振り込み入金の未記帳",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "cells": {
+                      "label": "減算 利息の引き落としの未記帳",
+                      "amount": 15000
+                    }
+                  },
+                  {
+                    "key": "d4",
+                    "cells": {
+                      "label": "修正後の残高",
+                      "amount": null
+                    },
+                    "role": "total"
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "label": "銀行の残高証明書の残高",
+                      "amount": 700000
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "label": "加算 営業時間外の預け入れ",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c3",
+                    "cells": {
+                      "label": "調整後の残高",
+                      "amount": null
+                    },
+                    "role": "total"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d4.amount",
+                "input": "numpad",
+                "answer": 720000
+              },
+              {
+                "ref": "c2.amount",
+                "input": "numpad",
+                "answer": 20000
+              },
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 95000
+              },
+              {
+                "ref": "c3.amount",
+                "input": "numpad",
+                "answer": 720000
+              }
+            ]
+          },
+          "explanation": "企業側は 640,000 + 95,000 − 15,000 = 720,000 円です。銀行側は 700,000 円に時間外の預け入れを足して 720,000 円になるので、預け入れは 20,000 円です。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u02-n2",
+      "title": "電子記録債権の譲渡と割引",
+      "meta": {
+        "goal": "譲渡と割引を書き、割引料を電子記録債権売却損にできる",
+        "topic": "電子記録債権の譲渡と割引",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "電子記録債権売却損"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u02-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "保有する電子記録債権 ¥500,000 を、期日前に銀行で割り引き、割引料 ¥7,500 を差し引かれた残額が普通預金に振り込まれた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 492500
+              },
+              {
+                "account": "電子記録債権売却損",
+                "amount": 7500
+              }
+            ],
+            "credit": [
+              {
+                "account": "電子記録債権",
+                "amount": 500000
+              }
+            ],
+            "accountOptions": [
+              "支払手数料",
+              "支払利息",
+              "普通預金",
+              "電子記録債権",
+              "売掛金",
+              "電子記録債権売却損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "割り引くと、期日より早くお金が入るかわりに、割引料が引かれます。この割引料は借方（左）の電子記録債権売却損で、債権は貸方（右）で全額消えます。",
+          "newAccounts": [
+            "電子記録債権売却損"
+          ]
+        },
+        {
+          "id": "b2-u02-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "仕入先への買掛金 ¥300,000 の支払いのため、保有する電子記録債権 ¥300,000 を、仕入先に譲渡した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "買掛金",
+                "amount": 300000
+              }
+            ],
+            "credit": [
+              {
+                "account": "電子記録債権",
+                "amount": 300000
+              }
+            ],
+            "accountOptions": [
+              "売掛金",
+              "仕入",
+              "電子記録債権",
+              "買掛金",
+              "電子記録債務"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "債権を渡して、払うべき買掛金を消しました。買掛金が借方（左）、渡した電子記録債権が貸方（右）です。"
+        },
+        {
+          "id": "b2-u02-n2-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "保有する電子記録債権 ¥250,000 を取引銀行に譲渡し、譲渡額 ¥246,000 が当座預金に入った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "当座預金",
+                "amount": 246000
+              },
+              {
+                "account": "電子記録債権売却損",
+                "amount": 4000
+              }
+            ],
+            "credit": [
+              {
+                "account": "電子記録債権",
+                "amount": 250000
+              }
+            ],
+            "accountOptions": [
+              "電子記録債権売却損",
+              "支払手数料",
+              "当座預金",
+              "電子記録債権",
+              "支払利息",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "250,000 円の債権を 246,000 円で譲ったので、4,000 円の損です。損は借方（左）の電子記録債権売却損にします。"
+        },
+        {
+          "id": "b2-u02-n2-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "保有する電子記録債権 ¥600,000 を、満期の 60 日前に銀行で割り引き、手取額が普通預金に振り込まれた。割引率は年 3.65% で、1年は 365 日として日割りで計算する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 596400
+              },
+              {
+                "account": "電子記録債権売却損",
+                "amount": 3600
+              }
+            ],
+            "credit": [
+              {
+                "account": "電子記録債権",
+                "amount": 600000
+              }
+            ],
+            "accountOptions": [
+              "支払利息",
+              "電子記録債権売却損",
+              "支払手数料",
+              "電子記録債権",
+              "普通預金",
+              "売掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "割引料は 600,000 × 3.65% × 60/365 = 3,600 円です。債権から引いた 596,400 円が手取りで、借方（左）の普通預金に入ります。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u02-n3",
+      "title": "売掛債権の譲渡（ファクタリング）",
+      "meta": {
+        "goal": "2社間と3社間で、手数料と入金の流れを書ける",
+        "topic": "売掛債権の譲渡",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u02-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "得意先から受け取るべき売掛金 ¥480,000 を、2社間ファクタリングで譲渡した（債権譲渡登記済み）。手数料 8% を差し引かれた手取額が普通預金に振り込まれた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 441600
+              },
+              {
+                "account": "売掛債権売却損",
+                "amount": 38400
+              }
+            ],
+            "credit": [
+              {
+                "account": "売掛金",
+                "amount": 480000
+              }
+            ],
+            "accountOptions": [
+              "電子記録債権売却損",
+              "支払手数料",
+              "売掛債権売却損",
+              "預り金",
+              "売掛金",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売掛金を売ったので、売掛金は貸方（右）で全額消えます。手数料 480,000 × 8% = 38,400 円は、借方（左）の売掛債権売却損です。",
+          "newAccounts": [
+            "売掛債権売却損"
+          ]
+        },
+        {
+          "id": "b2-u02-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "さきに2社間ファクタリングで譲渡した売掛債権 ¥480,000 の支払期日になり、得意先から当社の普通預金口座に振り込まれた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 480000
+              }
+            ],
+            "credit": [
+              {
+                "account": "預り金",
+                "amount": 480000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "普通預金",
+              "預り金",
+              "売掛金",
+              "仮受金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "2社間では、得意先はまだ当社に払います。このお金は当社のものではなく、あとでファクタリング会社へ渡すので、貸方（右）の預り金にします。",
+          "newAccounts": [
+            "預り金"
+          ]
+        },
+        {
+          "id": "b2-u02-n3-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "さきに預り金にしておいた ¥480,000 を、ファクタリング会社へ、普通預金から支払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "預り金",
+                "amount": 480000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 480000
+              }
+            ],
+            "accountOptions": [
+              "売掛債権売却損",
+              "普通預金",
+              "売掛金",
+              "買掛金",
+              "預り金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "預かっていたお金を、持ち主のファクタリング会社へ渡しました。預り金が借方（左）、普通預金が貸方（右）です。"
+        },
+        {
+          "id": "b2-u02-n3-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "得意先から受け取るべき売掛金 ¥900,000 を、3社間ファクタリングで譲渡した。得意先は承認している。手数料 5% を差し引かれた手取額が普通預金に振り込まれた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 855000
+              },
+              {
+                "account": "売掛債権売却損",
+                "amount": 45000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売掛金",
+                "amount": 900000
+              }
+            ],
+            "accountOptions": [
+              "売掛金",
+              "売掛債権売却損",
+              "預り金",
+              "支払手数料",
+              "電子記録債権売却損",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "3社間では、得意先が承認し、ファクタリング会社へ直接払います。売掛金を貸方（右）で消し、手数料 900,000 × 5% = 45,000 円を借方（左）の売掛債権売却損にします。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u02-n4",
+      "title": "営業外の電子記録債権と債務",
+      "meta": {
+        "goal": "固定資産の売買などで生じた電子記録債権と債務を、発生から決済まで書ける",
+        "topic": "営業外電子記録債権・債務",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "営業外電子記録債権",
+          "営業外電子記録債務"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u02-n4-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "営業用の車両 ¥1,200,000 を買い、代金は電子記録債務の発生記録で支払うこととした。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "車両運搬具",
+                "amount": 1200000
+              }
+            ],
+            "credit": [
+              {
+                "account": "営業外電子記録債務",
+                "amount": 1200000
+              }
+            ],
+            "accountOptions": [
+              "買掛金",
+              "未払金",
+              "営業外電子記録債務",
+              "車両運搬具",
+              "電子記録債務"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "商品ではないものを買ったときの電子記録債務は、営業外電子記録債務です。商品の仕入代金で生じる電子記録債務と区別します。",
+          "newAccounts": [
+            "営業外電子記録債務"
+          ]
+        },
+        {
+          "id": "b2-u02-n4-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "さきに発生記録をしていた営業外電子記録債務 ¥1,200,000 の支払期日になり、当座預金から引き落とされた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "営業外電子記録債務",
+                "amount": 1200000
+              }
+            ],
+            "credit": [
+              {
+                "account": "当座預金",
+                "amount": 1200000
+              }
+            ],
+            "accountOptions": [
+              "未払金",
+              "普通預金",
+              "電子記録債務",
+              "営業外電子記録債務",
+              "当座預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "払う義務が果たされたので、営業外電子記録債務が減ります（借方（左））。引き落とされた当座預金も減ります（貸方（右））。"
+        },
+        {
+          "id": "b2-u02-n4-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "使わなくなった備品（取得原価 ¥500,000、減価償却累計額 ¥300,000）を ¥180,000 で売却し、代金は電子記録債権の発生記録で受け取ることになった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 300000
+              },
+              {
+                "account": "営業外電子記録債権",
+                "amount": 180000
+              },
+              {
+                "account": "固定資産売却損",
+                "amount": 20000
+              }
+            ],
+            "credit": [
+              {
+                "account": "備品",
+                "amount": 500000
+              }
+            ],
+            "accountOptions": [
+              "営業外電子記録債権",
+              "備品",
+              "固定資産売却益",
+              "固定資産売却損",
+              "未収入金",
+              "電子記録債権",
+              "減価償却累計額"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "帳簿の上の値段は 500,000 − 300,000 = 200,000 円で、180,000 円で売ったので 20,000 円の損です。代金は商品以外の電子記録債権なので、営業外電子記録債権になります。",
+          "newAccounts": [
+            "営業外電子記録債権"
+          ]
+        },
+        {
+          "id": "b2-u02-n4-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "さきに発生記録をしていた営業外電子記録債権 ¥180,000 が、期日に普通預金へ振り込まれた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 180000
+              }
+            ],
+            "credit": [
+              {
+                "account": "営業外電子記録債権",
+                "amount": 180000
+              }
+            ],
+            "accountOptions": [
+              "電子記録債権",
+              "売上",
+              "未収入金",
+              "営業外電子記録債権",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "もらえる権利が現金に変わりました。普通預金が増え（借方（左））、営業外電子記録債権が減ります（貸方（右））。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u02-n5",
+      "title": "見分ける（債権の譲渡）",
+      "meta": {
+        "goal": "売却損、割引料、手数料、未収入金など、似た科目を見分けられる",
+        "topic": "債権の譲渡まわりの科目の見分け",
+        "minQuestions": 6,
+        "nodeType": "discriminate",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u02-n5-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "電子記録債権を期日前に銀行で割り引いたとき、差し引かれる割引料を処理する科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "支払利息",
+              "支払手数料",
+              "売掛債権売却損",
+              "電子記録債権売却損"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "電子記録債権を割り引いたり譲渡したりして生じる損は、電子記録債権売却損です。売掛金の売却と間違えないようにします。"
+        },
+        {
+          "id": "b2-u02-n5-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "売掛金を、ファクタリング会社へ売った。差し引かれる手数料を処理する科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "貸倒損失",
+              "電子記録債権売却損",
+              "支払手数料",
+              "売掛債権売却損"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "売掛金を売って生じる損は、売掛債権売却損です。貸倒れではないので、貸倒損失にはしません。"
+        },
+        {
+          "id": "b2-u02-n5-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "使わなくなった備品を売り、代金は電子記録債権の発生記録で受け取ることになった。借方に使う科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "売掛金",
+              "未収入金",
+              "営業外電子記録債権",
+              "電子記録債権"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "備品は商品ではないので、代金の電子記録債権は営業外電子記録債権です。商品を売って生じたものと区別します。"
+        },
+        {
+          "id": "b2-u02-n5-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "次の取引と科目を結びなさい。"
+          },
+          "task": {
+            "kind": "match",
+            "pairs": [
+              [
+                "商品の売上代金として生じた電子記録債権",
+                "電子記録債権"
+              ],
+              [
+                "備品の売却代金として生じた電子記録債権",
+                "営業外電子記録債権"
+              ],
+              [
+                "商品の仕入代金として生じた電子記録債務",
+                "電子記録債務"
+              ],
+              [
+                "備品の購入代金として生じた電子記録債務",
+                "営業外電子記録債務"
+              ]
+            ]
+          },
+          "explanation": "商品の取引で生じたものは営業の科目、商品以外（備品、車両など）の取引で生じたものは営業外の科目です。"
+        },
+        {
+          "id": "b2-u02-n5-q5",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "2社間ファクタリングで、譲渡した売掛債権の代金が、支払期日に得意先から当社の口座へ振り込まれた。貸方に使う科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "前受金",
+              "売掛金",
+              "預り金",
+              "売上"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "売掛金はすでに売って消えています。この入金はファクタリング会社へ渡すお金なので、預り金です。"
+        },
+        {
+          "id": "b2-u02-n5-q6",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "次の支払いと科目を結びなさい。"
+          },
+          "task": {
+            "kind": "match",
+            "pairs": [
+              [
+                "電子記録債権の割引料",
+                "電子記録債権売却損"
+              ],
+              [
+                "売掛金のファクタリングの手数料",
+                "売掛債権売却損"
+              ],
+              [
+                "営業外電子記録債権を譲渡したときの損",
+                "営業外電子記録債権売却損"
+              ],
+              [
+                "振り込みの手数料",
+                "支払手数料"
+              ]
+            ]
+          },
+          "explanation": "売るもの（債権）の種類で、損の科目の名前が変わります。手数料の科目は、債権を売るときではなく、単なるサービス料のときに使います。"
+        }
+      ]
+    }
+  ]
+}

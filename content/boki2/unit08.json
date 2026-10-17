@@ -1,0 +1,1166 @@
+{
+  "unit": {
+    "id": "b2-u08",
+    "course": "boki2",
+    "chapter": 8,
+    "title": "工場の1年（工業簿記の入門）"
+  },
+  "nodes": [
+    {
+      "id": "b2-u08-n1",
+      "title": "商業と何が違うか",
+      "meta": {
+        "goal": "商品の売買と、製品をつくる活動の違いが言える",
+        "topic": "商業簿記と工業簿記の違い",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 4,
+        "examSub": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "商業と製造業の言葉を、意味と組み合わせてください。"
+          },
+          "task": {
+            "kind": "match",
+            "pairs": [
+              [
+                "商品売買業の主な動き",
+                "仕入れた商品を売る"
+              ],
+              [
+                "製造業の主な動き",
+                "材料を加工して製品をつくり、売る"
+              ],
+              [
+                "仕掛品",
+                "つくりかけの製品"
+              ],
+              [
+                "製品",
+                "完成して売れる状態になったもの"
+              ]
+            ]
+          },
+          "explanation": "製造業は、材料に手を加えて製品に変える点が商品売買業と違います。つくりかけが仕掛品、完成したものが製品です。",
+          "source": "original",
+          "id": "b2-u08-n1-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造業のさくら木工が、製品の素になる材料を掛けで買った。借方に書く科目はどれか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "製品",
+              "材料",
+              "仕掛品",
+              "仕入"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "材料は商品ではなく、製品の素になる資産です。借方（左）は材料、貸方（右）は買掛金です。",
+          "source": "original",
+          "id": "b2-u08-n1-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造のために倉庫から出した主要な材料の原価は、まずどの科目に集めるか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "売上原価",
+              "製品",
+              "仕掛品",
+              "材料"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "材料を使ってつくっている途中のものは仕掛品です。借方（左）は仕掛品、貸方（右）は材料です。",
+          "source": "original",
+          "id": "b2-u08-n1-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製品が完成して製品倉庫に入った。その原価を借方に書く科目はどれか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "売上原価",
+              "仕掛品",
+              "材料",
+              "製品"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "完成した分の原価を、仕掛品から製品へ移します。借方（左）は製品、貸方（右）は仕掛品です。",
+          "source": "original",
+          "id": "b2-u08-n1-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "売れた製品の原価を、費用として表す科目はどれか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "仕掛品",
+              "売上原価",
+              "仕入",
+              "製品"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "売れたぶんは、資産の製品から費用の売上原価に変わります。借方（左）は売上原価、貸方（右）は製品です。",
+          "source": "original",
+          "id": "b2-u08-n1-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "商業簿記の「仕入」にあたる動きが、工業簿記では何段階かに分かれる。その順番として正しいものはどれか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "材料 → 仕掛品 → 製品 → 売上原価",
+              "製品 → 材料 → 仕掛品 → 売上原価",
+              "材料 → 製品 → 仕掛品 → 売上原価",
+              "仕掛品 → 材料 → 売上原価 → 製品"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "材料を使ってつくりかけの仕掛品になり、完成すると製品、売れると売上原価に移ります。",
+          "source": "original",
+          "id": "b2-u08-n1-q6",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u08-n2",
+      "title": "原価の分け方",
+      "meta": {
+        "goal": "材料費、労務費、経費、直接費と間接費、変動費と固定費、製品原価と期間原価を分けられる",
+        "topic": "原価の分類",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 4,
+        "examSub": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "次の費用は、どの分類に入れるか。\n特定の製品のために外部へ頼んだ加工の代金"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "直接労務費",
+              "直接経費",
+              "販売費及び一般管理費",
+              "直接材料費"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "製品に直接結びつく経費なので、直接経費です。",
+          "source": "original",
+          "id": "b2-u08-n2-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "次の費用は、どの分類に入れるか。\n工場長に払った給料"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "直接経費",
+              "直接材料費",
+              "直接労務費",
+              "製造間接費"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "工場全体のための労務費で、製品ごとに分けられないので、製造間接費です。",
+          "source": "original",
+          "id": "b2-u08-n2-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "次の費用は、どの分類に入れるか。\n本社の経理部に払った給料"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "直接経費",
+              "製造間接費",
+              "販売費及び一般管理費",
+              "直接労務費"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "製造とは関係ない管理の費用なので、製造原価に入れません。",
+          "source": "original",
+          "id": "b2-u08-n2-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "次の費用は、どの分類に入れるか。\n工場で使う掃除用の消耗品の費用"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "販売費及び一般管理費",
+              "直接材料費",
+              "直接労務費",
+              "製造間接費"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "製品との結びつきが直接わからない材料なので、製造間接費です。",
+          "source": "original",
+          "id": "b2-u08-n2-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ほたる鋳工の当月の費用は、直接材料費230,000円、直接労務費540,000円、直接経費170,000円、製造間接費130,000円である。製造原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1070000
+          },
+          "explanation": "直接費の3つと製造間接費を足したものが製造原価です。",
+          "source": "generated",
+          "id": "b2-u08-n2-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あさひ印刷工場の当月の費用は、直接材料費740,000円、直接労務費280,000円、直接経費135,000円、製造間接費370,000円である。製造原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1525000
+          },
+          "explanation": "直接費の3つと製造間接費を足したものが製造原価です。",
+          "source": "generated",
+          "id": "b2-u08-n2-q6",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造間接費の内訳は、間接材料費50,000円、間接労務費240,000円、間接経費40,000円である。製造間接費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 330000
+          },
+          "explanation": "間接材料費、間接労務費、間接経費の合計が製造間接費です。",
+          "source": "generated",
+          "id": "b2-u08-n2-q7",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造原価が950,000円、販売費が180,000円、一般管理費が340,000円のとき、総原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1470000
+          },
+          "explanation": "製造原価に販売費と一般管理費を足したものが総原価です。",
+          "source": "generated",
+          "id": "b2-u08-n2-q8",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "操業度が増えても、総額が変わらない原価を何というか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "間接費",
+              "固定費",
+              "変動費",
+              "直接費"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "操業度に関係なく一定額かかる原価が固定費です。変動費は操業度に比例して増えます。",
+          "source": "original",
+          "id": "b2-u08-n2-q9",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u08-n3",
+      "title": "原価の流れ",
+      "meta": {
+        "goal": "材料、労務費、経費、仕掛品、製品、売上原価の流れを、勘定の連絡で書ける",
+        "topic": "原価の流れと勘定の連絡",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 4,
+        "examSub": 1,
+        "introduces": [
+          "材料",
+          "労務費",
+          "経費",
+          "仕掛品",
+          "製品",
+          "製造間接費"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "たちばな陶器で、当月に材料を製造のために出庫した。製品の部品として使った分が160,000円、工場で使う消耗品として出した分が45,000円だった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕掛品",
+                "amount": 160000
+              },
+              {
+                "account": "製造間接費",
+                "amount": 45000
+              }
+            ],
+            "credit": [
+              {
+                "account": "材料",
+                "amount": 205000
+              }
+            ],
+            "accountOptions": [
+              "製造間接費",
+              "材料",
+              "仕掛品",
+              "製品",
+              "賃金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "製品に直接使った材料は仕掛品、工場の消耗品は製造間接費です。借方（左）は仕掛品と製造間接費、貸方（右）は材料です。",
+          "source": "generated",
+          "id": "b2-u08-n3-q1",
+          "sanitized": true,
+          "newAccounts": [
+            "製造間接費",
+            "材料"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "みなと金属で、当月に材料を製造のために出庫した。製品の部品として使った分が570,000円、工場で使う消耗品として出した分が40,000円だった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕掛品",
+                "amount": 570000
+              },
+              {
+                "account": "製造間接費",
+                "amount": 40000
+              }
+            ],
+            "credit": [
+              {
+                "account": "材料",
+                "amount": 610000
+              }
+            ],
+            "accountOptions": [
+              "製品",
+              "仕掛品",
+              "材料",
+              "賃金",
+              "製造間接費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "製品に直接使った材料は仕掛品、工場の消耗品は製造間接費です。借方（左）は仕掛品と製造間接費、貸方（右）は材料です。",
+          "source": "generated",
+          "id": "b2-u08-n3-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "かもめ化成で、当月に製品が完成し、製造原価950,000円の製品を製品倉庫へ入れた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "製品",
+                "amount": 950000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕掛品",
+                "amount": 950000
+              }
+            ],
+            "accountOptions": [
+              "材料",
+              "製品",
+              "売上原価",
+              "仕掛品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "完成した原価を、仕掛品から製品へ移します。借方（左）は製品、貸方（右）は仕掛品です。",
+          "source": "generated",
+          "id": "b2-u08-n3-q3",
+          "sanitized": true,
+          "newAccounts": [
+            "製品"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "くろまつ工業で、当月に製品が完成し、製造原価800,000円の製品を製品倉庫へ入れた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "製品",
+                "amount": 800000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕掛品",
+                "amount": 800000
+              }
+            ],
+            "accountOptions": [
+              "製品",
+              "材料",
+              "売上原価",
+              "仕掛品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "完成した原価を、仕掛品から製品へ移します。借方（左）は製品、貸方（右）は仕掛品です。",
+          "source": "generated",
+          "id": "b2-u08-n3-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "しらかば製紙の4月の仕掛品勘定を完成させる。月初仕掛品310,000円、当月の直接材料費780,000円、直接労務費480,000円、製造間接費の配賦額240,000円、月末仕掛品250,000円。完成した製品の原価は、月初と当月投入の合計から月末を引いて求める。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "仕掛品"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "前期繰越",
+                      "counterAccount": "前期繰越",
+                      "amount": 310000
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "材料",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "賃金",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d4",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "製造間接費",
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "製品",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "次期繰越",
+                      "amount": 250000
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 780000
+              },
+              {
+                "ref": "d3.amount",
+                "input": "numpad",
+                "answer": 480000
+              },
+              {
+                "ref": "d4.amount",
+                "input": "numpad",
+                "answer": 240000
+              },
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 1560000
+              }
+            ]
+          },
+          "explanation": "借方（左）は月初の仕掛品に、当月の材料、賃金、製造間接費を足します。貸方（右）は、完成した製品と月末の仕掛品に分かれます。",
+          "source": "original",
+          "id": "b2-u08-n3-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "いずみ樹脂の4月の仕掛品勘定を完成させる。月初仕掛品390,000円、当月の直接材料費720,000円、直接労務費300,000円、製造間接費の配賦額190,000円、月末仕掛品130,000円。完成した製品の原価は、月初と当月投入の合計から月末を引いて求める。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "仕掛品"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "前期繰越",
+                      "counterAccount": "前期繰越",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "材料",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "賃金",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d4",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "製造間接費",
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "製品",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "次期繰越",
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 390000
+              },
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 720000
+              },
+              {
+                "ref": "d3.amount",
+                "input": "numpad",
+                "answer": 300000
+              },
+              {
+                "ref": "d4.amount",
+                "input": "numpad",
+                "answer": 190000
+              },
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 1470000
+              },
+              {
+                "ref": "c2.amount",
+                "input": "numpad",
+                "answer": 130000
+              }
+            ]
+          },
+          "explanation": "借方（左）は月初の仕掛品に、当月の材料、賃金、製造間接費を足します。貸方（右）は、完成した製品と月末の仕掛品に分かれます。",
+          "source": "original",
+          "id": "b2-u08-n3-q6",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ふじなみ機械の月初仕掛品は420,000円、当月の製造費用は1,350,000円、月末仕掛品は170,000円である。当月に完成した製品の原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1600000
+          },
+          "explanation": "月初仕掛品に当月の製造費用を足し、月末仕掛品を引くと、完成した製品の原価になります。",
+          "source": "generated",
+          "id": "b2-u08-n3-q7",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "やまぶき電機の月初仕掛品は380,000円、当月の製造費用は2,550,000円、月末仕掛品は230,000円である。当月に完成した製品の原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 2700000
+          },
+          "explanation": "月初仕掛品に当月の製造費用を足し、月末仕掛品を引くと、完成した製品の原価になります。",
+          "source": "generated",
+          "id": "b2-u08-n3-q8",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u08-n4",
+      "title": "製造原価報告書",
+      "meta": {
+        "goal": "当期製品製造原価を、製造原価報告書から損益計算書につなげられる",
+        "topic": "製造原価報告書",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "材料の期首棚卸高が200,000円、当期仕入高が980,000円、期末棚卸高が70,000円のとき、当期の材料費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1110000
+          },
+          "explanation": "期首棚卸高に当期仕入高を足し、期末棚卸高を引いたものが当期の材料費です。",
+          "source": "generated",
+          "id": "b2-u08-n4-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "材料の期首棚卸高が150,000円、当期仕入高が420,000円、期末棚卸高が70,000円のとき、当期の材料費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 500000
+          },
+          "explanation": "期首棚卸高に当期仕入高を足し、期末棚卸高を引いたものが当期の材料費です。",
+          "source": "generated",
+          "id": "b2-u08-n4-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "つばめ精機の当期の材料費800,000円、労務費830,000円、経費200,000円、期首仕掛品210,000円、期末仕掛品360,000円のとき、当期製品製造原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1680000
+          },
+          "explanation": "材料費、労務費、経費が当期総製造費用です。これに期首仕掛品を足し、期末仕掛品を引いたものが当期製品製造原価です。",
+          "source": "generated",
+          "id": "b2-u08-n4-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "わかくさ縫製の当期の材料費1,260,000円、労務費510,000円、経費330,000円、期首仕掛品100,000円、期末仕掛品310,000円のとき、当期製品製造原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1890000
+          },
+          "explanation": "材料費、労務費、経費が当期総製造費用です。これに期首仕掛品を足し、期末仕掛品を引いたものが当期製品製造原価です。",
+          "source": "generated",
+          "id": "b2-u08-n4-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製品の期首棚卸高160,000円、当期製品製造原価3,650,000円、期末棚卸高230,000円のとき、損益計算書の売上原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 3580000
+          },
+          "explanation": "製品の期首棚卸高に当期製品製造原価を足し、期末棚卸高を引くと売上原価になります。",
+          "source": "generated",
+          "id": "b2-u08-n4-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造原価報告書の抜粋である。材料費960,000円、労務費540,000円、経費210,000円、期首仕掛品180,000円、期末仕掛品150,000円。空欄「当期総製造費用」は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1710000
+          },
+          "explanation": "材料費、労務費、経費の合計が当期総製造費用です。期首と期末の仕掛品は、その次の段階で加減します。",
+          "source": "original",
+          "id": "b2-u08-n4-q6",
+          "sanitized": true
+        },
+        {
+          "id": "b2-u08-n4-f1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "製造原価報告書の空欄を埋める。材料費、労務費、経費、期首仕掛品、期末仕掛品が与えられている。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "cost_report",
+              "data": {
+                "header": {
+                  "title": "製造原価報告書"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "label": "材料費",
+                      "detail": null,
+                      "amount": 820000
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "label": "労務費",
+                      "detail": null,
+                      "amount": 470000
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "label": "経費",
+                      "detail": null,
+                      "amount": 190000
+                    }
+                  },
+                  {
+                    "key": "r4",
+                    "role": "subtotal",
+                    "ruledAfter": "single",
+                    "cells": {
+                      "label": "当期総製造費用",
+                      "detail": null,
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "r5",
+                    "cells": {
+                      "label": "期首仕掛品棚卸高",
+                      "detail": null,
+                      "amount": 160000
+                    }
+                  },
+                  {
+                    "key": "r6",
+                    "role": "subtotal",
+                    "ruledAfter": "single",
+                    "cells": {
+                      "label": "合計",
+                      "detail": null,
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "r7",
+                    "cells": {
+                      "label": "期末仕掛品棚卸高",
+                      "detail": null,
+                      "amount": 130000
+                    }
+                  },
+                  {
+                    "key": "r8",
+                    "role": "total",
+                    "ruledAfter": "double",
+                    "cells": {
+                      "label": "当期製品製造原価",
+                      "detail": null,
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r4.amount",
+                "input": "numpad",
+                "answer": 1480000
+              },
+              {
+                "ref": "r6.amount",
+                "input": "numpad",
+                "answer": 1640000
+              },
+              {
+                "ref": "r8.amount",
+                "input": "numpad",
+                "answer": 1510000
+              }
+            ]
+          },
+          "explanation": "材料費、労務費、経費を足して当期総製造費用を出し、期首仕掛品を足して、期末仕掛品を引きます。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u08-n5",
+      "title": "工業簿記の仕訳",
+      "meta": {
+        "goal": "工場の取引を、仕訳で書ける（第4問(1)の形）",
+        "topic": "工業簿記の仕訳",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 4,
+        "examSub": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "みなと金属は、材料830,000円を掛けで買い入れた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "材料",
+                "amount": 830000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 830000
+              }
+            ],
+            "accountOptions": [
+              "仕入",
+              "買掛金",
+              "仕掛品",
+              "材料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "買い入れた材料は資産なので、借方（左）は材料です。代金はまだ払っていないので、貸方（右）は買掛金です。",
+          "source": "generated",
+          "id": "b2-u08-n5-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ふじなみ機械は、材料270,000円を掛けで買い入れた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "材料",
+                "amount": 270000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 270000
+              }
+            ],
+            "accountOptions": [
+              "材料",
+              "買掛金",
+              "仕掛品",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "買い入れた材料は資産なので、借方（左）は材料です。代金はまだ払っていないので、貸方（右）は買掛金です。",
+          "source": "generated",
+          "id": "b2-u08-n5-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ふじなみ機械は、当月に製造のため材料を出庫した。直接材料の消費高が670,000円、間接材料の消費高が130,000円である。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕掛品",
+                "amount": 670000
+              },
+              {
+                "account": "製造間接費",
+                "amount": 130000
+              }
+            ],
+            "credit": [
+              {
+                "account": "材料",
+                "amount": 800000
+              }
+            ],
+            "accountOptions": [
+              "製造間接費",
+              "仕掛品",
+              "賃金",
+              "材料",
+              "製品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "直接材料の消費は仕掛品、間接材料の消費は製造間接費です。借方（左）は仕掛品と製造間接費、貸方（右）は材料です。",
+          "source": "generated",
+          "id": "b2-u08-n5-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "たちばな陶器は、当月に製造のため材料を出庫した。直接材料の消費高が690,000円、間接材料の消費高が90,000円である。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕掛品",
+                "amount": 690000
+              },
+              {
+                "account": "製造間接費",
+                "amount": 90000
+              }
+            ],
+            "credit": [
+              {
+                "account": "材料",
+                "amount": 780000
+              }
+            ],
+            "accountOptions": [
+              "仕掛品",
+              "賃金",
+              "製造間接費",
+              "材料",
+              "製品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "直接材料の消費は仕掛品、間接材料の消費は製造間接費です。借方（左）は仕掛品と製造間接費、貸方（右）は材料です。",
+          "source": "generated",
+          "id": "b2-u08-n5-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あかね繊維は、当月の賃金の消費高を計上した。直接工の直接作業分が730,000円、間接作業分が120,000円である。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕掛品",
+                "amount": 730000
+              },
+              {
+                "account": "製造間接費",
+                "amount": 120000
+              }
+            ],
+            "credit": [
+              {
+                "account": "賃金",
+                "amount": 850000
+              }
+            ],
+            "accountOptions": [
+              "製品",
+              "材料",
+              "仕掛品",
+              "賃金",
+              "製造間接費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "直接作業の賃金は仕掛品、間接作業の賃金は製造間接費です。借方（左）は仕掛品と製造間接費、貸方（右）は賃金です。",
+          "source": "original",
+          "id": "b2-u08-n5-q5",
+          "sanitized": true,
+          "newAccounts": [
+            "賃金"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "みなと金属は、工場の機械の当月の減価償却費60,000円を、製造間接費として処理した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "製造間接費",
+                "amount": 60000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却費",
+                "amount": 60000
+              }
+            ],
+            "accountOptions": [
+              "材料",
+              "減価償却費",
+              "製造間接費",
+              "仕掛品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "工場の減価償却費は製造間接費に集めます。借方（左）は製造間接費、貸方（右）は減価償却費です。",
+          "source": "original",
+          "id": "b2-u08-n5-q6",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "いずみ樹脂は、製品を掛けで1,300,000円で売り上げた。この製品の製造原価は900,000円である。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 1300000
+              },
+              {
+                "account": "売上原価",
+                "amount": 900000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 1300000
+              },
+              {
+                "account": "製品",
+                "amount": 900000
+              }
+            ],
+            "accountOptions": [
+              "仕掛品",
+              "売掛金",
+              "製品",
+              "売上",
+              "売上原価",
+              "買掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売上は借方（左）の売掛金と貸方（右）の売上、原価は借方（左）の売上原価と貸方（右）の製品です。",
+          "source": "original",
+          "id": "b2-u08-n5-q7",
+          "sanitized": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1161 @@
+{
+  "unit": {
+    "id": "b3-u05",
+    "course": "boki3",
+    "chapter": 5,
+    "title": "商品売買の基本"
+  },
+  "nodes": [
+    {
+      "id": "b3-u05-n1",
+      "title": "三分法",
+      "meta": {
+        "goal": "仕入、売上、繰越商品の3つで売り買いを書ける",
+        "topic": "三分法",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "しおかぜ文具店が、ノートを現金70,000円で仕入れた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 70000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 70000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "売掛金",
+              "繰越商品",
+              "買掛金",
+              "仕入",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "三分法では、買ったときは、まだ売れていなくても仕入（費用）として借方（左）に書きます。現金が減るので、貸方（右）は現金です。",
+          "id": "b3-u05-n1-q1",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "かわせみ雑貨店が、商品150,000円を掛けで売った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 150000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 150000
+              }
+            ],
+            "accountOptions": [
+              "売掛金",
+              "売上",
+              "買掛金",
+              "現金",
+              "繰越商品",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "商品を売ったときは、売れた金額を売上に書きます。代金はあとなので、借方（左）は売掛金です。",
+          "id": "b3-u05-n1-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ひばり楽器店が、商品240,000円を仕入れ、100,000円は現金で払い、残りは掛けとした。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 240000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 100000
+              },
+              {
+                "account": "買掛金",
+                "amount": 140000
+              }
+            ],
+            "accountOptions": [
+              "繰越商品",
+              "現金",
+              "買掛金",
+              "売掛金",
+              "売上",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "仕入は全額の240,000円を借方（左）に書きます。払い方が2つあるので、貸方（右）は現金と買掛金に分けます。",
+          "id": "b3-u05-n1-q3",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "とうげ茶房が、商品320,000円を売り、120,000円は現金で受け取り、残りは掛けとした。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 120000
+              },
+              {
+                "account": "売掛金",
+                "amount": 200000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 320000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "仕入",
+              "繰越商品",
+              "売掛金",
+              "現金",
+              "買掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売上は全額の320,000円を貸方（右）に書きます。受け取り方が2つあるので、借方（左）は現金と売掛金に分けます。",
+          "id": "b3-u05-n1-q4",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b3-u05-n2",
+      "title": "返品",
+      "meta": {
+        "goal": "仕入側と売上側の返品を、鏡像として続けて書ける",
+        "topic": "仕入返品と売上返品",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "みずほ文具店が、掛けで仕入れた商品のうち、品違いだった15,000円分を仕入先に返した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "買掛金",
+                "amount": 15000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕入",
+                "amount": 15000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "買掛金",
+              "売上",
+              "売掛金",
+              "繰越商品",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "返すと、払う予定のお金が減るので、借方（左）は買掛金です。仕入れた分も取り消されるので、貸方（右）は仕入です。",
+          "id": "b3-u05-n2-q1",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "くるみ雑貨店が、掛けで売った商品のうち、22,000円分が返ってきた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売上",
+                "amount": 22000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売掛金",
+                "amount": 22000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "仕入",
+              "売掛金",
+              "買掛金",
+              "現金",
+              "繰越商品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "返ってくると、もらう予定のお金が減るので、貸方（右）は売掛金です。売った分も取り消されるので、借方（左）は売上で、仕入側の返品と貸借が鏡になります。",
+          "id": "b3-u05-n2-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "いなほ商店が、現金で仕入れた商品のうち、傷があった9,000円分を返し、代金が現金で戻ってきた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 9000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕入",
+                "amount": 9000
+              }
+            ],
+            "accountOptions": [
+              "売掛金",
+              "買掛金",
+              "売上",
+              "仕入",
+              "現金",
+              "繰越商品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "返して現金が戻ったので、借方（左）は現金。仕入れた分が取り消されるので、貸方（右）は仕入です。",
+          "id": "b3-u05-n2-q3",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あまね商店の買掛金勘定。\n7/3 商品100,000円を掛けで仕入れた\n7/10 品違いの15,000円分を返した\n7/31 残りを現金で払った"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "買掛金"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "7/10",
+                      "counterAccount": "仕入",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "7/31",
+                      "counterAccount": "現金",
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "7/3",
+                      "counterAccount": "仕入",
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 100000
+              },
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 15000
+              },
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 85000
+              }
+            ]
+          },
+          "explanation": "仕入れた100,000円は貸方（右）に増えます。返した15,000円と払った85,000円は、どちらも買掛金を減らすので借方（左）で、借方と貸方の合計が同じ100,000円になります。",
+          "id": "b3-u05-n2-q4",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b3-u05-n3",
+      "title": "諸掛り",
+      "meta": {
+        "goal": "仕入にかかる費用と、売るときの発送費を書き分けられる",
+        "topic": "仕入諸掛りと発送費",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "発送費"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "もみじ商店が、商品100,000円を掛けで仕入れた。あわせて、引取運賃3,000円を現金で払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 103000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 100000
+              },
+              {
+                "account": "現金",
+                "amount": 3000
+              }
+            ],
+            "accountOptions": [
+              "仕入",
+              "買掛金",
+              "売掛金",
+              "売上",
+              "現金",
+              "発送費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "商品を買って自分の店まで運ぶ費用は、商品の値段の一部として仕入に足します。借方（左）は103,000円の仕入です。",
+          "id": "b3-u05-n3-q1",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ほたる雑貨店が、売った商品を客に届ける運賃4,000円を現金で払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "発送費",
+                "amount": 4000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 4000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "売掛金",
+              "発送費",
+              "仕入",
+              "買掛金",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売ったあとに客へ届ける運賃は、売るための費用です。仕入には足さず、発送費に書きます。",
+          "id": "b3-u05-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "発送費"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "さざなみ工房が、仕入れた商品を店まで運ぶ運賃を払った。この運賃は、どこに書く？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "仕入に足す",
+              "発送費に書く",
+              "売上から引く",
+              "備品に書く"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "買って店に運び込むまでが、商品を手に入れる費用です。だから仕入に足します。",
+          "id": "b3-u05-n3-q3",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ひだまり商会の仕入勘定。\n8/5 商品260,000円を掛けで仕入れ、引取運賃6,000円を現金で払った"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "仕入"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "8/5",
+                      "counterAccount": "買掛金",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "8/5",
+                      "counterAccount": null,
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": []
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 260000
+              },
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 6000
+              },
+              {
+                "ref": "d2.counterAccount",
+                "input": "account_picker",
+                "answer": "現金",
+                "accountOptions": [
+                  "現金",
+                  "買掛金",
+                  "売掛金",
+                  "発送費"
+                ]
+              }
+            ]
+          },
+          "explanation": "商品の代金と、店まで運ぶ運賃は、どちらも仕入の借方（左）側に足します。運賃を払った相手の科目は現金です。",
+          "id": "b3-u05-n3-q4",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あやめ書店が、商品250,000円を掛けで仕入れた。あわせて、引取運賃8,000円を現金で払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 258000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 250000
+              },
+              {
+                "account": "現金",
+                "amount": 8000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "仕入",
+              "売掛金",
+              "発送費",
+              "売上",
+              "買掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "運賃8,000円も仕入に足して、仕入は258,000円です。貸方（右）は、買掛金と現金に分けます。",
+          "id": "b3-u05-n3-q5",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "取引と、書く科目を結ぶ。"
+          },
+          "task": {
+            "kind": "match",
+            "pairs": [
+              [
+                "商品を買って店まで運ぶ運賃",
+                "仕入"
+              ],
+              [
+                "売った商品を客に届ける運賃",
+                "発送費"
+              ],
+              [
+                "商品を掛けで売った金額",
+                "売上"
+              ],
+              [
+                "代金をあとで払う約束",
+                "買掛金"
+              ]
+            ]
+          },
+          "explanation": "買うための運賃は仕入に足し、売るための運賃は発送費に書きます。",
+          "id": "b3-u05-n3-q6",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b3-u05-n4",
+      "title": "相手別の元帳と仕入帳、売上帳",
+      "meta": {
+        "goal": "売掛金元帳、買掛金元帳、仕入帳、売上帳に記入できる",
+        "topic": "補助元帳と仕入帳・売上帳の記入",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "くすのき文具店の10月の仕入帳。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "purchase_book",
+              "data": {
+                "header": {
+                  "title": "仕入帳",
+                  "company": "くすのき文具店"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "date": "10/3",
+                      "summary": "クスノキ商会 掛け",
+                      "detail": null,
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "r1a",
+                    "cells": {
+                      "date": null,
+                      "summary": "ボールペン 60本 @90円",
+                      "detail": null,
+                      "amount": null
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r1b",
+                    "cells": {
+                      "date": null,
+                      "summary": "ノート 30冊 @160円",
+                      "detail": 4800,
+                      "amount": null
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "date": "10/9",
+                      "summary": "クスノキ商会 掛け返品",
+                      "detail": null,
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "r2a",
+                    "cells": {
+                      "date": null,
+                      "summary": "ノート 4冊 @160円",
+                      "detail": 640,
+                      "amount": 640
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "date": "10/16",
+                      "summary": "ハナミズキ工房 現金",
+                      "detail": null,
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "r3a",
+                    "cells": {
+                      "date": null,
+                      "summary": "画用紙 25枚 @120円",
+                      "detail": 3000,
+                      "amount": null
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r3b",
+                    "cells": {
+                      "date": null,
+                      "summary": "スケッチブック 12冊 @280円",
+                      "detail": 3360,
+                      "amount": 6360
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r-g",
+                    "cells": {
+                      "date": "10/31",
+                      "summary": "総仕入高",
+                      "detail": null,
+                      "amount": null
+                    },
+                    "role": "summary"
+                  },
+                  {
+                    "key": "r-r",
+                    "cells": {
+                      "date": null,
+                      "summary": "仕入戻し高",
+                      "detail": null,
+                      "amount": 640
+                    },
+                    "role": "summary"
+                  },
+                  {
+                    "key": "r-n",
+                    "cells": {
+                      "date": null,
+                      "summary": "純仕入高",
+                      "detail": null,
+                      "amount": null
+                    },
+                    "role": "summary",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1a.detail",
+                "input": "numpad",
+                "answer": 5400
+              },
+              {
+                "ref": "r1b.amount",
+                "input": "numpad",
+                "answer": 10200
+              },
+              {
+                "ref": "r-g.amount",
+                "input": "numpad",
+                "answer": 16560
+              },
+              {
+                "ref": "r-n.amount",
+                "input": "numpad",
+                "answer": 15920
+              }
+            ]
+          },
+          "explanation": "ボールペン60本は90円×60本で5,400円で、ノートと合わせて10,200円です。純仕入高は、総仕入高から返した分を引いた金額です。",
+          "id": "b3-u05-n4-q1",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あかね書店の11月の売上帳。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "sales_book",
+              "data": {
+                "header": {
+                  "title": "売上帳",
+                  "company": "あかね書店"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "date": "11/4",
+                      "summary": "ミドリ書房 掛け",
+                      "detail": null,
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "r1a",
+                    "cells": {
+                      "date": null,
+                      "summary": "絵本 20冊 @900円",
+                      "detail": 18000,
+                      "amount": null
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r1b",
+                    "cells": {
+                      "date": null,
+                      "summary": "図鑑 5冊 @2,400円",
+                      "detail": null,
+                      "amount": 30000
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "date": "11/11",
+                      "summary": "ミドリ書房 掛け返品",
+                      "detail": null,
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "r2a",
+                    "cells": {
+                      "date": null,
+                      "summary": "絵本 3冊 @900円",
+                      "detail": null,
+                      "amount": 2700
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "date": "11/22",
+                      "summary": "ヒカリ学習社 現金",
+                      "detail": null,
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "r3a",
+                    "cells": {
+                      "date": null,
+                      "summary": "辞典 4冊 @3,000円",
+                      "detail": 12000,
+                      "amount": 12000
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r-g",
+                    "cells": {
+                      "date": "11/30",
+                      "summary": "総売上高",
+                      "detail": null,
+                      "amount": null
+                    },
+                    "role": "summary"
+                  },
+                  {
+                    "key": "r-r",
+                    "cells": {
+                      "date": null,
+                      "summary": "売上戻り高",
+                      "detail": null,
+                      "amount": 2700
+                    },
+                    "role": "summary"
+                  },
+                  {
+                    "key": "r-n",
+                    "cells": {
+                      "date": null,
+                      "summary": "純売上高",
+                      "detail": null,
+                      "amount": null
+                    },
+                    "role": "summary",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1b.detail",
+                "input": "numpad",
+                "answer": 12000
+              },
+              {
+                "ref": "r2a.detail",
+                "input": "numpad",
+                "answer": 2700
+              },
+              {
+                "ref": "r-g.amount",
+                "input": "numpad",
+                "answer": 42000
+              },
+              {
+                "ref": "r-n.amount",
+                "input": "numpad",
+                "answer": 39300
+              }
+            ]
+          },
+          "explanation": "図鑑5冊は2,400円×5冊で12,000円、絵本の返品3冊は900円×3冊で2,700円です。純売上高は、総売上高から返ってきた分を引きます。",
+          "id": "b3-u05-n4-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "くすのき文具店の、仕入先クスノキ商会への買掛金元帳。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "supplier_ledger",
+              "data": {
+                "header": {
+                  "title": "買掛金元帳",
+                  "subject": "クスノキ商会"
+                },
+                "rows": [
+                  {
+                    "key": "r0",
+                    "cells": {
+                      "date": "10/1",
+                      "summary": "前月繰越",
+                      "folio": null,
+                      "debit": null,
+                      "credit": 30000,
+                      "side": "貸",
+                      "balance": 30000
+                    },
+                    "role": "opening"
+                  },
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "date": "10/3",
+                      "summary": "仕入",
+                      "folio": null,
+                      "debit": null,
+                      "credit": 14000,
+                      "side": "貸",
+                      "balance": null
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "date": "10/9",
+                      "summary": "返品",
+                      "folio": null,
+                      "debit": 1000,
+                      "credit": null,
+                      "side": "貸",
+                      "balance": null
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "date": "10/20",
+                      "summary": "支払い",
+                      "folio": null,
+                      "debit": 30000,
+                      "credit": null,
+                      "side": "貸",
+                      "balance": null
+                    }
+                  },
+                  {
+                    "key": "r-cf",
+                    "cells": {
+                      "date": "10/31",
+                      "summary": "次月繰越",
+                      "folio": null,
+                      "debit": 13000,
+                      "credit": null,
+                      "side": null,
+                      "balance": null
+                    },
+                    "role": "carryforward"
+                  },
+                  {
+                    "key": "r-t",
+                    "cells": {
+                      "date": null,
+                      "summary": null,
+                      "folio": null,
+                      "debit": 44000,
+                      "credit": null,
+                      "side": null,
+                      "balance": null
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  },
+                  {
+                    "key": "r-op",
+                    "cells": {
+                      "date": "11/1",
+                      "summary": "前月繰越",
+                      "folio": null,
+                      "debit": null,
+                      "credit": 13000,
+                      "side": "貸",
+                      "balance": 13000
+                    },
+                    "role": "opening"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.balance",
+                "input": "numpad",
+                "answer": 44000
+              },
+              {
+                "ref": "r2.balance",
+                "input": "numpad",
+                "answer": 43000
+              },
+              {
+                "ref": "r3.balance",
+                "input": "numpad",
+                "answer": 13000
+              },
+              {
+                "ref": "r-t.credit",
+                "input": "numpad",
+                "answer": 44000
+              }
+            ]
+          },
+          "explanation": "買掛金元帳は、仕入れたら貸方（右）に増え、返品や支払いで借方（左）に減ります。月末の残高13,000円が次の月へ繰り越されます。",
+          "id": "b3-u05-n4-q3",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あかね書店の、得意先ミドリ書房への売掛金元帳。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "customer_ledger",
+              "data": {
+                "header": {
+                  "title": "売掛金元帳",
+                  "subject": "ミドリ書房"
+                },
+                "rows": [
+                  {
+                    "key": "r0",
+                    "cells": {
+                      "date": "11/1",
+                      "summary": "前月繰越",
+                      "folio": null,
+                      "debit": 45000,
+                      "credit": null,
+                      "side": "借",
+                      "balance": 45000
+                    },
+                    "role": "opening"
+                  },
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "date": "11/4",
+                      "summary": "売上",
+                      "folio": null,
+                      "debit": 30000,
+                      "credit": null,
+                      "side": "借",
+                      "balance": null
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "date": "11/11",
+                      "summary": "返品",
+                      "folio": null,
+                      "debit": null,
+                      "credit": 2700,
+                      "side": "借",
+                      "balance": null
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "date": "11/25",
+                      "summary": "回収",
+                      "folio": null,
+                      "debit": null,
+                      "credit": 45000,
+                      "side": "借",
+                      "balance": null
+                    }
+                  },
+                  {
+                    "key": "r-cf",
+                    "cells": {
+                      "date": "11/30",
+                      "summary": "次月繰越",
+                      "folio": null,
+                      "debit": null,
+                      "credit": 27300,
+                      "side": null,
+                      "balance": null
+                    },
+                    "role": "carryforward"
+                  },
+                  {
+                    "key": "r-t",
+                    "cells": {
+                      "date": null,
+                      "summary": null,
+                      "folio": null,
+                      "debit": null,
+                      "credit": 75000,
+                      "side": null,
+                      "balance": null
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  },
+                  {
+                    "key": "r-op",
+                    "cells": {
+                      "date": "12/1",
+                      "summary": "前月繰越",
+                      "folio": null,
+                      "debit": 27300,
+                      "credit": null,
+                      "side": "借",
+                      "balance": 27300
+                    },
+                    "role": "opening"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.balance",
+                "input": "numpad",
+                "answer": 75000
+              },
+              {
+                "ref": "r2.balance",
+                "input": "numpad",
+                "answer": 72300
+              },
+              {
+                "ref": "r3.balance",
+                "input": "numpad",
+                "answer": 27300
+              },
+              {
+                "ref": "r-t.debit",
+                "input": "numpad",
+                "answer": 75000
+              }
+            ]
+          },
+          "explanation": "売掛金元帳は、売ったら借方（左）に増え、返品や回収で貸方（右）に減ります。月末の残高27,300円が次の月へ繰り越されます。",
+          "id": "b3-u05-n4-q4",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    }
+  ]
+}

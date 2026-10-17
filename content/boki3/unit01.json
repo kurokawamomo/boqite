@@ -1,0 +1,584 @@
+{
+  "unit": {
+    "id": "b3-u01",
+    "course": "boki3",
+    "chapter": 1,
+    "title": "簿記の型"
+  },
+  "nodes": [
+    {
+      "id": "b3-u01-n1",
+      "title": "会社の財産と成績",
+      "meta": {
+        "goal": "資産、負債、純資産、収益、費用の5つに、身近な物事を分けられる",
+        "topic": "5つの区分",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 2,
+        "introduces": [
+          "現金",
+          "借入金",
+          "資本金",
+          "売上",
+          "給料"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "ほたる文具店のレジに、1万円札が入っている。この「現金」は5つのどの仲間？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "資産",
+              "負債",
+              "純資産",
+              "収益",
+              "費用"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "今すぐ使えるお金は、会社が持っている財産です。財産は資産に入ります。",
+          "id": "b3-u01-n1-q1",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あおば食堂が、銀行から借りたお金を返さずに持っている。この「借入金」はどの仲間？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "資産",
+              "負債",
+              "純資産",
+              "収益",
+              "費用"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "借りたお金は、あとで返す約束です。返す義務は負債に入ります。",
+          "id": "b3-u01-n1-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "さざなみ工房の社長が、会社をつくるために自分のお金を出した。この「資本金」はどの仲間？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "資産",
+              "負債",
+              "純資産",
+              "収益",
+              "費用"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "社長が出したお金は、返さなくていい会社の元手です。元手は純資産に入ります。",
+          "id": "b3-u01-n1-q3",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "みどり園芸が、苗を売って代金を受け取った。この「売上」はどの仲間？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "資産",
+              "負債",
+              "純資産",
+              "収益",
+              "費用"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "商品を売って得た代金は、会社の成績のうち「増えた分」です。増えた分は収益に入ります。",
+          "id": "b3-u01-n1-q4",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "つばめ洗車店が、アルバイトの人に払う「給料」はどの仲間？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "資産",
+              "負債",
+              "純資産",
+              "収益",
+              "費用"
+            ],
+            "answerIndex": 4
+          },
+          "explanation": "働いてもらうために払うお金は、成績のうち「減った分」です。減った分は費用に入ります。",
+          "id": "b3-u01-n1-q5",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "くすのき書店の財産表。左右の合計は同じになる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "bs",
+              "data": {
+                "header": {
+                  "title": "貸借対照表",
+                  "company": "くすのき書店",
+                  "period": "×1年4月30日",
+                  "unit": "(単位：円)"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "label": "現金",
+                      "amount": 800000
+                    }
+                  },
+                  {
+                    "key": "d-t",
+                    "cells": {
+                      "label": "計",
+                      "amount": 800000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "label": "借入金",
+                      "amount": 300000
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "label": "資本金",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c-t",
+                    "cells": {
+                      "label": "計",
+                      "amount": 800000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "c2.amount",
+                "input": "numpad",
+                "answer": 500000
+              }
+            ]
+          },
+          "explanation": "財産の合計は、借りたお金と元手の合計と同じです。800,000円の財産のうち借りた分が300,000円なので、残りの500,000円が資本金です。",
+          "id": "b3-u01-n1-q6",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b3-u01-n2",
+      "title": "取引を左右に書く",
+      "meta": {
+        "goal": "1つの取引を2つの面に分け、増えた側と減った側に置ける",
+        "topic": "取引の二面性と仕訳の左右",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "花むすび雑貨店を開くため、店主が現金500,000円を出した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 500000
+              }
+            ],
+            "credit": [
+              {
+                "account": "資本金",
+                "amount": 500000
+              }
+            ],
+            "accountOptions": [
+              "借入金",
+              "給料",
+              "現金",
+              "売上",
+              "資本金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "現金が増えたので、増えた現金を借方（左）に書きます。出したお金は元手なので、貸方（右）が資本金です。",
+          "id": "b3-u01-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "現金",
+            "資本金"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "ことり製パンが、銀行から現金300,000円を借りた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 300000
+              }
+            ],
+            "credit": [
+              {
+                "account": "借入金",
+                "amount": 300000
+              }
+            ],
+            "accountOptions": [
+              "資本金",
+              "現金",
+              "給料",
+              "借入金",
+              "売上"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "現金が増えるので借方（左）は現金です。借りたお金はあとで返す義務なので、貸方（右）は借入金です。",
+          "id": "b3-u01-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "借入金"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "きたかぜ釣具店が、釣り竿を売って現金80,000円を受け取った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 80000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 80000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "資本金",
+              "売上",
+              "借入金",
+              "給料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "代金をもらって現金が増えるので借方（左）は現金。商品を売って得た分は貸方（右）の売上に書きます。",
+          "id": "b3-u01-n2-q3",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "売上"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "うみねこ商会が、従業員に給料を現金120,000円で払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "給料",
+                "amount": 120000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 120000
+              }
+            ],
+            "accountOptions": [
+              "借入金",
+              "資本金",
+              "給料",
+              "売上",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "給料は会社の成績を減らす費用なので、借方（左）に書きます。払った現金は減ったので、貸方（右）に書きます。",
+          "id": "b3-u01-n2-q4",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "給料"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3-u01-n3",
+      "title": "勘定に写す",
+      "meta": {
+        "goal": "仕訳を勘定（T字）に写し、残高を出せる",
+        "topic": "仕訳から勘定への転記と残高",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "次の取引を現金勘定に写す。\n4/1 店主が現金500,000円を出した\n4/10 商品を売り現金80,000円を受け取った\n4/25 給料120,000円を現金で払った"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "現金"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "4/1",
+                      "counterAccount": null,
+                      "amount": 500000
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "4/10",
+                      "counterAccount": "売上",
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "4/25",
+                      "counterAccount": "給料",
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.counterAccount",
+                "input": "account_picker",
+                "answer": "資本金",
+                "accountOptions": [
+                  "資本金",
+                  "売上",
+                  "給料",
+                  "借入金"
+                ]
+              },
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 80000
+              },
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 120000
+              }
+            ]
+          },
+          "explanation": "現金が増えた取引は借方（左）、減った取引は貸方（右）に写します。相手の科目は、仕訳のもう一方の科目です。",
+          "id": "b3-u01-n3-q1",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "次の取引を借入金勘定に写す。\n5/2 銀行から現金300,000円を借りた\n5/20 借りたうち100,000円を現金で返した"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "借入金"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "5/20",
+                      "counterAccount": null,
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "5/2",
+                      "counterAccount": "現金",
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 300000
+              },
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 100000
+              },
+              {
+                "ref": "d1.counterAccount",
+                "input": "account_picker",
+                "answer": "現金",
+                "accountOptions": [
+                  "現金",
+                  "売上",
+                  "給料",
+                  "資本金"
+                ]
+              }
+            ]
+          },
+          "explanation": "借入金は負債なので、増えたとき（借りたとき）は貸方（右）、減ったとき（返したとき）は借方（左）に書きます。現金とは借方と貸方が逆です。",
+          "id": "b3-u01-n3-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "次の取引を売上勘定に写す。\n6/3 現金45,000円の売上\n6/14 現金62,000円の売上\n6/28 現金38,000円の売上"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "売上"
+                },
+                "debit": [],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "6/3",
+                      "counterAccount": null,
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "6/14",
+                      "counterAccount": "現金",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c3",
+                    "cells": {
+                      "date": "6/28",
+                      "counterAccount": "現金",
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 45000
+              },
+              {
+                "ref": "c2.amount",
+                "input": "numpad",
+                "answer": 62000
+              },
+              {
+                "ref": "c3.amount",
+                "input": "numpad",
+                "answer": 38000
+              },
+              {
+                "ref": "c1.counterAccount",
+                "input": "account_picker",
+                "answer": "現金",
+                "accountOptions": [
+                  "資本金",
+                  "現金",
+                  "借入金",
+                  "給料"
+                ]
+              }
+            ]
+          },
+          "explanation": "売上は収益なので、増えたときは貸方（右）に書きます。3回の売上は、どれも貸方（右）側に並びます。",
+          "id": "b3-u01-n3-q3",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    }
+  ]
+}

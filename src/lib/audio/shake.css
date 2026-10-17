@@ -1,0 +1,35 @@
+/*
+ * navigator.vibrate 非対応環境（iOS Safari）向けの触覚フィードバック代替。
+ * 不正解時など「振動させたい」要素に .shake クラスを付け外しして使う。
+ * 例: el.classList.remove('shake'); void el.offsetWidth; el.classList.add('shake');
+ *     （再アニメーションのため一度 reflow を挟んでクラスを外してから付け直す）
+ */
+@keyframes boqite-shake {
+	10%,
+	90% {
+		transform: translateX(-1px);
+	}
+	20%,
+	80% {
+		transform: translateX(2px);
+	}
+	30%,
+	50%,
+	70% {
+		transform: translateX(-4px);
+	}
+	40%,
+	60% {
+		transform: translateX(4px);
+	}
+}
+
+.shake {
+	animation: boqite-shake 0.4s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.shake {
+		animation: none;
+	}
+}

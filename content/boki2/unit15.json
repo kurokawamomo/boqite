@@ -1,0 +1,695 @@
+{
+  "unit": {
+    "id": "b2-u15",
+    "course": "boki2",
+    "chapter": 15,
+    "title": "個別原価計算"
+  },
+  "nodes": [
+    {
+      "id": "b2-u15-n1",
+      "title": "製造指図書と原価計算表",
+      "meta": {
+        "goal": "指図書ごとに、原価計算表を作れる",
+        "topic": "製造指図書と原価計算表",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "製造指図書#101の原価。直接材料費130,000円、直接作業180時間（直接工の賃率は1時間あたり1,350円）。製造間接費は直接作業時間1時間あたり400円で配賦する。#101の製造原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 445000
+          },
+          "explanation": "直接材料費と直接労務費を指図書に賦課し、製造間接費は配賦して、3つを足します。",
+          "source": "generated",
+          "id": "b2-u15-n1-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造指図書#101の原価。直接材料費260,000円、直接作業150時間（直接工の賃率は1時間あたり1,450円）。製造間接費は直接作業時間1時間あたり850円で配賦する。#101の製造原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 605000
+          },
+          "explanation": "直接材料費と直接労務費を指図書に賦課し、製造間接費は配賦して、3つを足します。",
+          "source": "generated",
+          "id": "b2-u15-n1-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "原価計算表は、何ごとに作る帳票か。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "工程ごと",
+              "部門ごと",
+              "費目ごと",
+              "製造指図書ごと"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "個別原価計算では、注文ごとに出す製造指図書ごとに原価計算表を作り、原価を集めます。",
+          "source": "original",
+          "id": "b2-u15-n1-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造指図書に、そのまま賦課できない原価はどれか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "直接経費",
+              "製造間接費",
+              "直接材料費",
+              "直接労務費"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "製造間接費は特定の指図書に結びつかないので、基準を決めて配賦します。",
+          "source": "original",
+          "id": "b2-u15-n1-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "原価計算表の抜粋。#201は直接材料費280,000円、直接労務費160,000円、製造間接費200,000円。#202は直接材料費370,000円、直接労務費110,000円、製造間接費160,000円。2つの指図書の製造原価の合計は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1280000
+          },
+          "explanation": "指図書ごとに3つの原価を足し、2つの合計を足します。",
+          "source": "original",
+          "id": "b2-u15-n1-q5",
+          "sanitized": true
+        },
+        {
+          "id": "b2-u15-n1-f1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "原価計算表を完成させる。#301と#302の直接材料費、直接労務費、製造間接費の配賦率と作業時間が与えられている。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "cost_sheet",
+              "data": {
+                "header": {
+                  "title": "原価計算表"
+                },
+                "orders": [
+                  "#301",
+                  "#302"
+                ],
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "label": "直接材料費",
+                      "byOrder": {
+                        "#301": 240000,
+                        "#302": 310000
+                      },
+                      "total": 550000
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "label": "直接労務費",
+                      "byOrder": {
+                        "#301": 180000,
+                        "#302": 150000
+                      },
+                      "total": 330000
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "label": "製造間接費",
+                      "byOrder": {
+                        "#301": null,
+                        "#302": null
+                      },
+                      "total": 165000
+                    }
+                  },
+                  {
+                    "key": "r4",
+                    "role": "total",
+                    "ruledAfter": "double",
+                    "cells": {
+                      "label": "製造原価",
+                      "byOrder": {
+                        "#301": null,
+                        "#302": null
+                      },
+                      "total": 1045000
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r3.byOrder.#301",
+                "input": "numpad",
+                "answer": 90000
+              },
+              {
+                "ref": "r4.byOrder.#301",
+                "input": "numpad",
+                "answer": 510000
+              },
+              {
+                "ref": "r3.byOrder.#302",
+                "input": "numpad",
+                "answer": 75000
+              },
+              {
+                "ref": "r4.byOrder.#302",
+                "input": "numpad",
+                "answer": 535000
+              }
+            ]
+          },
+          "explanation": "製造間接費は作業時間に配賦率を掛け、3つの原価を足して製造原価にします。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u15-n2",
+      "title": "賦課と配賦",
+      "meta": {
+        "goal": "直接費を賦課し、間接費を配賦して、指図書別の原価を出せる",
+        "topic": "賦課と配賦",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "当月の製造間接費の実際発生額は240,000円、全指図書の直接作業時間の合計は300時間である。実際配賦率は1時間あたり何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 800
+          },
+          "explanation": "製造間接費の実際発生額を、直接作業時間の合計で割ります。",
+          "source": "generated",
+          "id": "b2-u15-n2-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造間接費の実際配賦率は1時間あたり800円。指図書#102の直接作業時間は240時間だった。#102へ配賦する製造間接費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 192000
+          },
+          "explanation": "配賦率に、その指図書の直接作業時間を掛けます。",
+          "source": "generated",
+          "id": "b2-u15-n2-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "当月の製造間接費の実際発生額は330,000円、全指図書の直接作業時間の合計は550時間である。実際配賦率は1時間あたり何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 600
+          },
+          "explanation": "製造間接費の実際発生額を、直接作業時間の合計で割ります。",
+          "source": "generated",
+          "id": "b2-u15-n2-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造間接費の実際配賦率は1時間あたり600円。指図書#102の直接作業時間は320時間だった。#102へ配賦する製造間接費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 192000
+          },
+          "explanation": "配賦率に、その指図書の直接作業時間を掛けます。",
+          "source": "generated",
+          "id": "b2-u15-n2-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "直接工の賃率は1時間あたり1,800円。指図書#103の直接作業時間は150時間だった。#103に賦課する直接労務費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 270000
+          },
+          "explanation": "賃率に、その指図書の直接作業時間を掛けて賦課します。",
+          "source": "generated",
+          "id": "b2-u15-n2-q5",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u15-n3",
+      "title": "仕損費",
+      "meta": {
+        "goal": "補修指図書を使った仕損費を、計算して処理できる",
+        "topic": "個別原価計算の仕損費",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "指図書#104で仕損が出たので、補修指図書を発行した。補修のために、材料45,000円、賃金20,000円、製造間接費の配賦額15,000円がかかった。仕損費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 80000
+          },
+          "explanation": "補修指図書にかかった原価の合計が、仕損費です。",
+          "source": "generated",
+          "id": "b2-u15-n3-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "指図書#104で仕損が出たので、補修指図書を発行した。補修のために、材料55,000円、賃金15,000円、製造間接費の配賦額40,000円がかかった。仕損費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 110000
+          },
+          "explanation": "補修指図書にかかった原価の合計が、仕損費です。",
+          "source": "generated",
+          "id": "b2-u15-n3-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "指図書#105が全部仕損となり、代わりの製品をつくる新しい指図書を発行した。旧指図書の製造原価は420,000円、仕損品の評価額は55,000円である。仕損費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 365000
+          },
+          "explanation": "旧指図書の製造原価から、仕損品の評価額を引いたものが、仕損費です。",
+          "source": "generated",
+          "id": "b2-u15-n3-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "指図書#105が全部仕損となり、代わりの製品をつくる新しい指図書を発行した。旧指図書の製造原価は560,000円、仕損品の評価額は25,000円である。仕損費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 535000
+          },
+          "explanation": "旧指図書の製造原価から、仕損品の評価額を引いたものが、仕損費です。",
+          "source": "generated",
+          "id": "b2-u15-n3-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ふじなみ機械は、補修指図書による補修のため、材料50,000円を消費し、賃金15,000円を消費し、製造間接費15,000円を配賦した。これらを仕損費にまとめる。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕損費",
+                "amount": 80000
+              }
+            ],
+            "credit": [
+              {
+                "account": "材料",
+                "amount": 50000
+              },
+              {
+                "account": "賃金",
+                "amount": 15000
+              },
+              {
+                "account": "製造間接費",
+                "amount": 15000
+              }
+            ],
+            "accountOptions": [
+              "製造間接費",
+              "賃金",
+              "仕掛品",
+              "仕損費",
+              "材料",
+              "製品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "補修にかかった原価を仕損費に集めるので、借方（左）は仕損費です。貸方（右）は、材料と賃金と製造間接費です。",
+          "source": "generated",
+          "id": "b2-u15-n3-q5",
+          "sanitized": true,
+          "newAccounts": [
+            "仕損費"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "みなと金属は、補修指図書による補修のため、材料50,000円を消費し、賃金30,000円を消費し、製造間接費25,000円を配賦した。これらを仕損費にまとめる。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕損費",
+                "amount": 105000
+              }
+            ],
+            "credit": [
+              {
+                "account": "材料",
+                "amount": 50000
+              },
+              {
+                "account": "賃金",
+                "amount": 30000
+              },
+              {
+                "account": "製造間接費",
+                "amount": 25000
+              }
+            ],
+            "accountOptions": [
+              "材料",
+              "仕掛品",
+              "製造間接費",
+              "製品",
+              "賃金",
+              "仕損費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "補修にかかった原価を仕損費に集めるので、借方（左）は仕損費です。貸方（右）は、材料と賃金と製造間接費です。",
+          "source": "generated",
+          "id": "b2-u15-n3-q6",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ももたに製菓は、補修指図書の仕損費85,000円を、仕損が生じた指図書に賦課した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕掛品",
+                "amount": 85000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕損費",
+                "amount": 85000
+              }
+            ],
+            "accountOptions": [
+              "製造間接費",
+              "仕損費",
+              "仕掛品",
+              "製品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "仕損費は、仕損が出た指図書の製造原価に加えます。借方（左）は仕掛品、貸方（右）は仕損費です。",
+          "source": "generated",
+          "id": "b2-u15-n3-q7",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "補修指図書を発行した場合、補修費はどう処理するか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "営業外費用にする",
+              "製造間接費に含める",
+              "補修指図書の原価として別に残す",
+              "仕損が生じた指図書に賦課する"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "正常な仕損の補修費は、仕損が出た指図書の製造原価に加えます。",
+          "source": "original",
+          "id": "b2-u15-n3-q8",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u15-n4",
+      "title": "勘定記入（個別原価計算）",
+      "meta": {
+        "goal": "仕掛品勘定と製品勘定に、指図書別の動きを記入できる",
+        "topic": "個別原価計算の勘定記入",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "しらかば製紙の6月の仕掛品勘定を完成させる。#601は当月に完成して製品へ、#602は月末に未完成。#601の直接材料費490,000円、直接労務費230,000円、製造間接費90,000円。#602の直接材料費370,000円、直接労務費290,000円、製造間接費190,000円。月初仕掛品はなし。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "仕掛品"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "材料",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "賃金",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "製造間接費",
+                      "amount": 280000
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "製品",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "次期繰越",
+                      "amount": 850000
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 860000
+              },
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 520000
+              },
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 810000
+              }
+            ]
+          },
+          "explanation": "借方（左）には、当月に投入した材料、賃金、製造間接費を書きます。貸方（右）は、完成した#601の原価と、月末に残った#602の原価です。",
+          "source": "original",
+          "id": "b2-u15-n4-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ふじなみ機械の6月の仕掛品勘定を完成させる。#601は当月に完成して製品へ、#602は月末に未完成。#601の直接材料費380,000円、直接労務費270,000円、製造間接費180,000円。#602の直接材料費200,000円、直接労務費190,000円、製造間接費190,000円。月初仕掛品はなし。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "仕掛品"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "材料",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "賃金",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "製造間接費",
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "製品",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "次期繰越",
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 580000
+              },
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 460000
+              },
+              {
+                "ref": "d3.amount",
+                "input": "numpad",
+                "answer": 370000
+              },
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 830000
+              },
+              {
+                "ref": "c2.amount",
+                "input": "numpad",
+                "answer": 580000
+              }
+            ]
+          },
+          "explanation": "借方（左）には、当月に投入した材料、賃金、製造間接費を書きます。貸方（右）は、完成した#601の原価と、月末に残った#602の原価です。",
+          "source": "original",
+          "id": "b2-u15-n4-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "指図書#701が完成し、原価計算表の合計は900,000円だった。製品勘定の借方に記入する金額は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 900000
+          },
+          "explanation": "完成した指図書の製造原価を、仕掛品から製品へ移します。",
+          "source": "generated",
+          "id": "b2-u15-n4-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "指図書#701が完成し、原価計算表の合計は1,200,000円だった。製品勘定の借方に記入する金額は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1200000
+          },
+          "explanation": "完成した指図書の製造原価を、仕掛品から製品へ移します。",
+          "source": "generated",
+          "id": "b2-u15-n4-q4",
+          "sanitized": true
+        }
+      ]
+    }
+  ]
+}

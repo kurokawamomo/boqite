@@ -1,0 +1,522 @@
+{
+  "unit": {
+    "id": "b2-u11",
+    "course": "boki2",
+    "chapter": 11,
+    "title": "部門別計算"
+  },
+  "nodes": [
+    {
+      "id": "b2-u11-n1",
+      "title": "部門個別費と共通費",
+      "meta": {
+        "goal": "配賦基準を選び、部門費に集計できる",
+        "topic": "部門個別費と共通費",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "あさひ印刷工場の切削部門に、部門個別費が300,000円かかった。建物の減価償却費1,080,000円を、床面積の比（切削部門5：組立部門4）で配賦する。切削部門の部門費（個別費と配賦額の合計）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 900000
+          },
+          "explanation": "部門個別費はそのまま集め、共通費は配賦基準の比で分けて足します。",
+          "source": "generated",
+          "id": "b2-u11-n1-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "やまぶき電機の切削部門に、部門個別費が160,000円かかった。建物の減価償却費1,320,000円を、床面積の比（切削部門6：組立部門5）で配賦する。切削部門の部門費（個別費と配賦額の合計）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 880000
+          },
+          "explanation": "部門個別費はそのまま集め、共通費は配賦基準の比で分けて足します。",
+          "source": "generated",
+          "id": "b2-u11-n1-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "電力料120,000円を、3つの部門の運転時間の比（20：10：30）で配賦する。運転時間10にあたる部門の配賦額は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 20000
+          },
+          "explanation": "合計を比の合計で割って、その部門の比を掛けます。",
+          "source": "generated",
+          "id": "b2-u11-n1-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "電力料420,000円を、3つの部門の運転時間の比（25：40：40）で配賦する。運転時間40にあたる部門の配賦額は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 160000
+          },
+          "explanation": "合計を比の合計で割って、その部門の比を掛けます。",
+          "source": "generated",
+          "id": "b2-u11-n1-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "建物の減価償却費を部門へ配賦するとき、基準として最もふさわしいものはどれか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "各部門の床面積",
+              "各部門の直接作業時間",
+              "各部門の従業員数",
+              "各部門の機械台数"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "建物の費用は、使っている広さと関係が深いので、床面積で配賦します。",
+          "source": "original",
+          "id": "b2-u11-n1-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "工場の福利厚生費を部門へ配賦するとき、基準として最もふさわしいものはどれか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "各部門の電力使用量",
+              "各部門の従業員数",
+              "各部門の床面積",
+              "各部門の機械の帳簿価額"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "福利厚生費は人にかかる費用なので、従業員数で配賦します。",
+          "source": "original",
+          "id": "b2-u11-n1-q6",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u11-n2",
+      "title": "部門費配分表",
+      "meta": {
+        "goal": "部門費配分表を完成させられる",
+        "topic": "部門費配分表",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "部門費配分表の一部。切削部門の個別費430,000円、組立部門の個別費280000円、補助部門（修繕部門）の個別費150,000円、動力部門の個別費140,000円。4つの部門の個別費の合計は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1000000
+          },
+          "explanation": "部門個別費は、部門ごとに集計して、合計します。",
+          "source": "generated",
+          "id": "b2-u11-n2-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "部門費配分表の一部。切削部門の個別費530,000円、組立部門の個別費460000円、補助部門（修繕部門）の個別費110,000円、動力部門の個別費70,000円。4つの部門の個別費の合計は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1170000
+          },
+          "explanation": "部門個別費は、部門ごとに集計して、合計します。",
+          "source": "generated",
+          "id": "b2-u11-n2-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "部門費配分表を作る。共通費240,000円を、切削部門、組立部門、修繕部門、動力部門に、床面積の比（5：3：1：1）で配賦する。切削部門への配賦額は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 120000
+          },
+          "explanation": "合計を比の合計10で割り、切削部門の5を掛けます。",
+          "source": "original",
+          "id": "b2-u11-n2-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "部門費配分表で、部門個別費と部門共通費の違いとして正しいものはどれか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "個別費も共通費も、すべて基準で分ける",
+              "個別費はその部門だけで発生したことが分かり、共通費は基準で分ける",
+              "個別費は製造間接費に入らない",
+              "個別費は基準で分け、共通費はその部門に直接集める"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "部門個別費はどの部門の費用か直接分かります。共通費は、基準を選んで各部門に分けます。",
+          "source": "original",
+          "id": "b2-u11-n2-q4",
+          "sanitized": true
+        },
+        {
+          "id": "b2-u11-n2-f1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "部門費配分表を完成させる。部門個別費と共通費（配賦基準つき）が与えられている。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "department_table",
+              "data": {
+                "header": {
+                  "title": "部門費配分表"
+                },
+                "departments": [
+                  "切削部門",
+                  "組立部門",
+                  "修繕部門",
+                  "動力部門"
+                ],
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "label": "部門個別費",
+                      "total": 1160000,
+                      "byDepartment": {
+                        "切削部門": 520000,
+                        "組立部門": 430000,
+                        "修繕部門": 120000,
+                        "動力部門": 90000
+                      }
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "label": "共通費（建物減価償却費）（床面積 5:3:1:1）",
+                      "total": 240000,
+                      "byDepartment": {
+                        "切削部門": null,
+                        "組立部門": null,
+                        "修繕部門": null,
+                        "動力部門": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "role": "total",
+                    "ruledAfter": "double",
+                    "cells": {
+                      "label": "部門費合計",
+                      "total": 1400000,
+                      "byDepartment": {
+                        "切削部門": null,
+                        "組立部門": 502000,
+                        "修繕部門": 144000,
+                        "動力部門": 114000
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r2.byDepartment.切削部門",
+                "input": "numpad",
+                "answer": 120000
+              },
+              {
+                "ref": "r2.byDepartment.組立部門",
+                "input": "numpad",
+                "answer": 72000
+              },
+              {
+                "ref": "r2.byDepartment.修繕部門",
+                "input": "numpad",
+                "answer": 24000
+              },
+              {
+                "ref": "r2.byDepartment.動力部門",
+                "input": "numpad",
+                "answer": 24000
+              },
+              {
+                "ref": "r3.byDepartment.切削部門",
+                "input": "numpad",
+                "answer": 640000
+              }
+            ]
+          },
+          "explanation": "共通費は床面積の比で分けて、個別費に足します。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u11-n3",
+      "title": "直接配賦法",
+      "meta": {
+        "goal": "補助部門費を製造部門へ配賦できる",
+        "topic": "直接配賦法",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "かもめ化成の製造部門費は、切削部門650,000円、組立部門720,000円である。補助部門（修繕部門）の費用240,000円を、直接配賦法により、製造部門への用役提供の比（切削：組立＝7：5）で配賦する。切削部門の製造部門費（配賦後）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 790000
+          },
+          "explanation": "補助部門費は、製造部門だけに、提供した用役の比で配賦します。",
+          "source": "generated",
+          "id": "b2-u11-n3-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "かもめ化成の製造部門費は、切削部門800,000円、組立部門720,000円である。補助部門（修繕部門）の費用132,000円を、直接配賦法により、製造部門への用役提供の比（切削：組立＝2：3）で配賦する。切削部門の製造部門費（配賦後）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 852800
+          },
+          "explanation": "補助部門費は、製造部門だけに、提供した用役の比で配賦します。",
+          "source": "generated",
+          "id": "b2-u11-n3-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "いずみ樹脂の製造部門費は、切削部門650,000円、組立部門620,000円である。補助部門（修繕部門）の費用132,000円を、直接配賦法により、製造部門への用役提供の比（切削：組立＝7：4）で配賦する。切削部門の製造部門費（配賦後）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 734000
+          },
+          "explanation": "補助部門費は、製造部門だけに、提供した用役の比で配賦します。",
+          "source": "generated",
+          "id": "b2-u11-n3-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "しらかば製紙の製造部門費は、切削部門710,000円、組立部門660,000円である。補助部門（修繕部門）の費用168,000円を、直接配賦法により、製造部門への用役提供の比（切削：組立＝7：7）で配賦する。切削部門の製造部門費（配賦後）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 794000
+          },
+          "explanation": "補助部門費は、製造部門だけに、提供した用役の比で配賦します。",
+          "source": "generated",
+          "id": "b2-u11-n3-q4",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u11-n4",
+      "title": "相互配賦法",
+      "meta": {
+        "goal": "第1次配賦と第2次配賦で、製造部門費を出せる",
+        "topic": "相互配賦法",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "みなと金属の部門費は、切削部門330,000円、組立部門440,000円、修繕部門280,000円、動力部門280,000円である。補助部門費を相互配賦法で配賦する。第1次配賦の割合は、修繕部門の費用を（動力：切削：組立＝2：3：3）、動力部門の費用を（修繕：切削：組立＝1：4：3）とする。第2次配賦は、第1次で補助部門が受けた額を、切削：組立＝3：2で製造部門だけに配賦する。切削部門の製造部門費（配賦後）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 638000
+          },
+          "explanation": "第1次で補助部門どうしにも配賦し、第2次では第1次で受けた分を製造部門だけに配賦して、切削部門に足します。",
+          "source": "generated",
+          "id": "b2-u11-n4-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あかね繊維の部門費は、切削部門300,000円、組立部門460,000円、修繕部門150,000円、動力部門210,000円である。補助部門費を相互配賦法で配賦する。第1次配賦の割合は、修繕部門の費用を（動力：切削：組立＝3：3：4）、動力部門の費用を（修繕：切削：組立＝3：3：6）とする。第2次配賦は、第1次で補助部門が受けた額を、切削：組立＝1：1で製造部門だけに配賦する。切削部門の製造部門費（配賦後）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 446250
+          },
+          "explanation": "第1次で補助部門どうしにも配賦し、第2次では第1次で受けた分を製造部門だけに配賦して、切削部門に足します。",
+          "source": "generated",
+          "id": "b2-u11-n4-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "相互配賦法の第1次配賦で、修繕部門の費用210,000円を、動力：切削：組立＝1：3：6で配賦する。動力部門への配賦額は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 21000
+          },
+          "explanation": "合計を比の合計で割り、動力部門の比を掛けます。補助部門どうしにも配賦するのが第1次です。",
+          "source": "generated",
+          "id": "b2-u11-n4-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "相互配賦法の第1次配賦で、動力部門の費用260,000円を、修繕：切削：組立＝2：4：4で配賦する。切削部門への配賦額は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 104000
+          },
+          "explanation": "合計を比の合計で割り、切削部門の比を掛けます。",
+          "source": "generated",
+          "id": "b2-u11-n4-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "相互配賦法の第2次配賦で、第1次配賦で補助部門が受けた額は、どこへ配賦するか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "製造部門と補助部門の全部",
+              "製造部門だけ",
+              "補助部門だけ",
+              "どこにも配賦しない"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "第2次は、補助部門が受けた額を製造部門だけに配賦して、補助部門の費用を残さないようにします。",
+          "source": "original",
+          "id": "b2-u11-n4-q5",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u11-n5",
+      "title": "予定配賦率（部門別）",
+      "meta": {
+        "goal": "部門別に予定配賦率で配賦し、差異を出せる",
+        "topic": "部門別の予定配賦",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "切削部門の年間の部門費予算が34,000,000円、年間の基準操業度（機械運転時間）が5,000時間である。切削部門の予定配賦率は1時間あたり何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 6800
+          },
+          "explanation": "部門費の年間予算を、基準操業度で割ります。",
+          "source": "generated",
+          "id": "b2-u11-n5-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "切削部門の年間の部門費予算が26,000,000円、年間の基準操業度（機械運転時間）が8,000時間である。切削部門の予定配賦率は1時間あたり何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 3250
+          },
+          "explanation": "部門費の年間予算を、基準操業度で割ります。",
+          "source": "generated",
+          "id": "b2-u11-n5-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "切削部門の予定配賦率は1時間あたり400円。製品Aの機械運転時間が390時間だったとき、製品Aに配賦する切削部門費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 156000
+          },
+          "explanation": "予定配賦率に、その製品の運転時間を掛けます。",
+          "source": "generated",
+          "id": "b2-u11-n5-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "切削部門の予定配賦率は1時間あたり750円。製品Aの機械運転時間が840時間だったとき、製品Aに配賦する切削部門費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 630000
+          },
+          "explanation": "予定配賦率に、その製品の運転時間を掛けます。",
+          "source": "generated",
+          "id": "b2-u11-n5-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "切削部門の実際発生額が990,000円、予定配賦額が955,000円だった。部門費配賦差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 35000
+          },
+          "explanation": "実際発生額と予定配賦額の差が、部門費配賦差異です。",
+          "source": "generated",
+          "id": "b2-u11-n5-q5",
+          "sanitized": true
+        }
+      ]
+    }
+  ]
+}

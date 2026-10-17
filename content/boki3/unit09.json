@@ -1,0 +1,746 @@
+{
+  "unit": {
+    "id": "b3-u09",
+    "course": "boki3",
+    "chapter": 9,
+    "title": "お金の貸し借り"
+  },
+  "nodes": [
+    {
+      "id": "b3-u09-n1",
+      "title": "貸すと借りる",
+      "meta": {
+        "goal": "貸付と借入を、両側で続けて書ける",
+        "topic": "貸付金と借入金",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "貸付金"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "こはる雑貨店が、取引先に、現金500,000円を貸した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "貸付金",
+                "amount": 500000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 500000
+              }
+            ],
+            "accountOptions": [
+              "貸付金",
+              "借入金",
+              "普通預金",
+              "売掛金",
+              "現金",
+              "買掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "貸したお金は、あとで返してもらえる権利です。借方（左）は貸付金、現金が減るので貸方（右）は現金です。",
+          "id": "b3-u09-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "貸付金"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "こはる雑貨店が、貸していた500,000円が、普通預金に返ってきた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 500000
+              }
+            ],
+            "credit": [
+              {
+                "account": "貸付金",
+                "amount": 500000
+              }
+            ],
+            "accountOptions": [
+              "普通預金",
+              "借入金",
+              "買掛金",
+              "現金",
+              "貸付金",
+              "売掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "返ってきて貸付金がなくなるので、貸方（右）は貸付金です。銀行に入ったので、借方（左）は普通預金です。",
+          "id": "b3-u09-n1-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あかつき商店が、銀行から800,000円を借り、普通預金に入金された。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 800000
+              }
+            ],
+            "credit": [
+              {
+                "account": "借入金",
+                "amount": 800000
+              }
+            ],
+            "accountOptions": [
+              "貸付金",
+              "売掛金",
+              "買掛金",
+              "借入金",
+              "現金",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "借りたお金は、あとで返す義務なので借入金で、貸方（右）に書きます。普通預金が増えるので借方（左）は普通預金で、貸付金とは借方と貸方が逆です。",
+          "id": "b3-u09-n1-q3",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あかつき商店が、借りていた800,000円を、普通預金から返した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "借入金",
+                "amount": 800000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 800000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "借入金",
+              "売掛金",
+              "普通預金",
+              "貸付金",
+              "買掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "返して借入金がなくなるので、借方（左）は借入金です。銀行のお金が減るので、貸方（右）は普通預金です。",
+          "id": "b3-u09-n1-q4",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "しののめ商店の貸付金勘定。\n4/1 取引先に現金400,000円を貸した\n9/30 貸した400,000円が普通預金に返ってきた"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "貸付金"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "4/1",
+                      "counterAccount": "現金",
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "9/30",
+                      "counterAccount": null,
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 400000
+              },
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 400000
+              },
+              {
+                "ref": "c1.counterAccount",
+                "input": "account_picker",
+                "answer": "普通預金",
+                "accountOptions": [
+                  "現金",
+                  "普通預金",
+                  "借入金",
+                  "売掛金"
+                ]
+              }
+            ]
+          },
+          "explanation": "貸したときに借方（左）に増え、返ってきたときに貸方（右）に消えます。返ってきた先の科目は普通預金です。",
+          "id": "b3-u09-n1-q5",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b3-u09-n2",
+      "title": "利息",
+      "meta": {
+        "goal": "月割と日割で利息を計算して書ける",
+        "topic": "利息の月割と日割",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "受取利息",
+          "支払利息"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "ほのぼの商会が、貸していた600,000円（年利3%、貸付期間6か月）の返済を受け、元金と利息が普通預金に入金された。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 609000
+              }
+            ],
+            "credit": [
+              {
+                "account": "貸付金",
+                "amount": 600000
+              },
+              {
+                "account": "受取利息",
+                "amount": 9000
+              }
+            ],
+            "accountOptions": [
+              "普通預金",
+              "支払利息",
+              "受取利息",
+              "現金",
+              "借入金",
+              "貸付金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "利息は600,000円×3%×6/12で9,000円で、もらった利息は受取利息（収益）で、貸方（右）に書きます。元金の貸付金が減り、借方（左）は入金の合計609,000円です。",
+          "id": "b3-u09-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "受取利息"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "ひだまり工房が、借りていた1,000,000円（年利2.4%、借入期間3か月）を、利息とあわせて普通預金から返した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "借入金",
+                "amount": 1000000
+              },
+              {
+                "account": "支払利息",
+                "amount": 6000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 1006000
+              }
+            ],
+            "accountOptions": [
+              "借入金",
+              "現金",
+              "受取利息",
+              "貸付金",
+              "普通預金",
+              "支払利息"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "利息は1,000,000円×2.4%×3/12で6,000円で、払った利息は支払利息（費用）で、借方（左）に書きます。元金の借入金が減り、貸方（右）は払った合計1,006,000円です。",
+          "id": "b3-u09-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "支払利息"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "ことぶき食堂が、借りていた730,000円（年利5%、借入期間73日）を、利息とあわせて現金で返した。1年は365日として日割りで計算する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "借入金",
+                "amount": 730000
+              },
+              {
+                "account": "支払利息",
+                "amount": 7300
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 737300
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "受取利息",
+              "借入金",
+              "貸付金",
+              "普通預金",
+              "支払利息"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "日割りの利息は、730,000円×5%×73/365で7,300円です。借方（左）は借入金の元金と支払利息、貸方（右）は払った合計737,300円です。",
+          "id": "b3-u09-n2-q3",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "つばさ運輸が、貸していた365,000円（年利4%、貸付期間90日）の返済を受け、元金と利息が普通預金に入金された。1年は365日として日割りで計算する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 368600
+              }
+            ],
+            "credit": [
+              {
+                "account": "貸付金",
+                "amount": 365000
+              },
+              {
+                "account": "受取利息",
+                "amount": 3600
+              }
+            ],
+            "accountOptions": [
+              "貸付金",
+              "支払利息",
+              "受取利息",
+              "借入金",
+              "現金",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "日割りの利息は、365,000円×4%×90/365で3,600円です。借方（左）は入金の合計368,600円、貸方（右）は貸付金の元金と受取利息です。",
+          "id": "b3-u09-n2-q4",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あしたば商店が、500,000円を年利3.6%で5か月間借りた。支払う利息はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 7500
+          },
+          "explanation": "500,000円×3.6%で、1年分の利息は18,000円。5か月ぶんは、18,000円×5/12で7,500円です。",
+          "id": "b3-u09-n2-q5",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "id": "b3-u09-n2-rishi-s501",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "取引先に貸し付けていた1,460,000円（年利6%）を、貸付けから109日後に、利息とともに現金で回収した。利息は日割（1年を365日）で計算する。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 1486160
+              }
+            ],
+            "credit": [
+              {
+                "account": "貸付金",
+                "amount": 1460000
+              },
+              {
+                "account": "受取利息",
+                "amount": 26160
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "貸付金",
+              "受取利息",
+              "支払利息"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "利息は 1,460,000円×6%×109／365＝26,160円。元本と利息をまとめて動かすので、現金が増えて借方、貸付金（元本）と受取利息（収益）が貸方だよ。",
+          "generated": {
+            "generator": "b3-u09-n2-rishi",
+            "seed": 501
+          }
+        },
+        {
+          "id": "b3-u09-n2-rishi-s502",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "銀行から借りていた240,000円（年利6%）を、借入れから6か月後に、利息とともに現金で返済した。利息は月割で計算する。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "借入金",
+                "amount": 240000
+              },
+              {
+                "account": "支払利息",
+                "amount": 7200
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 247200
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "借入金",
+              "支払利息",
+              "受取利息"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "利息は 240,000円×6%×6／12＝7,200円。元本と利息をまとめて動かすので、借入金（元本）と支払利息（費用）が借方、現金が減って貸方だよ。",
+          "generated": {
+            "generator": "b3-u09-n2-rishi",
+            "seed": 502
+          }
+        },
+        {
+          "id": "b3-u09-n2-rishi-s503",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "銀行から借りていた600,000円（年利3%）を、借入れから4か月後に、利息とともに現金で返済した。利息は月割で計算する。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "借入金",
+                "amount": 600000
+              },
+              {
+                "account": "支払利息",
+                "amount": 6000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 606000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "借入金",
+              "支払利息",
+              "受取利息"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "利息は 600,000円×3%×4／12＝6,000円。元本と利息をまとめて動かすので、借入金（元本）と支払利息（費用）が借方、現金が減って貸方だよ。",
+          "generated": {
+            "generator": "b3-u09-n2-rishi",
+            "seed": 503
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-u09-n3",
+      "title": "決算での利息",
+      "meta": {
+        "goal": "期末に未収と未払の利息を書き、翌期首に戻せる",
+        "topic": "未収利息と未払利息",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "未収利息",
+          "未払利息"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "もくせい商店は、貸付金600,000円（年利3%）を持っている。利息は毎年10月31日に受け取る約束で、決算日は3月31日。決算で、11月1日から3月31日までの利息を計上する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "未収利息",
+                "amount": 7500
+              }
+            ],
+            "credit": [
+              {
+                "account": "受取利息",
+                "amount": 7500
+              }
+            ],
+            "accountOptions": [
+              "受取利息",
+              "未払利息",
+              "貸付金",
+              "借入金",
+              "支払利息",
+              "未収利息"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "5か月ぶんの利息は600,000円×3%×5/12で7,500円で、まだ受け取っていなくても決算までに生まれた収益なので、貸方（右）は受取利息です。もらえる権利として、借方（左）は未収利息です。",
+          "id": "b3-u09-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "未収利息"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "にじのはし工房は、借入金1,200,000円（年利2.5%）がある。利息は毎年9月30日に払う約束で、決算日は3月31日。決算で、10月1日から3月31日までの利息を計上する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支払利息",
+                "amount": 15000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払利息",
+                "amount": 15000
+              }
+            ],
+            "accountOptions": [
+              "貸付金",
+              "未払利息",
+              "受取利息",
+              "未収利息",
+              "支払利息",
+              "借入金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "6か月ぶんの利息は1,200,000円×2.5%×6/12で15,000円で、まだ払っていなくても決算までに生まれた費用なので、借方（左）は支払利息です。払う義務として、貸方（右）は未払利息です。",
+          "id": "b3-u09-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "未払利息"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "もくせい商店は、新しい期の初日に、前の期末に計上した未収利息7,500円を、受取利息に戻す。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "受取利息",
+                "amount": 7500
+              }
+            ],
+            "credit": [
+              {
+                "account": "未収利息",
+                "amount": 7500
+              }
+            ],
+            "accountOptions": [
+              "未収利息",
+              "貸付金",
+              "受取利息",
+              "借入金",
+              "支払利息",
+              "未払利息"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "前の期に書いた分をいったん取り消す（借方は受取利息、貸方は未収利息）と、利息を受け取った日に全額を受取利息に書いても、前の期の分が二重になりません。",
+          "id": "b3-u09-n3-q3",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "にじのはし工房は、新しい期の初日に、前の期末に計上した未払利息15,000円を、支払利息に戻す。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "未払利息",
+                "amount": 15000
+              }
+            ],
+            "credit": [
+              {
+                "account": "支払利息",
+                "amount": 15000
+              }
+            ],
+            "accountOptions": [
+              "未収利息",
+              "貸付金",
+              "支払利息",
+              "未払利息",
+              "受取利息",
+              "借入金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "前の期に書いた分を、いったん取り消します。借方（左）は未払利息が消え、貸方（右）は支払利息が減ります。",
+          "id": "b3-u09-n3-q4",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "こうのとり商店の未払利息勘定。\n3/31 決算で未払いの利息15,000円を計上した\n4/1 新しい期のはじめに、その利息を支払利息に戻した"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "未払利息"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "4/1",
+                      "counterAccount": null,
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "3/31",
+                      "counterAccount": "支払利息",
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 15000
+              },
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 15000
+              },
+              {
+                "ref": "d1.counterAccount",
+                "input": "account_picker",
+                "answer": "支払利息",
+                "accountOptions": [
+                  "支払利息",
+                  "借入金",
+                  "現金",
+                  "受取利息"
+                ]
+              }
+            ]
+          },
+          "explanation": "決算で計上したときに貸方（右）に増え、翌期の初日に借方（左）へ消えます。決算のときと、借方と貸方が逆の仕訳です。",
+          "id": "b3-u09-n3-q5",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    }
+  ]
+}

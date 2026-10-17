@@ -1,0 +1,692 @@
+{
+  "unit": {
+    "id": "b2-u10",
+    "course": "boki2",
+    "chapter": 10,
+    "title": "製造間接費"
+  },
+  "nodes": [
+    {
+      "id": "b2-u10-n1",
+      "title": "予定配賦",
+      "meta": {
+        "goal": "予定配賦率を求めて、製品に配賦できる",
+        "topic": "製造間接費の予定配賦",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "ほたる鋳工の製造間接費の年間予算は13,200,000円、年間の基準操業度（直接作業時間）は12,000時間である。予定配賦率は1時間あたり何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1100
+          },
+          "explanation": "製造間接費の年間予算を、基準操業度で割ったものが予定配賦率です。",
+          "source": "generated",
+          "id": "b2-u10-n1-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ひのき家具の製造間接費の年間予算は32,400,000円、年間の基準操業度（直接作業時間）は18,000時間である。予定配賦率は1時間あたり何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1800
+          },
+          "explanation": "製造間接費の年間予算を、基準操業度で割ったものが予定配賦率です。",
+          "source": "generated",
+          "id": "b2-u10-n1-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造間接費の予定配賦率は1時間あたり600円で、製品Aの直接作業時間は670時間だった。製品Aに配賦する製造間接費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 402000
+          },
+          "explanation": "予定配賦率に、その製品の直接作業時間を掛けます。",
+          "source": "generated",
+          "id": "b2-u10-n1-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造間接費の予定配賦率は1時間あたり750円で、製品Aの直接作業時間は710時間だった。製品Aに配賦する製造間接費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 532500
+          },
+          "explanation": "予定配賦率に、その製品の直接作業時間を掛けます。",
+          "source": "generated",
+          "id": "b2-u10-n1-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "つばめ精機は、当月の製品に対し、製造間接費450,000円を予定配賦した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕掛品",
+                "amount": 450000
+              }
+            ],
+            "credit": [
+              {
+                "account": "製造間接費",
+                "amount": 450000
+              }
+            ],
+            "accountOptions": [
+              "製品",
+              "製造間接費",
+              "材料",
+              "仕掛品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "集めた製造間接費を製品に配賦するので、借方（左）は仕掛品、貸方（右）は製造間接費です。",
+          "source": "original",
+          "id": "b2-u10-n1-q5",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u10-n2",
+      "title": "配賦差異",
+      "meta": {
+        "goal": "配賦差異を求め、売上原価に加減できる",
+        "topic": "製造間接費の配賦差異",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [
+          "製造間接費配賦差異"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "製造間接費の実際発生額が1,160,000円、予定配賦額が1,180,000円だった。配賦差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 20000
+          },
+          "explanation": "実際発生額と予定配賦額の差が、製造間接費配賦差異です。",
+          "source": "generated",
+          "id": "b2-u10-n2-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造間接費の実際発生額が680,000円、予定配賦額が655,000円だった。配賦差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 25000
+          },
+          "explanation": "実際発生額と予定配賦額の差が、製造間接費配賦差異です。",
+          "source": "generated",
+          "id": "b2-u10-n2-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ほたる鋳工の製造間接費は、実際発生額1,110,000円に対し、予定配賦額が1,095,000円だった。不足分を製造間接費配賦差異として処理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "製造間接費配賦差異",
+                "amount": 15000
+              }
+            ],
+            "credit": [
+              {
+                "account": "製造間接費",
+                "amount": 15000
+              }
+            ],
+            "accountOptions": [
+              "製造間接費",
+              "製造間接費配賦差異",
+              "仕掛品",
+              "売上原価"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "予定より実際が多かった不足分は、借方（左）の製造間接費配賦差異に書きます。貸方（右）は製造間接費です。",
+          "source": "generated",
+          "id": "b2-u10-n2-q3",
+          "sanitized": true,
+          "newAccounts": [
+            "製造間接費配賦差異"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "つばめ精機の製造間接費は、実際発生額800,000円に対し、予定配賦額が780,000円だった。不足分を製造間接費配賦差異として処理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "製造間接費配賦差異",
+                "amount": 20000
+              }
+            ],
+            "credit": [
+              {
+                "account": "製造間接費",
+                "amount": 20000
+              }
+            ],
+            "accountOptions": [
+              "製造間接費",
+              "仕掛品",
+              "製造間接費配賦差異",
+              "売上原価"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "予定より実際が多かった不足分は、借方（左）の製造間接費配賦差異に書きます。貸方（右）は製造間接費です。",
+          "source": "generated",
+          "id": "b2-u10-n2-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ひのき家具は、決算で製造間接費配賦差異（借方残高）50,000円を、売上原価に振り替えた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売上原価",
+                "amount": 50000
+              }
+            ],
+            "credit": [
+              {
+                "account": "製造間接費配賦差異",
+                "amount": 50000
+              }
+            ],
+            "accountOptions": [
+              "売上原価",
+              "仕掛品",
+              "製造間接費配賦差異",
+              "製造間接費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "不足配賦の差異は、売上原価に足します。借方（左）は売上原価、貸方（右）は製造間接費配賦差異です。",
+          "source": "original",
+          "id": "b2-u10-n2-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "わかくさ縫製は、決算で製造間接費配賦差異（貸方残高）10,000円を、売上原価に振り替えた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "製造間接費配賦差異",
+                "amount": 10000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上原価",
+                "amount": 10000
+              }
+            ],
+            "accountOptions": [
+              "製造間接費配賦差異",
+              "売上原価",
+              "製造間接費",
+              "仕掛品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "過剰配賦の差異は、売上原価から引きます。借方（左）は製造間接費配賦差異、貸方（右）は売上原価です。",
+          "source": "original",
+          "id": "b2-u10-n2-q6",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u10-n3",
+      "title": "固定予算と変動予算",
+      "meta": {
+        "goal": "公式法変動予算で、予算許容額を求められる",
+        "topic": "固定予算と変動予算",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "製造間接費の変動予算（公式法）は、月間の固定費510,000円、変動費率は1時間あたり450円である。当月の実際操業度が1,600時間のとき、予算許容額は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1230000
+          },
+          "explanation": "予算許容額は、固定費に、変動費率と実際操業度の積を足したものです。",
+          "source": "generated",
+          "id": "b2-u10-n3-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造間接費の変動予算（公式法）は、月間の固定費340,000円、変動費率は1時間あたり390円である。当月の実際操業度が1,900時間のとき、予算許容額は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1081000
+          },
+          "explanation": "予算許容額は、固定費に、変動費率と実際操業度の積を足したものです。",
+          "source": "generated",
+          "id": "b2-u10-n3-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "月間の固定費予算540,000円、変動費率は1時間あたり390円の変動予算（公式法）がある。実際操業度が1,700時間のときの、変動費の予算許容額は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 663000
+          },
+          "explanation": "変動費の予算許容額は、変動費率に実際操業度を掛けたものです。",
+          "source": "generated",
+          "id": "b2-u10-n3-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "月間の固定費予算210,000円、変動費率は1時間あたり310円の変動予算（公式法）がある。実際操業度が700時間のときの、変動費の予算許容額は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 217000
+          },
+          "explanation": "変動費の予算許容額は、変動費率に実際操業度を掛けたものです。",
+          "source": "generated",
+          "id": "b2-u10-n3-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "固定予算では、実際の操業度が予算より少なくても、予算の額はどうなるか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "変わらない",
+              "操業度に比例して減る",
+              "固定費だけが減る",
+              "変動費だけが増える"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "固定予算は、操業度に関わらず予算額を一定に決めておく方法です。",
+          "source": "original",
+          "id": "b2-u10-n3-q5",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u10-n4",
+      "title": "予算差異と操業度差異",
+      "meta": {
+        "goal": "2つの差異を求めて、有利か不利かを言える",
+        "topic": "予算差異と操業度差異",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "月間の固定費予算460,000円、変動費率は1時間あたり160円、実際操業度1,900時間、実際の製造間接費発生額が794,000円である。予算差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 30000
+          },
+          "explanation": "予算許容額と実際発生額の差が予算差異です。",
+          "source": "generated",
+          "id": "b2-u10-n4-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "月間の固定費予算610,000円、変動費率は1時間あたり130円、実際操業度1,600時間、実際の製造間接費発生額が828,000円である。予算差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 10000
+          },
+          "explanation": "予算許容額と実際発生額の差が予算差異です。",
+          "source": "generated",
+          "id": "b2-u10-n4-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "月間の固定費予算が520,000円、基準操業度が1,600時間で、当月の実際操業度は1,500時間だった。操業度差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 32500
+          },
+          "explanation": "操業度差異は、固定費率に、基準操業度と実際操業度の差を掛けたものです。",
+          "source": "generated",
+          "id": "b2-u10-n4-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "月間の固定費予算が290,000円、基準操業度が1,000時間で、当月の実際操業度は800時間だった。操業度差異の金額（差額だけ）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 58000
+          },
+          "explanation": "操業度差異は、固定費率に、基準操業度と実際操業度の差を掛けたものです。",
+          "source": "generated",
+          "id": "b2-u10-n4-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "予算許容額が実際発生額より大きい。この予算差異は有利か不利か。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "差異なし",
+              "判断できない",
+              "有利差異",
+              "不利差異"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "予算より少ない費用で済んだので、有利な差異です。",
+          "source": "original",
+          "id": "b2-u10-n4-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "実際操業度が基準操業度を下回った。固定費の配賦不足から生じる操業度差異は、どちら向きか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "差異なし",
+              "不利差異",
+              "有利差異",
+              "予算差異になる"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "基準より操業度が低いと、固定費を配賦しきれず、不利な操業度差異になります。",
+          "source": "original",
+          "id": "b2-u10-n4-q6",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u10-n5",
+      "title": "勘定記入（製造間接費）",
+      "meta": {
+        "goal": "製造間接費の勘定に、配賦と差異を記入できる",
+        "topic": "製造間接費の勘定記入",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "いずみ樹脂の4月の製造間接費勘定を完成させる。間接材料費200,000円、間接労務費220,000円、間接経費180,000円を集め、仕掛品へ575,000円を予定配賦した。実際発生額との差額は、製造間接費配賦差異とする。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "製造間接費"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "材料",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "賃金",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "経費",
+                      "amount": 180000
+                    }
+                  },
+                  {
+                    "key": "d4",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "製造間接費配賦差異",
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "仕掛品",
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 200000
+              },
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 220000
+              },
+              {
+                "ref": "d4.amount",
+                "input": "numpad",
+                "answer": 25000
+              },
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 575000
+              }
+            ]
+          },
+          "explanation": "借方（左）には、間接材料費、間接労務費、間接経費を集めます。貸方（右）は予定配賦額で、実際との差額が借方（左）の配賦差異です。",
+          "source": "original",
+          "id": "b2-u10-n5-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "いずみ樹脂の4月の製造間接費勘定を完成させる。間接材料費100,000円、間接労務費250,000円、間接経費80,000円を集め、仕掛品へ400,000円を予定配賦した。実際発生額との差額は、製造間接費配賦差異とする。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "製造間接費"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "材料",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "賃金",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "経費",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d4",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "製造間接費配賦差異",
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "4/30",
+                      "counterAccount": "仕掛品",
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 100000
+              },
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 250000
+              },
+              {
+                "ref": "d3.amount",
+                "input": "numpad",
+                "answer": 80000
+              },
+              {
+                "ref": "d4.amount",
+                "input": "numpad",
+                "answer": 30000
+              },
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 400000
+              }
+            ]
+          },
+          "explanation": "借方（左）には、間接材料費、間接労務費、間接経費を集めます。貸方（右）は予定配賦額で、実際との差額が借方（左）の配賦差異です。",
+          "source": "original",
+          "id": "b2-u10-n5-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造間接費勘定の借方に、実際発生額760,000円が集まった。貸方には、仕掛品への予定配賦額755,000円が記入された。残りの差額（製造間接費配賦差異）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 5000
+          },
+          "explanation": "借方の合計と貸方の予定配賦額の差が、配賦差異として残ります。",
+          "source": "generated",
+          "id": "b2-u10-n5-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造間接費勘定の借方に、実際発生額550,000円が集まった。貸方には、仕掛品への予定配賦額525,000円が記入された。残りの差額（製造間接費配賦差異）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 25000
+          },
+          "explanation": "借方の合計と貸方の予定配賦額の差が、配賦差異として残ります。",
+          "source": "generated",
+          "id": "b2-u10-n5-q4",
+          "sanitized": true
+        }
+      ]
+    }
+  ]
+}
