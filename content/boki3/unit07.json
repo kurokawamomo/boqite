@@ -1,0 +1,1342 @@
+{
+  "unit": {
+    "id": "b3-u07",
+    "course": "boki3",
+    "chapter": 7,
+    "title": "在庫の数え方と売上原価"
+  },
+  "nodes": [
+    {
+      "id": "b3-u07-n1",
+      "title": "商品有高帳",
+      "meta": {
+        "goal": "先入先出法と移動平均法で払出単価を出せる",
+        "topic": "先入先出法と移動平均法",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "みちくさ文具店のボールペンの商品有高帳。先に仕入れたものから先に売る。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "inventory_ledger",
+              "data": {
+                "method": "fifo",
+                "header": {
+                  "title": "商品有高帳",
+                  "subject": "ボールペン"
+                },
+                "rows": [
+                  {
+                    "key": "r-op",
+                    "cells": {
+                      "date": "11/1",
+                      "summary": "前月繰越",
+                      "received": [],
+                      "shipped": [],
+                      "balance": [
+                        {
+                          "quantity": 30,
+                          "unitPrice": 100,
+                          "amount": 3000
+                        }
+                      ]
+                    },
+                    "role": "opening"
+                  },
+                  {
+                    "key": "r-1105",
+                    "cells": {
+                      "date": "11/5",
+                      "summary": "仕 入",
+                      "received": [
+                        {
+                          "quantity": 20,
+                          "unitPrice": 110,
+                          "amount": 2200
+                        }
+                      ],
+                      "shipped": [],
+                      "balance": [
+                        {
+                          "quantity": 30,
+                          "unitPrice": 100,
+                          "amount": 3000
+                        },
+                        {
+                          "quantity": 20,
+                          "unitPrice": 110,
+                          "amount": 2200
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "r-1112",
+                    "cells": {
+                      "date": "11/12",
+                      "summary": "売 上",
+                      "received": [],
+                      "shipped": [
+                        {
+                          "quantity": 30,
+                          "unitPrice": 100,
+                          "amount": 3000
+                        },
+                        {
+                          "quantity": 10,
+                          "unitPrice": 110,
+                          "amount": null
+                        }
+                      ],
+                      "balance": [
+                        {
+                          "quantity": 10,
+                          "unitPrice": 110,
+                          "amount": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "r-1120",
+                    "cells": {
+                      "date": "11/20",
+                      "summary": "仕 入",
+                      "received": [
+                        {
+                          "quantity": 30,
+                          "unitPrice": 120,
+                          "amount": 3600
+                        }
+                      ],
+                      "shipped": [],
+                      "balance": [
+                        {
+                          "quantity": 10,
+                          "unitPrice": 110,
+                          "amount": 1100
+                        },
+                        {
+                          "quantity": 30,
+                          "unitPrice": 120,
+                          "amount": 3600
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "r-1127",
+                    "cells": {
+                      "date": "11/27",
+                      "summary": "売 上",
+                      "received": [],
+                      "shipped": [
+                        {
+                          "quantity": 10,
+                          "unitPrice": 110,
+                          "amount": 1100
+                        },
+                        {
+                          "quantity": 15,
+                          "unitPrice": null,
+                          "amount": 1800
+                        }
+                      ],
+                      "balance": [
+                        {
+                          "quantity": null,
+                          "unitPrice": 120,
+                          "amount": 1800
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r-1112.shipped.1.amount",
+                "input": "numpad",
+                "answer": 1100
+              },
+              {
+                "ref": "r-1112.balance.0.amount",
+                "input": "numpad",
+                "answer": 1100
+              },
+              {
+                "ref": "r-1127.shipped.1.unitPrice",
+                "input": "numpad",
+                "answer": 120
+              },
+              {
+                "ref": "r-1127.balance.0.quantity",
+                "input": "numpad",
+                "answer": 15
+              }
+            ]
+          },
+          "explanation": "先入先出法は、古い仕入のぶんから順に払い出します。11/12は、先に30本を100円で、残りの10本を110円で払い出したので、残りは110円の10本です。",
+          "id": "b3-u07-n1-q1",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "こころね書店のノートの商品有高帳。仕入のたびに、平均した単価を出す。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "inventory_ledger",
+              "data": {
+                "method": "moving_average",
+                "header": {
+                  "title": "商品有高帳",
+                  "subject": "ノート"
+                },
+                "rows": [
+                  {
+                    "key": "r-op",
+                    "cells": {
+                      "date": "6/1",
+                      "summary": "前月繰越",
+                      "received": [],
+                      "shipped": [],
+                      "balance": [
+                        {
+                          "quantity": 20,
+                          "unitPrice": 100,
+                          "amount": 2000
+                        }
+                      ]
+                    },
+                    "role": "opening"
+                  },
+                  {
+                    "key": "r-0604",
+                    "cells": {
+                      "date": "6/4",
+                      "summary": "仕 入",
+                      "received": [
+                        {
+                          "quantity": 30,
+                          "unitPrice": 110,
+                          "amount": 3300
+                        }
+                      ],
+                      "shipped": [],
+                      "balance": [
+                        {
+                          "quantity": 50,
+                          "unitPrice": null,
+                          "amount": 5300
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "r-0610",
+                    "cells": {
+                      "date": "6/10",
+                      "summary": "売 上",
+                      "received": [],
+                      "shipped": [
+                        {
+                          "quantity": 25,
+                          "unitPrice": 106,
+                          "amount": null
+                        }
+                      ],
+                      "balance": [
+                        {
+                          "quantity": 25,
+                          "unitPrice": 106,
+                          "amount": 2650
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "r-0618",
+                    "cells": {
+                      "date": "6/18",
+                      "summary": "仕 入",
+                      "received": [
+                        {
+                          "quantity": 25,
+                          "unitPrice": 118,
+                          "amount": 2950
+                        }
+                      ],
+                      "shipped": [],
+                      "balance": [
+                        {
+                          "quantity": 50,
+                          "unitPrice": null,
+                          "amount": 5600
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "r-0625",
+                    "cells": {
+                      "date": "6/25",
+                      "summary": "売 上",
+                      "received": [],
+                      "shipped": [
+                        {
+                          "quantity": 30,
+                          "unitPrice": 112,
+                          "amount": 3360
+                        }
+                      ],
+                      "balance": [
+                        {
+                          "quantity": 20,
+                          "unitPrice": 112,
+                          "amount": null
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r-0604.balance.0.unitPrice",
+                "input": "numpad",
+                "answer": 106
+              },
+              {
+                "ref": "r-0610.shipped.0.amount",
+                "input": "numpad",
+                "answer": 2650
+              },
+              {
+                "ref": "r-0618.balance.0.unitPrice",
+                "input": "numpad",
+                "answer": 112
+              },
+              {
+                "ref": "r-0625.balance.0.amount",
+                "input": "numpad",
+                "answer": 2240
+              }
+            ]
+          },
+          "explanation": "移動平均法は、仕入れるたびに、残りの金額と仕入の金額を足して、数量で割ります。6/4は5,300円÷50個で106円、6/18は5,600円÷50個で112円です。",
+          "id": "b3-u07-n1-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ほしくず雑貨店の商品。先入先出法で記帳している。月初に40個（@50円）。仕入60個（@60円）のあと、70個を売った。この70個の払出金額はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 3800
+          },
+          "explanation": "古い40個を50円で払い出して2,000円、残りの30個は新しい60円で払い出して1,800円で、合わせて3,800円です。",
+          "id": "b3-u07-n1-q3",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "かりがね商店の商品を、移動平均法で管理している。月初の在庫は12個（1個130円）。続けて16個（1個200円）を仕入れ、そのうち20個を売った。この20個の払出金額はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 3400
+          },
+          "explanation": "仕入のあとの平均単価は、(1,560+3,200)円÷28個で170円です。20個を170円で払い出すので、3,400円です。",
+          "id": "b3-u07-n1-q4",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "id": "b3-u07-n1-yuudaka-s901",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "花びんについて、先入先出法で商品有高帳をつける。11/1の前月繰越は22個（@23円）、11/5に32個を@28円で仕入れ、11/12に39個を売り上げた。空欄を埋めよう。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "inventory_ledger",
+              "data": {
+                "method": "fifo",
+                "header": {
+                  "title": "商品有高帳",
+                  "subject": "花びん"
+                },
+                "rows": [
+                  {
+                    "key": "r-1101",
+                    "role": "opening",
+                    "cells": {
+                      "date": "11/1",
+                      "summary": "前月繰越",
+                      "received": [],
+                      "shipped": [],
+                      "balance": [
+                        {
+                          "quantity": 22,
+                          "unitPrice": 23,
+                          "amount": 506
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "r-1105",
+                    "cells": {
+                      "date": "11/5",
+                      "summary": "仕　入",
+                      "received": [
+                        {
+                          "quantity": 32,
+                          "unitPrice": 28,
+                          "amount": 896
+                        }
+                      ],
+                      "shipped": [],
+                      "balance": [
+                        {
+                          "quantity": 22,
+                          "unitPrice": 23,
+                          "amount": 506
+                        },
+                        {
+                          "quantity": 32,
+                          "unitPrice": 28,
+                          "amount": 896
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "r-1112",
+                    "cells": {
+                      "date": "11/12",
+                      "summary": "売　上",
+                      "received": [],
+                      "shipped": [
+                        {
+                          "quantity": 22,
+                          "unitPrice": 23,
+                          "amount": null
+                        },
+                        {
+                          "quantity": 17,
+                          "unitPrice": 28,
+                          "amount": null
+                        }
+                      ],
+                      "balance": [
+                        {
+                          "quantity": 15,
+                          "unitPrice": 28,
+                          "amount": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "r-1130",
+                    "role": "carryforward",
+                    "cells": {
+                      "date": "11/30",
+                      "summary": "次月繰越",
+                      "received": [],
+                      "shipped": [
+                        {
+                          "quantity": 15,
+                          "unitPrice": 28,
+                          "amount": 420
+                        }
+                      ],
+                      "balance": []
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r-1112.shipped.0.amount",
+                "input": "numpad",
+                "answer": 506
+              },
+              {
+                "ref": "r-1112.shipped.1.amount",
+                "input": "numpad",
+                "answer": 476
+              },
+              {
+                "ref": "r-1112.balance.0.amount",
+                "input": "numpad",
+                "answer": 420
+              }
+            ]
+          },
+          "explanation": "先入先出法は古い在庫から払い出すよ。11/12は前月繰越22個（@23）を使い切って、あとの17個を11/5の仕入分（@28）から出すので、17×28＝476円。残りは15個×@28だよ。",
+          "generated": {
+            "generator": "b3-u07-n1-yuudaka",
+            "seed": 901
+          }
+        },
+        {
+          "id": "b3-u07-n1-yuudaka-s902",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "花びんについて、移動平均法で商品有高帳をつける。11/1の前月繰越は10個（@30円）、11/5に20個を@39円で仕入れ、11/12に22個を売り上げた。空欄を埋めよう。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "inventory_ledger",
+              "data": {
+                "method": "moving_average",
+                "header": {
+                  "title": "商品有高帳",
+                  "subject": "花びん"
+                },
+                "rows": [
+                  {
+                    "key": "r-1101",
+                    "role": "opening",
+                    "cells": {
+                      "date": "11/1",
+                      "summary": "前月繰越",
+                      "received": [],
+                      "shipped": [],
+                      "balance": [
+                        {
+                          "quantity": 10,
+                          "unitPrice": 30,
+                          "amount": 300
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "r-1105",
+                    "cells": {
+                      "date": "11/5",
+                      "summary": "仕　入",
+                      "received": [
+                        {
+                          "quantity": 20,
+                          "unitPrice": 39,
+                          "amount": 780
+                        }
+                      ],
+                      "shipped": [],
+                      "balance": [
+                        {
+                          "quantity": 30,
+                          "unitPrice": null,
+                          "amount": 1080
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "r-1112",
+                    "cells": {
+                      "date": "11/12",
+                      "summary": "売　上",
+                      "received": [],
+                      "shipped": [
+                        {
+                          "quantity": 22,
+                          "unitPrice": 36,
+                          "amount": null
+                        }
+                      ],
+                      "balance": [
+                        {
+                          "quantity": 8,
+                          "unitPrice": 36,
+                          "amount": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "r-1130",
+                    "role": "carryforward",
+                    "cells": {
+                      "date": "11/30",
+                      "summary": "次月繰越",
+                      "received": [],
+                      "shipped": [
+                        {
+                          "quantity": 8,
+                          "unitPrice": 36,
+                          "amount": 288
+                        }
+                      ],
+                      "balance": []
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r-1105.balance.0.unitPrice",
+                "input": "numpad",
+                "answer": 36
+              },
+              {
+                "ref": "r-1112.shipped.0.amount",
+                "input": "numpad",
+                "answer": 792
+              },
+              {
+                "ref": "r-1112.balance.0.amount",
+                "input": "numpad",
+                "answer": 288
+              }
+            ]
+          },
+          "explanation": "移動平均法は、仕入のたびに平均単価を出し直すよ。(10×30＋20×39)÷30個＝@36円。売上はこの平均単価で払い出すよ。",
+          "generated": {
+            "generator": "b3-u07-n1-yuudaka",
+            "seed": 902
+          }
+        },
+        {
+          "id": "b3-u07-n1-yuudaka-s903",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "マグカップについて、先入先出法で商品有高帳をつける。11/1の前月繰越は30個（@16円）、11/5に32個を@22円で仕入れ、11/12に43個を売り上げた。空欄を埋めよう。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "inventory_ledger",
+              "data": {
+                "method": "fifo",
+                "header": {
+                  "title": "商品有高帳",
+                  "subject": "マグカップ"
+                },
+                "rows": [
+                  {
+                    "key": "r-1101",
+                    "role": "opening",
+                    "cells": {
+                      "date": "11/1",
+                      "summary": "前月繰越",
+                      "received": [],
+                      "shipped": [],
+                      "balance": [
+                        {
+                          "quantity": 30,
+                          "unitPrice": 16,
+                          "amount": 480
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "r-1105",
+                    "cells": {
+                      "date": "11/5",
+                      "summary": "仕　入",
+                      "received": [
+                        {
+                          "quantity": 32,
+                          "unitPrice": 22,
+                          "amount": 704
+                        }
+                      ],
+                      "shipped": [],
+                      "balance": [
+                        {
+                          "quantity": 30,
+                          "unitPrice": 16,
+                          "amount": 480
+                        },
+                        {
+                          "quantity": 32,
+                          "unitPrice": 22,
+                          "amount": 704
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "r-1112",
+                    "cells": {
+                      "date": "11/12",
+                      "summary": "売　上",
+                      "received": [],
+                      "shipped": [
+                        {
+                          "quantity": 30,
+                          "unitPrice": 16,
+                          "amount": null
+                        },
+                        {
+                          "quantity": 13,
+                          "unitPrice": 22,
+                          "amount": null
+                        }
+                      ],
+                      "balance": [
+                        {
+                          "quantity": 19,
+                          "unitPrice": 22,
+                          "amount": null
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "key": "r-1130",
+                    "role": "carryforward",
+                    "cells": {
+                      "date": "11/30",
+                      "summary": "次月繰越",
+                      "received": [],
+                      "shipped": [
+                        {
+                          "quantity": 19,
+                          "unitPrice": 22,
+                          "amount": 418
+                        }
+                      ],
+                      "balance": []
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r-1112.shipped.0.amount",
+                "input": "numpad",
+                "answer": 480
+              },
+              {
+                "ref": "r-1112.shipped.1.amount",
+                "input": "numpad",
+                "answer": 286
+              },
+              {
+                "ref": "r-1112.balance.0.amount",
+                "input": "numpad",
+                "answer": 418
+              }
+            ]
+          },
+          "explanation": "先入先出法は古い在庫から払い出すよ。11/12は前月繰越30個（@16）を使い切って、あとの13個を11/5の仕入分（@22）から出すので、13×22＝286円。残りは19個×@22だよ。",
+          "generated": {
+            "generator": "b3-u07-n1-yuudaka",
+            "seed": 903
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-u07-n2",
+      "title": "売上原価と売上総利益",
+      "meta": {
+        "goal": "期首、仕入、期末から売上原価を出し、売上総利益を出せる",
+        "topic": "売上原価と売上総利益の算定",
+        "minQuestions": 2,
+        "nodeType": "application",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "あおぞら書房の1年。期首の商品80,000円、当期の仕入640,000円、期末の商品90,000円。売上原価はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 630000
+          },
+          "explanation": "売るために使えた商品は、期首の80,000円と仕入の640,000円で720,000円。そのうち期末に売れ残った90,000円を引いた630,000円が、売れた分の原価です。",
+          "id": "b3-u07-n2-q1",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ひなげし雑貨店の1年。売上900,000円。期首の商品80,000円、当期の仕入640,000円、期末の商品90,000円。売上総利益はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 270000
+          },
+          "explanation": "売上原価は、80,000＋640,000−90,000で630,000円です。売上900,000円から売上原価を引いた270,000円が、売上総利益です。",
+          "id": "b3-u07-n2-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "すずらん堂の1年。売上900,000円、給料150,000円。期首の商品80,000円、当期の仕入640,000円、期末の商品90,000円。損益計算書を作る。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "pl",
+              "data": {
+                "header": {
+                  "title": "損益計算書",
+                  "company": "すずらん堂",
+                  "period": "×1年1月1日から×1年12月31日まで",
+                  "unit": "(単位：円)"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "label": "売上原価",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "label": "給料",
+                      "amount": 150000
+                    }
+                  },
+                  {
+                    "key": "d-ni",
+                    "cells": {
+                      "label": "当期純利益",
+                      "amount": null
+                    },
+                    "role": "net_income"
+                  },
+                  {
+                    "key": "d-t",
+                    "cells": {
+                      "label": "計",
+                      "amount": null
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "label": "売上",
+                      "amount": 900000
+                    }
+                  },
+                  {
+                    "key": "c-t",
+                    "cells": {
+                      "label": "計",
+                      "amount": 900000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 630000
+              },
+              {
+                "ref": "d-ni.amount",
+                "input": "numpad",
+                "answer": 120000
+              },
+              {
+                "ref": "d-t.amount",
+                "input": "numpad",
+                "answer": 900000
+              }
+            ]
+          },
+          "explanation": "売上原価は80,000＋640,000−90,000で630,000円。売上から売上原価と給料を引いた120,000円が当期純利益です。",
+          "id": "b3-u07-n2-q3",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "わかくさ商店の1年。売上原価は420,000円。期首の商品50,000円、当期の仕入400,000円。期末の商品はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 30000
+          },
+          "explanation": "売れた分の原価420,000円は、期首と仕入の合計450,000円から、売れ残りを引いた金額です。450,000−420,000で、期末の商品は30,000円です。",
+          "id": "b3-u07-n2-q4",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b3-u07-n3",
+      "title": "決算での売上原価",
+      "meta": {
+        "goal": "三分法の決算整理（期首と期末の振替）を書ける",
+        "topic": "三分法の決算整理",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "ことり楽器店は、決算で、期首の商品60,000円を、売上原価を出すために仕入に移す。（三分法）"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 60000
+              }
+            ],
+            "credit": [
+              {
+                "account": "繰越商品",
+                "amount": 60000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "繰越商品",
+              "現金",
+              "買掛金",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "前の期から繰り越した商品は、この期に売る分なので、仕入に足して借方（左）に書きます。貸方（右）は繰越商品です。",
+          "id": "b3-u07-n3-q1",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ことり楽器店は、決算の日に数えたら、期末の商品が75,000円あった。この分を仕入から外して繰越商品にする。（三分法）"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "繰越商品",
+                "amount": 75000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕入",
+                "amount": 75000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "買掛金",
+              "売上",
+              "仕入",
+              "繰越商品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "期末に残っている分はまだ売れていないので、仕入から外して、財産の繰越商品にして借方（左）に書きます。貸方（右）は仕入です。",
+          "id": "b3-u07-n3-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "すいせん商店は、決算で、期首の商品120,000円を仕入に移す。（三分法）"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 120000
+              }
+            ],
+            "credit": [
+              {
+                "account": "繰越商品",
+                "amount": 120000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "仕入",
+              "買掛金",
+              "繰越商品",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "期首の商品は、この期に売る分なので仕入に足します。借方（左）は仕入、貸方（右）は繰越商品です。",
+          "id": "b3-u07-n3-q3",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "すいせん商店は、決算で、期末の商品が95,000円あった。この分を繰越商品にする。（三分法）"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "繰越商品",
+                "amount": 95000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕入",
+                "amount": 95000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "売上",
+              "買掛金",
+              "仕入",
+              "繰越商品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "期末の売れ残りは、財産の繰越商品にします。仕入から外すので、貸方（右）は仕入です。",
+          "id": "b3-u07-n3-q4",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ことり楽器店の仕入勘定。1年の仕入は520,000円。期首の商品60,000円、期末の商品75,000円。決算の2つの振替を写す。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "仕入"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "1/1〜12/31",
+                      "counterAccount": "買掛金",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "12/31",
+                      "counterAccount": "繰越商品",
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "12/31",
+                      "counterAccount": "繰越商品",
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 520000
+              },
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 60000
+              },
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 75000
+              }
+            ]
+          },
+          "explanation": "期首の60,000円は仕入に足すので借方（左）、期末の75,000円は仕入から外すので貸方（右）です。借方と貸方の差の505,000円が、売れた分の原価（売上原価）になります。",
+          "id": "b3-u07-n3-q5",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b3-u07-n4",
+      "title": "売るたびに原価を移す方法",
+      "meta": {
+        "goal": "販売のつど売上原価勘定に振り替える方法で書き、三分法との違いを説明できる",
+        "topic": "売上原価対立法",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "商品",
+          "売上原価"
+        ],
+        "isNew": true
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "みやび文具店が、商品100,000円を掛けで仕入れた。（売るたびに原価を移す方法）"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "商品",
+                "amount": 100000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 100000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "売掛金",
+              "商品",
+              "繰越商品",
+              "売上原価",
+              "買掛金",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "この方法では、買ったときは費用の仕入でなく、財産の商品に書きます。借方（左）は商品、貸方（右）は買掛金です。",
+          "id": "b3-u07-n4-q1",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "商品"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "みやび文具店が、商品150,000円を掛けで売った。（売るたびに原価を移す方法）"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 150000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 150000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "仕入",
+              "売掛金",
+              "売上原価",
+              "繰越商品",
+              "買掛金",
+              "商品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売った金額を売上に書くところは、三分法と同じです。借方（左）はあとでもらう売掛金です。",
+          "id": "b3-u07-n4-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "みやび文具店が、売った商品の原価90,000円を、商品から売上原価に移した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売上原価",
+                "amount": 90000
+              }
+            ],
+            "credit": [
+              {
+                "account": "商品",
+                "amount": 90000
+              }
+            ],
+            "accountOptions": [
+              "商品",
+              "売上",
+              "繰越商品",
+              "買掛金",
+              "売掛金",
+              "売上原価",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売れた分の原価は、そのとき費用の売上原価にして借方（左）に書きます。商品が減るので貸方（右）は商品で、売るたびに書くので、決算で売れ残りを数えて直す必要がありません。",
+          "id": "b3-u07-n4-q3",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "売上原価"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "商品を仕入れたとき、「商品」という財産の科目に書くのはどちらの方法？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "売るたびに原価を移す方法",
+              "三分法",
+              "どちらも同じ",
+              "どちらでもない"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "三分法では、買ったときに費用の仕入へ書きます。売るたびに原価を移す方法では、売れるまでは財産の商品に書きます。",
+          "id": "b3-u07-n4-q4",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "決算で、期首と期末の商品を、仕入と繰越商品の間で移す仕訳が必要になるのはどちらの方法？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "三分法",
+              "売るたびに原価を移す方法",
+              "どちらも必要",
+              "どちらも不要"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "三分法は、売上原価を決算まで計算しません。だから決算で、期首と期末の商品を仕入と繰越商品の間で動かして求めます。",
+          "id": "b3-u07-n4-q5",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "もくれん商店の商品勘定。\n5/2 商品100,000円を掛けで仕入れた\n5/20 売った商品の原価90,000円を移した"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "商品"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "5/2",
+                      "counterAccount": "買掛金",
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "5/20",
+                      "counterAccount": null,
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 100000
+              },
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 90000
+              },
+              {
+                "ref": "c1.counterAccount",
+                "input": "account_picker",
+                "answer": "売上原価",
+                "accountOptions": [
+                  "売上",
+                  "売上原価",
+                  "仕入",
+                  "買掛金"
+                ]
+              }
+            ]
+          },
+          "explanation": "仕入れたときに借方（左）に増え、売れたときに貸方（右）に減ります。減った相手の科目は売上原価で、残りの10,000円はまだ売れていない商品です。",
+          "id": "b3-u07-n4-q6",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    }
+  ]
+}

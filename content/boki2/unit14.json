@@ -1,0 +1,1202 @@
+{
+  "unit": {
+    "id": "b2-u14",
+    "course": "boki2",
+    "chapter": 14,
+    "title": "株式会社の純資産"
+  },
+  "nodes": [
+    {
+      "id": "b2-u14-n1",
+      "title": "資本準備金",
+      "meta": {
+        "goal": "払込額のうち資本金にしない部分を、資本準備金にできる",
+        "topic": "資本準備金",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "資本準備金"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u14-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "会社の設立にあたり、株式 200 株を1株 ¥50,000 で発行し、払込金は当座預金に入った。資本金は、会社法で認められる最低額（払込額の2分の1）とする。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "当座預金",
+                "amount": 10000000
+              }
+            ],
+            "credit": [
+              {
+                "account": "資本金",
+                "amount": 5000000
+              },
+              {
+                "account": "資本準備金",
+                "amount": 5000000
+              }
+            ],
+            "accountOptions": [
+              "その他資本剰余金",
+              "資本準備金",
+              "利益準備金",
+              "資本金",
+              "繰越利益剰余金",
+              "当座預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "払い込まれた 10,000,000 円のうち、2分の1の 5,000,000 円までは、資本金にしなくてかまいません。資本金にしない部分は、貸方（右）の資本準備金です。",
+          "newAccounts": [
+            "資本準備金"
+          ]
+        },
+        {
+          "id": "b2-u14-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "新株 100 株を1株 ¥80,000 で発行し、払込金は普通預金に入った。資本金は、会社法で認められる最低額とする。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 8000000
+              }
+            ],
+            "credit": [
+              {
+                "account": "資本金",
+                "amount": 4000000
+              },
+              {
+                "account": "資本準備金",
+                "amount": 4000000
+              }
+            ],
+            "accountOptions": [
+              "資本準備金",
+              "利益準備金",
+              "その他資本剰余金",
+              "資本金",
+              "繰越利益剰余金",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "払込額は 80,000 × 100 = 8,000,000 円で、その2分の1の 4,000,000 円を資本金にします。残りの 4,000,000 円は資本準備金です。"
+        },
+        {
+          "id": "b2-u14-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "新株を発行して、払込金 ¥6,000,000 が普通預金に入った。資本準備金は ¥2,000,000 とし、残りを資本金にする。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 6000000
+              }
+            ],
+            "credit": [
+              {
+                "account": "資本金",
+                "amount": 4000000
+              },
+              {
+                "account": "資本準備金",
+                "amount": 2000000
+              }
+            ],
+            "accountOptions": [
+              "普通預金",
+              "資本準備金",
+              "資本金",
+              "その他資本剰余金",
+              "利益準備金",
+              "繰越利益剰余金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "資本準備金を 2,000,000 円とするので、資本金は残りの 4,000,000 円です。資本準備金にできる上限（払込額の2分の1 = 3,000,000 円）の範囲内なので、認められます。"
+        },
+        {
+          "id": "b2-u14-n1-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "新株を発行して、払込金 ¥12,000,000 を受け取った。資本準備金にできる最大の金額はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 6000000
+          },
+          "explanation": "資本金にしなくてよいのは、払込額のうち2分の1までです。12,000,000 × 1/2 = 6,000,000 円が、資本準備金にできる最大の金額です。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u14-n2",
+      "title": "その他の剰余金",
+      "meta": {
+        "goal": "その他資本剰余金と、任意積立金を書ける",
+        "topic": "その他資本剰余金と任意積立金",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "その他資本剰余金",
+          "別途積立金"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u14-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "株主総会で、資本準備金 ¥1,000,000 を減少させ、その他資本剰余金とすることが決まった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "資本準備金",
+                "amount": 1000000
+              }
+            ],
+            "credit": [
+              {
+                "account": "その他資本剰余金",
+                "amount": 1000000
+              }
+            ],
+            "accountOptions": [
+              "繰越利益剰余金",
+              "資本準備金",
+              "資本金",
+              "利益準備金",
+              "その他資本剰余金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "資本準備金を減らして、使い道の自由な資本の剰余金に移します。借方（左）で資本準備金を減らし、貸方（右）のその他資本剰余金に増やします。",
+          "newAccounts": [
+            "その他資本剰余金"
+          ]
+        },
+        {
+          "id": "b2-u14-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "株主総会で、繰越利益剰余金から ¥500,000 を、新築積立金として積み立てることが決まった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "繰越利益剰余金",
+                "amount": 500000
+              }
+            ],
+            "credit": [
+              {
+                "account": "新築積立金",
+                "amount": 500000
+              }
+            ],
+            "accountOptions": [
+              "資本金",
+              "未払配当金",
+              "利益準備金",
+              "新築積立金",
+              "繰越利益剰余金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "将来の建物の建築にそなえて、利益を積み立てます。借方（左）で繰越利益剰余金を減らし、貸方（右）の新築積立金に移します。",
+          "newAccounts": [
+            "新築積立金"
+          ]
+        },
+        {
+          "id": "b2-u14-n2-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "建物が完成したので、新築積立金 ¥500,000 を取り崩して、繰越利益剰余金に戻した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "新築積立金",
+                "amount": 500000
+              }
+            ],
+            "credit": [
+              {
+                "account": "繰越利益剰余金",
+                "amount": 500000
+              }
+            ],
+            "accountOptions": [
+              "資本金",
+              "新築積立金",
+              "繰越利益剰余金",
+              "利益準備金",
+              "未払配当金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "積立の目的を果たしたので、積み立てた利益を元に戻します。借方（左）で新築積立金を減らし、貸方（右）の繰越利益剰余金に戻します。"
+        },
+        {
+          "id": "b2-u14-n2-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "資本準備金を減少させたとき、その金額が移る先の科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "利益準備金",
+              "繰越利益剰余金",
+              "その他資本剰余金",
+              "新築積立金"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "資本準備金は資本の仲間なので、減らした金額は、同じ資本の仲間のその他資本剰余金に移ります。利益の仲間の繰越利益剰余金や利益準備金には移りません。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u14-n3",
+      "title": "準備金の積み立て",
+      "meta": {
+        "goal": "配当に伴う準備金積立額を、算式で求められる",
+        "topic": "配当に伴う準備金の積み立て",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u14-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "配当金 ¥2,000,000 を支払う。資本金は ¥10,000,000、資本準備金は ¥1,000,000、利益準備金は ¥1,200,000 である。配当の財源は繰越利益剰余金で、準備金は、配当額の10分の1か、資本金の4分の1に達するまでの不足額の、小さいほうを積み立てる。積み立てる利益準備金はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 200000
+          },
+          "explanation": "配当額の10分の1は 200,000 円です。資本金の4分の1 2,500,000 円までの不足は 2,500,000 − (1,000,000 + 1,200,000) = 300,000 円で、小さいほうの 200,000 円を積み立てます。"
+        },
+        {
+          "id": "b2-u14-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "配当金 ¥3,000,000 を支払う。資本金は ¥8,000,000、資本準備金は ¥1,000,000、利益準備金は ¥850,000 である。配当の財源は繰越利益剰余金で、準備金は、配当額の10分の1か、資本金の4分の1に達するまでの不足額の、小さいほうを積み立てる。積み立てる利益準備金はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 150000
+          },
+          "explanation": "配当額の10分の1は 300,000 円ですが、資本金の4分の1 2,000,000 円までの不足は 2,000,000 − (1,000,000 + 850,000) = 150,000 円しかありません。小さいほうの 150,000 円までしか積み立てられません。"
+        },
+        {
+          "id": "b2-u14-n3-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "株主総会で、繰越利益剰余金を財源に、配当金 ¥2,000,000 を支払うことが決まった。準備金は、配当額の10分の1を積み立てる（限度額の範囲内）。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "繰越利益剰余金",
+                "amount": 2200000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払配当金",
+                "amount": 2000000
+              },
+              {
+                "account": "利益準備金",
+                "amount": 200000
+              }
+            ],
+            "accountOptions": [
+              "資本準備金",
+              "利益準備金",
+              "その他資本剰余金",
+              "繰越利益剰余金",
+              "資本金",
+              "未払配当金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "配当 2,000,000 円の10分の1の 200,000 円を、利益準備金に積み立てます。借方（左）の繰越利益剰余金は、合わせた 2,200,000 円です。"
+        },
+        {
+          "id": "b2-u14-n3-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "株主総会で、その他資本剰余金を財源に、配当金 ¥1,500,000 を支払うことが決まった。準備金は、配当額の10分の1を積み立てる（限度額の範囲内）。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "その他資本剰余金",
+                "amount": 1650000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払配当金",
+                "amount": 1500000
+              },
+              {
+                "account": "資本準備金",
+                "amount": 150000
+              }
+            ],
+            "accountOptions": [
+              "利益準備金",
+              "資本準備金",
+              "その他資本剰余金",
+              "未払配当金",
+              "資本金",
+              "繰越利益剰余金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "財源が資本の剰余金のときは、積み立てる準備金は、資本準備金です。借方（左）のその他資本剰余金は、配当と積立の合計の 1,650,000 円です。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u14-n4",
+      "title": "剰余金の処分",
+      "meta": {
+        "goal": "繰越利益剰余金から、配当、準備金、任意積立金への処分を書ける。株主資本の計数の変動も書ける",
+        "topic": "剰余金の処分と計数の変動",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u14-n4-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "株主総会で、繰越利益剰余金から、配当金 ¥600,000、利益準備金 ¥60,000、新築積立金 ¥300,000 の処分をすることが決まった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "繰越利益剰余金",
+                "amount": 960000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払配当金",
+                "amount": 600000
+              },
+              {
+                "account": "利益準備金",
+                "amount": 60000
+              },
+              {
+                "account": "新築積立金",
+                "amount": 300000
+              }
+            ],
+            "accountOptions": [
+              "別途積立金",
+              "利益準備金",
+              "資本準備金",
+              "未払配当金",
+              "資本金",
+              "新築積立金",
+              "繰越利益剰余金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "繰越利益剰余金から出ていくのは、配当、準備金、積立金の3つの合計 960,000 円です。貸方（右）の3つの科目に、それぞれ振り分けます。"
+        },
+        {
+          "id": "b2-u14-n4-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "株主総会で、資本金 ¥2,000,000 を減少させ、その他資本剰余金とすることが決まった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "資本金",
+                "amount": 2000000
+              }
+            ],
+            "credit": [
+              {
+                "account": "その他資本剰余金",
+                "amount": 2000000
+              }
+            ],
+            "accountOptions": [
+              "繰越利益剰余金",
+              "資本金",
+              "資本準備金",
+              "その他資本剰余金",
+              "利益準備金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "資本金を減らして、使い道の自由な剰余金に移します。借方（左）で資本金を減らし、貸方（右）のその他資本剰余金に増やします。"
+        },
+        {
+          "id": "b2-u14-n4-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "株主総会で、その他資本剰余金 ¥500,000 を、資本金に組み入れることが決まった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "その他資本剰余金",
+                "amount": 500000
+              }
+            ],
+            "credit": [
+              {
+                "account": "資本金",
+                "amount": 500000
+              }
+            ],
+            "accountOptions": [
+              "その他資本剰余金",
+              "資本準備金",
+              "資本金",
+              "繰越利益剰余金",
+              "利益準備金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "剰余金を、資本金に変えます。借方（左）でその他資本剰余金を減らし、貸方（右）で資本金を増やします。"
+        },
+        {
+          "id": "b2-u14-n4-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "繰越利益剰余金が ¥800,000 の借方残高（損失）になっている。株主総会で、別途積立金 ¥800,000 を取り崩して、損失を補うことが決まった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "別途積立金",
+                "amount": 800000
+              }
+            ],
+            "credit": [
+              {
+                "account": "繰越利益剰余金",
+                "amount": 800000
+              }
+            ],
+            "accountOptions": [
+              "繰越利益剰余金",
+              "資本準備金",
+              "利益準備金",
+              "別途積立金",
+              "新築積立金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "別途積立金は、使い道の決まっていない積立金です。取り崩して、借方（左）で積立金を減らし、貸方（右）で繰越利益剰余金のマイナスを埋めます。",
+          "newAccounts": [
+            "別途積立金"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2-u14-n5",
+      "title": "会社の合併",
+      "meta": {
+        "goal": "吸収合併で、受け入れた資産と負債、のれんまたは負ののれん発生益を書ける",
+        "topic": "吸収合併",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "負ののれん発生益"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u14-n5-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "B社を吸収合併した。B社の資産は、現金 ¥500,000、繰越商品 ¥700,000、備品 ¥1,800,000（いずれも時価）、負債は買掛金 ¥600,000 である。合併の対価として、新株 60 株（1株 ¥50,000）を交付し、払込額の全額を資本金とする。差額はのれんとする。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 500000
+              },
+              {
+                "account": "繰越商品",
+                "amount": 700000
+              },
+              {
+                "account": "備品",
+                "amount": 1800000
+              },
+              {
+                "account": "のれん",
+                "amount": 600000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 600000
+              },
+              {
+                "account": "資本金",
+                "amount": 3000000
+              }
+            ],
+            "accountOptions": [
+              "繰越商品",
+              "備品",
+              "のれん",
+              "負ののれん発生益",
+              "資本金",
+              "資本準備金",
+              "買掛金",
+              "現金",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "受け入れた資産と負債の差は 3,000,000 − 600,000 = 2,400,000 円です。対価 3,000,000 円はそれより 600,000 円高いので、差額が借方（左）ののれんです。"
+        },
+        {
+          "id": "b2-u14-n5-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "B社を吸収合併した。B社の資産は、現金 ¥500,000、繰越商品 ¥700,000、備品 ¥1,800,000（いずれも時価）、負債は買掛金 ¥600,000 である。合併の対価として、新株 40 株（1株 ¥50,000）を交付し、払込額の全額を資本金とする。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 500000
+              },
+              {
+                "account": "繰越商品",
+                "amount": 700000
+              },
+              {
+                "account": "備品",
+                "amount": 1800000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 600000
+              },
+              {
+                "account": "資本金",
+                "amount": 2000000
+              },
+              {
+                "account": "負ののれん発生益",
+                "amount": 400000
+              }
+            ],
+            "accountOptions": [
+              "仕入",
+              "負ののれん発生益",
+              "買掛金",
+              "繰越商品",
+              "資本金",
+              "資本準備金",
+              "備品",
+              "のれん",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "受け入れた純資産 2,400,000 円より、対価の 2,000,000 円のほうが 400,000 円安く済みました。この差は、貸方（右）の負ののれん発生益です。",
+          "newAccounts": [
+            "負ののれん発生益"
+          ]
+        },
+        {
+          "id": "b2-u14-n5-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "合併で、受け入れた資産の時価が ¥4,200,000、引き継いだ負債が ¥1,500,000、対価が ¥3,500,000 だった。のれんはいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 800000
+          },
+          "explanation": "受け入れた純資産は 4,200,000 − 1,500,000 = 2,700,000 円です。払った対価 3,500,000 円との差 800,000 円が、のれんです。"
+        },
+        {
+          "id": "b2-u14-n5-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、合併で生じたのれん ¥600,000 を、5年間で定額法により償却する。直接控除で記帳する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "のれん償却",
+                "amount": 120000
+              }
+            ],
+            "credit": [
+              {
+                "account": "のれん",
+                "amount": 120000
+              }
+            ],
+            "accountOptions": [
+              "負ののれん発生益",
+              "のれん",
+              "ソフトウェア償却",
+              "のれん償却",
+              "減価償却費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "600,000 ÷ 5 = 120,000 円を、借方（左）ののれん償却にします。のれんは、累計額を使わず、貸方（右）で直接減らします。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u14-n6",
+      "title": "株主資本等変動計算書",
+      "meta": {
+        "goal": "純資産の各項目の増減を、様式に記入できる",
+        "topic": "株主資本等変動計算書",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u14-n6-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "当期首の純資産は、資本金 ¥5,000,000、資本準備金 ¥500,000、その他資本剰余金 ¥100,000、利益準備金 ¥200,000、繰越利益剰余金 ¥1,000,000、評価・換算差額等 ¥20,000 だった。当期に、新株を発行して払込額 ¥1,000,000 の全額を資本金とし、配当金 ¥300,000 の支払いと利益準備金 ¥30,000 の積み立てを行った。当期純利益は ¥450,000、株主資本以外の項目の変動額は ¥45,000 だった。株主資本等変動計算書の、当期末残高を完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "equity_statement",
+              "data": {
+                "header": {
+                  "title": "株主資本等変動計算書"
+                },
+                "rows": [
+                  {
+                    "key": "r-open",
+                    "cells": {
+                      "label": "当期首残高",
+                      "capital": 5000000,
+                      "capitalReserve": 500000,
+                      "otherCapitalSurplus": 100000,
+                      "retainedReserve": 200000,
+                      "retainedEarnings": 1000000,
+                      "valuationDifference": 20000,
+                      "total": 6820000
+                    }
+                  },
+                  {
+                    "key": "r-issue",
+                    "cells": {
+                      "label": "新株の発行",
+                      "capital": 1000000,
+                      "capitalReserve": null,
+                      "otherCapitalSurplus": null,
+                      "retainedReserve": null,
+                      "retainedEarnings": null,
+                      "valuationDifference": null,
+                      "total": 1000000
+                    }
+                  },
+                  {
+                    "key": "r-div",
+                    "cells": {
+                      "label": "剰余金の配当",
+                      "capital": null,
+                      "capitalReserve": null,
+                      "otherCapitalSurplus": null,
+                      "retainedReserve": null,
+                      "retainedEarnings": -300000,
+                      "valuationDifference": null,
+                      "total": -300000
+                    }
+                  },
+                  {
+                    "key": "r-res",
+                    "cells": {
+                      "label": "利益準備金の積立",
+                      "capital": null,
+                      "capitalReserve": null,
+                      "otherCapitalSurplus": null,
+                      "retainedReserve": 30000,
+                      "retainedEarnings": -30000,
+                      "valuationDifference": null,
+                      "total": null
+                    }
+                  },
+                  {
+                    "key": "r-ni",
+                    "cells": {
+                      "label": "当期純利益",
+                      "capital": null,
+                      "capitalReserve": null,
+                      "otherCapitalSurplus": null,
+                      "retainedReserve": null,
+                      "retainedEarnings": 450000,
+                      "valuationDifference": null,
+                      "total": 450000
+                    }
+                  },
+                  {
+                    "key": "r-oth",
+                    "cells": {
+                      "label": "株主資本以外の項目の変動額",
+                      "capital": null,
+                      "capitalReserve": null,
+                      "otherCapitalSurplus": null,
+                      "retainedReserve": null,
+                      "retainedEarnings": null,
+                      "valuationDifference": 45000,
+                      "total": 45000
+                    }
+                  },
+                  {
+                    "key": "r-end",
+                    "cells": {
+                      "label": "当期末残高",
+                      "capital": null,
+                      "capitalReserve": 500000,
+                      "otherCapitalSurplus": 100000,
+                      "retainedReserve": null,
+                      "retainedEarnings": null,
+                      "valuationDifference": null,
+                      "total": null
+                    },
+                    "role": "total"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r-end.capital",
+                "input": "numpad",
+                "answer": 6000000
+              },
+              {
+                "ref": "r-end.retainedReserve",
+                "input": "numpad",
+                "answer": 230000
+              },
+              {
+                "ref": "r-end.retainedEarnings",
+                "input": "numpad",
+                "answer": 1120000
+              },
+              {
+                "ref": "r-end.valuationDifference",
+                "input": "numpad",
+                "answer": 65000
+              },
+              {
+                "ref": "r-end.total",
+                "input": "numpad",
+                "answer": 8015000
+              }
+            ]
+          },
+          "explanation": "期末は、期首に変動額を足し引きして出します。繰越利益剰余金は 1,000,000 − 300,000 − 30,000 + 450,000 = 1,120,000 円で、純資産合計は 8,015,000 円です。"
+        },
+        {
+          "id": "b2-u14-n6-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "当期首の純資産は、資本金 ¥8,000,000、資本準備金 ¥1,000,000、利益準備金 ¥800,000、繰越利益剰余金 ¥600,000 だった。当期に、資本準備金 ¥500,000 を減少させてその他資本剰余金とし、配当金 ¥200,000 の支払いと利益準備金 ¥20,000 の積み立てを行った。当期純利益は ¥350,000、評価・換算差額等の増加は ¥10,000 だった。株主資本等変動計算書の、当期末残高を完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "equity_statement",
+              "data": {
+                "header": {
+                  "title": "株主資本等変動計算書"
+                },
+                "rows": [
+                  {
+                    "key": "r-open",
+                    "cells": {
+                      "label": "当期首残高",
+                      "capital": 8000000,
+                      "capitalReserve": 1000000,
+                      "otherCapitalSurplus": null,
+                      "retainedReserve": 800000,
+                      "retainedEarnings": 600000,
+                      "valuationDifference": null,
+                      "total": 10400000
+                    }
+                  },
+                  {
+                    "key": "r-cut",
+                    "cells": {
+                      "label": "資本準備金の減少",
+                      "capital": null,
+                      "capitalReserve": -500000,
+                      "otherCapitalSurplus": 500000,
+                      "retainedReserve": null,
+                      "retainedEarnings": null,
+                      "valuationDifference": null,
+                      "total": null
+                    }
+                  },
+                  {
+                    "key": "r-div",
+                    "cells": {
+                      "label": "剰余金の配当",
+                      "capital": null,
+                      "capitalReserve": null,
+                      "otherCapitalSurplus": null,
+                      "retainedReserve": null,
+                      "retainedEarnings": -200000,
+                      "valuationDifference": null,
+                      "total": -200000
+                    }
+                  },
+                  {
+                    "key": "r-res",
+                    "cells": {
+                      "label": "利益準備金の積立",
+                      "capital": null,
+                      "capitalReserve": null,
+                      "otherCapitalSurplus": null,
+                      "retainedReserve": 20000,
+                      "retainedEarnings": -20000,
+                      "valuationDifference": null,
+                      "total": null
+                    }
+                  },
+                  {
+                    "key": "r-ni",
+                    "cells": {
+                      "label": "当期純利益",
+                      "capital": null,
+                      "capitalReserve": null,
+                      "otherCapitalSurplus": null,
+                      "retainedReserve": null,
+                      "retainedEarnings": 350000,
+                      "valuationDifference": null,
+                      "total": 350000
+                    }
+                  },
+                  {
+                    "key": "r-oth",
+                    "cells": {
+                      "label": "株主資本以外の項目の変動額",
+                      "capital": null,
+                      "capitalReserve": null,
+                      "otherCapitalSurplus": null,
+                      "retainedReserve": null,
+                      "retainedEarnings": null,
+                      "valuationDifference": 10000,
+                      "total": 10000
+                    }
+                  },
+                  {
+                    "key": "r-end",
+                    "cells": {
+                      "label": "当期末残高",
+                      "capital": 8000000,
+                      "capitalReserve": null,
+                      "otherCapitalSurplus": null,
+                      "retainedReserve": null,
+                      "retainedEarnings": null,
+                      "valuationDifference": 10000,
+                      "total": null
+                    },
+                    "role": "total"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r-end.capitalReserve",
+                "input": "numpad",
+                "answer": 500000
+              },
+              {
+                "ref": "r-end.otherCapitalSurplus",
+                "input": "numpad",
+                "answer": 500000
+              },
+              {
+                "ref": "r-end.retainedReserve",
+                "input": "numpad",
+                "answer": 820000
+              },
+              {
+                "ref": "r-end.retainedEarnings",
+                "input": "numpad",
+                "answer": 730000
+              },
+              {
+                "ref": "r-end.total",
+                "input": "numpad",
+                "answer": 10560000
+              }
+            ]
+          },
+          "explanation": "資本準備金の減少は、同じ額が、その他資本剰余金の増加になります。繰越利益剰余金は 600,000 − 200,000 − 20,000 + 350,000 = 730,000 円で、純資産合計は 10,560,000 円です。"
+        },
+        {
+          "id": "b2-u14-n6-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "当期首のその他有価証券評価差額金は ¥20,000 だった。当期に、評価差額金の増加が ¥45,000 あった。当期末のその他有価証券評価差額金はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 65000
+          },
+          "explanation": "株主資本以外の項目も、期首に増減を足して、期末を出します。20,000 + 45,000 = 65,000 円です。"
+        },
+        {
+          "id": "b2-u14-n6-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "株主資本等変動計算書で、当期純利益は、どの項目の増加として記入する？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "繰越利益剰余金",
+              "その他有価証券評価差額金",
+              "資本金",
+              "利益準備金"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "当期純利益は、損益勘定から繰越利益剰余金へ移ります。だから、繰越利益剰余金の増加として記入します。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u14-n7",
+      "title": "見分ける（純資産）",
+      "meta": {
+        "goal": "資本金、準備金、剰余金、評価・換算差額等を見分けられる",
+        "topic": "純資産の項目の見分け",
+        "minQuestions": 6,
+        "nodeType": "discriminate",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u14-n7-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "株主から払い込まれたお金のうち、資本金にしなかった部分を置く科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "繰越利益剰余金",
+              "利益準備金",
+              "資本準備金",
+              "その他資本剰余金"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "払い込まれたお金の一部は、資本金にしなくてよく、その部分は資本準備金です。利益から積み立てる利益準備金とは、もとが違います。"
+        },
+        {
+          "id": "b2-u14-n7-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "配当金を支払うとき、配当額の10分の1を、繰越利益剰余金を財源にして積み立てる科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "資本準備金",
+              "利益準備金",
+              "別途積立金",
+              "資本金"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "利益を財源にした配当では、利益準備金に積み立てます。資本の剰余金を財源にしたときは、資本準備金です。"
+        },
+        {
+          "id": "b2-u14-n7-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "資本準備金を減らしたとき、増える科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "繰越利益剰余金",
+              "別途積立金",
+              "利益準備金",
+              "その他資本剰余金"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "資本準備金の減少で生じるのは、資本の剰余金です。利益の剰余金には、移りません。"
+        },
+        {
+          "id": "b2-u14-n7-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "使い道を決めずに、繰越利益剰余金から積み立てるときの科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "利益準備金",
+              "新築積立金",
+              "資本準備金",
+              "別途積立金"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "使い道を決めた積立金は新築積立金のように目的の名前が付き、決めていないものが別途積立金です。どちらも、利益から積み立てる任意の積立金です。"
+        },
+        {
+          "id": "b2-u14-n7-q5",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "次の科目と、純資産の区分を結びなさい。"
+          },
+          "task": {
+            "kind": "match",
+            "pairs": [
+              [
+                "資本金",
+                "株主資本（資本金）"
+              ],
+              [
+                "資本準備金",
+                "株主資本（資本剰余金）"
+              ],
+              [
+                "利益準備金",
+                "株主資本（利益剰余金）"
+              ],
+              [
+                "その他有価証券評価差額金",
+                "評価・換算差額等"
+              ]
+            ]
+          },
+          "explanation": "純資産の部は、株主資本と、評価・換算差額等に分かれます。株主資本の中は、資本金、資本剰余金、利益剰余金です。"
+        },
+        {
+          "id": "b2-u14-n7-q6",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "その他有価証券評価差額金は、貸借対照表の純資産の部の、どの区分に表示する？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "評価・換算差額等",
+              "利益剰余金",
+              "資本金",
+              "資本剰余金"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "その他有価証券評価差額金は、株主が出したお金や、会社の利益ではないので、株主資本には入りません。評価・換算差額等という別の区分です。"
+        }
+      ]
+    }
+  ]
+}

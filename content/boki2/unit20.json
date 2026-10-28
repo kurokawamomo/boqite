@@ -1,0 +1,1174 @@
+{
+  "unit": {
+    "id": "b2-u20",
+    "course": "boki2",
+    "chapter": 20,
+    "title": "連結会計"
+  },
+  "nodes": [
+    {
+      "id": "b2-u20-n1",
+      "title": "親会社と子会社",
+      "meta": {
+        "goal": "支配の意味と、連結する範囲が言える",
+        "topic": "支配と連結の範囲",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "連結会計の言葉を、意味と組み合わせてください。"
+          },
+          "task": {
+            "kind": "match",
+            "pairs": [
+              [
+                "親会社",
+                "他の会社を支配している会社"
+              ],
+              [
+                "子会社",
+                "親会社に支配されている会社"
+              ],
+              [
+                "非支配株主",
+                "親会社以外の子会社の株主"
+              ],
+              [
+                "連結財務諸表",
+                "親会社と子会社を1つの会社のように表す財務諸表"
+              ]
+            ]
+          },
+          "explanation": "親会社が子会社を支配しているとき、2つを1つの会社のように表して連結します。",
+          "source": "original",
+          "id": "b2-u20-n1-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "原則として、他の会社の議決権の何％を超えて持つと、その会社を支配しているとみなすか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "30％",
+              "100％",
+              "20％",
+              "50％"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "議決権の過半数（50％を超える）を持つと、支配しているとみなします。",
+          "source": "original",
+          "id": "b2-u20-n1-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "親会社が子会社の議決権の80％を持つとき、残りの20％を持つ株主を何というか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "関連会社",
+              "子会社",
+              "親会社",
+              "非支配株主"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "親会社以外の子会社の株主を、非支配株主といいます。",
+          "source": "original",
+          "id": "b2-u20-n1-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "連結財務諸表を作るときの考え方として、正しいものはどれか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "子会社だけを表す",
+              "親会社と子会社を1つの会社として表す",
+              "子会社を1社ずつ並べるだけにする",
+              "親会社だけを表す"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "連結財務諸表は、企業グループ全体を1つの会社のように表します。",
+          "source": "original",
+          "id": "b2-u20-n1-q4",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u20-n2",
+      "title": "資本連結",
+      "meta": {
+        "goal": "投資と資本を相殺し、のれんを計上できる",
+        "topic": "資本連結",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "支配獲得日の連結。親会社が子会社の株式の60％を5,700,000円で取得した。子会社の資本金は6,000,000円、利益剰余金は3,000,000円である。投資と資本を相殺消去する仕訳を書く（差額はのれんとする）。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "資本金",
+                "amount": 6000000
+              },
+              {
+                "account": "利益剰余金",
+                "amount": 3000000
+              },
+              {
+                "account": "のれん",
+                "amount": 300000
+              }
+            ],
+            "credit": [
+              {
+                "account": "子会社株式",
+                "amount": 5700000
+              },
+              {
+                "account": "非支配株主持分",
+                "amount": 3600000
+              }
+            ],
+            "accountOptions": [
+              "資本剰余金",
+              "利益剰余金",
+              "子会社株式",
+              "資本金",
+              "非支配株主持分",
+              "現金",
+              "のれん"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "子会社の資本と親会社の投資を消し、差額をのれんにします。借方（左）は資本金、利益剰余金、のれん、貸方（右）は子会社株式と非支配株主持分です。",
+          "source": "generated",
+          "id": "b2-u20-n2-q1",
+          "sanitized": true,
+          "newAccounts": [
+            "利益剰余金",
+            "非支配株主持分"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "支配獲得日の連結。親会社が子会社の株式の80％を3,100,000円で取得した。子会社の資本金は2,000,000円、利益剰余金は1,000,000円である。投資と資本を相殺消去する仕訳を書く（差額はのれんとする）。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "資本金",
+                "amount": 2000000
+              },
+              {
+                "account": "利益剰余金",
+                "amount": 1000000
+              },
+              {
+                "account": "のれん",
+                "amount": 700000
+              }
+            ],
+            "credit": [
+              {
+                "account": "子会社株式",
+                "amount": 3100000
+              },
+              {
+                "account": "非支配株主持分",
+                "amount": 600000
+              }
+            ],
+            "accountOptions": [
+              "非支配株主持分",
+              "子会社株式",
+              "利益剰余金",
+              "資本金",
+              "資本剰余金",
+              "のれん",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "子会社の資本と親会社の投資を消し、差額をのれんにします。借方（左）は資本金、利益剰余金、のれん、貸方（右）は子会社株式と非支配株主持分です。",
+          "source": "generated",
+          "id": "b2-u20-n2-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "支配獲得の翌期の連結。前期末に、親会社が子会社の株式の70％を7,700,000円で取得した（のれんの償却は当期から）。取得時の子会社の資本金は6,000,000円、利益剰余金は4,000,000円である。翌期の期首に、前期末の資本連結を引き継ぐ開始仕訳を書く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "資本金当期首残高",
+                "amount": 6000000
+              },
+              {
+                "account": "利益剰余金当期首残高",
+                "amount": 4000000
+              },
+              {
+                "account": "のれん",
+                "amount": 700000
+              }
+            ],
+            "credit": [
+              {
+                "account": "子会社株式",
+                "amount": 7700000
+              },
+              {
+                "account": "非支配株主持分当期首残高",
+                "amount": 3000000
+              }
+            ],
+            "accountOptions": [
+              "利益剰余金当期首残高",
+              "資本金当期首残高",
+              "のれん",
+              "子会社株式",
+              "資本金",
+              "利益剰余金",
+              "非支配株主持分当期首残高"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "前期末の相殺を、期首の残高として引き継ぎます。借方（左）は資本金当期首残高、利益剰余金当期首残高、のれん、貸方（右）は子会社株式と非支配株主持分当期首残高です。",
+          "source": "generated",
+          "id": "b2-u20-n2-q3",
+          "sanitized": true,
+          "newAccounts": [
+            "資本金当期首残高",
+            "利益剰余金当期首残高",
+            "非支配株主持分当期首残高"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "支配獲得の翌期の連結。前期末に、親会社が子会社の株式の90％を6,900,000円で取得した（のれんの償却は当期から）。取得時の子会社の資本金は6,000,000円、利益剰余金は1,000,000円である。翌期の期首に、前期末の資本連結を引き継ぐ開始仕訳を書く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "資本金当期首残高",
+                "amount": 6000000
+              },
+              {
+                "account": "利益剰余金当期首残高",
+                "amount": 1000000
+              },
+              {
+                "account": "のれん",
+                "amount": 600000
+              }
+            ],
+            "credit": [
+              {
+                "account": "子会社株式",
+                "amount": 6900000
+              },
+              {
+                "account": "非支配株主持分当期首残高",
+                "amount": 700000
+              }
+            ],
+            "accountOptions": [
+              "利益剰余金当期首残高",
+              "資本金当期首残高",
+              "利益剰余金",
+              "子会社株式",
+              "非支配株主持分当期首残高",
+              "資本金",
+              "のれん"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "前期末の相殺を、期首の残高として引き継ぎます。借方（左）は資本金当期首残高、利益剰余金当期首残高、のれん、貸方（右）は子会社株式と非支配株主持分当期首残高です。",
+          "source": "generated",
+          "id": "b2-u20-n2-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "親会社が子会社の株式の80％を7,100,000円で取得した。支配獲得日の子会社の純資産（資本金と利益剰余金）は8,000,000円である。のれんは何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 700000
+          },
+          "explanation": "取得した株式の価額から、子会社の純資産のうち親会社の持分を引いたものが、のれんです。",
+          "source": "generated",
+          "id": "b2-u20-n2-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "親会社が子会社の株式の90％を6,600,000円で取得した。支配獲得日の子会社の純資産（資本金と利益剰余金）は7,000,000円である。のれんは何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 300000
+          },
+          "explanation": "取得した株式の価額から、子会社の純資産のうち親会社の持分を引いたものが、のれんです。",
+          "source": "generated",
+          "id": "b2-u20-n2-q6",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "のれん600,000円を、20年で定額法により償却する。1年分ののれん償却は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 30000
+          },
+          "explanation": "のれんの金額を、償却する年数で割ります。",
+          "source": "generated",
+          "id": "b2-u20-n2-q7",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u20-n3",
+      "title": "非支配株主持分",
+      "meta": {
+        "goal": "子会社の純資産と利益のうち、親会社以外の分を計算できる",
+        "topic": "非支配株主持分",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [
+          "非支配株主持分"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "子会社の当期純利益は1,500,000円で、親会社の持株比率は70％である。非支配株主に帰属する当期純利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 450000
+          },
+          "explanation": "子会社の当期純利益のうち、非支配株主の持分の割合を掛けます。",
+          "source": "generated",
+          "id": "b2-u20-n3-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "子会社の当期純利益は3,000,000円で、親会社の持株比率は80％である。非支配株主に帰属する当期純利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 600000
+          },
+          "explanation": "子会社の当期純利益のうち、非支配株主の持分の割合を掛けます。",
+          "source": "generated",
+          "id": "b2-u20-n3-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "連結の修正。子会社の当期純利益のうち、非支配株主に帰属する分が1,400,000円である。この分を非支配株主持分の当期の変動として処理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "非支配株主に帰属する当期純利益",
+                "amount": 1400000
+              }
+            ],
+            "credit": [
+              {
+                "account": "非支配株主持分当期変動額",
+                "amount": 1400000
+              }
+            ],
+            "accountOptions": [
+              "非支配株主持分当期変動額",
+              "資本金",
+              "非支配株主持分",
+              "非支配株主に帰属する当期純利益"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "非支配株主の取り分は、利益の按分として借方（左）に書きます。貸方（右）は非支配株主持分当期変動額です。",
+          "source": "generated",
+          "id": "b2-u20-n3-q3",
+          "sanitized": true,
+          "newAccounts": [
+            "非支配株主に帰属する当期純利益",
+            "非支配株主持分当期変動額"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "連結の修正。子会社の当期純利益のうち、非支配株主に帰属する分が1,200,000円である。この分を非支配株主持分の当期の変動として処理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "非支配株主に帰属する当期純利益",
+                "amount": 1200000
+              }
+            ],
+            "credit": [
+              {
+                "account": "非支配株主持分当期変動額",
+                "amount": 1200000
+              }
+            ],
+            "accountOptions": [
+              "資本金",
+              "非支配株主持分当期変動額",
+              "非支配株主に帰属する当期純利益",
+              "非支配株主持分"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "非支配株主の取り分は、利益の按分として借方（左）に書きます。貸方（右）は非支配株主持分当期変動額です。",
+          "source": "generated",
+          "id": "b2-u20-n3-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "子会社が4,000,000円の配当をした。親会社の持株比率は70％である。非支配株主に支払われた配当は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1200000
+          },
+          "explanation": "配当のうち、非支配株主の持分の割合を掛けます。",
+          "source": "generated",
+          "id": "b2-u20-n3-q5",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u20-n4",
+      "title": "連結会社間の取引",
+      "meta": {
+        "goal": "売上と仕入、貸付金と借入金、売掛金と買掛金を相殺できる",
+        "topic": "連結会社間の取引の相殺",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "連結の修正。親会社から子会社への売上770,000円（子会社の仕入と同額）を相殺する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売上",
+                "amount": 770000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上原価",
+                "amount": 770000
+              }
+            ],
+            "accountOptions": [
+              "売上原価",
+              "売掛金",
+              "商品",
+              "売上"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "会社間の売上と仕入は、企業グループの外には出ていないので消します。借方（左）は売上、貸方（右）は売上原価です。",
+          "source": "generated",
+          "id": "b2-u20-n4-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "連結の修正。親会社から子会社への売上570,000円（子会社の仕入と同額）を相殺する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売上",
+                "amount": 570000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上原価",
+                "amount": 570000
+              }
+            ],
+            "accountOptions": [
+              "売上原価",
+              "売掛金",
+              "商品",
+              "売上"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "会社間の売上と仕入は、企業グループの外には出ていないので消します。借方（左）は売上、貸方（右）は売上原価です。",
+          "source": "generated",
+          "id": "b2-u20-n4-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "連結の修正。親会社の売掛金660,000円と、子会社の買掛金660,000円を相殺する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "買掛金",
+                "amount": 660000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売掛金",
+                "amount": 660000
+              }
+            ],
+            "accountOptions": [
+              "貸付金",
+              "借入金",
+              "買掛金",
+              "売掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "会社間の債権と債務は、グループ内の貸し借りなので消します。借方（左）は買掛金、貸方（右）は売掛金です。",
+          "source": "generated",
+          "id": "b2-u20-n4-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "連結の修正。親会社の売掛金600,000円と、子会社の買掛金600,000円を相殺する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "買掛金",
+                "amount": 600000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売掛金",
+                "amount": 600000
+              }
+            ],
+            "accountOptions": [
+              "貸付金",
+              "買掛金",
+              "売掛金",
+              "借入金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "会社間の債権と債務は、グループ内の貸し借りなので消します。借方（左）は買掛金、貸方（右）は売掛金です。",
+          "source": "generated",
+          "id": "b2-u20-n4-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "連結の修正。親会社の貸付金500,000円と、子会社の借入金500,000円を相殺する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "借入金",
+                "amount": 500000
+              }
+            ],
+            "credit": [
+              {
+                "account": "貸付金",
+                "amount": 500000
+              }
+            ],
+            "accountOptions": [
+              "買掛金",
+              "売掛金",
+              "貸付金",
+              "借入金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "会社間の貸し借りは消します。借方（左）は借入金、貸方（右）は貸付金です。",
+          "source": "original",
+          "id": "b2-u20-n4-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "連結の修正。親会社の受取利息50,000円と、子会社の支払利息50,000円を相殺する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "受取利息",
+                "amount": 50000
+              }
+            ],
+            "credit": [
+              {
+                "account": "支払利息",
+                "amount": 50000
+              }
+            ],
+            "accountOptions": [
+              "借入金",
+              "貸付金",
+              "支払利息",
+              "受取利息"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "会社間の利息は、グループ内のやりとりなので消します。借方（左）は受取利息、貸方（右）は支払利息です。",
+          "source": "original",
+          "id": "b2-u20-n4-q6",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u20-n5",
+      "title": "未実現損益",
+      "meta": {
+        "goal": "ダウンストリームとアップストリームを分けて、棚卸資産と土地の未実現損益を消せる",
+        "topic": "未実現損益の消去",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "親会社が子会社に、原価に10％の利益を加えて商品を売った。子会社の期末商品のうち、この商品の売価は1,100,000円である。期末商品に含まれる未実現利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 100000
+          },
+          "explanation": "売価を原価の（100＋利益率）％で割り、利益率を掛けると、売価に含まれる利益が出ます。",
+          "source": "generated",
+          "id": "b2-u20-n5-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "親会社が子会社に、原価に20％の利益を加えて商品を売った。子会社の期末商品のうち、この商品の売価は900,000円である。期末商品に含まれる未実現利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 150000
+          },
+          "explanation": "売価を原価の（100＋利益率）％で割り、利益率を掛けると、売価に含まれる利益が出ます。",
+          "source": "generated",
+          "id": "b2-u20-n5-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "連結の修正（ダウンストリーム）。親会社が子会社に売った商品の期末在庫に、未実現利益400,000円がある。これを消す。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売上原価",
+                "amount": 400000
+              }
+            ],
+            "credit": [
+              {
+                "account": "商品",
+                "amount": 400000
+              }
+            ],
+            "accountOptions": [
+              "売上原価",
+              "売上",
+              "非支配株主持分",
+              "商品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売り手が親会社なので、未実現利益は全額を親会社の利益から消します。借方（左）は売上原価、貸方（右）は商品です。",
+          "source": "generated",
+          "id": "b2-u20-n5-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "連結の修正（ダウンストリーム）。親会社が子会社に売った商品の期末在庫に、未実現利益200,000円がある。これを消す。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売上原価",
+                "amount": 200000
+              }
+            ],
+            "credit": [
+              {
+                "account": "商品",
+                "amount": 200000
+              }
+            ],
+            "accountOptions": [
+              "商品",
+              "非支配株主持分",
+              "売上",
+              "売上原価"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売り手が親会社なので、未実現利益は全額を親会社の利益から消します。借方（左）は売上原価、貸方（右）は商品です。",
+          "source": "generated",
+          "id": "b2-u20-n5-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "連結の修正（アップストリーム）。子会社が親会社に売った商品の期末在庫に、未実現利益400,000円がある。子会社の非支配株主の持分は10％である。未実現利益を消し、非支配株主の負担分を調整する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売上原価",
+                "amount": 400000
+              },
+              {
+                "account": "非支配株主持分当期変動額",
+                "amount": 40000
+              }
+            ],
+            "credit": [
+              {
+                "account": "商品",
+                "amount": 400000
+              },
+              {
+                "account": "非支配株主に帰属する当期純利益",
+                "amount": 40000
+              }
+            ],
+            "accountOptions": [
+              "非支配株主に帰属する当期純利益",
+              "売上原価",
+              "商品",
+              "土地",
+              "非支配株主持分当期変動額",
+              "売上"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売り手が子会社なので、未実現利益のうち非支配株主の分は、非支配株主が負担します。借方（左）は売上原価と非支配株主持分当期変動額、貸方（右）は商品と非支配株主に帰属する当期純利益です。",
+          "source": "original",
+          "id": "b2-u20-n5-q5",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u20-n6",
+      "title": "連結精算表",
+      "meta": {
+        "goal": "開始仕訳と当期の修正で、連結精算表を作れる",
+        "topic": "連結精算表",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "連結精算表。親会社の売上高1,350,000円、子会社の売上高900,000円、会社間の売上の相殺70,000円のとき、連結の売上高は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 2180000
+          },
+          "explanation": "親会社と子会社の売上を足し、相殺した分を引きます。",
+          "source": "generated",
+          "id": "b2-u20-n6-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "連結精算表。親会社の売上高1,500,000円、子会社の売上高350,000円、会社間の売上の相殺150,000円のとき、連結の売上高は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1700000
+          },
+          "explanation": "親会社と子会社の売上を足し、相殺した分を引きます。",
+          "source": "generated",
+          "id": "b2-u20-n6-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "連結精算表。親会社の売掛金1,500,000円、子会社の売掛金1,150,000円、会社間の債権債務の相殺250,000円のとき、連結の売掛金は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 2400000
+          },
+          "explanation": "親会社と子会社の売掛金を足し、相殺した分を引きます。",
+          "source": "generated",
+          "id": "b2-u20-n6-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "連結精算表。親会社の売掛金600,000円、子会社の売掛金650,000円、会社間の債権債務の相殺110,000円のとき、連結の売掛金は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1140000
+          },
+          "explanation": "親会社と子会社の売掛金を足し、相殺した分を引きます。",
+          "source": "generated",
+          "id": "b2-u20-n6-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "連結精算表（一部）。親会社から子会社への売上250,000円（子会社の仕入と同額）を相殺し、親会社の売掛金のうち240,000円と、子会社の買掛金のうち240,000円を相殺する。空欄を埋める。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "consolidation_worksheet",
+              "data": {
+                "header": {
+                  "title": "連結精算表",
+                  "unit": "(単位：円)"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "accountName": "売上",
+                      "parent": 2900000,
+                      "subsidiary": 1000000,
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "consolidated": null
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "accountName": "売上原価",
+                      "parent": 1740000,
+                      "subsidiary": 600000,
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "consolidated": null
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "accountName": "売掛金",
+                      "parent": 890000,
+                      "subsidiary": 450000,
+                      "adjustment": {
+                        "debit": null,
+                        "credit": 240000
+                      },
+                      "consolidated": null
+                    }
+                  },
+                  {
+                    "key": "r4",
+                    "cells": {
+                      "accountName": "買掛金",
+                      "parent": 800000,
+                      "subsidiary": 940000,
+                      "adjustment": {
+                        "debit": 240000,
+                        "credit": null
+                      },
+                      "consolidated": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.adjustment.debit",
+                "input": "numpad",
+                "answer": 250000
+              },
+              {
+                "ref": "r1.consolidated",
+                "input": "numpad",
+                "answer": 3650000
+              },
+              {
+                "ref": "r2.adjustment.credit",
+                "input": "numpad",
+                "answer": 250000
+              },
+              {
+                "ref": "r2.consolidated",
+                "input": "numpad",
+                "answer": 2090000
+              },
+              {
+                "ref": "r3.consolidated",
+                "input": "numpad",
+                "answer": 1100000
+              },
+              {
+                "ref": "r4.consolidated",
+                "input": "numpad",
+                "answer": 1500000
+              }
+            ]
+          },
+          "explanation": "会社間の売上と仕入を消し、売掛金と買掛金も消します。修正の借方（左）と貸方（右）を、親会社と子会社の合計に加減して、連結の金額を出します。",
+          "source": "generated",
+          "id": "b2-u20-n6-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "連結精算表（一部）。親会社から子会社への売上350,000円（子会社の仕入と同額）を相殺し、親会社の売掛金のうち210,000円と、子会社の買掛金のうち210,000円を相殺する。空欄を埋める。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "consolidation_worksheet",
+              "data": {
+                "header": {
+                  "title": "連結精算表",
+                  "unit": "(単位：円)"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "accountName": "売上",
+                      "parent": 1700000,
+                      "subsidiary": 900000,
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "consolidated": null
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "accountName": "売上原価",
+                      "parent": 1020000,
+                      "subsidiary": 540000,
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "consolidated": null
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "accountName": "売掛金",
+                      "parent": 960000,
+                      "subsidiary": 500000,
+                      "adjustment": {
+                        "debit": null,
+                        "credit": 210000
+                      },
+                      "consolidated": null
+                    }
+                  },
+                  {
+                    "key": "r4",
+                    "cells": {
+                      "accountName": "買掛金",
+                      "parent": 300000,
+                      "subsidiary": 910000,
+                      "adjustment": {
+                        "debit": 210000,
+                        "credit": null
+                      },
+                      "consolidated": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.adjustment.debit",
+                "input": "numpad",
+                "answer": 350000
+              },
+              {
+                "ref": "r1.consolidated",
+                "input": "numpad",
+                "answer": 2250000
+              },
+              {
+                "ref": "r2.adjustment.credit",
+                "input": "numpad",
+                "answer": 350000
+              },
+              {
+                "ref": "r2.consolidated",
+                "input": "numpad",
+                "answer": 1210000
+              },
+              {
+                "ref": "r3.consolidated",
+                "input": "numpad",
+                "answer": 1250000
+              },
+              {
+                "ref": "r4.consolidated",
+                "input": "numpad",
+                "answer": 1000000
+              }
+            ]
+          },
+          "explanation": "会社間の売上と仕入を消し、売掛金と買掛金も消します。修正の借方（左）と貸方（右）を、親会社と子会社の合計に加減して、連結の金額を出します。",
+          "source": "generated",
+          "id": "b2-u20-n6-q6",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u20-n7",
+      "title": "連結財務諸表",
+      "meta": {
+        "goal": "連結貸借対照表と連結損益計算書の金額を、精算表から求められる",
+        "topic": "連結財務諸表",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "のれん500,000円を5年で定額法により償却している。支配獲得から2年経った連結貸借対照表の、のれんの残高は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 300000
+          },
+          "explanation": "取得時ののれんから、償却した分を引きます。",
+          "source": "generated",
+          "id": "b2-u20-n7-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "のれん1,100,000円を10年で定額法により償却している。支配獲得から1年経った連結貸借対照表の、のれんの残高は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 990000
+          },
+          "explanation": "取得時ののれんから、償却した分を引きます。",
+          "source": "generated",
+          "id": "b2-u20-n7-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "連結損益計算書。親会社の当期純利益1,000,000円、子会社の当期純利益300,000円、のれん償却40,000円、非支配株主の持分10％である。親会社株主に帰属する当期純利益は何円か（親会社の利益と子会社の利益を足し、のれん償却と非支配株主の取り分を引く）。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1230000
+          },
+          "explanation": "2社の利益を足し、のれん償却を引き、子会社の利益のうち非支配株主の分を引きます。",
+          "source": "generated",
+          "id": "b2-u20-n7-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "連結損益計算書。親会社の当期純利益1,800,000円、子会社の当期純利益600,000円、のれん償却30,000円、非支配株主の持分30％である。親会社株主に帰属する当期純利益は何円か（親会社の利益と子会社の利益を足し、のれん償却と非支配株主の取り分を引く）。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 2190000
+          },
+          "explanation": "2社の利益を足し、のれん償却を引き、子会社の利益のうち非支配株主の分を引きます。",
+          "source": "generated",
+          "id": "b2-u20-n7-q4",
+          "sanitized": true
+        }
+      ]
+    }
+  ]
+}

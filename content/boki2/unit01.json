@@ -1,0 +1,1855 @@
+{
+  "unit": {
+    "id": "b2-u01",
+    "course": "boki2",
+    "chapter": 1,
+    "title": "3級からの橋渡し"
+  },
+  "nodes": [
+    {
+      "id": "b2-u01-n1",
+      "title": "3級の仕訳を思い出す",
+      "meta": {
+        "goal": "現金、掛け、固定資産、税金、経過勘定の仕訳を、混ぜて出されても書ける",
+        "topic": "3級の仕訳の総復習",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u01-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品 ¥180,000 を掛けで仕入れ、引取運賃 ¥4,000 を現金で払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 184000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 180000
+              },
+              {
+                "account": "現金",
+                "amount": 4000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "買掛金",
+              "仕入",
+              "未払金",
+              "発送費",
+              "売掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "仕入れるためにかかった運賃は、仕入の金額に足します。借方（左）は 180,000 + 4,000 = 184,000 円の仕入です。"
+        },
+        {
+          "id": "b2-u01-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "営業用の備品 ¥250,000 を買い、代金は月末払いとした。運送費 ¥10,000 は現金で払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "備品",
+                "amount": 260000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払金",
+                "amount": 250000
+              },
+              {
+                "account": "現金",
+                "amount": 10000
+              }
+            ],
+            "accountOptions": [
+              "買掛金",
+              "備品",
+              "発送費",
+              "現金",
+              "未払金",
+              "消耗品費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "備品を使えるようにするためにかかった運送費は、備品の金額に足します。商品ではない代金の後払いは、貸方（右）の未払金です。"
+        },
+        {
+          "id": "b2-u01-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "給料 ¥280,000 を支払った。所得税 ¥14,000 と社会保険料 ¥22,000 を差し引き、残りは普通預金から振り込んだ。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "給料",
+                "amount": 280000
+              }
+            ],
+            "credit": [
+              {
+                "account": "所得税預り金",
+                "amount": 14000
+              },
+              {
+                "account": "社会保険料預り金",
+                "amount": 22000
+              },
+              {
+                "account": "普通預金",
+                "amount": 244000
+              }
+            ],
+            "accountOptions": [
+              "社会保険料預り金",
+              "所得税預り金",
+              "普通預金",
+              "従業員預り金",
+              "法定福利費",
+              "給料",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "給料は天引き前の 280,000 円が費用で、借方（左）です。引いたぶんは、あとで納める預り金として貸方（右）に置きます。"
+        },
+        {
+          "id": "b2-u01-n1-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品 ¥150,000（税抜）を掛けで売り上げた。消費税は10%で、税抜方式で処理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 165000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 150000
+              },
+              {
+                "account": "仮受消費税",
+                "amount": 15000
+              }
+            ],
+            "accountOptions": [
+              "仮受消費税",
+              "売掛金",
+              "未払消費税",
+              "売上",
+              "仮払消費税",
+              "前受金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売掛金は税込の 165,000 円で、借方（左）です。お客さんから預かった消費税 15,000 円は、売上にせず貸方（右）の仮受消費税にします。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u01-n2",
+      "title": "3級の決算を一周する",
+      "meta": {
+        "goal": "整理事項7項目で、精算表から財務諸表まで作れる",
+        "topic": "3級の決算の総復習",
+        "minQuestions": 2,
+        "nodeType": "application",
+        "examPart": 3,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u01-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "アカネ雑貨店の決算日は3月31日。整理事項は次のとおり。(1) 期末商品棚卸高は ¥250,000 である。売上原価は仕入の行で計算する。 (2) 売掛金の期末残高に 2% の貸倒れを見積もる（差額補充法）。 (3) 備品を定額法（耐用年数6年、残存価額ゼロ、取得原価 ¥600,000）で減価償却する。 (4) 支払保険料は、11月1日に1年分を払ったものである。次の期のぶんを整理する。 (5) 家賃 ¥25,000 が、まだ払われていない。 (6) 受取家賃のうち ¥30,000 は次の期のぶんである。 (7) 通信費のうち ¥3,000 は、未使用の郵便切手である。 精算表を完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "worksheet",
+              "data": {
+                "header": {
+                  "title": "精算表"
+                },
+                "rows": [
+                  {
+                    "key": "w1",
+                    "cells": {
+                      "accountName": "現金",
+                      "trialBalance": {
+                        "debit": 190000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": 190000,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w2",
+                    "cells": {
+                      "accountName": "当座預金",
+                      "trialBalance": {
+                        "debit": 360000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": 360000,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w3",
+                    "cells": {
+                      "accountName": "売掛金",
+                      "trialBalance": {
+                        "debit": 500000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": 500000,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w4",
+                    "cells": {
+                      "accountName": "繰越商品",
+                      "trialBalance": {
+                        "debit": 220000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": 250000,
+                        "credit": 220000
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": 250000,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w5",
+                    "cells": {
+                      "accountName": "貯蔵品",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": 3000,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": 3000,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w6",
+                    "cells": {
+                      "accountName": "前払保険料",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": 35000,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w7",
+                    "cells": {
+                      "accountName": "備品",
+                      "trialBalance": {
+                        "debit": 600000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": 600000,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w8",
+                    "cells": {
+                      "accountName": "貸倒引当金",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": 3000
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": 7000
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": 10000
+                      }
+                    }
+                  },
+                  {
+                    "key": "w9",
+                    "cells": {
+                      "accountName": "減価償却累計額",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": 200000
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": 100000
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": 300000
+                      }
+                    }
+                  },
+                  {
+                    "key": "w10",
+                    "cells": {
+                      "accountName": "買掛金",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": 310000
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": 310000
+                      }
+                    }
+                  },
+                  {
+                    "key": "w11",
+                    "cells": {
+                      "accountName": "未払家賃",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": 25000
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": 25000
+                      }
+                    }
+                  },
+                  {
+                    "key": "w12",
+                    "cells": {
+                      "accountName": "前受家賃",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": 30000
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w13",
+                    "cells": {
+                      "accountName": "資本金",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": 800000
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": 800000
+                      }
+                    }
+                  },
+                  {
+                    "key": "w14",
+                    "cells": {
+                      "accountName": "繰越利益剰余金",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": 192000
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": 192000
+                      }
+                    }
+                  },
+                  {
+                    "key": "w15",
+                    "cells": {
+                      "accountName": "売上",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": 3000000
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": 3000000
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w16",
+                    "cells": {
+                      "accountName": "受取家賃",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": 120000
+                      },
+                      "adjustment": {
+                        "debit": 30000,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": 90000
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w17",
+                    "cells": {
+                      "accountName": "仕入",
+                      "trialBalance": {
+                        "debit": 1900000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": 220000,
+                        "credit": 250000
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w18",
+                    "cells": {
+                      "accountName": "給料",
+                      "trialBalance": {
+                        "debit": 480000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": 480000,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w19",
+                    "cells": {
+                      "accountName": "支払家賃",
+                      "trialBalance": {
+                        "debit": 300000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": 25000,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": 325000,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w20",
+                    "cells": {
+                      "accountName": "支払保険料",
+                      "trialBalance": {
+                        "debit": 60000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": 35000
+                      },
+                      "incomeStatement": {
+                        "debit": 25000,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w21",
+                    "cells": {
+                      "accountName": "通信費",
+                      "trialBalance": {
+                        "debit": 15000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": 3000
+                      },
+                      "incomeStatement": {
+                        "debit": 12000,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w22",
+                    "cells": {
+                      "accountName": "貸倒引当金繰入",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": 7000,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w23",
+                    "cells": {
+                      "accountName": "減価償却費",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": 100000,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w-ni",
+                    "cells": {
+                      "accountName": "当期純利益",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": 271000
+                      }
+                    },
+                    "role": "net_income"
+                  },
+                  {
+                    "key": "w-total",
+                    "cells": {
+                      "accountName": "合 計",
+                      "trialBalance": {
+                        "debit": 4625000,
+                        "credit": 4625000
+                      },
+                      "adjustment": {
+                        "debit": 670000,
+                        "credit": 670000
+                      },
+                      "incomeStatement": {
+                        "debit": 3090000,
+                        "credit": 3090000
+                      },
+                      "balanceSheet": {
+                        "debit": 1938000,
+                        "credit": 1938000
+                      }
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "w22.adjustment.debit",
+                "input": "numpad",
+                "answer": 7000
+              },
+              {
+                "ref": "w23.adjustment.debit",
+                "input": "numpad",
+                "answer": 100000
+              },
+              {
+                "ref": "w17.incomeStatement.debit",
+                "input": "numpad",
+                "answer": 1870000
+              },
+              {
+                "ref": "w6.balanceSheet.debit",
+                "input": "numpad",
+                "answer": 35000
+              },
+              {
+                "ref": "w12.balanceSheet.credit",
+                "input": "numpad",
+                "answer": 30000
+              },
+              {
+                "ref": "w-ni.incomeStatement.debit",
+                "input": "numpad",
+                "answer": 271000
+              }
+            ]
+          },
+          "explanation": "整理事項は修正記入の欄に書き、収益と費用は損益計算書、それ以外は貸借対照表の欄へ移します。損益計算書の借方（左）と貸方（右）の差が、当期純利益です。"
+        },
+        {
+          "id": "b2-u01-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "ウスベニ文具店の決算日は3月31日。整理事項は次のとおり。(1) 期末商品棚卸高は ¥330,000 である。売上原価は仕入の行で計算する。 (2) 売掛金の期末残高に 1% の貸倒れを見積もる（差額補充法）。 (3) 備品を定額法（耐用年数5年、残存価額ゼロ、取得原価 ¥1,000,000）で減価償却する。 (4) 支払保険料は、1月1日に1年分を払ったものである。次の期のぶんを整理する。 (5) 貸している土地の地代 ¥30,000 が、まだ入っていない。 (6) 租税公課のうち ¥5,000 は、未使用の収入印紙である。 (7) 家賃 ¥40,000 が、まだ払われていない。 精算表を完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "worksheet",
+              "data": {
+                "header": {
+                  "title": "精算表"
+                },
+                "rows": [
+                  {
+                    "key": "w1",
+                    "cells": {
+                      "accountName": "現金",
+                      "trialBalance": {
+                        "debit": 140000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": 140000,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w2",
+                    "cells": {
+                      "accountName": "普通預金",
+                      "trialBalance": {
+                        "debit": 410000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": 410000,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w3",
+                    "cells": {
+                      "accountName": "売掛金",
+                      "trialBalance": {
+                        "debit": 900000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": 900000,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w4",
+                    "cells": {
+                      "accountName": "繰越商品",
+                      "trialBalance": {
+                        "debit": 310000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": 330000,
+                        "credit": 310000
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": 330000,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w5",
+                    "cells": {
+                      "accountName": "貯蔵品",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": 5000,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": 5000,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w6",
+                    "cells": {
+                      "accountName": "前払保険料",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": 54000,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": 54000,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w7",
+                    "cells": {
+                      "accountName": "未収地代",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": 30000,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w8",
+                    "cells": {
+                      "accountName": "備品",
+                      "trialBalance": {
+                        "debit": 1000000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": 1000000,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w9",
+                    "cells": {
+                      "accountName": "貸倒引当金",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": 8000
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": 1000
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": 9000
+                      }
+                    }
+                  },
+                  {
+                    "key": "w10",
+                    "cells": {
+                      "accountName": "減価償却累計額",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": 400000
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": 200000
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": 600000
+                      }
+                    }
+                  },
+                  {
+                    "key": "w11",
+                    "cells": {
+                      "accountName": "買掛金",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": 420000
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": 420000
+                      }
+                    }
+                  },
+                  {
+                    "key": "w12",
+                    "cells": {
+                      "accountName": "未払家賃",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": 40000
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w13",
+                    "cells": {
+                      "accountName": "資本金",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": 1000000
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": 1000000
+                      }
+                    }
+                  },
+                  {
+                    "key": "w14",
+                    "cells": {
+                      "accountName": "繰越利益剰余金",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": 618000
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": 618000
+                      }
+                    }
+                  },
+                  {
+                    "key": "w15",
+                    "cells": {
+                      "accountName": "売上",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": 3950000
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": 3950000
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w16",
+                    "cells": {
+                      "accountName": "受取地代",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": 90000
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": 30000
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": 120000
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w17",
+                    "cells": {
+                      "accountName": "仕入",
+                      "trialBalance": {
+                        "debit": 2500000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": 310000,
+                        "credit": 330000
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w18",
+                    "cells": {
+                      "accountName": "給料",
+                      "trialBalance": {
+                        "debit": 650000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": 650000,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w19",
+                    "cells": {
+                      "accountName": "支払家賃",
+                      "trialBalance": {
+                        "debit": 480000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": 40000,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": 520000,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w20",
+                    "cells": {
+                      "accountName": "支払保険料",
+                      "trialBalance": {
+                        "debit": 72000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": 54000
+                      },
+                      "incomeStatement": {
+                        "debit": 18000,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w21",
+                    "cells": {
+                      "accountName": "租税公課",
+                      "trialBalance": {
+                        "debit": 24000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": 5000
+                      },
+                      "incomeStatement": {
+                        "debit": 19000,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w22",
+                    "cells": {
+                      "accountName": "貸倒引当金繰入",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": 1000,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w23",
+                    "cells": {
+                      "accountName": "減価償却費",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": 200000,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "w-ni",
+                    "cells": {
+                      "accountName": "当期純利益",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": 182000
+                      }
+                    },
+                    "role": "net_income"
+                  },
+                  {
+                    "key": "w-total",
+                    "cells": {
+                      "accountName": "合 計",
+                      "trialBalance": {
+                        "debit": 6486000,
+                        "credit": 6486000
+                      },
+                      "adjustment": {
+                        "debit": 970000,
+                        "credit": 970000
+                      },
+                      "incomeStatement": {
+                        "debit": 4070000,
+                        "credit": 4070000
+                      },
+                      "balanceSheet": {
+                        "debit": 2869000,
+                        "credit": 2869000
+                      }
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "w22.adjustment.debit",
+                "input": "numpad",
+                "answer": 1000
+              },
+              {
+                "ref": "w23.adjustment.debit",
+                "input": "numpad",
+                "answer": 200000
+              },
+              {
+                "ref": "w17.incomeStatement.debit",
+                "input": "numpad",
+                "answer": 2480000
+              },
+              {
+                "ref": "w7.balanceSheet.debit",
+                "input": "numpad",
+                "answer": 30000
+              },
+              {
+                "ref": "w12.balanceSheet.credit",
+                "input": "numpad",
+                "answer": 40000
+              },
+              {
+                "ref": "w-ni.incomeStatement.debit",
+                "input": "numpad",
+                "answer": 182000
+              }
+            ]
+          },
+          "explanation": "売上原価は仕入の行で、期首商品を足し、期末商品を引いて求めます。整理後の数字を、損益計算書か貸借対照表のどちらの欄へ移すかは、科目の種類で決まります。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u01-n3",
+      "title": "3級に降りた論点",
+      "meta": {
+        "goal": "販売のつど売上原価、定率法、除却を、2級で出る形で書ける",
+        "topic": "3級に降りた論点の確認",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u01-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "販売のつど売上原価勘定に振り替える方法で記帳している。原価 ¥75,000 の商品を ¥120,000 で、掛けで売った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 120000
+              },
+              {
+                "account": "売上原価",
+                "amount": 75000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 120000
+              },
+              {
+                "account": "商品",
+                "amount": 75000
+              }
+            ],
+            "accountOptions": [
+              "売掛金",
+              "売上原価",
+              "商品",
+              "売上",
+              "買掛金",
+              "繰越商品",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売った時点で、売上と、売った商品の原価（売上原価）を同時に記録します。減った商品は、商品勘定の貸方（右）です。"
+        },
+        {
+          "id": "b2-u01-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、備品（取得原価 ¥600,000、期首の減価償却累計額 ¥150,000）を定率法（償却率 25%）で減価償却する。間接法で記帳する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 112500
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 112500
+              }
+            ],
+            "accountOptions": [
+              "未払金",
+              "備品",
+              "減価償却費",
+              "固定資産売却損",
+              "減価償却累計額"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "定率法は、取得原価から償却ずみの額を引いた残り（450,000 円）に償却率を掛けます。450,000 × 25% = 112,500 円が、借方（左）の減価償却費です。"
+        },
+        {
+          "id": "b2-u01-n3-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "取得原価 ¥480,000、減価償却累計額 ¥360,000 の備品を除却した。処分価額は ¥30,000 と見積もられ、業者が引き取るまで保管する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 360000
+              },
+              {
+                "account": "貯蔵品",
+                "amount": 30000
+              },
+              {
+                "account": "固定資産除却損",
+                "amount": 90000
+              }
+            ],
+            "credit": [
+              {
+                "account": "備品",
+                "amount": 480000
+              }
+            ],
+            "accountOptions": [
+              "固定資産除却損",
+              "固定資産売却損",
+              "貯蔵品",
+              "雑損",
+              "減価償却累計額",
+              "備品",
+              "未収入金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "帳簿の上の値段は 120,000 円で、引き取ってもらえる見込みは 30,000 円です。差の 90,000 円が、借方（左）の固定資産除却損になります。"
+        },
+        {
+          "id": "b2-u01-n3-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "販売のつど売上原価勘定に振り替える方法で記帳している。さきに売った商品（売価 ¥40,000、原価 ¥25,000）が返品された。代金は売掛金から差し引く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売上",
+                "amount": 40000
+              },
+              {
+                "account": "商品",
+                "amount": 25000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売掛金",
+                "amount": 40000
+              },
+              {
+                "account": "売上原価",
+                "amount": 25000
+              }
+            ],
+            "accountOptions": [
+              "買掛金",
+              "商品",
+              "売掛金",
+              "売上原価",
+              "繰越商品",
+              "売上",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売ったときの仕訳を逆にします。売上と売掛金を取り消し、売上原価も取り消して商品を戻すので、借方（左）に商品、貸方（右）に売上原価です。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u01-n4",
+      "title": "補助簿から数字を集める",
+      "meta": {
+        "goal": "補助簿の記録から、元帳の残高や取引の合計を割り出せる",
+        "topic": "補助簿から元帳の数字を求める",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u01-n4-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "現金出納帳の4月の記録（下の表）から、空欄を求める。4月1日の残高は ¥150,000。月末の残りは、次の月へ繰り越す。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "cash_book",
+              "data": {
+                "header": {
+                  "title": "現金出納帳"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "date": "4/1",
+                      "summary": "前月繰越",
+                      "income": 150000,
+                      "expense": null,
+                      "balance": 150000
+                    },
+                    "role": "opening"
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "date": "4/5",
+                      "summary": "売掛金の回収",
+                      "income": 90000,
+                      "expense": null,
+                      "balance": 240000
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "date": "4/12",
+                      "summary": "仕入代金の支払い",
+                      "income": null,
+                      "expense": 130000,
+                      "balance": null
+                    }
+                  },
+                  {
+                    "key": "r4",
+                    "cells": {
+                      "date": "4/20",
+                      "summary": "給料の支払い",
+                      "income": null,
+                      "expense": 60000,
+                      "balance": 50000
+                    }
+                  },
+                  {
+                    "key": "r5",
+                    "cells": {
+                      "date": "4/28",
+                      "summary": "現金売上",
+                      "income": 85000,
+                      "expense": null,
+                      "balance": null
+                    }
+                  },
+                  {
+                    "key": "r6",
+                    "cells": {
+                      "date": "4/30",
+                      "summary": "次月繰越",
+                      "income": null,
+                      "expense": null,
+                      "balance": null
+                    },
+                    "role": "carryforward"
+                  },
+                  {
+                    "key": "r7",
+                    "cells": {
+                      "date": null,
+                      "summary": null,
+                      "income": null,
+                      "expense": 325000,
+                      "balance": null
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r3.balance",
+                "input": "numpad",
+                "answer": 110000
+              },
+              {
+                "ref": "r5.balance",
+                "input": "numpad",
+                "answer": 135000
+              },
+              {
+                "ref": "r6.expense",
+                "input": "numpad",
+                "answer": 135000
+              },
+              {
+                "ref": "r7.income",
+                "input": "numpad",
+                "answer": 325000
+              }
+            ]
+          },
+          "explanation": "残高は、前の行の残高に収入を足し、支出を引いて出します。月末の残高 135,000 円を次月繰越として支出の欄に入れると、収入と支出の合計がそろいます。"
+        },
+        {
+          "id": "b2-u01-n4-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "仕入帳の10月の記録（下の表）から、空欄を求める。返品のぶんは、総仕入高から引く。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "purchase_book",
+              "data": {
+                "header": {
+                  "title": "仕入帳"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "date": "10/5",
+                      "summary": "ヒナタ商会 掛け",
+                      "detail": null,
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "r1a",
+                    "cells": {
+                      "date": null,
+                      "summary": "ボールペン 100本 @120円",
+                      "detail": 12000,
+                      "amount": null
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r1b",
+                    "cells": {
+                      "date": null,
+                      "summary": "ノート 200冊 @90円",
+                      "detail": 18000,
+                      "amount": null
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "date": "10/12",
+                      "summary": "シラサギ商店 掛け",
+                      "detail": null,
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "r2a",
+                    "cells": {
+                      "date": null,
+                      "summary": "ファイル 50個 @400円",
+                      "detail": 20000,
+                      "amount": 20000
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "date": "10/18",
+                      "summary": "ヒナタ商会 掛け返品",
+                      "detail": null,
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "r3a",
+                    "cells": {
+                      "date": null,
+                      "summary": "ノート 40冊 @90円",
+                      "detail": 3600,
+                      "amount": 3600
+                    },
+                    "role": "sub_entry"
+                  },
+                  {
+                    "key": "r-gross",
+                    "cells": {
+                      "date": "10/31",
+                      "summary": "総仕入高",
+                      "detail": null,
+                      "amount": null
+                    },
+                    "role": "summary"
+                  },
+                  {
+                    "key": "r-return",
+                    "cells": {
+                      "date": null,
+                      "summary": "仕入戻し高",
+                      "detail": null,
+                      "amount": null
+                    },
+                    "role": "summary"
+                  },
+                  {
+                    "key": "r-net",
+                    "cells": {
+                      "date": null,
+                      "summary": "純仕入高",
+                      "detail": null,
+                      "amount": null
+                    },
+                    "role": "summary",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1b.amount",
+                "input": "numpad",
+                "answer": 30000
+              },
+              {
+                "ref": "r-gross.amount",
+                "input": "numpad",
+                "answer": 50000
+              },
+              {
+                "ref": "r-return.amount",
+                "input": "numpad",
+                "answer": 3600
+              },
+              {
+                "ref": "r-net.amount",
+                "input": "numpad",
+                "answer": 46400
+              }
+            ]
+          },
+          "explanation": "同じ仕入先の品物の内訳を足すと 1 回の仕入の金額、全部を足すと総仕入高です。そこから返品の 3,600 円を引いた 46,400 円が、純仕入高です。"
+        }
+      ]
+    }
+  ]
+}

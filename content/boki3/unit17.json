@@ -1,0 +1,1276 @@
+{
+  "unit": {
+    "id": "b3-u17",
+    "course": "boki3",
+    "chapter": 17,
+    "title": "伝票と証ひょう"
+  },
+  "nodes": [
+    {
+      "id": "b3-u17-n1",
+      "title": "3つの伝票",
+      "meta": {
+        "goal": "入金、出金、振替の伝票に起票できる",
+        "topic": "三伝票の起票",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u17-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "10月6日、得意先から売掛金 ¥150,000 を現金で回収した。入金伝票に起票する。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "slip",
+              "data": {
+                "slipType": "receipt",
+                "header": {
+                  "title": "入金伝票",
+                  "period": "×1年10月6日"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "account": null,
+                      "amount": null
+                    }
+                  }
+                ],
+                "slipNo": "101"
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.account",
+                "input": "account_picker",
+                "answer": "売掛金",
+                "accountOptions": [
+                  "売掛金",
+                  "買掛金",
+                  "前受金",
+                  "売上"
+                ]
+              },
+              {
+                "ref": "r1.amount",
+                "input": "numpad",
+                "answer": 150000
+              }
+            ]
+          },
+          "explanation": "現金が入ったので入金伝票で、書くのは現金の相手の科目だけです。相手は売掛金です。"
+        },
+        {
+          "id": "b3-u17-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "10月7日、仕入先へ買掛金 ¥80,000 を現金で支払った。出金伝票に起票する。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "slip",
+              "data": {
+                "slipType": "payment",
+                "header": {
+                  "title": "出金伝票",
+                  "period": "×1年10月7日"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "account": null,
+                      "amount": null
+                    }
+                  }
+                ],
+                "slipNo": "201"
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.account",
+                "input": "account_picker",
+                "answer": "買掛金",
+                "accountOptions": [
+                  "買掛金",
+                  "売掛金",
+                  "前払金",
+                  "仕入"
+                ]
+              },
+              {
+                "ref": "r1.amount",
+                "input": "numpad",
+                "answer": 80000
+              }
+            ]
+          },
+          "explanation": "現金が出たので出金伝票で、書くのは現金の相手の科目だけです。相手は買掛金です。"
+        },
+        {
+          "id": "b3-u17-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "10月9日、商品 ¥200,000 を掛けで仕入れた。振替伝票に起票する。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "slip",
+              "data": {
+                "slipType": "transfer",
+                "header": {
+                  "title": "振替伝票",
+                  "period": "×1年10月9日"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "debitAccount": null,
+                      "debitAmount": null,
+                      "creditAccount": null,
+                      "creditAmount": 200000
+                    }
+                  }
+                ],
+                "slipNo": "301"
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.debitAccount",
+                "input": "account_picker",
+                "answer": "仕入",
+                "accountOptions": [
+                  "仕入",
+                  "売掛金",
+                  "現金",
+                  "買掛金"
+                ]
+              },
+              {
+                "ref": "r1.creditAccount",
+                "input": "account_picker",
+                "answer": "買掛金",
+                "accountOptions": [
+                  "買掛金",
+                  "売掛金",
+                  "現金",
+                  "仕入"
+                ]
+              },
+              {
+                "ref": "r1.debitAmount",
+                "input": "numpad",
+                "answer": 200000
+              }
+            ]
+          },
+          "explanation": "現金が動かない取引は、振替伝票です。仕訳のとおり、借方に仕入、貸方に買掛金を書きます。"
+        },
+        {
+          "id": "b3-u17-n1-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "給料 ¥300,000 を現金で払った。このとき起票する伝票は、どれ？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "振替伝票",
+              "入金伝票",
+              "出金伝票",
+              "請求書"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "現金が出ていく取引なので、出金伝票です。入金は入金伝票、現金が関わらないものは振替伝票です。"
+        }
+      ]
+    },
+    {
+      "id": "b3-u17-n2",
+      "title": "一部が現金の取引",
+      "meta": {
+        "goal": "分けて起票する方法と、全額を掛けとみなす方法の両方で起票できる",
+        "topic": "一部現金取引の起票",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u17-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "11月4日、商品 ¥100,000 を売り上げ、¥30,000 は現金で受け取り、残りは掛けとした。取引を2つに分けて伝票を切る方法で、入金伝票に起票する。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "slip",
+              "data": {
+                "slipType": "receipt",
+                "header": {
+                  "title": "入金伝票",
+                  "period": "×1年11月4日"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "account": null,
+                      "amount": null
+                    }
+                  }
+                ],
+                "slipNo": "102"
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.account",
+                "input": "account_picker",
+                "answer": "売上",
+                "accountOptions": [
+                  "売上",
+                  "前受金",
+                  "仮受金",
+                  "売掛金"
+                ]
+              },
+              {
+                "ref": "r1.amount",
+                "input": "numpad",
+                "answer": 30000
+              }
+            ]
+          },
+          "explanation": "現金で受け取った 30,000 円ぶんだけを、現金売上として入金伝票に書きます。相手の科目は売上です。"
+        },
+        {
+          "id": "b3-u17-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "11月4日、商品 ¥100,000 を売り上げ、¥30,000 は現金で受け取り、残りは掛けとした。取引を2つに分けて伝票を切る方法で、振替伝票に起票する。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "slip",
+              "data": {
+                "slipType": "transfer",
+                "header": {
+                  "title": "振替伝票",
+                  "period": "×1年11月4日"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "debitAccount": null,
+                      "debitAmount": null,
+                      "creditAccount": null,
+                      "creditAmount": 70000
+                    }
+                  }
+                ],
+                "slipNo": "302"
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.debitAccount",
+                "input": "account_picker",
+                "answer": "売掛金",
+                "accountOptions": [
+                  "売掛金",
+                  "売上",
+                  "買掛金",
+                  "現金"
+                ]
+              },
+              {
+                "ref": "r1.creditAccount",
+                "input": "account_picker",
+                "answer": "売上",
+                "accountOptions": [
+                  "売上",
+                  "仕入",
+                  "現金",
+                  "売掛金"
+                ]
+              },
+              {
+                "ref": "r1.debitAmount",
+                "input": "numpad",
+                "answer": 70000
+              }
+            ]
+          },
+          "explanation": "残りの 70,000 円は掛けで売ったぶんです。現金が動かないので振替伝票に、借方 売掛金、貸方 売上と書きます。"
+        },
+        {
+          "id": "b3-u17-n2-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "12月5日、仕入先から商品 ¥360,000 を買い、うち ¥130,000 は現金で払い、残りは掛けにした。まず全額を掛け仕入として扱う方法で、振替伝票を書く。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "slip",
+              "data": {
+                "slipType": "transfer",
+                "header": {
+                  "title": "振替伝票",
+                  "period": "×1年12月5日"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "debitAccount": null,
+                      "debitAmount": 360000,
+                      "creditAccount": null,
+                      "creditAmount": null
+                    }
+                  }
+                ],
+                "slipNo": "303"
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.debitAccount",
+                "input": "account_picker",
+                "answer": "仕入",
+                "accountOptions": [
+                  "仕入",
+                  "現金",
+                  "売掛金",
+                  "買掛金"
+                ]
+              },
+              {
+                "ref": "r1.creditAccount",
+                "input": "account_picker",
+                "answer": "買掛金",
+                "accountOptions": [
+                  "買掛金",
+                  "売掛金",
+                  "現金",
+                  "仕入"
+                ]
+              },
+              {
+                "ref": "r1.creditAmount",
+                "input": "numpad",
+                "answer": 360000
+              }
+            ]
+          },
+          "explanation": "まず全額の 360,000 円を掛けで仕入れたことにして書きます。借方（左）は仕入、貸方（右）は買掛金で、金額は全額です。"
+        },
+        {
+          "id": "b3-u17-n2-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "12月5日、商品 ¥360,000 を買い入れ、¥130,000 は現金払い、残りは掛けにした。まず全額を掛け仕入として扱い、そのうえで現金を払った分を出金伝票に書く。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "slip",
+              "data": {
+                "slipType": "payment",
+                "header": {
+                  "title": "出金伝票",
+                  "period": "×1年12月5日"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "account": null,
+                      "amount": null
+                    }
+                  }
+                ],
+                "slipNo": "202"
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.account",
+                "input": "account_picker",
+                "answer": "買掛金",
+                "accountOptions": [
+                  "買掛金",
+                  "現金",
+                  "売掛金",
+                  "仕入"
+                ]
+              },
+              {
+                "ref": "r1.amount",
+                "input": "numpad",
+                "answer": 130000
+              }
+            ]
+          },
+          "explanation": "全額を掛けにしたあとで、現金で払った 130,000 円ぶんの買掛金を減らす、という流れです。現金が出ていくので出金伝票で、相手の科目は買掛金です。"
+        }
+      ]
+    },
+    {
+      "id": "b3-u17-n3",
+      "title": "仕訳日計表と元帳",
+      "meta": {
+        "goal": "伝票から仕訳日計表を作り、総勘定元帳と相手別の元帳に転記できる",
+        "topic": "仕訳日計表と元帳への転記",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u17-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "10月6日の伝票は次のとおり。入金伝票: 売掛金 ¥80,000、売上 ¥50,000。出金伝票: 買掛金 ¥60,000、通信費 ¥5,000。振替伝票: （借）仕入 ¥120,000（貸）買掛金 ¥120,000、（借）売掛金 ¥200,000（貸）売上 ¥200,000。 仕訳日計表を完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "daily_journal_summary",
+              "data": {
+                "header": {
+                  "title": "仕訳日計表",
+                  "period": "×1年10月6日"
+                },
+                "rows": [
+                  {
+                    "key": "r-cash",
+                    "cells": {
+                      "debit": null,
+                      "debitFolio": "1",
+                      "accountName": "現 金",
+                      "creditFolio": "1",
+                      "credit": 65000
+                    }
+                  },
+                  {
+                    "key": "r-ar",
+                    "cells": {
+                      "debit": null,
+                      "debitFolio": "3",
+                      "accountName": "売掛金",
+                      "creditFolio": "3",
+                      "credit": 80000
+                    }
+                  },
+                  {
+                    "key": "r-ap",
+                    "cells": {
+                      "debit": 60000,
+                      "debitFolio": "20",
+                      "accountName": "買掛金",
+                      "creditFolio": "20",
+                      "credit": null
+                    }
+                  },
+                  {
+                    "key": "r-sales",
+                    "cells": {
+                      "debit": null,
+                      "debitFolio": null,
+                      "accountName": "売 上",
+                      "creditFolio": "40",
+                      "credit": 250000
+                    }
+                  },
+                  {
+                    "key": "r-purchase",
+                    "cells": {
+                      "debit": 120000,
+                      "debitFolio": "50",
+                      "accountName": "仕 入",
+                      "creditFolio": null,
+                      "credit": null
+                    }
+                  },
+                  {
+                    "key": "r-comm",
+                    "cells": {
+                      "debit": 5000,
+                      "debitFolio": "60",
+                      "accountName": "通信費",
+                      "creditFolio": null,
+                      "credit": null
+                    }
+                  },
+                  {
+                    "key": "r-total",
+                    "cells": {
+                      "debit": null,
+                      "debitFolio": null,
+                      "accountName": "合 計",
+                      "creditFolio": null,
+                      "credit": 515000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r-cash.debit",
+                "input": "numpad",
+                "answer": 130000
+              },
+              {
+                "ref": "r-ar.debit",
+                "input": "numpad",
+                "answer": 200000
+              },
+              {
+                "ref": "r-ap.credit",
+                "input": "numpad",
+                "answer": 120000
+              },
+              {
+                "ref": "r-total.debit",
+                "input": "numpad",
+                "answer": 515000
+              }
+            ]
+          },
+          "explanation": "伝票を、科目ごとに借方と貸方へ集めた表です。たとえば現金は、入金伝票の 80,000 + 50,000 = 130,000 が借方、出金伝票の 60,000 + 5,000 = 65,000 が貸方です。"
+        },
+        {
+          "id": "b3-u17-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "10月6日の仕訳日計表で、現金の借方合計は ¥130,000、貸方合計は ¥65,000 だった。10月5日の現金の残高は ¥500,000。仕訳日計表から、総勘定元帳の現金に転記する。",
+            "document": {
+              "type": "daily_journal_summary",
+              "data": {
+                "header": {
+                  "title": "仕訳日計表",
+                  "period": "×1年10月6日"
+                },
+                "rows": [
+                  {
+                    "key": "r-cash",
+                    "cells": {
+                      "debit": 130000,
+                      "debitFolio": "1",
+                      "accountName": "現 金",
+                      "creditFolio": "1",
+                      "credit": 65000
+                    }
+                  },
+                  {
+                    "key": "r-ar",
+                    "cells": {
+                      "debit": 200000,
+                      "debitFolio": "3",
+                      "accountName": "売掛金",
+                      "creditFolio": "3",
+                      "credit": 80000
+                    }
+                  },
+                  {
+                    "key": "r-ap",
+                    "cells": {
+                      "debit": 60000,
+                      "debitFolio": "20",
+                      "accountName": "買掛金",
+                      "creditFolio": "20",
+                      "credit": 120000
+                    }
+                  },
+                  {
+                    "key": "r-sales",
+                    "cells": {
+                      "debit": null,
+                      "debitFolio": null,
+                      "accountName": "売 上",
+                      "creditFolio": "40",
+                      "credit": 250000
+                    }
+                  },
+                  {
+                    "key": "r-purchase",
+                    "cells": {
+                      "debit": 120000,
+                      "debitFolio": "50",
+                      "accountName": "仕 入",
+                      "creditFolio": null,
+                      "credit": null
+                    }
+                  },
+                  {
+                    "key": "r-comm",
+                    "cells": {
+                      "debit": 5000,
+                      "debitFolio": "60",
+                      "accountName": "通信費",
+                      "creditFolio": null,
+                      "credit": null
+                    }
+                  },
+                  {
+                    "key": "r-total",
+                    "cells": {
+                      "debit": 515000,
+                      "debitFolio": null,
+                      "accountName": "合 計",
+                      "creditFolio": null,
+                      "credit": 515000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            }
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "general_ledger",
+              "data": {
+                "layout": "running_balance",
+                "header": {
+                  "subject": "現 金",
+                  "folio": "1"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "date": "10/5",
+                      "summary": "前日繰越",
+                      "folio": null,
+                      "debit": null,
+                      "credit": null,
+                      "side": "借",
+                      "balance": 500000
+                    },
+                    "role": "opening"
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "date": "10/6",
+                      "summary": "仕訳日計表",
+                      "folio": "7",
+                      "debit": null,
+                      "credit": null,
+                      "side": "借",
+                      "balance": 630000
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "date": "10/6",
+                      "summary": "仕訳日計表",
+                      "folio": "7",
+                      "debit": null,
+                      "credit": null,
+                      "side": "借",
+                      "balance": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r2.debit",
+                "input": "numpad",
+                "answer": 130000
+              },
+              {
+                "ref": "r3.credit",
+                "input": "numpad",
+                "answer": 65000
+              },
+              {
+                "ref": "r3.balance",
+                "input": "numpad",
+                "answer": 565000
+              }
+            ]
+          },
+          "explanation": "日計表の合計を、借方と貸方に分けて元帳へ写します。500,000 + 130,000 = 630,000 から 65,000 を引いた 565,000 円が、日の終わりの残高です。"
+        },
+        {
+          "id": "b3-u17-n3-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "11月12日、あおぞら商店に商品 ¥130,000 を掛けで売り（振替伝票 No.405）、同じ日に同店から売掛金 ¥50,000 が現金で入金された（入金伝票 No.118）。前日の11月11日時点の売掛金は ¥70,000。この2枚の伝票を、あおぞら商店の売掛金元帳に写す。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "customer_ledger",
+              "data": {
+                "header": {
+                  "title": "売掛金元帳",
+                  "subject": "あおぞら商店"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "date": "11/11",
+                      "summary": "前日繰越",
+                      "folio": null,
+                      "debit": null,
+                      "credit": null,
+                      "side": "借",
+                      "balance": 70000
+                    },
+                    "role": "opening"
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "date": "11/12",
+                      "summary": "売り上げ",
+                      "folio": "405",
+                      "debit": null,
+                      "credit": null,
+                      "side": "借",
+                      "balance": 200000
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "date": "11/12",
+                      "summary": "入 金",
+                      "folio": "118",
+                      "debit": null,
+                      "credit": null,
+                      "side": "借",
+                      "balance": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r2.debit",
+                "input": "numpad",
+                "answer": 130000
+              },
+              {
+                "ref": "r3.credit",
+                "input": "numpad",
+                "answer": 50000
+              },
+              {
+                "ref": "r3.balance",
+                "input": "numpad",
+                "answer": 150000
+              }
+            ]
+          },
+          "explanation": "売掛金元帳は、取引先ごとの増減を書きます。売ると増え（借方）、入金で減ります（貸方）。70,000 + 130,000 − 50,000 = 150,000 円が残高です。"
+        }
+      ]
+    },
+    {
+      "id": "b3-u17-n4",
+      "title": "書類を読む",
+      "meta": {
+        "goal": "請求書、領収書、納付書、照合表、振込依頼書、旅費の報告書から仕訳を書ける",
+        "topic": "証ひょうからの仕訳",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u17-n4-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "仕入先から下の請求書が届いた。この内容で商品を仕入れたものとして、仕訳する。代金は後払いで、消費税は税抜方式で処理する。",
+            "document": {
+              "type": "invoice",
+              "data": {
+                "header": {
+                  "title": "請求書"
+                },
+                "issuer": "タチバナ文具株式会社",
+                "addressee": "オリヅル商店 御中",
+                "issuedOn": "×1年11月30日",
+                "dueDate": "×1年12月28日",
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "name": "ボールペン",
+                      "quantity": 100,
+                      "unitPrice": 200,
+                      "amount": 20000
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "name": "ノート",
+                      "quantity": 100,
+                      "unitPrice": 150,
+                      "amount": 15000
+                    }
+                  }
+                ],
+                "taxAmount": 3500,
+                "total": 38500,
+                "note": "消費税10%を含みます。期日までにお振込みください。"
+              }
+            }
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 35000
+              },
+              {
+                "account": "仮払消費税",
+                "amount": 3500
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 38500
+              }
+            ],
+            "accountOptions": [
+              "未払金",
+              "租税公課",
+              "現金",
+              "買掛金",
+              "仕入",
+              "仮受消費税",
+              "仮払消費税"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "請求書の合計 38,500 円には消費税 3,500 円が入っています。税抜の 35,000 円が仕入、税のぶんは仮払消費税、払うべき総額が買掛金です。"
+        },
+        {
+          "id": "b3-u17-n4-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "コピー機のトナーを買い、下の領収書を受け取った。代金は現金で払った。消費税は税抜方式で処理する。",
+            "document": {
+              "type": "receipt",
+              "data": {
+                "header": {
+                  "title": "領収書"
+                },
+                "issuer": "フタバ事務機株式会社",
+                "addressee": "ハマユウ堂 様",
+                "issuedOn": "×1年8月20日",
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "description": "コピー機トナー代として",
+                      "amount": 11000
+                    }
+                  }
+                ],
+                "taxAmount": 1000,
+                "total": 11000
+              }
+            }
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "消耗品費",
+                "amount": 10000
+              },
+              {
+                "account": "仮払消費税",
+                "amount": 1000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 11000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "備品",
+              "仮払消費税",
+              "仮受消費税",
+              "通信費",
+              "消耗品費",
+              "租税公課"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "領収書の合計 11,000 円から税 1,000 円を引いた 10,000 円がトナー代で、消耗品費です。税のぶんは仮払消費税になります。"
+        },
+        {
+          "id": "b3-u17-n4-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "下の領収済通知書のとおり、確定申告で消費税を普通預金から納付した。決算で未払消費税に計上してある。",
+            "document": {
+              "type": "tax_notice",
+              "data": {
+                "header": {
+                  "title": "領収済通知書"
+                },
+                "taxType": "消費税",
+                "filingType": "確定申告",
+                "fiscalPeriod": "×1年4月1日から×2年3月31日まで",
+                "paidOn": "×2年5月28日",
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "label": "本税",
+                      "amount": 110000
+                    }
+                  }
+                ],
+                "total": 110000
+              }
+            }
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "未払消費税",
+                "amount": 110000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 110000
+              }
+            ],
+            "accountOptions": [
+              "未払消費税",
+              "租税公課",
+              "仮払消費税",
+              "現金",
+              "仮受消費税",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "決算のときに、納める額を未払消費税にしてあります。払ったので、その借りが消えます。"
+        },
+        {
+          "id": "b3-u17-n4-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "下の当座勘定照合表の、10月8日の欄の取引を仕訳する。ヤナギ商店は得意先で、売掛金の回収として振り込まれた。",
+            "document": {
+              "type": "bank_statement",
+              "data": {
+                "bankName": "緑山銀行",
+                "header": {
+                  "title": "当座勘定照合表"
+                },
+                "issuedOn": "×1年10月31日",
+                "addressee": "シラハマ商店 様",
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "date": "10.2",
+                      "description": "小切手 No.0041 ゴトウ産業",
+                      "payment": 150000,
+                      "deposit": null,
+                      "balance": null
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "date": "10.8",
+                      "description": "お振込み ヤナギ商店",
+                      "payment": null,
+                      "deposit": 180000,
+                      "balance": null
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "date": "⋮",
+                      "description": "⋮",
+                      "payment": null,
+                      "deposit": null,
+                      "balance": null
+                    },
+                    "role": "continued"
+                  }
+                ]
+              }
+            }
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "当座預金",
+                "amount": 180000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売掛金",
+                "amount": 180000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "現金",
+              "買掛金",
+              "当座預金",
+              "普通預金",
+              "売掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "「お預り金額」の欄にある金額は、当座預金に入ったお金です。振り込みの相手が得意先で、回収なので、貸方は売掛金です。"
+        },
+        {
+          "id": "b3-u17-n4-q5",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "店舗用の建物を借りるにあたり、不動産会社から下の振込依頼書が届いた。内訳どおり、普通預金から振り込んで支払った。",
+            "document": {
+              "type": "transfer_request",
+              "data": {
+                "header": {
+                  "title": "振込依頼書"
+                },
+                "requester": "株式会社ササナミ不動産",
+                "addressee": "ナナクサ商店 様",
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "description": "敷金",
+                      "amount": 160000
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "description": "初月家賃",
+                      "amount": 80000
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "description": "仲介手数料",
+                      "amount": 80000
+                    }
+                  }
+                ],
+                "total": 320000,
+                "account": "緑山銀行 駅前支店 当座 7654321 カ)ササナミフドウサン"
+              }
+            }
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "差入保証金",
+                "amount": 160000
+              },
+              {
+                "account": "支払家賃",
+                "amount": 80000
+              },
+              {
+                "account": "支払手数料",
+                "amount": 80000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 320000
+              }
+            ],
+            "accountOptions": [
+              "建物",
+              "普通預金",
+              "支払家賃",
+              "差入保証金",
+              "仮払金",
+              "支払手数料",
+              "修繕費",
+              "前払金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "敷金は返ってくるお金なので差入保証金です。初月の家賃と仲介手数料は返ってこないので、費用です。"
+        },
+        {
+          "id": "b3-u17-n4-q6",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "出張から戻った社員が、下の旅費交通費支払報告書を提出して精算した。出張の前に ¥50,000 を仮払いしてあり、残りは現金で返ってきた。",
+            "document": {
+              "type": "expense_report",
+              "data": {
+                "header": {
+                  "title": "旅費交通費支払報告書"
+                },
+                "submitter": "営業部 ナカジマ",
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "date": "9/2",
+                      "item": "タクシー（駅から取引先）",
+                      "amount": 2700,
+                      "receipt": "あり"
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "date": "9/3",
+                      "item": "新幹線（往復）",
+                      "amount": 4800,
+                      "receipt": "あり"
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "date": "9/3",
+                      "item": "宿泊",
+                      "amount": 12000,
+                      "receipt": "あり"
+                    }
+                  }
+                ],
+                "receipts": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "issuer": "空港タクシー(株)",
+                      "amount": 2700
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "issuer": "東西鉄道(株)",
+                      "amount": 4800
+                    }
+                  },
+                  {
+                    "key": "c3",
+                    "cells": {
+                      "issuer": "湊ホテル(株)",
+                      "amount": 12000
+                    }
+                  }
+                ],
+                "total": 19500
+              }
+            }
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "旅費交通費",
+                "amount": 19500
+              },
+              {
+                "account": "現金",
+                "amount": 30500
+              }
+            ],
+            "credit": [
+              {
+                "account": "仮払金",
+                "amount": 50000
+              }
+            ],
+            "accountOptions": [
+              "仮払金",
+              "従業員立替金",
+              "現金",
+              "立替金",
+              "旅費交通費",
+              "仮受金",
+              "通信費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "報告書の明細と領収書は同じ支出を2回載せているだけなので、足すのは明細の 19,500 円だけです。仮払金 50,000 から使ったぶんを引いた 30,500 円が現金で戻ります。"
+        }
+      ]
+    }
+  ]
+}

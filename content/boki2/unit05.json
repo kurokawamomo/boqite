@@ -1,0 +1,858 @@
+{
+  "unit": {
+    "id": "b2-u05",
+    "course": "boki2",
+    "chapter": 5,
+    "title": "収益認識"
+  },
+  "nodes": [
+    {
+      "id": "b2-u05-n1",
+      "title": "一時点と一定期間",
+      "meta": {
+        "goal": "履行義務の種類を判定し、検収基準、出荷基準、着荷基準で収益の時点を選べる",
+        "topic": "履行義務と収益を認識する時点",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u05-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "出荷基準で売上を計上している。商品 ¥260,000 を得意先に掛けで出荷した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 260000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 260000
+              }
+            ],
+            "accountOptions": [
+              "売掛金",
+              "仕入",
+              "前受金",
+              "契約資産",
+              "売上"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "出荷基準では、商品を出荷した日に売上を計上します。借方（左）の売掛金と貸方（右）の売上です。"
+        },
+        {
+          "id": "b2-u05-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "検収基準で売上を計上している。さきに出荷した商品 ¥260,000 を、得意先が検収した。代金は掛けとする。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 260000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 260000
+              }
+            ],
+            "accountOptions": [
+              "売掛金",
+              "売上",
+              "契約資産",
+              "前受金",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "検収基準では、得意先が商品を確かめて受け取った日に、売上を計上します。出荷した日ではありません。"
+        },
+        {
+          "id": "b2-u05-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "着荷基準で売上を計上している。商品 ¥180,000 を出荷した日の処理として正しいものは？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "仕訳をしない（売上は商品が着いたときに計上する）",
+              "売掛金 / 売上 で仕訳する",
+              "前受金 / 売上 で仕訳する",
+              "仕入 / 売上 で仕訳する"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "着荷基準では、商品が得意先に着いた日に売上を計上します。出荷の日は、まだ売上を計上する日ではありません。"
+        },
+        {
+          "id": "b2-u05-n1-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "次の契約と、収益を計上する時期を結びなさい。"
+          },
+          "task": {
+            "kind": "match",
+            "pairs": [
+              [
+                "機械を引き渡す販売",
+                "一時点で収益を計上する"
+              ],
+              [
+                "1年間の保守サービス契約",
+                "一定の期間にわたって収益を計上する"
+              ],
+              [
+                "ホテルの宿泊サービス",
+                "一定の期間にわたって収益を計上する"
+              ],
+              [
+                "商品の店頭での販売",
+                "一時点で収益を計上する"
+              ]
+            ]
+          },
+          "explanation": "商品を渡して終わるものは、渡した一時点です。時間とともにサービスを提供するものは、提供した期間にわたって収益にします。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u05-n2",
+      "title": "役務収益と役務原価",
+      "meta": {
+        "goal": "役務の提供の収益と原価を、進捗度に応じて書ける",
+        "topic": "役務収益と役務原価",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "役務収益",
+          "役務原価"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u05-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "システム開発の契約（報酬 ¥900,000）に着手し、外注費 ¥300,000 を現金で払った。サービスの提供にかかった費用は、完成まで仕掛品で処理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕掛品",
+                "amount": 300000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 300000
+              }
+            ],
+            "accountOptions": [
+              "仕入",
+              "現金",
+              "役務原価",
+              "仕掛品",
+              "前払金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "完成するまでは、かかった費用を借方（左）の仕掛品に集めておきます。収益に見合う費用にするのは、完成したときです。",
+          "newAccounts": [
+            "仕掛品"
+          ]
+        },
+        {
+          "id": "b2-u05-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "システム開発が完成して引き渡し、報酬 ¥900,000 を掛けとした。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 900000
+              }
+            ],
+            "credit": [
+              {
+                "account": "役務収益",
+                "amount": 900000
+              }
+            ],
+            "accountOptions": [
+              "前受金",
+              "役務収益",
+              "売上",
+              "売掛金",
+              "契約資産"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "サービスを提供して得た収益は、役務収益です。商品を売ったときの売上とは、名前を分けます。",
+          "newAccounts": [
+            "役務収益"
+          ]
+        },
+        {
+          "id": "b2-u05-n2-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "システム開発が完成したので、仕掛品 ¥300,000 を、収益に対応させて役務原価に振り替えた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "役務原価",
+                "amount": 300000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕掛品",
+                "amount": 300000
+              }
+            ],
+            "accountOptions": [
+              "仕入",
+              "契約資産",
+              "仕掛品",
+              "役務原価",
+              "売上原価"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "役務収益と同じ時に、かかった原価を借方（左）の役務原価にします。仕掛品が貸方（右）で消えます。",
+          "newAccounts": [
+            "役務原価"
+          ]
+        },
+        {
+          "id": "b2-u05-n2-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、1年にわたって提供する契約（報酬 ¥1,200,000）の進捗度が 40% になった。対価を請求できる状態ではないため、契約資産で処理して、役務収益を計上する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "契約資産",
+                "amount": 480000
+              }
+            ],
+            "credit": [
+              {
+                "account": "役務収益",
+                "amount": 480000
+              }
+            ],
+            "accountOptions": [
+              "前受金",
+              "売上",
+              "売掛金",
+              "役務収益",
+              "契約資産"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "進捗度 40% なので、1,200,000 × 40% = 480,000 円を、この期の収益にします。まだ請求できない権利は、借方（左）の契約資産です。",
+          "newAccounts": [
+            "契約資産"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2-u05-n3",
+      "title": "複数の履行義務",
+      "meta": {
+        "goal": "取引価格を、独立販売価格の比で配分できる",
+        "topic": "複数の履行義務の取引価格の配分",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u05-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品A（独立販売価格 ¥600,000）と、1年間の保守サービス（独立販売価格 ¥200,000）を、セットで ¥720,000 で販売した。商品Aに配分する取引価格はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 540000
+          },
+          "explanation": "取引価格は、それぞれの独立販売価格の比で分けます。720,000 × 600/800 = 540,000 円です。"
+        },
+        {
+          "id": "b2-u05-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品A（独立販売価格 ¥600,000）と、1年間の保守サービス（独立販売価格 ¥200,000）を、セットで ¥720,000 で販売した。保守サービスに配分する取引価格はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 180000
+          },
+          "explanation": "720,000 のうち、商品Aに 540,000 円を配分したので、残りの 180,000 円が保守サービスです。720,000 × 200/800 でも同じです。"
+        },
+        {
+          "id": "b2-u05-n3-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品A（独立販売価格 ¥600,000）を、1年間の保守サービス（独立販売価格 ¥200,000）とセットで、¥720,000 で掛け販売した。商品Aは引き渡したが、保守サービスはこれから提供する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 720000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 540000
+              },
+              {
+                "account": "契約負債",
+                "amount": 180000
+              }
+            ],
+            "accountOptions": [
+              "売掛金",
+              "契約負債",
+              "売上",
+              "契約資産",
+              "役務収益",
+              "前受金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "商品Aは引き渡したので 540,000 円を売上にします。保守サービスは、これから提供する義務なので、貸方（右）の契約負債 180,000 円です。",
+          "newAccounts": [
+            "契約負債"
+          ]
+        },
+        {
+          "id": "b2-u05-n3-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、上の保守サービスのうち、3か月ぶんを提供した。契約負債は ¥180,000 である。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "契約負債",
+                "amount": 45000
+              }
+            ],
+            "credit": [
+              {
+                "account": "役務収益",
+                "amount": 45000
+              }
+            ],
+            "accountOptions": [
+              "役務収益",
+              "契約資産",
+              "契約負債",
+              "売上",
+              "前受金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "保守サービスは 12 か月なので、3 か月ぶんは 180,000 × 3/12 = 45,000 円です。提供したぶんだけ、契約負債（借方（左））から役務収益（貸方（右））へ移します。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u05-n4",
+      "title": "変動対価",
+      "meta": {
+        "goal": "売上割戻の見積りを売上から引き、返金負債を立てられる",
+        "topic": "変動対価と返金負債",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "返金負債"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u05-n4-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品 ¥500,000 を掛けで売り上げた。販売数量に応じて、後日 ¥20,000 の割戻を支払う見込みがある。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 500000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 480000
+              },
+              {
+                "account": "返金負債",
+                "amount": 20000
+              }
+            ],
+            "accountOptions": [
+              "仮受金",
+              "売掛金",
+              "前受金",
+              "返金負債",
+              "契約負債",
+              "売上"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "あとで返す見込みのぶんは、最初から売上に入れません。480,000 円を売上にし、返す見込みの 20,000 円は貸方（右）の返金負債にします。",
+          "newAccounts": [
+            "返金負債"
+          ]
+        },
+        {
+          "id": "b2-u05-n4-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "さきに返金負債にしていた割戻 ¥20,000 を、見込みどおり現金で支払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "返金負債",
+                "amount": 20000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 20000
+              }
+            ],
+            "accountOptions": [
+              "返金負債",
+              "売上",
+              "売掛金",
+              "仮受金",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "見込みどおりなので、売上は動きません。借方（左）の返金負債が減り、貸方（右）の現金が減ります。"
+        },
+        {
+          "id": "b2-u05-n4-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "さきに返金負債にしていた割戻 ¥20,000 のところ、実際には ¥25,000 を現金で支払うことになった。差額は売上から差し引く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "返金負債",
+                "amount": 20000
+              },
+              {
+                "account": "売上",
+                "amount": 5000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 25000
+              }
+            ],
+            "accountOptions": [
+              "仮受金",
+              "売上",
+              "返金負債",
+              "売掛金",
+              "雑損",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "見込みを 5,000 円上回りました。多く払ったぶんは、売上が下がったと考えて、借方（左）の売上を減らします。"
+        },
+        {
+          "id": "b2-u05-n4-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "さきに返金負債にしていた ¥20,000 のうち、販売数量の条件に届かなかったため、¥8,000 は払わなくてよくなった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "返金負債",
+                "amount": 8000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 8000
+              }
+            ],
+            "accountOptions": [
+              "雑益",
+              "仮受金",
+              "返金負債",
+              "契約負債",
+              "売上"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "払わなくてよくなったぶんは、売上を多く見積もっていたのと同じです。返金負債を借方（左）で減らし、貸方（右）の売上に戻します。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u05-n5",
+      "title": "契約資産と契約負債",
+      "meta": {
+        "goal": "前受金や売掛金との違いを説明し、契約資産と契約負債を書ける",
+        "topic": "契約資産と契約負債",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "契約資産",
+          "契約負債"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u05-n5-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品を引き渡す前に、代金 ¥200,000 を普通預金で受け取った。商品を引き渡す義務は、契約負債として処理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 200000
+              }
+            ],
+            "credit": [
+              {
+                "account": "契約負債",
+                "amount": 200000
+              }
+            ],
+            "accountOptions": [
+              "仮受金",
+              "売上",
+              "普通預金",
+              "契約負債",
+              "前受金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "商品をまだ渡していないので、売上にはできません。商品を渡す義務を、貸方（右）の契約負債に置きます。"
+        },
+        {
+          "id": "b2-u05-n5-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "さきに代金を受け取っていた商品を、得意先に引き渡した。契約負債は ¥200,000 である。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "契約負債",
+                "amount": 200000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 200000
+              }
+            ],
+            "accountOptions": [
+              "売掛金",
+              "仮受金",
+              "売上",
+              "契約負債",
+              "前受金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "商品を引き渡して、義務が果たされました。借方（左）の契約負債を消し、貸方（右）の売上にします。"
+        },
+        {
+          "id": "b2-u05-n5-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "役務の提供を進め、対価 ¥600,000 のうち 40% ぶんの収益を計上した。契約のすべてを果たすまで請求できないため、契約資産で処理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "契約資産",
+                "amount": 240000
+              }
+            ],
+            "credit": [
+              {
+                "account": "役務収益",
+                "amount": 240000
+              }
+            ],
+            "accountOptions": [
+              "役務収益",
+              "売掛金",
+              "契約負債",
+              "契約資産",
+              "前受金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "600,000 × 40% = 240,000 円を、この期の収益にします。請求できない権利は、売掛金ではなく、借方（左）の契約資産です。"
+        },
+        {
+          "id": "b2-u05-n5-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "役務のすべてを果たし、対価 ¥600,000 を請求できるようになった。契約資産は ¥240,000 である。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 600000
+              }
+            ],
+            "credit": [
+              {
+                "account": "契約資産",
+                "amount": 240000
+              },
+              {
+                "account": "役務収益",
+                "amount": 360000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "役務収益",
+              "契約負債",
+              "前受金",
+              "売掛金",
+              "契約資産"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "請求できるようになったので、全額 600,000 円が売掛金です。すでに収益にした 240,000 円ぶんは契約資産を消し、残りの 360,000 円を役務収益にします。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u05-n6",
+      "title": "見分ける（収益認識）",
+      "meta": {
+        "goal": "契約資産、売掛金、前受金、契約負債、返金負債を見分けられる",
+        "topic": "収益認識の科目の見分け",
+        "minQuestions": 6,
+        "nodeType": "discriminate",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u05-n6-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "対価を受け取る権利のうち、契約のすべてを果たすまで請求できないものを置く科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "前払金",
+              "未収入金",
+              "契約資産",
+              "売掛金"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "請求できる状態の債権が売掛金で、請求できる前の権利が契約資産です。同じ「もらえる権利」でも、請求できるかどうかで分けます。"
+        },
+        {
+          "id": "b2-u05-n6-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品を引き渡す前に、代金を受け取った。引き渡す義務を置く科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "契約負債",
+              "返金負債",
+              "契約資産",
+              "買掛金"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "商品やサービスを渡す義務に対して、先に受け取った対価は契約負債です。返金する義務ではなく、渡す義務という点が違います。"
+        },
+        {
+          "id": "b2-u05-n6-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "売上割戻として、将来払い戻す見込みの金額を置く科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "契約負債",
+              "返金負債",
+              "仮受金",
+              "未払金"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "お金を返す見込みがあるぶんは、返金負債です。商品やサービスを渡す義務の契約負債とは違い、お金を返す義務です。"
+        },
+        {
+          "id": "b2-u05-n6-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "役務の提供を終え、対価をすぐ請求できる状態になった。債権を置く科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "売掛金",
+              "契約資産",
+              "未収入金",
+              "前受金"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "請求できる状態になれば、債権は売掛金です。商品以外のものを売った債権なら未収入金ですが、役務の対価は売掛金で扱います。"
+        },
+        {
+          "id": "b2-u05-n6-q5",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "次の場面と科目を結びなさい。"
+          },
+          "task": {
+            "kind": "match",
+            "pairs": [
+              [
+                "履行が終わるまで、まだ請求できない対価を受け取る権利",
+                "契約資産"
+              ],
+              [
+                "商品を渡す前に受け取った代金",
+                "契約負債"
+              ],
+              [
+                "将来返す見込みの割戻",
+                "返金負債"
+              ],
+              [
+                "請求できる状態になった代金",
+                "売掛金"
+              ]
+            ]
+          },
+          "explanation": "もらえる権利でも、請求できるかどうかで契約資産と売掛金に分かれます。受け取った代金が、渡す義務か返す義務かで、契約負債と返金負債に分かれます。"
+        },
+        {
+          "id": "b2-u05-n6-q6",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "システムの開発や保守といった、サービスの提供で得る収益の科目は？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "役務収益",
+              "売上",
+              "契約負債",
+              "受取手数料"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "サービスの提供の対価は、役務収益です。商品を売ったときの売上と、名前を分けて管理します。"
+        }
+      ]
+    }
+  ]
+}

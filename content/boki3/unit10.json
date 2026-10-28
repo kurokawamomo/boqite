@@ -1,0 +1,845 @@
+{
+  "unit": {
+    "id": "b3-u10",
+    "course": "boki3",
+    "chapter": 10,
+    "title": "一時的な置き場所"
+  },
+  "nodes": [
+    {
+      "id": "b3-u10-n1",
+      "title": "仮払金と仮受金",
+      "meta": {
+        "goal": "出張の概算払いと精算、内容不明の入金を書ける",
+        "topic": "仮払金と仮受金",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "仮払金",
+          "仮受金",
+          "旅費交通費"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u10-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "営業部のサエグサに、あすの出張にそなえて、旅費の概算額 ¥30,000 を現金で渡した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仮払金",
+                "amount": 30000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 30000
+              }
+            ],
+            "accountOptions": [
+              "旅費交通費",
+              "前払金",
+              "立替金",
+              "仮払金",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "まだ使い道も金額も決まっていないお金は、仮払金の箱に入れておきます。旅費交通費にするのは、精算してからです。",
+          "newAccounts": [
+            "仮払金"
+          ]
+        },
+        {
+          "id": "b3-u10-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "出張から戻った社員が精算した。前に ¥50,000 を仮払いしていたが、実際の旅費は ¥46,800 で、残りは現金で返ってきた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "旅費交通費",
+                "amount": 46800
+              },
+              {
+                "account": "現金",
+                "amount": 3200
+              }
+            ],
+            "credit": [
+              {
+                "account": "仮払金",
+                "amount": 50000
+              }
+            ],
+            "accountOptions": [
+              "仮払金",
+              "仮受金",
+              "現金",
+              "立替金",
+              "通信費",
+              "旅費交通費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "使ったぶんが旅費交通費、戻ってきたぶんが現金です。仮払金は 50,000 すべてが片づくので、貸方で消えます。"
+        },
+        {
+          "id": "b3-u10-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "ナギサ堂の普通預金口座に、相手も理由もわからない ¥85,000 が振り込まれていた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 85000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仮受金",
+                "amount": 85000
+              }
+            ],
+            "accountOptions": [
+              "普通預金",
+              "売掛金",
+              "前受金",
+              "売上",
+              "雑益",
+              "仮受金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "何のお金かわからないので、売上や売掛金にはできません。わかるまで仮受金で預かります。",
+          "newAccounts": [
+            "仮受金"
+          ]
+        },
+        {
+          "id": "b3-u10-n1-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "先日、理由不明で預かっていた ¥85,000 は、得意先ミドリ産業からの売掛金の回収だったとわかった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仮受金",
+                "amount": 85000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売掛金",
+                "amount": 85000
+              }
+            ],
+            "accountOptions": [
+              "前受金",
+              "現金",
+              "仮払金",
+              "仮受金",
+              "売上",
+              "売掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "預かっていた仮受金を取り消し、本来の売掛金を減らします。仮受金は借方に置いて消します。"
+        }
+      ]
+    },
+    {
+      "id": "b3-u10-n2",
+      "title": "給料と預り金",
+      "meta": {
+        "goal": "給料から天引きし、あとで納める流れを書ける。社会保険料の会社負担分も",
+        "topic": "給料の天引きと預り金・法定福利費",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "預り金",
+          "法定福利費"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u10-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "月末に従業員へ給料 ¥300,000 を支払った。所得税 ¥20,000 と社会保険料 ¥15,000 を差し引き、残りは普通預金から従業員の口座へ振り込んだ。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "給料",
+                "amount": 300000
+              }
+            ],
+            "credit": [
+              {
+                "account": "所得税預り金",
+                "amount": 20000
+              },
+              {
+                "account": "社会保険料預り金",
+                "amount": 15000
+              },
+              {
+                "account": "普通預金",
+                "amount": 265000
+              }
+            ],
+            "accountOptions": [
+              "普通預金",
+              "現金",
+              "所得税預り金",
+              "法定福利費",
+              "仮払金",
+              "給料",
+              "従業員預り金",
+              "社会保険料預り金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "給料は差し引く前の 300,000 が費用です。天引きしたぶんは会社のお金ではなく、あとで国や保険組合へ納める預かり金になります。",
+          "newAccounts": [
+            "所得税預り金",
+            "社会保険料預り金"
+          ]
+        },
+        {
+          "id": "b3-u10-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "先月給料から天引きして預かっていた所得税 ¥60,000 を、税務署へ現金で納めた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "所得税預り金",
+                "amount": 60000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 60000
+              }
+            ],
+            "accountOptions": [
+              "給料",
+              "租税公課",
+              "現金",
+              "社会保険料預り金",
+              "仮払金",
+              "所得税預り金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "預かっていたお金を国へ渡しただけなので、費用は増えません。預り金が減って、現金が減ります。"
+        },
+        {
+          "id": "b3-u10-n2-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "従業員から預かっていた社会保険料 ¥90,000 と、会社が負担するぶん ¥90,000 を、あわせて普通預金から納付した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "社会保険料預り金",
+                "amount": 90000
+              },
+              {
+                "account": "法定福利費",
+                "amount": 90000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 180000
+              }
+            ],
+            "accountOptions": [
+              "社会保険料預り金",
+              "普通預金",
+              "所得税預り金",
+              "従業員預り金",
+              "租税公課",
+              "給料",
+              "法定福利費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "従業員ぶんは預かっていたお金なので預り金を減らし、会社の負担ぶんは法定福利費という費用にします。",
+          "newAccounts": [
+            "法定福利費"
+          ]
+        },
+        {
+          "id": "b3-u10-n2-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "給料 ¥400,000 を現金で支払った。所得税 ¥25,000、住民税 ¥18,000、社会保険料 ¥30,000 を差し引いている。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "給料",
+                "amount": 400000
+              }
+            ],
+            "credit": [
+              {
+                "account": "所得税預り金",
+                "amount": 25000
+              },
+              {
+                "account": "住民税預り金",
+                "amount": 18000
+              },
+              {
+                "account": "社会保険料預り金",
+                "amount": 30000
+              },
+              {
+                "account": "現金",
+                "amount": 327000
+              }
+            ],
+            "accountOptions": [
+              "所得税預り金",
+              "住民税預り金",
+              "法定福利費",
+              "租税公課",
+              "仮払金",
+              "従業員預り金",
+              "給料",
+              "現金",
+              "社会保険料預り金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "貸方が4行ありますが、考え方は同じです。給料の総額が借方、天引き3つが預り金、手取りの 327,000 が現金です。",
+          "newAccounts": [
+            "住民税預り金"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3-u10-n3",
+      "title": "立替金",
+      "meta": {
+        "goal": "従業員や取引先の分を立て替える",
+        "topic": "立替金",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "立替金"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u10-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "得意先ハヤセ商店に商品を発送するとき、先方が負担する運賃 ¥4,000 を、当社が現金で立て替えて運送業者へ払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "立替金",
+                "amount": 4000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 4000
+              }
+            ],
+            "accountOptions": [
+              "発送費",
+              "従業員立替金",
+              "未払金",
+              "立替金",
+              "仮払金",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "相手が払うはずのお金を代わりに払ったので、あとで返してもらえます。その権利は立替金で、発送費にすると当社の費用になってしまいます。",
+          "newAccounts": [
+            "立替金"
+          ]
+        },
+        {
+          "id": "b3-u10-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "さきに立て替えていた運賃 ¥4,000 が、ハヤセ商店から現金で返ってきた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 4000
+              }
+            ],
+            "credit": [
+              {
+                "account": "立替金",
+                "amount": 4000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "発送費",
+              "立替金",
+              "受取利息",
+              "従業員立替金",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "返してもらったので、立替金の権利が消えます。収益ではないので、売上にはしません。"
+        },
+        {
+          "id": "b3-u10-n3-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "従業員のキリシマが本人負担の健康診断料 ¥12,000 を、会社が現金で立て替えて払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "従業員立替金",
+                "amount": 12000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 12000
+              }
+            ],
+            "accountOptions": [
+              "従業員立替金",
+              "立替金",
+              "給料",
+              "仮払金",
+              "雑費",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "従業員が払うべきお金の立て替えなので、従業員立替金です。取引先の立替金と分けておくと、誰に返してもらうのかが一目でわかります。",
+          "newAccounts": [
+            "従業員立替金"
+          ]
+        },
+        {
+          "id": "b3-u10-n3-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "給料 ¥250,000 を支払うとき、先に立て替えていた従業員立替金 ¥12,000 と所得税 ¥15,000 を差し引き、残りを普通預金から振り込んだ。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "給料",
+                "amount": 250000
+              }
+            ],
+            "credit": [
+              {
+                "account": "従業員立替金",
+                "amount": 12000
+              },
+              {
+                "account": "所得税預り金",
+                "amount": 15000
+              },
+              {
+                "account": "普通預金",
+                "amount": 223000
+              }
+            ],
+            "accountOptions": [
+              "従業員立替金",
+              "法定福利費",
+              "仮払金",
+              "立替金",
+              "社会保険料預り金",
+              "給料",
+              "所得税預り金",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "立て替えたぶんを給料から引くと、返してもらったことになります。そのぶん従業員立替金が減ります。"
+        }
+      ]
+    },
+    {
+      "id": "b3-u10-n4",
+      "title": "敷金",
+      "meta": {
+        "goal": "差入保証金を払い、修繕費を差し引いて返してもらうまでを書ける",
+        "topic": "差入保証金",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "差入保証金",
+          "修繕費"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u10-n4-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "店舗用の建物を借りる契約をして、敷金 ¥200,000、1か月分の家賃 ¥100,000、不動産会社への仲介手数料 ¥100,000 をまとめて普通預金から支払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "差入保証金",
+                "amount": 200000
+              },
+              {
+                "account": "支払家賃",
+                "amount": 100000
+              },
+              {
+                "account": "支払手数料",
+                "amount": 100000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 400000
+              }
+            ],
+            "accountOptions": [
+              "普通預金",
+              "仮払金",
+              "支払家賃",
+              "修繕費",
+              "建物",
+              "差入保証金",
+              "前払金",
+              "支払手数料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "敷金はあとで返ってくるので、費用ではなく差入保証金という資産です。家賃と仲介手数料は返ってこないので費用です。",
+          "newAccounts": [
+            "差入保証金",
+            "支払家賃"
+          ]
+        },
+        {
+          "id": "b3-u10-n4-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "店舗を明け渡した。預けていた敷金 ¥200,000 から、原状回復の修繕費 ¥50,000 が差し引かれ、残りが普通預金に振り込まれた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 150000
+              },
+              {
+                "account": "修繕費",
+                "amount": 50000
+              }
+            ],
+            "credit": [
+              {
+                "account": "差入保証金",
+                "amount": 200000
+              }
+            ],
+            "accountOptions": [
+              "差入保証金",
+              "支払家賃",
+              "修繕費",
+              "未収入金",
+              "仮受金",
+              "普通預金",
+              "建物"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "返ってこなかった 50,000 は、部屋を元に戻すために使われたぶんなので修繕費です。差入保証金は全額が消えます。",
+          "newAccounts": [
+            "修繕費"
+          ]
+        },
+        {
+          "id": "b3-u10-n4-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "事務所の賃貸借契約が終わり、敷金 ¥160,000 が全額、現金で返ってきた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 160000
+              }
+            ],
+            "credit": [
+              {
+                "account": "差入保証金",
+                "amount": 160000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "受取家賃",
+              "雑益",
+              "修繕費",
+              "前受金",
+              "差入保証金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "預けていたお金が戻っただけです。利益ではないので、雑益や受取家賃にはしません。"
+        },
+        {
+          "id": "b3-u10-n4-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "倉庫を借りる契約をして、敷金 ¥300,000 と、翌月分の家賃 ¥150,000 を小切手を振り出して支払った。当座預金の残高は十分にある。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "差入保証金",
+                "amount": 300000
+              },
+              {
+                "account": "支払家賃",
+                "amount": 150000
+              }
+            ],
+            "credit": [
+              {
+                "account": "当座預金",
+                "amount": 450000
+              }
+            ],
+            "accountOptions": [
+              "修繕費",
+              "現金",
+              "仮払金",
+              "前払金",
+              "差入保証金",
+              "当座預金",
+              "支払家賃"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "敷金は返ってくるので差入保証金、家賃は費用です。小切手を振り出したので、貸方は当座預金です。"
+        }
+      ]
+    },
+    {
+      "id": "b3-u10-n5",
+      "title": "見分ける",
+      "meta": {
+        "goal": "仮払金と立替金と前払金、仮受金と預り金と前受金を見分ける",
+        "topic": "一時的な勘定の見分け",
+        "minQuestions": 6,
+        "nodeType": "discriminate",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u10-n5-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "取引先から商品を仕入れる契約をして、手付として ¥50,000 を現金で払った。商品はまだ届いていない。この ¥50,000 はどの科目に置く？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "立替金",
+              "仮払金",
+              "前払金",
+              "貸付金"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "商品を受け取れる権利なので前払金です。何に使うかが決まっている点で、仮払金とは違います。"
+        },
+        {
+          "id": "b3-u10-n5-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "従業員が出張に出るので、旅費の概算として ¥30,000 を渡した。精算は帰ってきてからになる。この ¥30,000 はどの科目に置く？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "仮払金",
+              "旅費交通費",
+              "立替金",
+              "前払金"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "使い道は旅費ですが、金額がまだ決まっていません。決まるまでは仮払金です。"
+        },
+        {
+          "id": "b3-u10-n5-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "取引先が払うはずの運賃 ¥6,000 を、当社が代わりに払った。この ¥6,000 はどの科目に置く？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "立替金",
+              "発送費",
+              "前払金",
+              "仮払金"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "相手に返してもらうお金です。当社の費用ではないので、発送費にはなりません。"
+        },
+        {
+          "id": "b3-u10-n5-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "次の取引と科目を結びなさい。"
+          },
+          "task": {
+            "kind": "match",
+            "pairs": [
+              [
+                "得意先から商品の注文時に受け取った内金",
+                "前受金"
+              ],
+              [
+                "従業員の給料から引いて預かった所得税",
+                "所得税預り金"
+              ],
+              [
+                "内容がわからない入金",
+                "仮受金"
+              ]
+            ]
+          },
+          "explanation": "内金は商品を渡す約束つきのお金（前受金）、天引きは国へ渡すお金（預り金）、わからない入金はわかるまでの仮の置き場（仮受金）です。"
+        },
+        {
+          "id": "b3-u10-n5-q5",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "次の取引と科目を結びなさい。"
+          },
+          "task": {
+            "kind": "match",
+            "pairs": [
+              [
+                "商品を仕入れる前に払った手付金",
+                "前払金"
+              ],
+              [
+                "出張の旅費の概算払い",
+                "仮払金"
+              ],
+              [
+                "従業員のために立て替えた健康診断料",
+                "従業員立替金"
+              ]
+            ]
+          },
+          "explanation": "どれも「先にお金を出した」点は同じです。商品のため、金額未確定、従業員のため、と理由で分けます。"
+        },
+        {
+          "id": "b3-u10-n5-q6",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "得意先から商品の代金 ¥120,000 の振り込みがあった。ところが請求書は出しておらず、何の代金か確認が取れない。この入金の仕訳は、貸方をどの科目にする？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "売掛金",
+              "仮受金",
+              "従業員預り金",
+              "前受金"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "売掛金かどうかがまだ確認できません。前受金だと決めつけるのも早いので、わかるまで仮受金です。"
+        }
+      ]
+    }
+  ]
+}

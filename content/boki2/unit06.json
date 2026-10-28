@@ -1,0 +1,1140 @@
+{
+  "unit": {
+    "id": "b2-u06",
+    "course": "boki2",
+    "chapter": 6,
+    "title": "固定資産と無形資産"
+  },
+  "nodes": [
+    {
+      "id": "b2-u06-n1",
+      "title": "割賦購入",
+      "meta": {
+        "goal": "利息を区分して（定額法で）割賦購入を書ける",
+        "topic": "割賦購入",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u06-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "備品（現金で買えば ¥480,000）を、毎月末に ¥130,000 ずつ4回で払う約束で買った。支払総額は ¥520,000 で、利息のぶんは前払利息で区分して処理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "備品",
+                "amount": 480000
+              },
+              {
+                "account": "前払利息",
+                "amount": 40000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払金",
+                "amount": 520000
+              }
+            ],
+            "accountOptions": [
+              "支払利息",
+              "前払利息",
+              "買掛金",
+              "備品",
+              "前払金",
+              "未払金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "備品の取得原価は、現金で買ったときの値段 480,000 円です。利息のぶん 40,000 円は、備品ではなく前払利息に区分して、借方（左）に置きます。",
+          "newAccounts": [
+            "前払利息"
+          ]
+        },
+        {
+          "id": "b2-u06-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "割賦で買った備品の第1回の支払いとして、¥130,000 を当座預金から払った。利息 ¥40,000 は4回で均等に配分し、1回ぶんを支払利息にする。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "未払金",
+                "amount": 130000
+              },
+              {
+                "account": "支払利息",
+                "amount": 10000
+              }
+            ],
+            "credit": [
+              {
+                "account": "当座預金",
+                "amount": 130000
+              },
+              {
+                "account": "前払利息",
+                "amount": 10000
+              }
+            ],
+            "accountOptions": [
+              "未払金",
+              "支払利息",
+              "買掛金",
+              "備品",
+              "前払利息",
+              "現金",
+              "当座預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "払うたびに、未払金が減ります。利息 40,000 ÷ 4 = 10,000 円を、借方（左）の支払利息にして、貸方（右）の前払利息から外します。"
+        },
+        {
+          "id": "b2-u06-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "備品（現金正価 ¥900,000）を、毎回 ¥160,000 の6回払い（総額 ¥960,000）の割賦で買った。利息を6回で均等に配分するとき、1回あたりの利息はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 10000
+          },
+          "explanation": "利息の総額は、支払総額から現金正価を引いた 960,000 − 900,000 = 60,000 円です。6 回で均等に分けるので、60,000 ÷ 6 = 10,000 円です。"
+        },
+        {
+          "id": "b2-u06-n1-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "車両（現金で買えば ¥1,500,000）を、毎年 ¥540,000 ずつ3回で払う約束で買った。利息のぶんは前払利息で区分して処理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "車両運搬具",
+                "amount": 1500000
+              },
+              {
+                "account": "前払利息",
+                "amount": 120000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払金",
+                "amount": 1620000
+              }
+            ],
+            "accountOptions": [
+              "前払金",
+              "未払金",
+              "支払利息",
+              "前払利息",
+              "買掛金",
+              "車両運搬具"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "支払総額は 540,000 × 3 = 1,620,000 円です。現金正価 1,500,000 円が車両の取得原価で、差の 120,000 円が利息になります。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u06-n2",
+      "title": "圧縮記帳",
+      "meta": {
+        "goal": "国庫補助金を直接控除方式で記帳できる",
+        "topic": "圧縮記帳",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "国庫補助金受贈益",
+          "固定資産圧縮損"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u06-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "新しい機械を買うための国庫補助金 ¥2,000,000 が、普通預金に振り込まれた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 2000000
+              }
+            ],
+            "credit": [
+              {
+                "account": "国庫補助金受贈益",
+                "amount": 2000000
+              }
+            ],
+            "accountOptions": [
+              "普通預金",
+              "雑益",
+              "国庫補助金受贈益",
+              "仮受金",
+              "売上"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "国からもらった補助金は、返さなくてよい収益です。貸方（右）の国庫補助金受贈益にします。",
+          "newAccounts": [
+            "国庫補助金受贈益"
+          ]
+        },
+        {
+          "id": "b2-u06-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "機械（備品として処理する）¥5,000,000 を買い、代金は当座預金から払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "備品",
+                "amount": 5000000
+              }
+            ],
+            "credit": [
+              {
+                "account": "当座預金",
+                "amount": 5000000
+              }
+            ],
+            "accountOptions": [
+              "備品",
+              "当座預金",
+              "現金",
+              "未払金",
+              "建設仮勘定"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "取得したときは、代金の全額を備品の取得原価として、借方（左）に置きます。圧縮は、別の仕訳で行います。"
+        },
+        {
+          "id": "b2-u06-n2-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "さきに受け取った国庫補助金 ¥2,000,000 で買った備品について、直接控除方式で圧縮記帳をした。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "固定資産圧縮損",
+                "amount": 2000000
+              }
+            ],
+            "credit": [
+              {
+                "account": "備品",
+                "amount": 2000000
+              }
+            ],
+            "accountOptions": [
+              "減価償却費",
+              "固定資産売却損",
+              "備品",
+              "国庫補助金受贈益",
+              "固定資産圧縮損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "もらった補助金のぶんだけ、備品の帳簿価額を減らします。貸方（右）で備品を減らし、借方（左）の固定資産圧縮損にします。",
+          "newAccounts": [
+            "固定資産圧縮損"
+          ]
+        },
+        {
+          "id": "b2-u06-n2-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "圧縮記帳をしたあとの備品（帳簿価額 ¥3,000,000）を、定額法（耐用年数5年、残存価額ゼロ）で減価償却する。間接法で記帳する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 600000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 600000
+              }
+            ],
+            "accountOptions": [
+              "減価償却累計額",
+              "固定資産圧縮損",
+              "減価償却費",
+              "備品",
+              "国庫補助金受贈益"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "償却の元になるのは、圧縮したあとの金額 3,000,000 円です。3,000,000 ÷ 5 = 600,000 円を、借方（左）の減価償却費にします。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u06-n3",
+      "title": "建設仮勘定",
+      "meta": {
+        "goal": "建設中の支払を集め、完成時に振り替えられる",
+        "topic": "建設仮勘定",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "建設仮勘定"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u06-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "建物の建築を請け負う会社に、建築代金のうち着手金 ¥6,000,000 を、小切手を振り出して支払った。建物はまだ完成していない。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "建設仮勘定",
+                "amount": 6000000
+              }
+            ],
+            "credit": [
+              {
+                "account": "当座預金",
+                "amount": 6000000
+              }
+            ],
+            "accountOptions": [
+              "建設仮勘定",
+              "未払金",
+              "前払金",
+              "建物",
+              "当座預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "完成前に払ったお金は、建物ではなく建設仮勘定に置きます。完成して引き渡しを受けるまで、仮の置き場です。",
+          "newAccounts": [
+            "建設仮勘定"
+          ]
+        },
+        {
+          "id": "b2-u06-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "建築中の建物の中間金 ¥8,000,000 を、普通預金から支払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "建設仮勘定",
+                "amount": 8000000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 8000000
+              }
+            ],
+            "accountOptions": [
+              "未払金",
+              "普通預金",
+              "建物",
+              "建設仮勘定",
+              "前払金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "中間金も、完成前に払ったお金です。借方（左）の建設仮勘定に積み上げていきます。"
+        },
+        {
+          "id": "b2-u06-n3-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "建物が完成し、引き渡しを受けた。これまでの建設仮勘定は ¥14,000,000 で、残金 ¥6,000,000 を当座預金から支払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "建物",
+                "amount": 20000000
+              }
+            ],
+            "credit": [
+              {
+                "account": "建設仮勘定",
+                "amount": 14000000
+              },
+              {
+                "account": "当座預金",
+                "amount": 6000000
+              }
+            ],
+            "accountOptions": [
+              "前払金",
+              "建物",
+              "当座預金",
+              "建設仮勘定",
+              "普通預金",
+              "未払金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "完成したので、仮の置き場から建物へ移します。借方（左）の建物は、仮勘定の 14,000,000 円と残金 6,000,000 円を合わせた 20,000,000 円です。"
+        },
+        {
+          "id": "b2-u06-n3-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "建物が完成し、引き渡しを受けた。請負代金 ¥12,000,000 のうち ¥9,000,000 は建設仮勘定で処理ずみで、残りの ¥3,000,000 は翌月に払う。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "建物",
+                "amount": 12000000
+              }
+            ],
+            "credit": [
+              {
+                "account": "建設仮勘定",
+                "amount": 9000000
+              },
+              {
+                "account": "未払金",
+                "amount": 3000000
+              }
+            ],
+            "accountOptions": [
+              "買掛金",
+              "建物",
+              "前払金",
+              "建設仮勘定",
+              "未払金",
+              "当座預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "払ったぶんの仮勘定を消し、まだ払っていない 3,000,000 円は、貸方（右）の未払金にします。建物の取得原価は請負代金の全額です。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u06-n4",
+      "title": "償却の方法",
+      "meta": {
+        "goal": "直接法、生産高比例法、定率法で、当期の償却額を書き分けられる",
+        "topic": "償却の方法の書き分け",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u06-n4-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、備品（取得原価 ¥300,000、耐用年数5年、残存価額ゼロ）を定額法で減価償却する。直接法で記帳する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 60000
+              }
+            ],
+            "credit": [
+              {
+                "account": "備品",
+                "amount": 60000
+              }
+            ],
+            "accountOptions": [
+              "減価償却累計額",
+              "減価償却費",
+              "固定資産売却損",
+              "備品",
+              "修繕費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "直接法は、固定資産の帳簿価額を直接減らします。300,000 ÷ 5 = 60,000 円を、貸方（右）の備品から引きます。"
+        },
+        {
+          "id": "b2-u06-n4-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、車両（取得原価 ¥3,000,000、残存価額 ¥300,000、総走行可能距離 150,000km）を生産高比例法で減価償却する。当期の走行距離は 18,000km で、間接法で記帳する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 324000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 324000
+              }
+            ],
+            "accountOptions": [
+              "減価償却累計額",
+              "車両運搬具",
+              "修繕費",
+              "減価償却費",
+              "固定資産売却損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "走った距離に応じて償却します。(3,000,000 − 300,000) × 18,000 ÷ 150,000 = 324,000 円が、借方（左）の減価償却費です。"
+        },
+        {
+          "id": "b2-u06-n4-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、備品（取得原価 ¥800,000、期首の減価償却累計額 ¥200,000）を定率法（償却率 25%）で減価償却する。間接法で記帳する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 150000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 150000
+              }
+            ],
+            "accountOptions": [
+              "減価償却費",
+              "備品",
+              "固定資産売却損",
+              "修繕費",
+              "減価償却累計額"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "定率法は、期首の帳簿価額（800,000 − 200,000 = 600,000）に償却率を掛けます。600,000 × 25% = 150,000 円です。"
+        },
+        {
+          "id": "b2-u06-n4-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "車両（取得原価 ¥3,000,000、残存価額 ¥300,000、総走行可能距離 150,000km）を生産高比例法で減価償却する。当期の走行距離が 12,000km のとき、当期の減価償却費はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 216000
+          },
+          "explanation": "(3,000,000 − 300,000) × 12,000 ÷ 150,000 = 216,000 円です。走った距離が短いほど、償却する額も小さくなります。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u06-n5",
+      "title": "のれんとソフトウェア",
+      "meta": {
+        "goal": "のれん、ソフトウェア、ソフトウェア仮勘定の取得と償却を書ける",
+        "topic": "のれんとソフトウェア",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "のれん",
+          "ソフトウェア",
+          "ソフトウェア仮勘定",
+          "のれん償却",
+          "ソフトウェア償却"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u06-n5-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "他社の事業を ¥9,000,000 で譲り受け、普通預金から支払った。譲り受けた資産は、商品 ¥2,000,000 と備品 ¥6,000,000、引き継いだ負債は未払金 ¥1,500,000 である。差額はのれんとする。商品は繰越商品で処理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "繰越商品",
+                "amount": 2000000
+              },
+              {
+                "account": "備品",
+                "amount": 6000000
+              },
+              {
+                "account": "のれん",
+                "amount": 2500000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払金",
+                "amount": 1500000
+              },
+              {
+                "account": "普通預金",
+                "amount": 9000000
+              }
+            ],
+            "accountOptions": [
+              "建物",
+              "のれん",
+              "繰越商品",
+              "未払金",
+              "備品",
+              "買掛金",
+              "普通預金",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "引き継いだ資産と負債の差は 8,000,000 − 1,500,000 = 6,500,000 円です。それを 2,500,000 円上回る対価を払ったので、その差が借方（左）ののれんです。",
+          "newAccounts": [
+            "のれん"
+          ]
+        },
+        {
+          "id": "b2-u06-n5-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、のれん ¥2,500,000 を、10年間で定額法により償却する。直接控除で記帳する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "のれん償却",
+                "amount": 250000
+              }
+            ],
+            "credit": [
+              {
+                "account": "のれん",
+                "amount": 250000
+              }
+            ],
+            "accountOptions": [
+              "のれん償却",
+              "減価償却費",
+              "のれん",
+              "ソフトウェア償却",
+              "減価償却累計額"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "のれんは、毎期少しずつ費用にします。2,500,000 ÷ 10 = 250,000 円を、借方（左）ののれん償却にして、貸方（右）でのれんを減らします。",
+          "newAccounts": [
+            "のれん償却"
+          ]
+        },
+        {
+          "id": "b2-u06-n5-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "自社で使うソフトウェア ¥1,800,000 を買い、代金は普通預金から払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "ソフトウェア",
+                "amount": 1800000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 1800000
+              }
+            ],
+            "accountOptions": [
+              "ソフトウェア",
+              "備品",
+              "未払金",
+              "ソフトウェア仮勘定",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "自分の会社で使うソフトウェアは、固定資産として、借方（左）のソフトウェアに置きます。備品とは別の科目です。",
+          "newAccounts": [
+            "ソフトウェア"
+          ]
+        },
+        {
+          "id": "b2-u06-n5-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "自社で使うソフトウェアの制作を外部に委託し、前払いとして ¥900,000 を普通預金から払った。ソフトウェアはまだ完成していない。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "ソフトウェア仮勘定",
+                "amount": 900000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 900000
+              }
+            ],
+            "accountOptions": [
+              "備品",
+              "ソフトウェア",
+              "ソフトウェア仮勘定",
+              "前払金",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "完成前に払ったお金は、ソフトウェア仮勘定という仮の置き場に置きます。建設中の建物に払ったお金を建設仮勘定に置くのと同じ考え方です。",
+          "newAccounts": [
+            "ソフトウェア仮勘定"
+          ]
+        },
+        {
+          "id": "b2-u06-n5-q5",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、ソフトウェア ¥1,800,000 を、5年間で定額法により償却する。直接控除で記帳する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "ソフトウェア償却",
+                "amount": 360000
+              }
+            ],
+            "credit": [
+              {
+                "account": "ソフトウェア",
+                "amount": 360000
+              }
+            ],
+            "accountOptions": [
+              "減価償却費",
+              "減価償却累計額",
+              "のれん償却",
+              "ソフトウェア償却",
+              "ソフトウェア"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "1,800,000 ÷ 5 = 360,000 円を、借方（左）のソフトウェア償却にします。ソフトウェアは、累計額を使わず、貸方（右）で直接減らします。",
+          "newAccounts": [
+            "ソフトウェア償却"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b2-u06-n6",
+      "title": "長期前払費用",
+      "meta": {
+        "goal": "1年を超える前払いを、期首と決算で流動と固定に分けられる",
+        "topic": "長期前払費用",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "長期前払費用"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u06-n6-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。当期の4月1日に、3年分の保険料 ¥360,000 を現金で払い、支払保険料にしてある。1年以内に費用になるぶんを前払保険料に、1年を超えるぶんを長期前払費用に振り替える。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "前払保険料",
+                "amount": 120000
+              },
+              {
+                "account": "長期前払費用",
+                "amount": 120000
+              }
+            ],
+            "credit": [
+              {
+                "account": "支払保険料",
+                "amount": 240000
+              }
+            ],
+            "accountOptions": [
+              "前払家賃",
+              "前払保険料",
+              "支払保険料",
+              "未払保険料",
+              "前払金",
+              "長期前払費用"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "3年分のうち、当期は 120,000 円で、そのまま費用に残します。次の1年ぶん 120,000 円は前払保険料、さらにその先の 120,000 円は長期前払費用にして、借方（左）に置きます。",
+          "newAccounts": [
+            "長期前払費用"
+          ]
+        },
+        {
+          "id": "b2-u06-n6-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。さきの決算で長期前払費用にした保険料 ¥120,000 が、1年以内に費用になる時期になった。前払保険料に振り替える。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "前払保険料",
+                "amount": 120000
+              }
+            ],
+            "credit": [
+              {
+                "account": "長期前払費用",
+                "amount": 120000
+              }
+            ],
+            "accountOptions": [
+              "未払保険料",
+              "長期前払費用",
+              "前払保険料",
+              "前払金",
+              "支払保険料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "あと1年で費用になるぶんは、長期ではなく、1年以内の前払保険料です。長期前払費用を貸方（右）で減らし、前払保険料に移します。"
+        },
+        {
+          "id": "b2-u06-n6-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。当期の4月1日に、5年分の火災保険料 ¥600,000 を現金で払い、支払保険料にしてある。1年以内に費用になるぶんを前払保険料に、1年を超えるぶんを長期前払費用に振り替える。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "前払保険料",
+                "amount": 120000
+              },
+              {
+                "account": "長期前払費用",
+                "amount": 360000
+              }
+            ],
+            "credit": [
+              {
+                "account": "支払保険料",
+                "amount": 480000
+              }
+            ],
+            "accountOptions": [
+              "支払保険料",
+              "未払保険料",
+              "前払金",
+              "前払家賃",
+              "前払保険料",
+              "長期前払費用"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "1年ぶんは 120,000 円です。当期ぶんの 120,000 円を費用に残し、次の1年ぶん 120,000 円を前払保険料、残りの 3 年ぶん 360,000 円を長期前払費用にします。"
+        },
+        {
+          "id": "b2-u06-n6-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。10月1日に、3年分（36か月）の保険料 ¥720,000 を払った。決算で、1年を超えて先の期のぶんとして長期前払費用になる金額はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 360000
+          },
+          "explanation": "当期は 10月から3月の 6 か月、次の期が 12 か月で、残りの 36 − 6 − 12 = 18 か月が1年を超えるぶんです。720,000 × 18/36 = 360,000 円です。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u06-n7",
+      "title": "固定資産台帳",
+      "meta": {
+        "goal": "有形と無形の取得、償却、除却、売却を台帳に記入できる",
+        "topic": "有形・無形の固定資産台帳",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u06-n7-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。備品C は ×1年4月1日に取得（耐用年数6年）、備品D は当期の ×3年7月1日に取得（耐用年数4年）した。どちらも定額法、残存価額ゼロで、月割りで計算する。当期（×3年4月1日から×4年3月31日まで）の固定資産台帳を完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "fixed_asset_ledger",
+              "data": {
+                "header": {
+                  "title": "固定資産台帳",
+                  "period": "×3年4月1日から×4年3月31日まで"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "acquiredOn": "×1年4/1",
+                      "name": "備品C",
+                      "quantity": 1,
+                      "method": "定額法",
+                      "usefulLife": "6年",
+                      "cost": 900000,
+                      "openingAccumulated": null,
+                      "openingBookValue": 600000,
+                      "depreciation": 150000,
+                      "closingBookValue": null
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "acquiredOn": "×3年7/1",
+                      "name": "備品D",
+                      "quantity": 1,
+                      "method": "定額法",
+                      "usefulLife": "4年",
+                      "cost": 480000,
+                      "openingAccumulated": null,
+                      "openingBookValue": null,
+                      "depreciation": null,
+                      "closingBookValue": null
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "acquiredOn": null,
+                      "name": "合 計",
+                      "quantity": null,
+                      "method": null,
+                      "usefulLife": null,
+                      "cost": 1380000,
+                      "openingAccumulated": 300000,
+                      "openingBookValue": 600000,
+                      "depreciation": 240000,
+                      "closingBookValue": 840000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.openingAccumulated",
+                "input": "numpad",
+                "answer": 300000
+              },
+              {
+                "ref": "r1.closingBookValue",
+                "input": "numpad",
+                "answer": 450000
+              },
+              {
+                "ref": "r2.depreciation",
+                "input": "numpad",
+                "answer": 90000
+              },
+              {
+                "ref": "r2.closingBookValue",
+                "input": "numpad",
+                "answer": 390000
+              }
+            ]
+          },
+          "explanation": "備品C は期首までに 2 年ぶん（900,000 ÷ 6 × 2 = 300,000 円）を償却ずみで、当期は 150,000 円です。備品D は 7月から3月の 9 か月で、480,000 ÷ 4 × 9/12 = 90,000 円です。"
+        },
+        {
+          "id": "b2-u06-n7-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。ソフトウェアE（耐用年数5年、定額法）の期首の累計償却額は ¥300,000、車両F は定率法（償却率 20%）で、期首の累計償却額は ¥200,000 である。当期の固定資産台帳を完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "fixed_asset_ledger",
+              "data": {
+                "header": {
+                  "title": "固定資産台帳",
+                  "period": "×3年4月1日から×4年3月31日まで"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "acquiredOn": "×1年4/1",
+                      "name": "ソフトウェアE",
+                      "quantity": 1,
+                      "method": "定額法",
+                      "usefulLife": "5年",
+                      "cost": 1500000,
+                      "openingAccumulated": 300000,
+                      "openingBookValue": null,
+                      "depreciation": 300000,
+                      "closingBookValue": null
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "acquiredOn": "×2年4/1",
+                      "name": "車両F",
+                      "quantity": 1,
+                      "method": "定率法（20%）",
+                      "usefulLife": "—",
+                      "cost": 1000000,
+                      "openingAccumulated": 200000,
+                      "openingBookValue": 800000,
+                      "depreciation": null,
+                      "closingBookValue": null
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "acquiredOn": null,
+                      "name": "合 計",
+                      "quantity": null,
+                      "method": null,
+                      "usefulLife": null,
+                      "cost": 2500000,
+                      "openingAccumulated": 500000,
+                      "openingBookValue": 2000000,
+                      "depreciation": 460000,
+                      "closingBookValue": 1540000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.openingBookValue",
+                "input": "numpad",
+                "answer": 1200000
+              },
+              {
+                "ref": "r1.closingBookValue",
+                "input": "numpad",
+                "answer": 900000
+              },
+              {
+                "ref": "r2.depreciation",
+                "input": "numpad",
+                "answer": 160000
+              },
+              {
+                "ref": "r2.closingBookValue",
+                "input": "numpad",
+                "answer": 640000
+              }
+            ]
+          },
+          "explanation": "ソフトウェアEは 1,500,000 ÷ 5 = 300,000 円ずつ減ります。車両F は、期首の帳簿価額 800,000 円に償却率 20% を掛けた 160,000 円が、当期の償却費です。"
+        }
+      ]
+    }
+  ]
+}

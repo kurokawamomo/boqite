@@ -1,0 +1,988 @@
+{
+  "unit": {
+    "id": "b2-u13",
+    "course": "boki2",
+    "chapter": 13,
+    "title": "外貨建取引と税金"
+  },
+  "nodes": [
+    {
+      "id": "b2-u13-n1",
+      "title": "外貨建ての売買",
+      "meta": {
+        "goal": "発生と決済の為替レートの差を、為替差損益にできる",
+        "topic": "外貨建ての売買",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "為替差損益"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u13-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品 1,000 米ドル（US$）を掛けで売り上げた。取引日の為替相場は 1ドル ¥110 である。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 110000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 110000
+              }
+            ],
+            "accountOptions": [
+              "売掛金",
+              "前受金",
+              "売上",
+              "仕入",
+              "為替差損益"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "外国のお金の金額は、取引した日の為替相場で円に直します。1,000 × 110 = 110,000 円が、売掛金と売上です。"
+        },
+        {
+          "id": "b2-u13-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "さきに売った売掛金 1,000 米ドル（計上額 ¥110,000）が決済され、円で普通預金に入金された。決済日の為替相場は 1ドル ¥112 である。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 112000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売掛金",
+                "amount": 110000
+              },
+              {
+                "account": "為替差損益",
+                "amount": 2000
+              }
+            ],
+            "accountOptions": [
+              "普通預金",
+              "売上",
+              "売掛金",
+              "為替差損益",
+              "前受金",
+              "雑益"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "入金は 1,000 × 112 = 112,000 円で、帳簿の売掛金より 2,000 円多く入りました。この差は、貸方（右）の為替差損益（益）です。",
+          "newAccounts": [
+            "為替差損益"
+          ]
+        },
+        {
+          "id": "b2-u13-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品 2,000 米ドルを掛けで仕入れた。取引日の為替相場は 1ドル ¥108 である。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 216000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 216000
+              }
+            ],
+            "accountOptions": [
+              "仕入",
+              "為替差損益",
+              "売上",
+              "買掛金",
+              "売掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "2,000 × 108 = 216,000 円です。借方（左）が仕入、貸方（右）が買掛金で、どちらも取引日の相場で円に直します。"
+        },
+        {
+          "id": "b2-u13-n1-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "さきに仕入れた買掛金 2,000 米ドル（計上額 ¥216,000）を、普通預金から円で支払った。決済日の為替相場は 1ドル ¥111 である。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "買掛金",
+                "amount": 216000
+              },
+              {
+                "account": "為替差損益",
+                "amount": 6000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 222000
+              }
+            ],
+            "accountOptions": [
+              "売掛金",
+              "仕入",
+              "雑損",
+              "為替差損益",
+              "買掛金",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "払うのは 2,000 × 111 = 222,000 円で、帳簿の買掛金より 6,000 円多く払います。この差は、借方（左）の為替差損益（損）です。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u13-n2",
+      "title": "決算での換算",
+      "meta": {
+        "goal": "売掛金と買掛金を、決算日のレートで換算できる",
+        "topic": "決算での外貨の換算",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u13-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、外貨建ての売掛金 1,000 米ドル（計上額 ¥110,000）を、決算日の為替相場 1ドル ¥114 で換算しなおす。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 4000
+              }
+            ],
+            "credit": [
+              {
+                "account": "為替差損益",
+                "amount": 4000
+              }
+            ],
+            "accountOptions": [
+              "売掛金",
+              "雑益",
+              "売上",
+              "買掛金",
+              "為替差損益"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "決算日の相場で 1,000 × 114 = 114,000 円になり、帳簿より 4,000 円高くなりました。売掛金を増やし、貸方（右）の為替差損益（益）にします。"
+        },
+        {
+          "id": "b2-u13-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、外貨建ての買掛金 2,000 米ドル（計上額 ¥216,000）を、決算日の為替相場 1ドル ¥111 で換算しなおす。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "為替差損益",
+                "amount": 6000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 6000
+              }
+            ],
+            "accountOptions": [
+              "為替差損益",
+              "仕入",
+              "買掛金",
+              "売掛金",
+              "雑損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "決算日の相場で 2,000 × 111 = 222,000 円になり、払う円の金額が 6,000 円増えます。買掛金を貸方（右）で増やし、借方（左）の為替差損益（損）にします。"
+        },
+        {
+          "id": "b2-u13-n2-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、外貨建ての買掛金 3,000 米ドル（計上額 ¥330,000）を、決算日の為替相場 1ドル ¥108 で換算しなおす。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "買掛金",
+                "amount": 6000
+              }
+            ],
+            "credit": [
+              {
+                "account": "為替差損益",
+                "amount": 6000
+              }
+            ],
+            "accountOptions": [
+              "買掛金",
+              "雑益",
+              "仕入",
+              "為替差損益",
+              "売掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "決算日の相場で 3,000 × 108 = 324,000 円になり、払う円が 6,000 円減ります。借方（左）で買掛金を減らし、貸方（右）の為替差損益（益）にします。"
+        },
+        {
+          "id": "b2-u13-n2-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、外貨建ての売掛金 1,500 米ドルがある。発生時の為替相場は 1ドル ¥109、決算日の為替相場は 1ドル ¥113 である。換算によって生じる為替差益はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 6000
+          },
+          "explanation": "1ドルあたり 113 − 109 = 4 円の円安なので、売掛金は 1,500 × 4 = 6,000 円増えます。これが為替差益です。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u13-n3",
+      "title": "為替予約の振当処理",
+      "meta": {
+        "goal": "予約レートで円の金額を確定する処理を書ける",
+        "topic": "為替予約の振当処理",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u13-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品 1,000 米ドルを掛けで仕入れ、同時に為替予約（予約レート 1ドル ¥108）を結んだ。取引日の為替相場は 1ドル ¥110 である。振当処理により、予約レートで円に直す。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 108000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 108000
+              }
+            ],
+            "accountOptions": [
+              "買掛金",
+              "仕入",
+              "売上",
+              "売掛金",
+              "為替差損益"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "為替予約で、支払う円の金額が、すでに決まっています。予約レートの 1,000 × 108 = 108,000 円で、仕入と買掛金を計上します。"
+        },
+        {
+          "id": "b2-u13-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "さきに 1,000 米ドルの商品を、取引日の相場 1ドル ¥110 で掛けで仕入れ、買掛金 ¥110,000 を計上している。今日、為替予約（予約レート 1ドル ¥107）を結び、振当処理を行う。差額は、為替差損益として当期に処理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "買掛金",
+                "amount": 3000
+              }
+            ],
+            "credit": [
+              {
+                "account": "為替差損益",
+                "amount": 3000
+              }
+            ],
+            "accountOptions": [
+              "雑益",
+              "買掛金",
+              "為替差損益",
+              "売掛金",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "予約によって、支払う円は 1,000 × 107 = 107,000 円に確定しました。帳簿の 110,000 円との差 3,000 円は、借方（左）で買掛金を減らし、貸方（右）の為替差損益（益）にします。"
+        },
+        {
+          "id": "b2-u13-n3-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "為替予約をした買掛金（予約レートで計上した ¥108,000）の支払期日になり、普通預金から円で支払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "買掛金",
+                "amount": 108000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 108000
+              }
+            ],
+            "accountOptions": [
+              "買掛金",
+              "売掛金",
+              "為替差損益",
+              "普通預金",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "予約で円の金額が決まっているので、為替相場が変わっていても、為替差損益は出ません。帳簿の金額どおり、買掛金と普通預金を動かします。"
+        },
+        {
+          "id": "b2-u13-n3-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "商品 2,000 米ドルを掛けで売り上げ、同時に為替予約（予約レート 1ドル ¥112）を結んだ。取引日の為替相場は 1ドル ¥110 である。振当処理により、予約レートで円に直す。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 224000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 224000
+              }
+            ],
+            "accountOptions": [
+              "売掛金",
+              "為替差損益",
+              "仕入",
+              "売上",
+              "買掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "受け取る円の金額が、予約で決まっています。2,000 × 112 = 224,000 円で、売掛金と売上を計上します。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u13-n4",
+      "title": "法人税等の課税所得",
+      "meta": {
+        "goal": "当期純利益に加算と減算をして、課税所得と法人税等を計算できる",
+        "topic": "課税所得と法人税等",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u13-n4-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "税引前の当期純利益は ¥1,800,000 である。税法の計算で、損金に算入されない費用が ¥200,000、益金に算入されない収益が ¥50,000 ある。課税所得はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1950000
+          },
+          "explanation": "損金に入らない費用は利益から差し引けないので足し、益金に入らない収益は課税の対象外なので引きます。1,800,000 + 200,000 − 50,000 = 1,950,000 円です。"
+        },
+        {
+          "id": "b2-u13-n4-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "課税所得が ¥1,950,000 で、法人税、住民税及び事業税の税率の合計が 30% のとき、法人税、住民税及び事業税はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 585000
+          },
+          "explanation": "課税所得に税率を掛けます。1,950,000 × 30% = 585,000 円です。"
+        },
+        {
+          "id": "b2-u13-n4-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、当期の法人税、住民税及び事業税が ¥585,000 と確定した。中間納付 ¥250,000 は仮払法人税等で処理ずみで、残りは未払とする。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "法人税、住民税及び事業税",
+                "amount": 585000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仮払法人税等",
+                "amount": 250000
+              },
+              {
+                "account": "未払法人税等",
+                "amount": 335000
+              }
+            ],
+            "accountOptions": [
+              "未払法人税等",
+              "租税公課",
+              "未払金",
+              "法人税、住民税及び事業税",
+              "普通預金",
+              "仮払法人税等"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "税額 585,000 円が今期の費用です。すでに払った 250,000 円を貸方（右）で仮払法人税等から外し、残りの 335,000 円を未払法人税等にします。"
+        },
+        {
+          "id": "b2-u13-n4-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "確定申告をして、決算で未払法人税等にしていた ¥335,000 を、普通預金から納付した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "未払法人税等",
+                "amount": 335000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 335000
+              }
+            ],
+            "accountOptions": [
+              "租税公課",
+              "法人税、住民税及び事業税",
+              "仮払法人税等",
+              "未払法人税等",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "費用は決算ですでに計上しています。納めるのは、借方（左）の未払法人税等という義務を、お金で果たすことです。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u13-n5",
+      "title": "税効果会計の基本",
+      "meta": {
+        "goal": "引当金と減価償却の一時差異から、繰延税金資産と法人税等調整額を書ける",
+        "topic": "税効果会計の基本",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "繰延税金資産",
+          "法人税等調整額"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u13-n5-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、貸倒引当金の繰入額のうち ¥40,000 が、税法上は損金に算入されず、将来の課税所得を減らすことになる（将来減算一時差異）。法定実効税率は 30% で、税効果会計を適用する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "繰延税金資産",
+                "amount": 12000
+              }
+            ],
+            "credit": [
+              {
+                "account": "法人税等調整額",
+                "amount": 12000
+              }
+            ],
+            "accountOptions": [
+              "繰延税金資産",
+              "未払法人税等",
+              "法人税等調整額",
+              "繰延税金負債",
+              "法人税、住民税及び事業税"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "40,000 × 30% = 12,000 円は、将来の税金が減る効果です。借方（左）の繰延税金資産にして、貸方（右）の法人税等調整額で、今期の税金の費用を減らします。",
+          "newAccounts": [
+            "繰延税金資産",
+            "法人税等調整額"
+          ]
+        },
+        {
+          "id": "b2-u13-n5-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、減価償却費のうち ¥90,000 が、税法上は損金に算入されず、将来の課税所得を減らすことになる。法定実効税率は 30% で、税効果会計を適用する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "繰延税金資産",
+                "amount": 27000
+              }
+            ],
+            "credit": [
+              {
+                "account": "法人税等調整額",
+                "amount": 27000
+              }
+            ],
+            "accountOptions": [
+              "繰延税金資産",
+              "法人税等調整額",
+              "繰延税金負債",
+              "法人税、住民税及び事業税",
+              "未払法人税等"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "90,000 × 30% = 27,000 円が、将来の税金が減る効果です。貸倒引当金のときと同じ形で、借方（左）に繰延税金資産、貸方（右）に法人税等調整額を置きます。"
+        },
+        {
+          "id": "b2-u13-n5-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "期末に、前期の決算で計上した繰延税金資産 ¥12,000 のもとになった損金不算入の額が、税法上も認められた。繰延税金資産を取り崩す。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "法人税等調整額",
+                "amount": 12000
+              }
+            ],
+            "credit": [
+              {
+                "account": "繰延税金資産",
+                "amount": 12000
+              }
+            ],
+            "accountOptions": [
+              "法人税等調整額",
+              "繰延税金資産",
+              "法人税、住民税及び事業税",
+              "繰延税金負債",
+              "未払法人税等"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "将来減らせるはずだった税金を、実際に減らしたので、繰延税金資産は役目を終えます。貸方（右）で消し、借方（左）の法人税等調整額で費用に戻します。"
+        },
+        {
+          "id": "b2-u13-n5-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "将来減算一時差異が ¥250,000 ある。法定実効税率が 30% のとき、計上する繰延税金資産はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 75000
+          },
+          "explanation": "一時差異に税率を掛けます。250,000 × 30% = 75,000 円です。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u13-n6",
+      "title": "税効果と評価差額金",
+      "meta": {
+        "goal": "その他有価証券の評価差額に、繰延税金を併用できる",
+        "topic": "税効果と評価差額金",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u13-n6-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、その他有価証券（帳簿価額 ¥800,000）の時価が ¥860,000 になった。全部純資産直入法で処理し、税効果会計を適用する。法定実効税率は 30% である。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "その他有価証券",
+                "amount": 60000
+              }
+            ],
+            "credit": [
+              {
+                "account": "繰延税金負債",
+                "amount": 18000
+              },
+              {
+                "account": "その他有価証券評価差額金",
+                "amount": 42000
+              }
+            ],
+            "accountOptions": [
+              "繰延税金資産",
+              "有価証券評価益",
+              "法人税等調整額",
+              "その他有価証券評価差額金",
+              "その他有価証券",
+              "繰延税金負債"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "評価益 60,000 円のうち、30% の 18,000 円は将来の税金が増える効果なので、貸方（右）の繰延税金負債にします。残りの 42,000 円が、その他有価証券評価差額金です。",
+          "newAccounts": [
+            "繰延税金負債"
+          ]
+        },
+        {
+          "id": "b2-u13-n6-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、その他有価証券（帳簿価額 ¥800,000）の時価が ¥740,000 になった。全部純資産直入法で処理し、税効果会計を適用する。法定実効税率は 30% である。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "その他有価証券評価差額金",
+                "amount": 42000
+              },
+              {
+                "account": "繰延税金資産",
+                "amount": 18000
+              }
+            ],
+            "credit": [
+              {
+                "account": "その他有価証券",
+                "amount": 60000
+              }
+            ],
+            "accountOptions": [
+              "繰延税金負債",
+              "その他有価証券評価差額金",
+              "その他有価証券",
+              "法人税等調整額",
+              "繰延税金資産",
+              "有価証券評価損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "評価損 60,000 円のうち、30% の 18,000 円は将来の税金が減る効果なので、借方（左）の繰延税金資産にします。残りの 42,000 円が、評価差額金のマイナスです。"
+        },
+        {
+          "id": "b2-u13-n6-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "期首になった。前期の決算で、その他有価証券の評価益 ¥60,000 について、繰延税金負債 ¥18,000 とその他有価証券評価差額金 ¥42,000 を計上している。洗替えの処理を行う。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "繰延税金負債",
+                "amount": 18000
+              },
+              {
+                "account": "その他有価証券評価差額金",
+                "amount": 42000
+              }
+            ],
+            "credit": [
+              {
+                "account": "その他有価証券",
+                "amount": 60000
+              }
+            ],
+            "accountOptions": [
+              "その他有価証券評価差額金",
+              "繰延税金資産",
+              "繰延税金負債",
+              "有価証券評価益",
+              "その他有価証券",
+              "法人税等調整額"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "期首に評価を元に戻します。借方（左）で、繰延税金負債と評価差額金を消し、貸方（右）で、その他有価証券の帳簿価額を取得原価に戻します。"
+        },
+        {
+          "id": "b2-u13-n6-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "その他有価証券の評価益が ¥200,000 のとき、法定実効税率 30% の税効果会計を適用して、その他有価証券評価差額金に計上する金額はいくら？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 140000
+          },
+          "explanation": "税効果の繰延税金負債は 200,000 × 30% = 60,000 円です。評価差額金は、残りの 200,000 − 60,000 = 140,000 円です。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u13-n7",
+      "title": "未決算と費用の整理",
+      "meta": {
+        "goal": "未決算勘定、研究開発費、創立費と開業費を書き分けられる",
+        "topic": "未決算・研究開発費・創立費と開業費",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "未決算",
+          "研究開発費",
+          "創立費",
+          "開業費"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b2-u13-n7-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "倉庫（取得原価 ¥3,000,000、減価償却累計額 ¥1,200,000）が火災で焼失した。保険契約があるが、保険金の額はまだ決まっていない。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 1200000
+              },
+              {
+                "account": "未決算",
+                "amount": 1800000
+              }
+            ],
+            "credit": [
+              {
+                "account": "建物",
+                "amount": 3000000
+              }
+            ],
+            "accountOptions": [
+              "未収入金",
+              "保険差益",
+              "減価償却累計額",
+              "未決算",
+              "火災損失",
+              "建物"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "保険金の額が決まるまでは、損益にせず、帳簿価額 1,800,000 円を借方（左）の未決算に置きます。額が決まった時点で、損益を確定します。",
+          "newAccounts": [
+            "未決算"
+          ]
+        },
+        {
+          "id": "b2-u13-n7-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "火災で焼失した倉庫について、保険金 ¥1,500,000 が確定し、普通預金に振り込まれた。未決算は ¥1,800,000 である。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 1500000
+              },
+              {
+                "account": "火災損失",
+                "amount": 300000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未決算",
+                "amount": 1800000
+              }
+            ],
+            "accountOptions": [
+              "保険差益",
+              "普通預金",
+              "未収入金",
+              "火災損失",
+              "雑損",
+              "未決算"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "失った財産の 1,800,000 円に対して、保険金は 1,500,000 円でした。足りない 300,000 円は、借方（左）の火災損失です。",
+          "newAccounts": [
+            "火災損失"
+          ]
+        },
+        {
+          "id": "b2-u13-n7-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "新製品の研究のために、研究費 ¥700,000 を現金で支払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "研究開発費",
+                "amount": 700000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 700000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "研究開発費",
+              "ソフトウェア",
+              "備品",
+              "創立費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "研究や開発のために払ったお金は、将来の成果が確かでないので、資産にせず、払った期の費用にします。",
+          "newAccounts": [
+            "研究開発費"
+          ]
+        },
+        {
+          "id": "b2-u13-n7-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "会社の設立のために、定款の作成と登記の費用 ¥400,000 を、普通預金から払った。創立費として、費用に計上する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "創立費",
+                "amount": 400000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 400000
+              }
+            ],
+            "accountOptions": [
+              "開業費",
+              "のれん",
+              "創立費",
+              "研究開発費",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "会社を設立するためにかかった費用は、創立費です。2級では、払った期の費用として、借方（左）に置きます。",
+          "newAccounts": [
+            "創立費"
+          ]
+        }
+      ]
+    }
+  ]
+}

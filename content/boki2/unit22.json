@@ -1,0 +1,674 @@
+{
+  "unit": {
+    "id": "b2-u22",
+    "course": "boki2",
+    "chapter": 22,
+    "title": "損益分岐点と直接原価計算"
+  },
+  "nodes": [
+    {
+      "id": "b2-u22-n1",
+      "title": "損益分岐点",
+      "meta": {
+        "goal": "貢献利益率から、損益分岐点の売上高を出せる",
+        "topic": "損益分岐点",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 5,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "売上高10,000,000円、変動費4,000,000円のとき、貢献利益率は何％か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 60
+          },
+          "explanation": "貢献利益は売上高から変動費を引いた額で、売上高で割ると貢献利益率です。",
+          "source": "generated",
+          "id": "b2-u22-n1-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "売上高9,000,000円、変動費5,400,000円のとき、貢献利益率は何％か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 40
+          },
+          "explanation": "貢献利益は売上高から変動費を引いた額で、売上高で割ると貢献利益率です。",
+          "source": "generated",
+          "id": "b2-u22-n1-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "固定費が2,000,000円、貢献利益率が40％のとき、損益分岐点の売上高は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 5000000
+          },
+          "explanation": "損益分岐点の売上高は、固定費を貢献利益率で割って求めます。",
+          "source": "generated",
+          "id": "b2-u22-n1-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "固定費が10,000,000円、貢献利益率が25％のとき、損益分岐点の売上高は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 40000000
+          },
+          "explanation": "損益分岐点の売上高は、固定費を貢献利益率で割って求めます。",
+          "source": "generated",
+          "id": "b2-u22-n1-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製品1個あたりの販売価格1,500円、変動費700円、固定費1,040,000円のとき、損益分岐点の販売数量は何個か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1300
+          },
+          "explanation": "固定費を、1個あたりの貢献利益で割ります。",
+          "source": "generated",
+          "id": "b2-u22-n1-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "売上高18,000,000円、変動費10,800,000円のとき、貢献利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 7200000
+          },
+          "explanation": "貢献利益は、売上高から変動費を引いた額です。",
+          "source": "generated",
+          "id": "b2-u22-n1-q6",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u22-n2",
+      "title": "目標利益と安全余裕率",
+      "meta": {
+        "goal": "目標利益を得る売上高と、安全余裕率を求められる",
+        "topic": "目標利益と安全余裕率",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 5,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "固定費3,000,000円、貢献利益率25％の会社が、営業利益1,000,000円を得るために必要な売上高は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 16000000
+          },
+          "explanation": "固定費に目標利益を足し、貢献利益率で割ります。",
+          "source": "generated",
+          "id": "b2-u22-n2-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "固定費3,000,000円、貢献利益率25％の会社が、営業利益1,000,000円を得るために必要な売上高は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 16000000
+          },
+          "explanation": "固定費に目標利益を足し、貢献利益率で割ります。",
+          "source": "generated",
+          "id": "b2-u22-n2-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "実際の売上高が16,000,000円、損益分岐点の売上高が12,000,000円のとき、安全余裕率は何％か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 25
+          },
+          "explanation": "安全余裕率は、売上高から損益分岐点を引いた額を、売上高で割って％にします。",
+          "source": "generated",
+          "id": "b2-u22-n2-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "実際の売上高が8,000,000円、損益分岐点の売上高が6,000,000円のとき、安全余裕率は何％か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 25
+          },
+          "explanation": "安全余裕率は、売上高から損益分岐点を引いた額を、売上高で割って％にします。",
+          "source": "generated",
+          "id": "b2-u22-n2-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "売上高7,000,000円、貢献利益率30％、固定費1,500,000円のとき、営業利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 600000
+          },
+          "explanation": "売上高に貢献利益率を掛けて貢献利益を出し、固定費を引きます。",
+          "source": "generated",
+          "id": "b2-u22-n2-q5",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u22-n3",
+      "title": "原価予測",
+      "meta": {
+        "goal": "高低点法で、変動費率と固定費を出せる",
+        "topic": "高低点法による原価予測",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 5,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "高低点法。最高の操業度1,100時間のときの原価が504,000円、最低の操業度500時間のときの原価が420,000円だった。変動費率は1時間あたり何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 140
+          },
+          "explanation": "原価の差を、操業度の差で割ったものが変動費率です。",
+          "source": "generated",
+          "id": "b2-u22-n3-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "高低点法。最高の操業度2,300時間のときの原価が377,000円、最低の操業度1,100時間のときの原価が269,000円だった。変動費率は1時間あたり何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 90
+          },
+          "explanation": "原価の差を、操業度の差で割ったものが変動費率です。",
+          "source": "generated",
+          "id": "b2-u22-n3-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "高低点法。最高の操業度2,700時間のときの原価が602,000円、最低の操業度1,100時間のときの原価が346,000円だった。固定費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 170000
+          },
+          "explanation": "最高の操業度の原価から、変動費率×最高の操業度を引くと、固定費が出ます。",
+          "source": "generated",
+          "id": "b2-u22-n3-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "高低点法。最高の操業度2,500時間のときの原価が820,000円、最低の操業度500時間のときの原価が540,000円だった。固定費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 470000
+          },
+          "explanation": "最高の操業度の原価から、変動費率×最高の操業度を引くと、固定費が出ます。",
+          "source": "generated",
+          "id": "b2-u22-n3-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "高低点法で、変動費率が1時間あたり180円、固定費が460,000円と分かった。操業度が1,200時間のときの、原価の予測額は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 676000
+          },
+          "explanation": "固定費に、変動費率と操業度の積を足します。",
+          "source": "generated",
+          "id": "b2-u22-n3-q5",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u22-n4",
+      "title": "直接原価計算の損益計算書",
+      "meta": {
+        "goal": "貢献利益までを出した損益計算書を作れる",
+        "topic": "直接原価計算の損益計算書",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 5,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "直接原価計算の損益計算書。売上高8,000,000円、変動売上原価2,000,000円、変動販売費400,000円である。貢献利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 5600000
+          },
+          "explanation": "売上高から、変動売上原価と変動販売費を引いた額が貢献利益です。",
+          "source": "generated",
+          "id": "b2-u22-n4-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "直接原価計算の損益計算書。貢献利益が5,600,000円、製造固定費1,600,000円、固定販売費及び一般管理費800,000円である。営業利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 3200000
+          },
+          "explanation": "貢献利益から、製造固定費と固定販売費及び一般管理費を引くと、営業利益です。",
+          "source": "generated",
+          "id": "b2-u22-n4-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "直接原価計算の損益計算書。売上高9,000,000円、変動売上原価2,500,000円、変動販売費500,000円である。貢献利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 6000000
+          },
+          "explanation": "売上高から、変動売上原価と変動販売費を引いた額が貢献利益です。",
+          "source": "generated",
+          "id": "b2-u22-n4-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "直接原価計算の損益計算書。貢献利益が6,000,000円、製造固定費2,100,000円、固定販売費及び一般管理費1,000,000円である。営業利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 2900000
+          },
+          "explanation": "貢献利益から、製造固定費と固定販売費及び一般管理費を引くと、営業利益です。",
+          "source": "generated",
+          "id": "b2-u22-n4-q4",
+          "sanitized": true
+        },
+        {
+          "id": "b2-u22-n4-f1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "直接原価計算の損益計算書を完成させる。売上高、変動売上原価、変動販売費、固定費が与えられている。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "profit_table",
+              "data": {
+                "header": {
+                  "title": "損益計算書（直接原価計算）"
+                },
+                "variant": "amount_only",
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "label": "売上高",
+                      "amount": 1600000,
+                      "ratio": null
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "label": "変動売上原価",
+                      "amount": 640000,
+                      "ratio": null
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "role": "subtotal",
+                    "ruledAfter": "single",
+                    "cells": {
+                      "label": "変動製造マージン",
+                      "amount": null,
+                      "ratio": null
+                    }
+                  },
+                  {
+                    "key": "r4",
+                    "cells": {
+                      "label": "変動販売費",
+                      "amount": 160000,
+                      "ratio": null
+                    }
+                  },
+                  {
+                    "key": "r5",
+                    "role": "subtotal",
+                    "ruledAfter": "single",
+                    "cells": {
+                      "label": "貢献利益",
+                      "amount": null,
+                      "ratio": null
+                    }
+                  },
+                  {
+                    "key": "r6",
+                    "cells": {
+                      "label": "製造固定費",
+                      "amount": 420000,
+                      "ratio": null
+                    }
+                  },
+                  {
+                    "key": "r7",
+                    "cells": {
+                      "label": "固定販売費及び一般管理費",
+                      "amount": 180000,
+                      "ratio": null
+                    }
+                  },
+                  {
+                    "key": "r8",
+                    "role": "total",
+                    "ruledAfter": "double",
+                    "cells": {
+                      "label": "営業利益",
+                      "amount": null,
+                      "ratio": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r3.amount",
+                "input": "numpad",
+                "answer": 960000
+              },
+              {
+                "ref": "r5.amount",
+                "input": "numpad",
+                "answer": 800000
+              },
+              {
+                "ref": "r8.amount",
+                "input": "numpad",
+                "answer": 200000
+              }
+            ]
+          },
+          "explanation": "売上高から変動費を引いて貢献利益を出し、そこから固定費を引くと営業利益です。"
+        }
+      ]
+    },
+    {
+      "id": "b2-u22-n5",
+      "title": "固定費調整",
+      "meta": {
+        "goal": "全部原価計算と直接原価計算の、営業利益の差を調整できる",
+        "topic": "固定費調整",
+        "minQuestions": 4,
+        "nodeType": "calculation",
+        "examPart": 5,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "製品1個あたりの固定製造原価が80円、期末製品が500個のとき、期末製品に含まれる固定製造原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 40000
+          },
+          "explanation": "1個あたりの固定製造原価に、期末製品の数量を掛けます。",
+          "source": "generated",
+          "id": "b2-u22-n5-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製品1個あたりの固定製造原価が150円、期末製品が200個のとき、期末製品に含まれる固定製造原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 30000
+          },
+          "explanation": "1個あたりの固定製造原価に、期末製品の数量を掛けます。",
+          "source": "generated",
+          "id": "b2-u22-n5-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "直接原価計算の営業利益が5,900,000円。期首製品に含まれる固定製造原価が100,000円、期末製品に含まれる固定製造原価が400,000円だった。全部原価計算の営業利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 6200000
+          },
+          "explanation": "全部原価計算の営業利益は、直接原価計算の営業利益に、期末の固定費を足し、期首の固定費を引いて求めます。",
+          "source": "generated",
+          "id": "b2-u22-n5-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "直接原価計算の営業利益が5,400,000円。期首製品に含まれる固定製造原価が50,000円、期末製品に含まれる固定製造原価が350,000円だった。全部原価計算の営業利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 5700000
+          },
+          "explanation": "全部原価計算の営業利益は、直接原価計算の営業利益に、期末の固定費を足し、期首の固定費を引いて求めます。",
+          "source": "generated",
+          "id": "b2-u22-n5-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "期末製品が期首製品より増えたとき、全部原価計算の営業利益は、直接原価計算の営業利益と比べてどうなるか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "大きくなる",
+              "比べられない",
+              "小さくなる",
+              "同じになる"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "増えた期末製品に含まれる固定費は、全部原価計算では費用にならず、資産に残るので、営業利益が大きくなります。",
+          "source": "original",
+          "id": "b2-u22-n5-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "固定費調整で、期首製品に含まれる固定費は、調整の式でどう扱うか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "足す",
+              "使わない",
+              "2倍にする",
+              "引く"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "期首の固定費は当期に費用になるので、全部原価計算の利益を出すときに引きます。",
+          "source": "original",
+          "id": "b2-u22-n5-q6",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u22-n6",
+      "title": "見分ける（原価計算の損益計算書）",
+      "meta": {
+        "goal": "全部原価計算と直接原価計算の損益計算書の違いを読み取れる",
+        "topic": "全部原価計算と直接原価計算の見分け",
+        "minQuestions": 6,
+        "nodeType": "discriminate",
+        "examPart": 5,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "製造固定費を、発生した期の費用（期間原価）として一括で処理するのはどちらか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "直接原価計算",
+              "全部原価計算",
+              "どちらも同じ",
+              "どちらも資産にする"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "直接原価計算は、固定費を期間の費用とします。",
+          "source": "original",
+          "id": "b2-u22-n6-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造固定費を、製品原価に含めて、売れるまで在庫（資産）に残すのはどちらか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "どちらも同じ",
+              "全部原価計算",
+              "どちらも費用にする",
+              "直接原価計算"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "全部原価計算は、固定費も製品原価に含めます。",
+          "source": "original",
+          "id": "b2-u22-n6-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "損益計算書に「貢献利益」の項目が出るのはどちらか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "どちらも出る",
+              "全部原価計算",
+              "直接原価計算",
+              "どちらも出ない"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "貢献利益は、直接原価計算の損益計算書に出る利益です。",
+          "source": "original",
+          "id": "b2-u22-n6-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "損益計算書に「売上総利益」の項目が出るのはどちらか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "どちらも出る",
+              "全部原価計算",
+              "どちらも出ない",
+              "直接原価計算"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "売上総利益は、全部原価計算の損益計算書に出ます。",
+          "source": "original",
+          "id": "b2-u22-n6-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "生産量が販売量より多い期に、営業利益が大きく出やすいのはどちらか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "全部原価計算",
+              "比べられない",
+              "同じ",
+              "直接原価計算"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "在庫に固定費が残るぶん、全部原価計算の営業利益のほうが大きく出ます。",
+          "source": "original",
+          "id": "b2-u22-n6-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "販売量が同じなら、生産量が変わっても営業利益が変わらないのはどちらか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "全部原価計算",
+              "直接原価計算",
+              "両方とも変わらない",
+              "両方とも変わる"
+            ],
+            "answerIndex": 1
+          },
+          "explanation": "直接原価計算は、固定費を全額費用とするので、生産量に利益が左右されません。",
+          "source": "original",
+          "id": "b2-u22-n6-q6",
+          "sanitized": true
+        }
+      ]
+    }
+  ]
+}

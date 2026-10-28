@@ -1,0 +1,1055 @@
+{
+  "unit": {
+    "id": "b3-u13",
+    "course": "boki3",
+    "chapter": 13,
+    "title": "費用と収益の期ずれ"
+  },
+  "nodes": [
+    {
+      "id": "b3-u13-n1",
+      "title": "払いすぎた費用",
+      "meta": {
+        "goal": "前払費用を決算で書き、翌期首に戻せる",
+        "topic": "前払費用",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "前払保険料など前払費用"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u13-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。12月1日に、1年分（12か月）の保険料 ¥72,000 を現金で払い、支払保険料として処理してある。次の期にかかるぶんを決算で整理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "前払保険料",
+                "amount": 48000
+              }
+            ],
+            "credit": [
+              {
+                "account": "支払保険料",
+                "amount": 48000
+              }
+            ],
+            "accountOptions": [
+              "未払保険料",
+              "前払金",
+              "現金",
+              "前払保険料",
+              "前払地代",
+              "支払保険料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "12月から3月までの4か月分は、この期の費用です。残り8か月分 72,000 × 8/12 = 48,000 円は次の期のぶんなので、費用から外して前払保険料という資産にします。",
+          "newAccounts": [
+            "前払保険料",
+            "支払保険料"
+          ]
+        },
+        {
+          "id": "b3-u13-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "新しい期の初日（4月1日）になった。前の期の決算で、支払保険料のうち ¥48,000 を前払保険料に移してある。これを元に戻す。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支払保険料",
+                "amount": 48000
+              }
+            ],
+            "credit": [
+              {
+                "account": "前払保険料",
+                "amount": 48000
+              }
+            ],
+            "accountOptions": [
+              "未払保険料",
+              "前払金",
+              "前払保険料",
+              "現金",
+              "前払地代",
+              "支払保険料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "新しい期になったので、前払いしていたぶんは、いよいよこの期の費用になります。決算整理の逆を書いて、支払保険料に戻します。"
+        },
+        {
+          "id": "b3-u13-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。11月1日に、事務所の家賃 6か月分（11月から4月まで）¥240,000 を現金で払い、支払家賃として処理してある。次の期にかかるぶんを決算で整理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "前払家賃",
+                "amount": 40000
+              }
+            ],
+            "credit": [
+              {
+                "account": "支払家賃",
+                "amount": 40000
+              }
+            ],
+            "accountOptions": [
+              "前払家賃",
+              "未払家賃",
+              "前払金",
+              "前払地代",
+              "現金",
+              "支払家賃"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "この期の費用は11月から3月までの5か月分です。4月の1か月分、240,000 ÷ 6 = 40,000 円が次の期のぶんなので、前払家賃にします。",
+          "newAccounts": [
+            "前払家賃"
+          ]
+        },
+        {
+          "id": "b3-u13-n1-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。2月1日に、3か月分（2月から4月まで）の広告宣伝費 ¥90,000 を現金で払い、広告宣伝費として処理してある。次の期にかかるぶんを決算で整理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "前払広告宣伝費",
+                "amount": 30000
+              }
+            ],
+            "credit": [
+              {
+                "account": "広告宣伝費",
+                "amount": 30000
+              }
+            ],
+            "accountOptions": [
+              "前払金",
+              "現金",
+              "前払家賃",
+              "前払広告宣伝費",
+              "未払金",
+              "広告宣伝費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "この期は2月と3月の2か月分です。4月の1か月分 30,000 円は次の期のぶんなので、前払広告宣伝費に移します。",
+          "newAccounts": [
+            "前払広告宣伝費",
+            "広告宣伝費"
+          ]
+        },
+        {
+          "id": "b3-u13-n1-maebarai-s701",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "11月1日に、保険料12か月分108,000円を現金で支払い、全額を支払保険料として処理していた。決算日（3月31日）に、翌期にあたる分を前払保険料へ振り替える。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "前払保険料",
+                "amount": 63000
+              }
+            ],
+            "credit": [
+              {
+                "account": "支払保険料",
+                "amount": 63000
+              }
+            ],
+            "accountOptions": [
+              "前払保険料",
+              "支払保険料",
+              "未払保険料",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "1か月あたり108,000円÷12＝9,000円。決算日のあとにかかるのは7か月分だから9,000円×7＝63,000円。費用を取り消して、前払保険料（資産）に移すよ。",
+          "generated": {
+            "generator": "b3-u13-n1-maebarai",
+            "seed": 701
+          }
+        },
+        {
+          "id": "b3-u13-n1-maebarai-s702",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "8月1日に、保険料12か月分72,000円を現金で支払い、全額を支払保険料として処理していた。決算日（3月31日）に、翌期にあたる分を前払保険料へ振り替える。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "前払保険料",
+                "amount": 24000
+              }
+            ],
+            "credit": [
+              {
+                "account": "支払保険料",
+                "amount": 24000
+              }
+            ],
+            "accountOptions": [
+              "前払保険料",
+              "支払保険料",
+              "未払保険料",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "1か月あたり72,000円÷12＝6,000円。決算日のあとにかかるのは4か月分だから6,000円×4＝24,000円。費用を取り消して、前払保険料（資産）に移すよ。",
+          "generated": {
+            "generator": "b3-u13-n1-maebarai",
+            "seed": 702
+          }
+        },
+        {
+          "id": "b3-u13-n1-maebarai-s703",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "6月1日に、保険料12か月分228,000円を現金で支払い、全額を支払保険料として処理していた。決算日（3月31日）に、翌期にあたる分を前払保険料へ振り替える。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "前払保険料",
+                "amount": 38000
+              }
+            ],
+            "credit": [
+              {
+                "account": "支払保険料",
+                "amount": 38000
+              }
+            ],
+            "accountOptions": [
+              "前払保険料",
+              "支払保険料",
+              "未払保険料",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "1か月あたり228,000円÷12＝19,000円。決算日のあとにかかるのは2か月分だから19,000円×2＝38,000円。費用を取り消して、前払保険料（資産）に移すよ。",
+          "generated": {
+            "generator": "b3-u13-n1-maebarai",
+            "seed": 703
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-u13-n2",
+      "title": "まだ払っていない費用",
+      "meta": {
+        "goal": "未払費用を書き、翌期首に戻せる",
+        "topic": "未払費用",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "未払家賃など未払費用"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u13-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。店舗の家賃は月額 ¥50,000 で、毎年6月末と12月末に半年分ずつ後払いしている。1月から3月までのぶんが、まだ払われていない。決算で整理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支払家賃",
+                "amount": 150000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払家賃",
+                "amount": 150000
+              }
+            ],
+            "accountOptions": [
+              "前払家賃",
+              "未払金",
+              "支払地代",
+              "支払家賃",
+              "現金",
+              "未払家賃"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "1月から3月は、使ったのにまだ払っていない3か月です。50,000 × 3 = 150,000 円を、この期の費用にして、未払家賃という借りにします。",
+          "newAccounts": [
+            "未払家賃"
+          ]
+        },
+        {
+          "id": "b3-u13-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "新しい期の初日（4月1日）になった。前の期の決算で、家賃 ¥150,000 を未払家賃として整理してある。これを元に戻す。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "未払家賃",
+                "amount": 150000
+              }
+            ],
+            "credit": [
+              {
+                "account": "支払家賃",
+                "amount": 150000
+              }
+            ],
+            "accountOptions": [
+              "前払家賃",
+              "未払金",
+              "支払家賃",
+              "現金",
+              "支払地代",
+              "未払家賃"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "あとで払うときは、支払家賃として全額を払うことになります。先に未払家賃を元に戻しておくと、費用が二重にならずにすみます。"
+        },
+        {
+          "id": "b3-u13-n2-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。駐車場の地代は年額 ¥720,000 で、毎年8月31日に1年分（前年9月から当年8月まで）を後払いしている。9月から3月までのぶんを、決算で整理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支払地代",
+                "amount": 420000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払地代",
+                "amount": 420000
+              }
+            ],
+            "accountOptions": [
+              "支払地代",
+              "前払地代",
+              "未払金",
+              "現金",
+              "支払家賃",
+              "未払地代"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "9月から3月まではちょうど7か月です。720,000 ÷ 12 × 7 = 420,000 円が、使ったのにまだ払っていない地代です。",
+          "newAccounts": [
+            "支払地代",
+            "未払地代"
+          ]
+        },
+        {
+          "id": "b3-u13-n2-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。借入金 ¥2,400,000（年利 3%）の利息は、毎年9月30日に1年分（前年10月から当年9月まで）を後払いしている。10月から3月までのぶんを、決算で整理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支払利息",
+                "amount": 36000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払利息",
+                "amount": 36000
+              }
+            ],
+            "accountOptions": [
+              "未払金",
+              "現金",
+              "借入金",
+              "支払利息",
+              "前払利息",
+              "未払利息"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "10月から3月は6か月です。2,400,000 × 3% × 6/12 = 36,000 円が、まだ払っていない利息です。"
+        },
+        {
+          "id": "b3-u13-n2-mibarai-s711",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "毎月14,000円の地代について、決算日（3月31日）までの2か月分をまだ支払っていない。この分を当期の費用として計上する。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支払地代",
+                "amount": 28000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払地代",
+                "amount": 28000
+              }
+            ],
+            "accountOptions": [
+              "支払地代",
+              "未払地代",
+              "前払地代",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "まだ払っていなくても、当期にかかった分は当期の費用だよ。14,000円×2か月＝28,000円を支払地代（費用）に入れて、あとで払う義務を未払地代（負債）に書くよ。",
+          "generated": {
+            "generator": "b3-u13-n2-mibarai",
+            "seed": 711
+          }
+        },
+        {
+          "id": "b3-u13-n2-mibarai-s712",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "毎月17,000円の保険料について、決算日（3月31日）までの3か月分をまだ支払っていない。この分を当期の費用として計上する。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支払保険料",
+                "amount": 51000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払保険料",
+                "amount": 51000
+              }
+            ],
+            "accountOptions": [
+              "支払保険料",
+              "未払保険料",
+              "前払保険料",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "まだ払っていなくても、当期にかかった分は当期の費用だよ。17,000円×3か月＝51,000円を支払保険料（費用）に入れて、あとで払う義務を未払保険料（負債）に書くよ。",
+          "generated": {
+            "generator": "b3-u13-n2-mibarai",
+            "seed": 712
+          },
+          "newAccounts": [
+            "未払保険料"
+          ]
+        },
+        {
+          "id": "b3-u13-n2-mibarai-s713",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "毎月9,000円の保険料について、決算日（3月31日）までの3か月分をまだ支払っていない。この分を当期の費用として計上する。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支払保険料",
+                "amount": 27000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払保険料",
+                "amount": 27000
+              }
+            ],
+            "accountOptions": [
+              "支払保険料",
+              "未払保険料",
+              "前払保険料",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "まだ払っていなくても、当期にかかった分は当期の費用だよ。9,000円×3か月＝27,000円を支払保険料（費用）に入れて、あとで払う義務を未払保険料（負債）に書くよ。",
+          "generated": {
+            "generator": "b3-u13-n2-mibarai",
+            "seed": 713
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-u13-n3",
+      "title": "もらいすぎた収益と、まだもらっていない収益",
+      "meta": {
+        "goal": "前払いと未払いの裏返しとして、前受収益と未収収益を書ける",
+        "topic": "前受収益と未収収益",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "前受家賃",
+          "未収地代"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u13-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。12月1日に、貸している倉庫の家賃 6か月分（12月から5月まで）¥180,000 を現金で受け取り、受取家賃として処理してある。次の期のぶんを決算で整理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "受取家賃",
+                "amount": 60000
+              }
+            ],
+            "credit": [
+              {
+                "account": "前受家賃",
+                "amount": 60000
+              }
+            ],
+            "accountOptions": [
+              "未収家賃",
+              "前受金",
+              "受取地代",
+              "受取家賃",
+              "現金",
+              "前受家賃"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "この期は12月から3月の4か月で、4月と5月の2か月分 180,000 ÷ 6 × 2 = 60,000 円は次の期のぶんです。収益から外して、前受家賃という借りに移します。",
+          "newAccounts": [
+            "受取家賃",
+            "前受家賃"
+          ]
+        },
+        {
+          "id": "b3-u13-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "新しい期の初日（4月1日）になった。前の期の決算で、受取家賃のうち ¥60,000 を前受家賃に移してある。これを元に戻す。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "前受家賃",
+                "amount": 60000
+              }
+            ],
+            "credit": [
+              {
+                "account": "受取家賃",
+                "amount": 60000
+              }
+            ],
+            "accountOptions": [
+              "未収家賃",
+              "前受金",
+              "受取家賃",
+              "現金",
+              "受取地代",
+              "前受家賃"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "前もって受け取っていたぶんが、この期の収益になりました。前受家賃を減らして、受取家賃に戻します。"
+        },
+        {
+          "id": "b3-u13-n3-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。貸している土地の地代は年額 ¥360,000 で、毎年7月31日に1年分（前年8月から当年7月まで）を後で受け取っている。8月から3月までのぶんが、まだ入っていない。決算で整理する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "未収地代",
+                "amount": 240000
+              }
+            ],
+            "credit": [
+              {
+                "account": "受取地代",
+                "amount": 240000
+              }
+            ],
+            "accountOptions": [
+              "未収地代",
+              "前受地代",
+              "未収入金",
+              "現金",
+              "受取家賃",
+              "受取地代"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "8月から3月は8か月です。360,000 ÷ 12 × 8 = 240,000 円は、この期にもらえるのにまだもらっていないので、未収地代という権利にします。",
+          "newAccounts": [
+            "未収地代",
+            "受取地代"
+          ]
+        },
+        {
+          "id": "b3-u13-n3-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "新しい期の初日（4月1日）になった。前の期の決算で、受取地代 ¥240,000 を未収地代として整理してある。これを元に戻す。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "受取地代",
+                "amount": 240000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未収地代",
+                "amount": 240000
+              }
+            ],
+            "accountOptions": [
+              "未収入金",
+              "現金",
+              "受取家賃",
+              "受取地代",
+              "前受地代",
+              "未収地代"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "あとで地代を受け取るときは、全額を受取地代として受け取ります。先に未収地代を元に戻しておくと、収益が二重になりません。"
+        }
+      ]
+    },
+    {
+      "id": "b3-u13-n4",
+      "title": "1年を通す",
+      "meta": {
+        "goal": "期首の再振替、期中の支払い、期末の整理を1つの勘定でつなげる",
+        "topic": "経過勘定の1年通し",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u13-n4-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。毎年10月1日に、1年分の保険料 ¥60,000 を現金で払っている。前の期の決算では、前払ぶん ¥30,000 を前払保険料に振り替えてある。支払保険料の勘定を完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "支払保険料"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "4/1",
+                      "counterAccount": "前払保険料",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "10/1",
+                      "counterAccount": "現金",
+                      "amount": 60000
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "cells": {
+                      "date": null,
+                      "counterAccount": null,
+                      "amount": 90000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "3/31",
+                      "counterAccount": null,
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "3/31",
+                      "counterAccount": "損益",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c3",
+                    "cells": {
+                      "date": null,
+                      "counterAccount": null,
+                      "amount": 90000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 30000
+              },
+              {
+                "ref": "c1.counterAccount",
+                "input": "account_picker",
+                "answer": "前払保険料",
+                "accountOptions": [
+                  "損益",
+                  "前払保険料",
+                  "現金",
+                  "未払保険料"
+                ]
+              },
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 30000
+              },
+              {
+                "ref": "c2.amount",
+                "input": "numpad",
+                "answer": 60000
+              }
+            ]
+          },
+          "explanation": "期首に前払いぶんを戻すので、借方に 30,000。10月に 60,000 を払って、決算で次の期のぶん 30,000 を前払保険料へ移すと、残りの 60,000 が1年分の保険料、つまり損益へ移る費用です。"
+        },
+        {
+          "id": "b3-u13-n4-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。店舗の家賃は月額 ¥50,000 で、毎年6月末と12月末に半年分ずつ後払いしている。前の期の決算では、1月から3月のぶん ¥150,000 を未払家賃として整理してある。支払家賃の勘定を完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "支払家賃"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "現金",
+                      "amount": 300000
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "12/31",
+                      "counterAccount": "現金",
+                      "amount": 300000
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "cells": {
+                      "date": "3/31",
+                      "counterAccount": "未払家賃",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d4",
+                    "cells": {
+                      "date": null,
+                      "counterAccount": null,
+                      "amount": 750000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "4/1",
+                      "counterAccount": null,
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "3/31",
+                      "counterAccount": "損益",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c3",
+                    "cells": {
+                      "date": null,
+                      "counterAccount": null,
+                      "amount": 750000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d3.amount",
+                "input": "numpad",
+                "answer": 150000
+              },
+              {
+                "ref": "c1.counterAccount",
+                "input": "account_picker",
+                "answer": "未払家賃",
+                "accountOptions": [
+                  "損益",
+                  "未払家賃",
+                  "現金",
+                  "前払家賃"
+                ]
+              },
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 150000
+              },
+              {
+                "ref": "c2.amount",
+                "input": "numpad",
+                "answer": 600000
+              }
+            ]
+          },
+          "explanation": "期首に未払ぶんを戻すので、貸方に 150,000。2回払って、決算で未払ぶんをもう一度借方に立てると、残りの 600,000 が1年分の家賃（月額 50,000 × 12）になります。"
+        }
+      ]
+    },
+    {
+      "id": "b3-u13-n5",
+      "title": "月次で計上している場合",
+      "meta": {
+        "goal": "月ごとに計上済みのとき、年度末に何を足すかを書ける",
+        "topic": "月次計上済みの経過勘定",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u13-n5-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。備品の減価償却費は年間 ¥120,000 で、月次決算では毎月末に ¥10,000 を計上している。2月末までの11か月分は処理ずみ。年度の決算で計上する仕訳。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 10000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 10000
+              }
+            ],
+            "accountOptions": [
+              "備品",
+              "支払保険料",
+              "未払金",
+              "減価償却費",
+              "前払金",
+              "減価償却累計額"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "11か月ぶんは毎月つけてあるので、足りないのは3月ぶんの 10,000 円だけです。120,000 を二重につけないようにします。"
+        },
+        {
+          "id": "b3-u13-n5-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。車両の減価償却費は年間 ¥240,000 で、月次決算では毎月末に ¥20,000 を計上している。2月末までの11か月分は処理ずみ。年度の決算で計上する仕訳。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 20000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 20000
+              }
+            ],
+            "accountOptions": [
+              "車両運搬具",
+              "備品",
+              "減価償却累計額",
+              "未払金",
+              "支払保険料",
+              "減価償却費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "月次でつけてきたぶんを除き、3月ぶんの 20,000 円を足します。"
+        },
+        {
+          "id": "b3-u13-n5-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。備品の減価償却費は年間 ¥180,000 で、月次決算では2月末までの11か月分 ¥165,000 を計上ずみ。年度の決算で計上する金額は？"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 15000
+          },
+          "explanation": "年間の 180,000 から、計上ずみの 165,000 を引いた 15,000 円が、3月ぶんです。"
+        },
+        {
+          "id": "b3-u13-n5-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。建物の減価償却費は年間 ¥600,000 で、月次決算では毎月末に ¥50,000 を計上している。2月末までの11か月分は処理ずみ。年度の決算で計上する仕訳。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 50000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 50000
+              }
+            ],
+            "accountOptions": [
+              "修繕費",
+              "支払保険料",
+              "未払金",
+              "減価償却費",
+              "建物",
+              "減価償却累計額"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "月次で11か月ぶんをつけてあるので、足りないのは3月ぶんの 50,000 円です。年間の 600,000 円を入れると二重になります。"
+        }
+      ]
+    }
+  ]
+}

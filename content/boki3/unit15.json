@@ -1,0 +1,567 @@
+{
+  "unit": {
+    "id": "b3-u15",
+    "course": "boki3",
+    "chapter": 15,
+    "title": "株式会社"
+  },
+  "nodes": [
+    {
+      "id": "b3-u15-n1",
+      "title": "株を発行する",
+      "meta": {
+        "goal": "設立と増資で、払込額を資本金にできる",
+        "topic": "株式の発行",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u15-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "カワセミ株式会社を設立し、株式 100 株を1株 ¥40,000 で発行した。払込金は全額、普通預金に入った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "普通預金",
+                "amount": 4000000
+              }
+            ],
+            "credit": [
+              {
+                "account": "資本金",
+                "amount": 4000000
+              }
+            ],
+            "accountOptions": [
+              "繰越利益剰余金",
+              "利益準備金",
+              "現金",
+              "普通預金",
+              "借入金",
+              "資本金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "株主が出したお金が会社の元手で、元手は資本金です。40,000 × 100 = 4,000,000 円を全額資本金にします。"
+        },
+        {
+          "id": "b3-u15-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "会社の規模を広げるため、新しい株式 50 株を1株 ¥60,000 で発行し、払込金は当座預金に入った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "当座預金",
+                "amount": 3000000
+              }
+            ],
+            "credit": [
+              {
+                "account": "資本金",
+                "amount": 3000000
+              }
+            ],
+            "accountOptions": [
+              "繰越利益剰余金",
+              "利益準備金",
+              "資本金",
+              "借入金",
+              "普通預金",
+              "当座預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "あとから株を発行して集めたお金（増資）も、元手が増えたことになります。60,000 × 50 = 3,000,000 円を資本金に足します。"
+        },
+        {
+          "id": "b3-u15-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "ホシノ商会株式会社の設立にあたり、株式 80 株を1株 ¥50,000 で発行し、払込金を当座預金に預け入れた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "当座預金",
+                "amount": 4000000
+              }
+            ],
+            "credit": [
+              {
+                "account": "資本金",
+                "amount": 4000000
+              }
+            ],
+            "accountOptions": [
+              "当座預金",
+              "繰越利益剰余金",
+              "利益準備金",
+              "現金",
+              "借入金",
+              "資本金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "払い込まれた全額が資本金です。80 × 50,000 = 4,000,000 円です。"
+        },
+        {
+          "id": "b3-u15-n1-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "株式を新しく発行して払込金を受け取ったとき、資本金に入れる金額は、ふつうどう決める？"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "払い込まれた金額から税金を引いた額",
+              "株式の額面だけ",
+              "払い込まれた金額の半分",
+              "払い込まれた金額の全額"
+            ],
+            "answerIndex": 3
+          },
+          "explanation": "3級の問題では、払い込まれた金額の全額を資本金にします。会社の元手が、そのまま増えるイメージです。"
+        }
+      ]
+    },
+    {
+      "id": "b3-u15-n2",
+      "title": "もうけを移す",
+      "meta": {
+        "goal": "収益と費用を損益に集め、純利益を繰越利益剰余金に移せる",
+        "topic": "損益勘定と純利益の振替",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "損益"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u15-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、収益の勘定を損益勘定に振り替える。売上が ¥1,800,000、受取家賃が ¥120,000 ある。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売上",
+                "amount": 1800000
+              },
+              {
+                "account": "受取家賃",
+                "amount": 120000
+              }
+            ],
+            "credit": [
+              {
+                "account": "損益",
+                "amount": 1920000
+              }
+            ],
+            "accountOptions": [
+              "繰越利益剰余金",
+              "資本金",
+              "給料",
+              "損益",
+              "売上",
+              "仕入",
+              "受取家賃"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "収益は1年で集まった「もうけの材料」で、まず損益という集計用の箱に集めます。収益は貸方に増える科目なので、借方に置いて消します。",
+          "newAccounts": [
+            "損益"
+          ]
+        },
+        {
+          "id": "b3-u15-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、費用の勘定を損益勘定に振り替える。仕入が ¥1,100,000、給料が ¥380,000、支払家賃が ¥120,000、減価償却費が ¥80,000 ある。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "損益",
+                "amount": 1680000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕入",
+                "amount": 1100000
+              },
+              {
+                "account": "給料",
+                "amount": 380000
+              },
+              {
+                "account": "支払家賃",
+                "amount": 120000
+              },
+              {
+                "account": "減価償却費",
+                "amount": 80000
+              }
+            ],
+            "accountOptions": [
+              "支払家賃",
+              "繰越利益剰余金",
+              "減価償却費",
+              "売上",
+              "受取家賃",
+              "給料",
+              "資本金",
+              "仕入",
+              "損益"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "費用も損益の箱に集めます。費用は借方に増える科目なので、貸方に置いて消し、集計は損益の借方です。"
+        },
+        {
+          "id": "b3-u15-n2-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、損益勘定の貸方（収益の合計）が ¥1,920,000、借方（費用の合計）が ¥1,680,000 になった。差額の当期純利益を繰越利益剰余金へ移す。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "損益",
+                "amount": 240000
+              }
+            ],
+            "credit": [
+              {
+                "account": "繰越利益剰余金",
+                "amount": 240000
+              }
+            ],
+            "accountOptions": [
+              "損益",
+              "資本金",
+              "利益準備金",
+              "未払配当金",
+              "売上",
+              "繰越利益剰余金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "収益 1,920,000 から費用 1,680,000 を引くと、もうけは 240,000 円です。損益を空にして、もうけを繰越利益剰余金へ積みます。",
+          "newAccounts": [
+            "繰越利益剰余金"
+          ]
+        },
+        {
+          "id": "b3-u15-n2-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算で、損益勘定の借方（費用の合計）が貸方（収益の合計）より ¥90,000 多かった。この当期純損失を繰越利益剰余金へ移す。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "繰越利益剰余金",
+                "amount": 90000
+              }
+            ],
+            "credit": [
+              {
+                "account": "損益",
+                "amount": 90000
+              }
+            ],
+            "accountOptions": [
+              "利益準備金",
+              "売上",
+              "未払配当金",
+              "繰越利益剰余金",
+              "資本金",
+              "損益"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "損が出たので、もうけを積む箱の繰越利益剰余金を減らします。減らすので借方に置きます。"
+        }
+      ]
+    },
+    {
+      "id": "b3-u15-n3",
+      "title": "配当する",
+      "meta": {
+        "goal": "配当と利益準備金の積立を書き、配当を支払える",
+        "topic": "配当と利益準備金",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "利益準備金",
+          "未払配当金"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u15-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "株主総会で、繰越利益剰余金を財源に、配当金 ¥300,000 を支払うこと、利益準備金 ¥30,000 を積み立てることが決まった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "繰越利益剰余金",
+                "amount": 330000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払配当金",
+                "amount": 300000
+              },
+              {
+                "account": "利益準備金",
+                "amount": 30000
+              }
+            ],
+            "accountOptions": [
+              "資本金",
+              "未払金",
+              "損益",
+              "利益準備金",
+              "繰越利益剰余金",
+              "普通預金",
+              "未払配当金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "株主へ配る額と、積み立てる額は、どちらも繰越利益剰余金から出ます。まだ払っていない配当金は未払配当金、積み立ては利益準備金です。",
+          "newAccounts": [
+            "未払配当金",
+            "利益準備金"
+          ]
+        },
+        {
+          "id": "b3-u15-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決議されていた配当金 ¥300,000 を、普通預金から株主へ支払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "未払配当金",
+                "amount": 300000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 300000
+              }
+            ],
+            "accountOptions": [
+              "繰越利益剰余金",
+              "利益準備金",
+              "普通預金",
+              "資本金",
+              "支払手数料",
+              "未払配当金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "配当は決議のときに、未払配当金（借り）にしてあります。払ったのでその借りが消え、費用にはなりません。"
+        },
+        {
+          "id": "b3-u15-n3-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "株主総会で、繰越利益剰余金から配当金 ¥500,000 を支払うこと、利益準備金 ¥50,000 を積み立てることが決まった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "繰越利益剰余金",
+                "amount": 550000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払配当金",
+                "amount": 500000
+              },
+              {
+                "account": "利益準備金",
+                "amount": 50000
+              }
+            ],
+            "accountOptions": [
+              "繰越利益剰余金",
+              "利益準備金",
+              "資本金",
+              "未払金",
+              "損益",
+              "普通預金",
+              "未払配当金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "積み立てる額 50,000 円は、問題文で決まっています。借方は 500,000 + 50,000 = 550,000 円です。"
+        },
+        {
+          "id": "b3-u15-n3-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日は3月31日。前期から繰り越した繰越利益剰余金は ¥600,000。6月25日の株主総会で配当金 ¥300,000 と利益準備金 ¥30,000 を決めた。当期の収益は ¥3,000,000、費用は ¥2,760,000 だった。繰越利益剰余金の勘定を完成させる。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "繰越利益剰余金"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "6/25",
+                      "counterAccount": null,
+                      "amount": 300000
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "6/25",
+                      "counterAccount": null,
+                      "amount": 30000
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "cells": {
+                      "date": "3/31",
+                      "counterAccount": "次期繰越",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d4",
+                    "cells": {
+                      "date": null,
+                      "counterAccount": null,
+                      "amount": 840000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "4/1",
+                      "counterAccount": "前期繰越",
+                      "amount": 600000
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "3/31",
+                      "counterAccount": "損益",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c3",
+                    "cells": {
+                      "date": null,
+                      "counterAccount": null,
+                      "amount": 840000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.counterAccount",
+                "input": "account_picker",
+                "answer": "未払配当金",
+                "accountOptions": [
+                  "未払配当金",
+                  "損益",
+                  "資本金",
+                  "利益準備金"
+                ]
+              },
+              {
+                "ref": "d2.counterAccount",
+                "input": "account_picker",
+                "answer": "利益準備金",
+                "accountOptions": [
+                  "未払配当金",
+                  "資本金",
+                  "損益",
+                  "利益準備金"
+                ]
+              },
+              {
+                "ref": "c2.amount",
+                "input": "numpad",
+                "answer": 240000
+              },
+              {
+                "ref": "d3.amount",
+                "input": "numpad",
+                "answer": 510000
+              }
+            ]
+          },
+          "explanation": "配当の決議では、配当金と準備金の2つが借方に並びます。当期純利益は 3,000,000 − 2,760,000 = 240,000 円で貸方に入り、残りの 510,000 円が次期へ繰り越されます。"
+        }
+      ]
+    }
+  ]
+}

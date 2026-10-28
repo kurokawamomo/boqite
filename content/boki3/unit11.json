@@ -1,0 +1,316 @@
+{
+  "unit": {
+    "id": "b3-u11",
+    "course": "boki3",
+    "chapter": 11,
+    "title": "費用の種類と貯蔵品"
+  },
+  "nodes": [
+    {
+      "id": "b3-u11-n1",
+      "title": "よく出る費用",
+      "meta": {
+        "goal": "通信費、消耗品費、水道光熱費などを取引文から選べる",
+        "topic": "費用の科目選択",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "通信費",
+          "消耗品費",
+          "水道光熱費",
+          "広告宣伝費",
+          "雑費"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u11-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "郵便局で、郵便切手 ¥3,300 とはがき ¥1,100 を現金で買い、そのまま発送に使った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "通信費",
+                "amount": 4400
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 4400
+              }
+            ],
+            "accountOptions": [
+              "消耗品費",
+              "租税公課",
+              "雑費",
+              "通信費",
+              "広告宣伝費",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "切手とはがきは、連絡のために使うお金です。その場で使い切るので、通信費にします。"
+        },
+        {
+          "id": "b3-u11-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "事務用のコピー用紙とボールペンを ¥6,800 で買い、現金で払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "消耗品費",
+                "amount": 6800
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 6800
+              }
+            ],
+            "accountOptions": [
+              "通信費",
+              "雑費",
+              "現金",
+              "備品",
+              "広告宣伝費",
+              "消耗品費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "すぐ使ってなくなる事務用品は、消耗品費です。何年も使う机やパソコンなら備品になります。"
+        },
+        {
+          "id": "b3-u11-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "今月の電気代とガス代あわせて ¥23,500 が、普通預金から自動で引き落とされた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "水道光熱費",
+                "amount": 23500
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 23500
+              }
+            ],
+            "accountOptions": [
+              "水道光熱費",
+              "通信費",
+              "雑費",
+              "未払金",
+              "支払手数料",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "電気、ガス、水道の代金は水道光熱費です。引き落とされたぶん、普通預金が減ります。",
+          "newAccounts": [
+            "水道光熱費"
+          ]
+        },
+        {
+          "id": "b3-u11-n1-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "次の支払いと科目を結びなさい。"
+          },
+          "task": {
+            "kind": "match",
+            "pairs": [
+              [
+                "新聞に折り込むチラシの印刷代",
+                "広告宣伝費"
+              ],
+              [
+                "来客に出すお茶菓子代",
+                "雑費"
+              ],
+              [
+                "電話の月額料金",
+                "通信費"
+              ],
+              [
+                "コピー用紙の購入代",
+                "消耗品費"
+              ]
+            ]
+          },
+          "explanation": "どの科目も費用で、迷ったときは「何のために払ったか」で決めます。宣伝のため、少額でほかに当てはまらないため、連絡のため、事務に使うため、です。"
+        }
+      ]
+    },
+    {
+      "id": "b3-u11-n2",
+      "title": "貯蔵品",
+      "meta": {
+        "goal": "期末に残った切手や収入印紙を貯蔵品へ移し、翌期首に戻せる",
+        "topic": "貯蔵品",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "貯蔵品",
+          "租税公課"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "id": "b3-u11-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "契約書に貼る収入印紙 ¥4,000 を郵便局で買い、現金で払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "租税公課",
+                "amount": 4000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 4000
+              }
+            ],
+            "accountOptions": [
+              "通信費",
+              "貯蔵品",
+              "雑費",
+              "租税公課",
+              "消耗品費",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "収入印紙は、税金のかわりに貼るものです。買ったときは租税公課という費用にします。",
+          "newAccounts": [
+            "租税公課"
+          ]
+        },
+        {
+          "id": "b3-u11-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日（3月31日）。期中に通信費で処理したはがきが、30枚（1枚 ¥85）、使われないまま残っている。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "貯蔵品",
+                "amount": 2550
+              }
+            ],
+            "credit": [
+              {
+                "account": "通信費",
+                "amount": 2550
+              }
+            ],
+            "accountOptions": [
+              "租税公課",
+              "消耗品費",
+              "通信費",
+              "前払金",
+              "現金",
+              "貯蔵品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "30枚 × 85円 = 2,550 円ぶんは、まだ使っていません。使っていないぶんを費用から外して、貯蔵品という資産に移します。"
+        },
+        {
+          "id": "b3-u11-n2-q3",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "決算日に、期中に租税公課として処理した収入印紙のうち ¥2,000 ぶんが未使用で残っていた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "貯蔵品",
+                "amount": 2000
+              }
+            ],
+            "credit": [
+              {
+                "account": "租税公課",
+                "amount": 2000
+              }
+            ],
+            "accountOptions": [
+              "貯蔵品",
+              "通信費",
+              "消耗品費",
+              "現金",
+              "雑費",
+              "租税公課"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "使っていない収入印紙は、次の期に使える財産です。租税公課から貯蔵品へ移します。"
+        },
+        {
+          "id": "b3-u11-n2-q4",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "新しい期の初日（4月1日）になった。前の期の決算で、郵便切手 ¥5,500 を貯蔵品に移してある。これを元の費用に戻す。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "通信費",
+                "amount": 5500
+              }
+            ],
+            "credit": [
+              {
+                "account": "貯蔵品",
+                "amount": 5500
+              }
+            ],
+            "accountOptions": [
+              "消耗品費",
+              "雑費",
+              "現金",
+              "通信費",
+              "租税公課",
+              "貯蔵品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "新しい期では、この切手を使うたびに通信費になります。期の初めに決算整理の逆の仕訳をしておくと、使った分だけを費用として扱えます。"
+        }
+      ]
+    }
+  ]
+}

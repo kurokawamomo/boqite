@@ -1,0 +1,957 @@
+{
+  "unit": {
+    "id": "b2-u23",
+    "course": "boki2",
+    "chapter": 23,
+    "title": "製品の受払いと工場会計"
+  },
+  "nodes": [
+    {
+      "id": "b2-u23-n1",
+      "title": "製品の受入れと販売",
+      "meta": {
+        "goal": "製品勘定と製品有高帳に記入できる",
+        "topic": "製品の受払い",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 4,
+        "examSub": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "ふじなみ機械の6月の製品勘定を完成させる。月初の製品390,000円、当月の完成品の製造原価2,450,000円、月末の製品170,000円。売れた製品の原価は、月初と当月完成の合計から月末を引いて求める。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "製品"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "前月繰越",
+                      "counterAccount": "前期繰越",
+                      "amount": 390000
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "仕掛品",
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "売上原価",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "次期繰越",
+                      "amount": 170000
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 2450000
+              },
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 2670000
+              }
+            ]
+          },
+          "explanation": "借方（左）には、月初の製品と、当月完成して仕掛品から移った分を書きます。貸方（右）は、売れた分の売上原価と、月末の製品です。",
+          "source": "original",
+          "id": "b2-u23-n1-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "わかくさ縫製の6月の製品勘定を完成させる。月初の製品160,000円、当月の完成品の製造原価2,100,000円、月末の製品330,000円。売れた製品の原価は、月初と当月完成の合計から月末を引いて求める。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "製品"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "前月繰越",
+                      "counterAccount": "前期繰越",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "仕掛品",
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "売上原価",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "6/30",
+                      "counterAccount": "次期繰越",
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 160000
+              },
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 2100000
+              },
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 1930000
+              },
+              {
+                "ref": "c2.amount",
+                "input": "numpad",
+                "answer": 330000
+              }
+            ]
+          },
+          "explanation": "借方（左）には、月初の製品と、当月完成して仕掛品から移った分を書きます。貸方（右）は、売れた分の売上原価と、月末の製品です。",
+          "source": "original",
+          "id": "b2-u23-n1-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製品有高帳（先入先出法）。月初250個（1個あたり3,000円）、当月に300個（1個あたり1,300円）が完成して入庫した。当月は270個を販売した。売上原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 776000
+          },
+          "explanation": "先入先出法では、古い単価の製品から先に払い出したものとして計算します。",
+          "source": "generated",
+          "id": "b2-u23-n1-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製品有高帳（先入先出法）。月初300個（1個あたり1,900円）、当月に150個（1個あたり1,000円）が完成して入庫した。当月は380個を販売した。売上原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 650000
+          },
+          "explanation": "先入先出法では、古い単価の製品から先に払い出したものとして計算します。",
+          "source": "generated",
+          "id": "b2-u23-n1-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "月初の製品210,000円、当月の完成品の製造原価2,000,000円、月末の製品200,000円のとき、売上原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 2010000
+          },
+          "explanation": "月初の製品に当月の完成品を足し、月末の製品を引いたものが売上原価です。",
+          "source": "generated",
+          "id": "b2-u23-n1-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "月初の製品340,000円、当月の完成品の製造原価3,200,000円、月末の製品340,000円のとき、売上原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 3200000
+          },
+          "explanation": "月初の製品に当月の完成品を足し、月末の製品を引いたものが売上原価です。",
+          "source": "generated",
+          "id": "b2-u23-n1-q6",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u23-n2",
+      "title": "営業費",
+      "meta": {
+        "goal": "販売費と一般管理費を分け、記帳できる",
+        "topic": "営業費の記帳",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 4,
+        "examSub": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "つばめ精機は、製品の広告費30,000円を現金で払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "販売費及び一般管理費",
+                "amount": 30000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 30000
+              }
+            ],
+            "accountOptions": [
+              "販売費及び一般管理費",
+              "仕掛品",
+              "現金",
+              "製造間接費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "広告費は販売のための費用で、製造原価には入れません。借方（左）は販売費及び一般管理費、貸方（右）は現金です。",
+          "source": "generated",
+          "id": "b2-u23-n2-q1",
+          "sanitized": true,
+          "newAccounts": [
+            "販売費及び一般管理費"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "さくら木工は、製品の広告費55,000円を現金で払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "販売費及び一般管理費",
+                "amount": 55000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 55000
+              }
+            ],
+            "accountOptions": [
+              "製造間接費",
+              "販売費及び一般管理費",
+              "現金",
+              "仕掛品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "広告費は販売のための費用で、製造原価には入れません。借方（左）は販売費及び一般管理費、貸方（右）は現金です。",
+          "source": "generated",
+          "id": "b2-u23-n2-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "さくら木工は、本社の事務員の給料110,000円を現金で払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "販売費及び一般管理費",
+                "amount": 110000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 110000
+              }
+            ],
+            "accountOptions": [
+              "製造間接費",
+              "現金",
+              "販売費及び一般管理費",
+              "賃金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "本社の事務員の給料は管理のための費用なので、製造原価に入れません。借方（左）は販売費及び一般管理費、貸方（右）は現金です。",
+          "source": "generated",
+          "id": "b2-u23-n2-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "たちばな陶器は、本社の事務員の給料40,000円を現金で払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "販売費及び一般管理費",
+                "amount": 40000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 40000
+              }
+            ],
+            "accountOptions": [
+              "販売費及び一般管理費",
+              "製造間接費",
+              "現金",
+              "賃金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "本社の事務員の給料は管理のための費用なので、製造原価に入れません。借方（左）は販売費及び一般管理費、貸方（右）は現金です。",
+          "source": "generated",
+          "id": "b2-u23-n2-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "次の費用のうち、製造原価に入れず、営業費（販売費及び一般管理費）として扱うものはどれか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "直接工の賃金",
+              "製品の主要部品の材料費",
+              "営業担当者の給料",
+              "工場の機械の減価償却費"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "営業担当者の給料は販売のための費用です。ほかは製造のための費用です。",
+          "source": "original",
+          "id": "b2-u23-n2-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "営業費の分類として正しいものはどれか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "材料費と労務費に分ける",
+              "直接費と間接費に分ける",
+              "販売費と一般管理費に分ける",
+              "変動費と固定費だけに分ける"
+            ],
+            "answerIndex": 2
+          },
+          "explanation": "営業費は、販売のための費用と、会社全体の管理のための費用に分けます。",
+          "source": "original",
+          "id": "b2-u23-n2-q6",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u23-n3",
+      "title": "工場会計の独立",
+      "meta": {
+        "goal": "本社勘定と工場勘定で、相互の取引を仕訳できる",
+        "topic": "工場会計の独立",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 4,
+        "examSub": 1,
+        "introduces": [
+          "本社",
+          "工場"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "工場会計が独立しているつばめ精機の本社が、材料350,000円を掛けで買い入れ、工場に引き渡した。本社の仕訳を書く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "工場",
+                "amount": 350000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 350000
+              }
+            ],
+            "accountOptions": [
+              "本社",
+              "買掛金",
+              "工場",
+              "材料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "工場に渡した分は、本社から見ると工場への貸しなので、借方（左）は工場です。貸方（右）は買掛金です。",
+          "source": "generated",
+          "id": "b2-u23-n3-q1",
+          "sanitized": true,
+          "newAccounts": [
+            "工場"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "工場会計が独立しているやまぶき電機の工場が、本社が買い入れた材料350,000円を受け取った。工場の仕訳を書く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "材料",
+                "amount": 350000
+              }
+            ],
+            "credit": [
+              {
+                "account": "本社",
+                "amount": 350000
+              }
+            ],
+            "accountOptions": [
+              "買掛金",
+              "材料",
+              "工場",
+              "本社"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "受け取った材料は工場の資産なので、借方（左）は材料です。貸方（右）は、本社に対する借りの本社です。",
+          "source": "generated",
+          "id": "b2-u23-n3-q2",
+          "sanitized": true,
+          "newAccounts": [
+            "本社"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "工場会計が独立しているたちばな陶器の本社が、材料430,000円を掛けで買い入れ、工場に引き渡した。本社の仕訳を書く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "工場",
+                "amount": 430000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 430000
+              }
+            ],
+            "accountOptions": [
+              "買掛金",
+              "材料",
+              "本社",
+              "工場"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "工場に渡した分は、本社から見ると工場への貸しなので、借方（左）は工場です。貸方（右）は買掛金です。",
+          "source": "generated",
+          "id": "b2-u23-n3-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "工場会計が独立しているふじなみ機械の工場が、本社が買い入れた材料430,000円を受け取った。工場の仕訳を書く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "材料",
+                "amount": 430000
+              }
+            ],
+            "credit": [
+              {
+                "account": "本社",
+                "amount": 430000
+              }
+            ],
+            "accountOptions": [
+              "材料",
+              "本社",
+              "買掛金",
+              "工場"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "受け取った材料は工場の資産なので、借方（左）は材料です。貸方（右）は、本社に対する借りの本社です。",
+          "source": "generated",
+          "id": "b2-u23-n3-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "工場会計が独立しているわかくさ縫製の本社が、工場の賃金の支払いのため、現金100,000円を工場に送った。本社の仕訳を書く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "工場",
+                "amount": 100000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 100000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "賃金",
+              "工場",
+              "本社"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "本社から工場へ現金を送ったので、借方（左）は工場、貸方（右）は現金です。",
+          "source": "original",
+          "id": "b2-u23-n3-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "工場会計が独立しているこはる食品工業の工場が、本社から現金100,000円を受け取り、賃金の支払いに充てた。工場の仕訳を書く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "賃金",
+                "amount": 100000
+              }
+            ],
+            "credit": [
+              {
+                "account": "本社",
+                "amount": 100000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "本社",
+              "工場",
+              "賃金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "賃金を払ったので、借方（左）は賃金です。貸方（右）は、本社から送られた現金の分の本社です。",
+          "source": "original",
+          "id": "b2-u23-n3-q6",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u23-n4",
+      "title": "第4問の仕訳を総ざらい",
+      "meta": {
+        "goal": "工業簿記の仕訳を、取引文から書ける（15パターンを混ぜて）",
+        "topic": "工業簿記の仕訳の総ざらい",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 4,
+        "examSub": 1,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "あかね繊維は、当月に完成した製品の製造原価2,250,000円を、製品へ振り替えた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "製品",
+                "amount": 2250000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕掛品",
+                "amount": 2250000
+              }
+            ],
+            "accountOptions": [
+              "製品",
+              "仕掛品",
+              "売上原価",
+              "材料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "完成した原価を、仕掛品から製品へ移します。借方（左）は製品、貸方（右）は仕掛品です。",
+          "source": "generated",
+          "id": "b2-u23-n4-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "しらかば製紙は、賃金の予定消費高より実際が15,000円多かったので、差額を賃率差異として処理した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "賃率差異",
+                "amount": 15000
+              }
+            ],
+            "credit": [
+              {
+                "account": "賃金",
+                "amount": 15000
+              }
+            ],
+            "accountOptions": [
+              "仕掛品",
+              "製造間接費",
+              "賃率差異",
+              "賃金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "実際が予定より多いぶんは不利な差異で、借方（左）の賃率差異です。貸方（右）は賃金です。",
+          "source": "generated",
+          "id": "b2-u23-n4-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "わかくさ縫製は、補修指図書の仕損費150,000円を、仕損が生じた指図書に賦課した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕掛品",
+                "amount": 150000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕損費",
+                "amount": 150000
+              }
+            ],
+            "accountOptions": [
+              "製品",
+              "仕掛品",
+              "仕損費",
+              "製造間接費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "仕損費は元の指図書の原価に加えます。借方（左）は仕掛品、貸方（右）は仕損費です。",
+          "source": "generated",
+          "id": "b2-u23-n4-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "工場会計が独立しているふじなみ機械の本社が、材料510,000円を掛けで買い入れ、工場に引き渡した。本社の仕訳を書く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "工場",
+                "amount": 510000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 510000
+              }
+            ],
+            "accountOptions": [
+              "本社",
+              "材料",
+              "工場",
+              "買掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "工場に渡した分は工場への貸しです。借方（左）は工場、貸方（右）は買掛金です。",
+          "source": "generated",
+          "id": "b2-u23-n4-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "かもめ化成は、決算で製造間接費配賦差異（借方残高）10,000円を、売上原価に振り替えた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売上原価",
+                "amount": 10000
+              }
+            ],
+            "credit": [
+              {
+                "account": "製造間接費配賦差異",
+                "amount": 10000
+              }
+            ],
+            "accountOptions": [
+              "売上原価",
+              "製造間接費",
+              "製造間接費配賦差異",
+              "仕掛品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "不足配賦の差異は売上原価に足します。借方（左）は売上原価、貸方（右）は製造間接費配賦差異です。",
+          "source": "generated",
+          "id": "b2-u23-n4-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "やまぶき電機は、製造間接費600,000円を、予定配賦率により製品に配賦した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕掛品",
+                "amount": 600000
+              }
+            ],
+            "credit": [
+              {
+                "account": "製造間接費",
+                "amount": 600000
+              }
+            ],
+            "accountOptions": [
+              "製品",
+              "製造間接費",
+              "材料",
+              "仕掛品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "配賦した分を製品の原価にするので、借方（左）は仕掛品、貸方（右）は製造間接費です。",
+          "source": "generated",
+          "id": "b2-u23-n4-q6",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "しらかば製紙は、材料900,000円を掛けで買い入れた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "材料",
+                "amount": 900000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 900000
+              }
+            ],
+            "accountOptions": [
+              "材料",
+              "仕掛品",
+              "仕入",
+              "買掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "買い入れた材料は資産なので、借方（左）は材料、貸方（右）は買掛金です。",
+          "source": "generated",
+          "id": "b2-u23-n4-q7",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "こはる食品工業は、特定の製品のための外注加工賃45,000円を、直接経費として消費した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕掛品",
+                "amount": 45000
+              }
+            ],
+            "credit": [
+              {
+                "account": "外注加工賃",
+                "amount": 45000
+              }
+            ],
+            "accountOptions": [
+              "外注加工賃",
+              "仕掛品",
+              "製造間接費",
+              "材料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "直接経費は仕掛品に入れます。借方（左）は仕掛品、貸方（右）は外注加工賃です。",
+          "source": "generated",
+          "id": "b2-u23-n4-q8",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "さくら木工は、製品を掛けで2,300,000円で売り上げた。製造原価は1,600,000円である。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 2300000
+              },
+              {
+                "account": "売上原価",
+                "amount": 1600000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 2300000
+              },
+              {
+                "account": "製品",
+                "amount": 1600000
+              }
+            ],
+            "accountOptions": [
+              "買掛金",
+              "売上原価",
+              "仕掛品",
+              "売掛金",
+              "売上",
+              "製品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売上は借方（左）の売掛金と貸方（右）の売上、原価は借方（左）の売上原価と貸方（右）の製品です。",
+          "source": "generated",
+          "id": "b2-u23-n4-q9",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "つばめ精機は、直接材料の消費高490,000円と間接材料の消費高95,000円を計上した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕掛品",
+                "amount": 490000
+              },
+              {
+                "account": "製造間接費",
+                "amount": 95000
+              }
+            ],
+            "credit": [
+              {
+                "account": "材料",
+                "amount": 585000
+              }
+            ],
+            "accountOptions": [
+              "製品",
+              "材料",
+              "製造間接費",
+              "仕掛品",
+              "賃金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "直接材料は仕掛品、間接材料は製造間接費です。借方（左）は仕掛品と製造間接費、貸方（右）は材料です。",
+          "source": "generated",
+          "id": "b2-u23-n4-q10",
+          "sanitized": true
+        }
+      ]
+    }
+  ]
+}

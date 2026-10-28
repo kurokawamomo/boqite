@@ -1,0 +1,594 @@
+{
+  "unit": {
+    "id": "b2-u19",
+    "course": "boki2",
+    "chapter": 19,
+    "title": "本支店会計"
+  },
+  "nodes": [
+    {
+      "id": "b2-u19-n1",
+      "title": "本支店間の取引",
+      "meta": {
+        "goal": "本店勘定と支店勘定で、商品の送付、現金の送付、費用の立替えを書ける",
+        "topic": "本支店間の取引",
+        "minQuestions": 2,
+        "nodeType": "application",
+        "examPart": 3,
+        "introduces": [
+          "本店",
+          "支店"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "本店が、原価430,000円の商品を支店へ送った。本店の仕訳を書く（商品は仕入勘定で処理する）。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支店",
+                "amount": 430000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕入",
+                "amount": 430000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "本店",
+              "仕入",
+              "支店"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "商品を送った本店は、支店への貸しができるので、借方（左）は支店です。貸方（右）は仕入です。",
+          "source": "generated",
+          "id": "b2-u19-n1-q1",
+          "sanitized": true,
+          "newAccounts": [
+            "支店"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "支店が、本店から原価430,000円の商品を受け取った。支店の仕訳を書く（商品は仕入勘定で処理する）。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 430000
+              }
+            ],
+            "credit": [
+              {
+                "account": "本店",
+                "amount": 430000
+              }
+            ],
+            "accountOptions": [
+              "本店",
+              "仕入",
+              "売上",
+              "支店"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "受け取った商品は仕入に入れるので、借方（左）は仕入です。貸方（右）は、本店からの借りの本店です。",
+          "source": "generated",
+          "id": "b2-u19-n1-q2",
+          "sanitized": true,
+          "newAccounts": [
+            "本店"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "本店が、原価290,000円の商品を支店へ送った。本店の仕訳を書く（商品は仕入勘定で処理する）。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支店",
+                "amount": 290000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕入",
+                "amount": 290000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "本店",
+              "仕入",
+              "支店"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "商品を送った本店は、支店への貸しができるので、借方（左）は支店です。貸方（右）は仕入です。",
+          "source": "generated",
+          "id": "b2-u19-n1-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "支店が、本店から原価290,000円の商品を受け取った。支店の仕訳を書く（商品は仕入勘定で処理する）。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 290000
+              }
+            ],
+            "credit": [
+              {
+                "account": "本店",
+                "amount": 290000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "仕入",
+              "支店",
+              "本店"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "受け取った商品は仕入に入れるので、借方（左）は仕入です。貸方（右）は、本店からの借りの本店です。",
+          "source": "generated",
+          "id": "b2-u19-n1-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "本店が、支店に現金210,000円を送った。本店の仕訳を書く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支店",
+                "amount": 210000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 210000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "仕入",
+              "支店",
+              "本店"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "現金を送ったので、本店は支店への貸しです。借方（左）は支店、貸方（右）は現金です。",
+          "source": "original",
+          "id": "b2-u19-n1-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "支店が、本店から現金210,000円を受け取った。支店の仕訳を書く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 210000
+              }
+            ],
+            "credit": [
+              {
+                "account": "本店",
+                "amount": 210000
+              }
+            ],
+            "accountOptions": [
+              "支店",
+              "仕入",
+              "本店",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "現金が増えるので、借方（左）は現金です。貸方（右）は、本店からの借りの本店です。",
+          "source": "original",
+          "id": "b2-u19-n1-q6",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u19-n2",
+      "title": "2つの計算制度",
+      "meta": {
+        "goal": "本店集中計算制度と支店分散計算制度の違いを、仕訳で示せる",
+        "topic": "本店集中計算制度と支店分散計算制度",
+        "minQuestions": 2,
+        "nodeType": "application",
+        "examPart": 3,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "支店分散計算制度。A支店が、B支店に現金50,000円を送った。A支店の仕訳を書く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支店",
+                "amount": 50000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 50000
+              }
+            ],
+            "accountOptions": [
+              "仕入",
+              "本店",
+              "現金",
+              "支店"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "分散計算制度では、支店どうしの勘定を直接使います。借方（左）はB支店あての支店、貸方（右）は現金です。",
+          "source": "generated",
+          "id": "b2-u19-n2-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "本店集中計算制度。A支店が、B支店に現金50,000円を送った。A支店の仕訳を書く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "本店",
+                "amount": 50000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 50000
+              }
+            ],
+            "accountOptions": [
+              "支店",
+              "本店",
+              "仕入",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "集中計算制度では、支店どうしの取引も、本店を相手として書きます。借方（左）は本店、貸方（右）は現金です。",
+          "source": "generated",
+          "id": "b2-u19-n2-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "支店分散計算制度。A支店が、B支店に現金250,000円を送った。A支店の仕訳を書く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "支店",
+                "amount": 250000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 250000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "仕入",
+              "支店",
+              "本店"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "分散計算制度では、支店どうしの勘定を直接使います。借方（左）はB支店あての支店、貸方（右）は現金です。",
+          "source": "generated",
+          "id": "b2-u19-n2-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "本店集中計算制度。A支店が、B支店に現金250,000円を送った。A支店の仕訳を書く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "本店",
+                "amount": 250000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 250000
+              }
+            ],
+            "accountOptions": [
+              "本店",
+              "仕入",
+              "支店",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "集中計算制度では、支店どうしの取引も、本店を相手として書きます。借方（左）は本店、貸方（右）は現金です。",
+          "source": "generated",
+          "id": "b2-u19-n2-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "本店集中計算制度では、支店どうしの取引を、どう記帳するか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "本店との取引として記帳する",
+              "本店だけが記帳する",
+              "支店どうしの勘定で直接記帳する",
+              "記帳しない"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "各支店は、他の支店とも本店を相手にして記帳し、本店が各支店の勘定を管理します。",
+          "source": "original",
+          "id": "b2-u19-n2-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "支店分散計算制度では、支店どうしの取引を、どう記帳するか。"
+          },
+          "task": {
+            "kind": "choice",
+            "options": [
+              "支店どうしの勘定で直接記帳する",
+              "本店だけが記帳する",
+              "本店との取引として記帳する",
+              "記帳しない"
+            ],
+            "answerIndex": 0
+          },
+          "explanation": "支店が、相手の支店の勘定を直接使って記帳します。",
+          "source": "original",
+          "id": "b2-u19-n2-q6",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u19-n3",
+      "title": "未達事項",
+      "meta": {
+        "goal": "本店と支店の残高が合わない原因を整理できる",
+        "topic": "本支店の未達事項",
+        "minQuestions": 2,
+        "nodeType": "application",
+        "examPart": 3,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "決算で、本店の支店勘定は借方残高750,000円、支店の本店勘定は貸方残高710,000円で一致しない。原因は、本店が発送した商品140,000円が支店に未達であることと、支店が送った現金100,000円が本店に未達であることだけである。本店の支店勘定から、未達事項を整理した後の、一致する金額は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 650000
+          },
+          "explanation": "本店の勘定は、支店が送った現金の未達分を引いて調整します。支店の勘定は、本店が送った商品の未達分を足して調整します。",
+          "source": "generated",
+          "id": "b2-u19-n3-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "決算で、本店の支店勘定は借方残高500,000円、支店の本店勘定は貸方残高410,000円で一致しない。原因は、本店が発送した商品280,000円が支店に未達であることと、支店が送った現金190,000円が本店に未達であることだけである。本店の支店勘定から、未達事項を整理した後の、一致する金額は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 310000
+          },
+          "explanation": "本店の勘定は、支店が送った現金の未達分を引いて調整します。支店の勘定は、本店が送った商品の未達分を足して調整します。",
+          "source": "generated",
+          "id": "b2-u19-n3-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "支店の本店勘定は貸方残高500,000円。本店が発送した商品290,000円が支店に未達のとき、未達事項を整理した後の支店の本店勘定は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 790000
+          },
+          "explanation": "未達の商品を支店が受け取ったものとして、本店勘定に足します。",
+          "source": "generated",
+          "id": "b2-u19-n3-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "支店の本店勘定は貸方残高1,250,000円。本店が発送した商品270,000円が支店に未達のとき、未達事項を整理した後の支店の本店勘定は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1520000
+          },
+          "explanation": "未達の商品を支店が受け取ったものとして、本店勘定に足します。",
+          "source": "generated",
+          "id": "b2-u19-n3-q4",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u19-n4",
+      "title": "合併財務諸表",
+      "meta": {
+        "goal": "本店と支店の損益を合算して、財務諸表を作れる",
+        "topic": "本支店合併財務諸表",
+        "minQuestions": 2,
+        "nodeType": "application",
+        "examPart": 3,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "本店の当期純利益が1,250,000円、支店の当期純利益が500,000円である。合併損益計算書の当期純利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1750000
+          },
+          "explanation": "本店と支店の損益を合算したものが、合併後の当期純利益です。",
+          "source": "generated",
+          "id": "b2-u19-n4-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "本店の当期純利益が700,000円、支店の当期純利益が700,000円である。合併損益計算書の当期純利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1400000
+          },
+          "explanation": "本店と支店の損益を合算したものが、合併後の当期純利益です。",
+          "source": "generated",
+          "id": "b2-u19-n4-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "合併損益計算書の作成。本店の売上高5,100,000円、支店の売上高1,500,000円で、本店と支店の間の商品の送付は売上に含まれない。合併後の売上高は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 6600000
+          },
+          "explanation": "本店と支店の売上を合算します。本支店間の送付は売上にならないので、含めません。",
+          "source": "generated",
+          "id": "b2-u19-n4-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "合併損益計算書の作成。本店の売上高5,700,000円、支店の売上高1,400,000円で、本店と支店の間の商品の送付は売上に含まれない。合併後の売上高は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 7100000
+          },
+          "explanation": "本店と支店の売上を合算します。本支店間の送付は売上にならないので、含めません。",
+          "source": "generated",
+          "id": "b2-u19-n4-q4",
+          "sanitized": true
+        },
+        {
+          "id": "b2-u19-n4-f1",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "本店と支店の損益計算書を合算して、合併損益計算書を作る。本店と支店の金額が与えられている。【本店】売上高4,200,000円、売上原価2,400,000円。【支店】売上高1,800,000円、売上原価1,000,000円。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "pl",
+              "data": {
+                "header": {
+                  "title": "合併損益計算書"
+                },
+                "debit": [
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "label": "売上原価",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d3",
+                    "role": "net_income",
+                    "cells": {
+                      "label": "売上総利益",
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "label": "売上高",
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 6000000
+              },
+              {
+                "ref": "d2.amount",
+                "input": "numpad",
+                "answer": 3400000
+              },
+              {
+                "ref": "d3.amount",
+                "input": "numpad",
+                "answer": 2600000
+              }
+            ]
+          },
+          "explanation": "項目ごとに本店と支店を足し、合併の欄に書きます。"
+        }
+      ]
+    }
+  ]
+}

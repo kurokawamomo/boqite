@@ -1,0 +1,1012 @@
+{
+  "unit": {
+    "id": "b3-u03",
+    "course": "boki3",
+    "chapter": 3,
+    "title": "現金"
+  },
+  "nodes": [
+    {
+      "id": "b3-u03-n1",
+      "title": "現金として扱う紙",
+      "meta": {
+        "goal": "他人の小切手、送金小切手、配当金の領収証を受け取る仕訳を書ける",
+        "topic": "通貨代用証券と配当金領収証",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "受取配当金"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "ひだまり花店が、売掛金の回収として、取引先が振り出した小切手275,000円を受け取った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 275000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売掛金",
+                "amount": 275000
+              }
+            ],
+            "accountOptions": [
+              "仕入",
+              "買掛金",
+              "売掛金",
+              "売上",
+              "現金",
+              "受取配当金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "他の人が振り出した小切手は、銀行ですぐ現金に換えられるので、現金として借方（左）に書きます。回収した分の売掛金が減るので、貸方（右）は売掛金です。",
+          "id": "b3-u03-n1-q1",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "きりしま書店が、本の代金として、送金小切手56,000円を受け取った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 56000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 56000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "現金",
+              "受取配当金",
+              "売掛金",
+              "仕入",
+              "買掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "送金小切手も、銀行ですぐ現金に換えられるので、借方（左）は現金です。本を売った代金なので、貸方（右）は売上です。",
+          "id": "b3-u03-n1-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あさひ農園が、持っている株の配当金領収証12,000円を受け取った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 12000
+              }
+            ],
+            "credit": [
+              {
+                "account": "受取配当金",
+                "amount": 12000
+              }
+            ],
+            "accountOptions": [
+              "買掛金",
+              "売掛金",
+              "受取配当金",
+              "仕入",
+              "売上",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "配当金領収証は、銀行ですぐ現金になるので、借方（左）は現金です。株を持っていて受け取ったお金は、受取配当金（収益）として貸方（右）に書きます。",
+          "id": "b3-u03-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "受取配当金"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "こもれび陶器店が、商品130,000円を売り、代金として他の会社が振り出した小切手を受け取った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 130000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 130000
+              }
+            ],
+            "accountOptions": [
+              "売掛金",
+              "買掛金",
+              "現金",
+              "仕入",
+              "売上",
+              "受取配当金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "小切手を受け取った時点で、現金と同じ扱いです。借方（左）は現金、貸方（右）は売上です。",
+          "id": "b3-u03-n1-q4",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b3-u03-n2",
+      "title": "現金が合わない",
+      "meta": {
+        "goal": "現金過不足の発生、原因判明、決算での雑損と雑益を1つの流れで書ける",
+        "topic": "現金過不足の発生・判明・決算",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "現金過不足",
+          "雑損",
+          "雑益"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "ゆりの木商店の月末に、帳簿の現金は80,000円なのに、実際の現金は77,000円だった。まず、帳簿を実際に合わせる。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金過不足",
+                "amount": 3000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 3000
+              }
+            ],
+            "accountOptions": [
+              "雑益",
+              "売上",
+              "現金",
+              "雑損",
+              "通信費",
+              "現金過不足"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "実際の現金が少ないので、帳簿の現金を減らして貸方（右）に書きます。理由がまだ分からない差は、いったん現金過不足として借方（左）に置きます。",
+          "id": "b3-u03-n2-q1",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "現金過不足"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "ゆりの木商店は、現金が3,000円足りなかった原因を調べ、通信費2,000円の記帳漏れだと分かった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "通信費",
+                "amount": 2000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金過不足",
+                "amount": 2000
+              }
+            ],
+            "accountOptions": [
+              "現金過不足",
+              "雑益",
+              "通信費",
+              "現金",
+              "雑損",
+              "売上"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "払ったのに帳簿に書き忘れた通信費を、今になって費用に書きます。分かった分だけ、現金過不足から外します。",
+          "id": "b3-u03-n2-q2",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "通信費"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "ゆりの木商店は、決算になっても、現金過不足の残り1,000円の原因が分からなかった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "雑損",
+                "amount": 1000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金過不足",
+                "amount": 1000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "通信費",
+              "現金",
+              "現金過不足",
+              "雑益",
+              "雑損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "決算まで原因が分からない不足は、損として処理します。借方（左）は雑損（費用）、貸方（右）で現金過不足を0にします。",
+          "id": "b3-u03-n2-q3",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "雑損"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "ふうせん雑貨店は、決算で、現金過不足（貸方）が5,000円残っていた。原因は分からないままだった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金過不足",
+                "amount": 5000
+              }
+            ],
+            "credit": [
+              {
+                "account": "雑益",
+                "amount": 5000
+              }
+            ],
+            "accountOptions": [
+              "現金過不足",
+              "雑損",
+              "雑益",
+              "現金",
+              "通信費",
+              "売上"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "実際の現金が多くて原因が分からない分は、得として処理します。借方（左）で現金過不足を0にし、貸方（右）は雑益（収益）です。",
+          "id": "b3-u03-n2-q4",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "雑益"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "現金過不足の1年。\n3/31 実際の現金が帳簿より3,000円少なかった\n4/15 通信費2,000円の記帳漏れと分かった\n12/31 残りの原因は分からなかった"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "現金過不足"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "3/31",
+                      "counterAccount": "現金",
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "4/15",
+                      "counterAccount": "通信費",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "12/31",
+                      "counterAccount": null,
+                      "amount": 1000
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 3000
+              },
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 2000
+              },
+              {
+                "ref": "c2.counterAccount",
+                "input": "account_picker",
+                "answer": "雑損",
+                "accountOptions": [
+                  "売上",
+                  "通信費",
+                  "雑損",
+                  "雑益"
+                ]
+              }
+            ]
+          },
+          "explanation": "不足が見つかった日に借方（左）へ、原因が分かった分と、決算で分からなかった分を貸方（右）へ写します。借方と貸方が同じ3,000円になって、現金過不足は0になります。",
+          "id": "b3-u03-n2-q5",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b3-u03-n3",
+      "title": "小口現金",
+      "meta": {
+        "goal": "定額で前渡しし、報告を受けて補給する",
+        "topic": "定額資金前渡法",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "小口現金"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "さくら写真館が、経理担当から小口の係へ、1週間分の小口現金20,000円を現金で前渡しした。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "小口現金",
+                "amount": 20000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 20000
+              }
+            ],
+            "accountOptions": [
+              "消耗品費",
+              "旅費交通費",
+              "小口現金",
+              "雑費",
+              "現金",
+              "通信費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "細かい支払い用に、係にあずけたお金は、会社の財産のまま小口現金に書きます。現金が減るので、貸方（右）は現金です。",
+          "id": "b3-u03-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "小口現金"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "さくら写真館は、1週間のおわりに、小口の係から通信費4,500円と消耗品費6,800円を使ったと報告を受け、使った分と同じ額の現金を渡した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "通信費",
+                "amount": 4500
+              },
+              {
+                "account": "消耗品費",
+                "amount": 6800
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 11300
+              }
+            ],
+            "accountOptions": [
+              "通信費",
+              "現金",
+              "小口現金",
+              "雑費",
+              "旅費交通費",
+              "消耗品費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "使った分を費用に書き、同じ額だけ現金を補います。これで小口現金は、前渡しした20,000円に戻ります。",
+          "id": "b3-u03-n3-q2",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "消耗品費"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "どんぐり印刷所が、小口の係に、月はじめに小口現金30,000円を現金で前渡しした。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "小口現金",
+                "amount": 30000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 30000
+              }
+            ],
+            "accountOptions": [
+              "旅費交通費",
+              "通信費",
+              "雑費",
+              "小口現金",
+              "消耗品費",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "係にあずけたお金は、まだ会社の財産です。借方（左）は小口現金、現金が減るので貸方（右）は現金です。",
+          "id": "b3-u03-n3-q3",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "どんぐり印刷所は、小口の係から旅費交通費5,200円と雑費1,300円を使ったと報告を受け、同額の現金を補給した。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "旅費交通費",
+                "amount": 5200
+              },
+              {
+                "account": "雑費",
+                "amount": 1300
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 6500
+              }
+            ],
+            "accountOptions": [
+              "消耗品費",
+              "通信費",
+              "小口現金",
+              "雑費",
+              "旅費交通費",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "報告を受けた分だけ費用に書き、その分の現金を補います。補った後の小口現金は、前渡しした額に戻ります。",
+          "id": "b3-u03-n3-q4",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "旅費交通費",
+            "雑費"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b3-u03-n4",
+      "title": "出納帳に写す",
+      "meta": {
+        "goal": "現金出納帳と小口現金出納帳を記入し、締める",
+        "topic": "現金出納帳と小口現金出納帳の記入",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "たきび洋品店の5月の現金出納帳。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "cash_book",
+              "data": {
+                "header": {
+                  "title": "現金出納帳",
+                  "company": "たきび洋品店"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "date": "5/1",
+                      "summary": "前月繰越",
+                      "income": 150000,
+                      "expense": null,
+                      "balance": 150000
+                    },
+                    "role": "opening"
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "date": "5/6",
+                      "summary": "商品の売上",
+                      "income": 80000,
+                      "expense": null,
+                      "balance": 230000
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "date": "5/12",
+                      "summary": "商品の仕入",
+                      "income": null,
+                      "expense": 60000,
+                      "balance": null
+                    }
+                  },
+                  {
+                    "key": "r4",
+                    "cells": {
+                      "date": "5/20",
+                      "summary": "売掛金の回収",
+                      "income": 45000,
+                      "expense": null,
+                      "balance": 215000
+                    }
+                  },
+                  {
+                    "key": "r5",
+                    "cells": {
+                      "date": "5/28",
+                      "summary": "給料の支払い",
+                      "income": null,
+                      "expense": 100000,
+                      "balance": null
+                    }
+                  },
+                  {
+                    "key": "r-cf",
+                    "cells": {
+                      "date": "5/31",
+                      "summary": "次月繰越",
+                      "income": null,
+                      "expense": null,
+                      "balance": null
+                    },
+                    "role": "carryforward"
+                  },
+                  {
+                    "key": "r-t",
+                    "cells": {
+                      "date": null,
+                      "summary": null,
+                      "income": null,
+                      "expense": 275000,
+                      "balance": null
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  },
+                  {
+                    "key": "r-op",
+                    "cells": {
+                      "date": "6/1",
+                      "summary": "前月繰越",
+                      "income": 115000,
+                      "expense": null,
+                      "balance": 115000
+                    },
+                    "role": "opening"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r3.balance",
+                "input": "numpad",
+                "answer": 170000
+              },
+              {
+                "ref": "r5.balance",
+                "input": "numpad",
+                "answer": 115000
+              },
+              {
+                "ref": "r-cf.expense",
+                "input": "numpad",
+                "answer": 115000
+              },
+              {
+                "ref": "r-t.income",
+                "input": "numpad",
+                "answer": 275000
+              }
+            ]
+          },
+          "explanation": "残高は、前の残高に収入を足し、支出を引いて出します。月末の残高115,000円を次月繰越として支出の側に書くと、収入と支出の合計がそろいます。",
+          "id": "b3-u03-n4-q1",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "こまどり事務所の小口現金出納帳。1週間の終わりに、使った分を補給する。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "petty_cash_book",
+              "data": {
+                "header": {
+                  "title": "小口現金出納帳",
+                  "company": "こまどり事務所"
+                },
+                "columns": [
+                  "通信費",
+                  "消耗品費",
+                  "雑費"
+                ],
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "receipt": 20000,
+                      "date": "4/1",
+                      "summary": "小口現金受け入れ",
+                      "payment": null,
+                      "breakdown": {}
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "receipt": null,
+                      "date": "4/2",
+                      "summary": "切手",
+                      "payment": 3000,
+                      "breakdown": {
+                        "通信費": 3000
+                      }
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "receipt": null,
+                      "date": "4/3",
+                      "summary": "コピー用紙",
+                      "payment": 4200,
+                      "breakdown": {
+                        "消耗品費": 4200
+                      }
+                    }
+                  },
+                  {
+                    "key": "r4",
+                    "cells": {
+                      "receipt": null,
+                      "date": "4/4",
+                      "summary": "お茶代",
+                      "payment": 1500,
+                      "breakdown": {
+                        "雑費": 1500
+                      }
+                    }
+                  },
+                  {
+                    "key": "r5",
+                    "cells": {
+                      "receipt": null,
+                      "date": "4/5",
+                      "summary": "電話代",
+                      "payment": 5300,
+                      "breakdown": {
+                        "通信費": 5300
+                      }
+                    }
+                  },
+                  {
+                    "key": "r-sub",
+                    "cells": {
+                      "receipt": null,
+                      "date": null,
+                      "summary": "合 計",
+                      "payment": null,
+                      "breakdown": {
+                        "通信費": null,
+                        "消耗品費": 4200,
+                        "雑費": 1500
+                      }
+                    },
+                    "role": "subtotal"
+                  },
+                  {
+                    "key": "r-rep",
+                    "cells": {
+                      "receipt": null,
+                      "date": "4/5",
+                      "summary": "本日補給",
+                      "payment": null,
+                      "breakdown": {}
+                    },
+                    "role": "replenishment"
+                  },
+                  {
+                    "key": "r-cf",
+                    "cells": {
+                      "receipt": null,
+                      "date": "4/5",
+                      "summary": "次週繰越",
+                      "payment": 20000,
+                      "breakdown": {}
+                    },
+                    "role": "carryforward"
+                  },
+                  {
+                    "key": "r-t",
+                    "cells": {
+                      "receipt": null,
+                      "date": null,
+                      "summary": null,
+                      "payment": 34000,
+                      "breakdown": {}
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  },
+                  {
+                    "key": "r-op",
+                    "cells": {
+                      "receipt": 20000,
+                      "date": "4/8",
+                      "summary": "前週繰越",
+                      "payment": null,
+                      "breakdown": {}
+                    },
+                    "role": "opening"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r-sub.payment",
+                "input": "numpad",
+                "answer": 14000
+              },
+              {
+                "ref": "r-sub.breakdown.通信費",
+                "input": "numpad",
+                "answer": 8300
+              },
+              {
+                "ref": "r-rep.receipt",
+                "input": "numpad",
+                "answer": 14000
+              },
+              {
+                "ref": "r-t.receipt",
+                "input": "numpad",
+                "answer": 34000
+              }
+            ]
+          },
+          "explanation": "使った合計の14,000円を、同じ額だけ補給します。補給の後は、前の週と同じ20,000円が次の週へ繰り越されます。",
+          "id": "b3-u03-n4-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "つくし商店の9月の現金出納帳。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "cash_book",
+              "data": {
+                "header": {
+                  "title": "現金出納帳",
+                  "company": "つくし商店"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "date": "9/1",
+                      "summary": "前月繰越",
+                      "income": 90000,
+                      "expense": null,
+                      "balance": 90000
+                    },
+                    "role": "opening"
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "date": "9/7",
+                      "summary": "商品の売上",
+                      "income": 120000,
+                      "expense": null,
+                      "balance": 210000
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "date": "9/14",
+                      "summary": "商品の仕入",
+                      "income": null,
+                      "expense": 85000,
+                      "balance": 125000
+                    }
+                  },
+                  {
+                    "key": "r4",
+                    "cells": {
+                      "date": "9/21",
+                      "summary": null,
+                      "income": null,
+                      "expense": 40000,
+                      "balance": null
+                    }
+                  },
+                  {
+                    "key": "r5",
+                    "cells": {
+                      "date": "9/27",
+                      "summary": "売掛金の回収",
+                      "income": 70000,
+                      "expense": null,
+                      "balance": null
+                    }
+                  },
+                  {
+                    "key": "r-cf",
+                    "cells": {
+                      "date": "9/30",
+                      "summary": "次月繰越",
+                      "income": null,
+                      "expense": 155000,
+                      "balance": null
+                    },
+                    "role": "carryforward"
+                  },
+                  {
+                    "key": "r-t",
+                    "cells": {
+                      "date": null,
+                      "summary": null,
+                      "income": 280000,
+                      "expense": null,
+                      "balance": null
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  },
+                  {
+                    "key": "r-op",
+                    "cells": {
+                      "date": "10/1",
+                      "summary": "前月繰越",
+                      "income": 155000,
+                      "expense": null,
+                      "balance": 155000
+                    },
+                    "role": "opening"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r4.summary",
+                "input": "chips",
+                "answer": "買掛金の支払い",
+                "options": [
+                  "商品の仕入",
+                  "商品の売上",
+                  "売掛金の回収",
+                  "買掛金の支払い"
+                ]
+              },
+              {
+                "ref": "r4.balance",
+                "input": "numpad",
+                "answer": 85000
+              },
+              {
+                "ref": "r5.balance",
+                "input": "numpad",
+                "answer": 155000
+              },
+              {
+                "ref": "r-t.expense",
+                "input": "numpad",
+                "answer": 280000
+              }
+            ]
+          },
+          "explanation": "支出の欄に40,000円とあるので、現金が出ていった取引です。買掛金を払ったので、摘要は買掛金の支払いです。",
+          "id": "b3-u03-n4-q3",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    }
+  ]
+}

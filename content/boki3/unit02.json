@@ -1,0 +1,1322 @@
+{
+  "unit": {
+    "id": "b3-u02",
+    "course": "boki3",
+    "chapter": 2,
+    "title": "小さな会社の1年"
+  },
+  "nodes": [
+    {
+      "id": "b3-u02-n1",
+      "title": "開業して売り買いする",
+      "meta": {
+        "goal": "掛けで仕入れて掛けで売る取引を書ける",
+        "topic": "掛けの売り買い",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "売掛金",
+          "買掛金",
+          "仕入",
+          "備品"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "とんぼ菓子店が、クッキーの材料120,000円を掛けで仕入れた。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 120000
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 120000
+              }
+            ],
+            "accountOptions": [
+              "売上",
+              "現金",
+              "買掛金",
+              "仕入",
+              "売掛金",
+              "備品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "仕入は、売るために買った分の費用です。代金はあとで払う約束なので、貸方（右）は買掛金（あとで払うお金）です。",
+          "id": "b3-u02-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "仕入",
+            "買掛金"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "ほしぞら文具店が、ノート200,000円分を掛けで売った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 200000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 200000
+              }
+            ],
+            "accountOptions": [
+              "売掛金",
+              "仕入",
+              "備品",
+              "現金",
+              "買掛金",
+              "売上"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "代金はあとでもらう約束なので、増えたのは売掛金で、借方（左）に書きます。売った分は売上で、貸方（右）に書きます。",
+          "id": "b3-u02-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "売掛金"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "しろくま珈琲が、レジ台を現金90,000円で買った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "備品",
+                "amount": 90000
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 90000
+              }
+            ],
+            "accountOptions": [
+              "買掛金",
+              "売掛金",
+              "備品",
+              "売上",
+              "仕入",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "レジ台は何年も使う道具なので、費用でなく財産（資産）の備品に入ります。現金が減るので貸方（右）は現金です。",
+          "id": "b3-u02-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "備品"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "かぜのね雑貨店が、商品180,000円を売り、50,000円は現金で受け取り、残りは掛けとした。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 50000
+              },
+              {
+                "account": "売掛金",
+                "amount": 130000
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 180000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "備品",
+              "売掛金",
+              "売上",
+              "買掛金",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "現金で入った分と、あとでもらう分を、借方（左）に2行で書きます。合計180,000円が売上です。",
+          "id": "b3-u02-n1-q4",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "id": "b3-u02-n1-kake-s101",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "ゆりの木商店からマグカップ28個を1個50円で仕入れ、代金は掛けとした。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 1400
+              }
+            ],
+            "credit": [
+              {
+                "account": "買掛金",
+                "amount": 1400
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "売掛金",
+              "買掛金",
+              "売上",
+              "仕入",
+              "備品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "商品を買うので仕入(費用)が増えて借方。代金はまだ払っていないから、買掛金(負債)が増えて貸方だよ。",
+          "generated": {
+            "generator": "b3-u02-n1-kake",
+            "seed": 101
+          }
+        },
+        {
+          "id": "b3-u02-n1-kake-s102",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "あさひ商店への買掛金3600円を、現金で支払った。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "買掛金",
+                "amount": 3600
+              }
+            ],
+            "credit": [
+              {
+                "account": "現金",
+                "amount": 3600
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "売掛金",
+              "買掛金",
+              "売上",
+              "仕入",
+              "備品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "あとで払う約束(買掛金)を果たしたので、買掛金(負債)が減って借方。現金(資産)が減って貸方だよ。",
+          "generated": {
+            "generator": "b3-u02-n1-kake",
+            "seed": 102
+          }
+        },
+        {
+          "id": "b3-u02-n1-kake-s103",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "かぜのこ商店にコーヒーカップ36個を1個40円で売り上げ、代金は掛けとした。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "売掛金",
+                "amount": 1440
+              }
+            ],
+            "credit": [
+              {
+                "account": "売上",
+                "amount": 1440
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "売掛金",
+              "買掛金",
+              "売上",
+              "仕入",
+              "備品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "商品を売るので売上(収益)が増えて貸方。代金はまだもらっていないから、売掛金(資産)が増えて借方だよ。",
+          "generated": {
+            "generator": "b3-u02-n1-kake",
+            "seed": 103
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-u02-n2",
+      "title": "月末に残高をそろえる",
+      "meta": {
+        "goal": "残高試算表を作り、左右の合計が合うことを確かめる",
+        "topic": "残高試算表の作成",
+        "minQuestions": 2,
+        "nodeType": "application",
+        "examPart": 3,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "4月の取引から、4月30日の残高試算表を作る。\n4/1 店主が現金600,000円を出した\n4/5 商品250,000円を掛けで仕入れた\n4/8 備品100,000円を現金で買った\n4/15 商品380,000円を掛けで売った\n4/20 売掛金300,000円を現金で回収した\n4/25 買掛金150,000円を現金で払った"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "trial_balance",
+              "data": {
+                "variant": "balance",
+                "header": {
+                  "title": "残高試算表",
+                  "company": "うずしお商店",
+                  "period": "×1年4月30日",
+                  "unit": "(単位：円)"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "debitBalance": null,
+                      "debitTotal": null,
+                      "accountName": "現金",
+                      "creditTotal": null,
+                      "creditBalance": null
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "debitBalance": null,
+                      "debitTotal": null,
+                      "accountName": "売掛金",
+                      "creditTotal": null,
+                      "creditBalance": null
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "debitBalance": 100000,
+                      "debitTotal": null,
+                      "accountName": "備品",
+                      "creditTotal": null,
+                      "creditBalance": null
+                    }
+                  },
+                  {
+                    "key": "r4",
+                    "cells": {
+                      "debitBalance": 250000,
+                      "debitTotal": null,
+                      "accountName": "仕入",
+                      "creditTotal": null,
+                      "creditBalance": null
+                    }
+                  },
+                  {
+                    "key": "r5",
+                    "cells": {
+                      "debitBalance": null,
+                      "debitTotal": null,
+                      "accountName": "買掛金",
+                      "creditTotal": null,
+                      "creditBalance": null
+                    }
+                  },
+                  {
+                    "key": "r6",
+                    "cells": {
+                      "debitBalance": null,
+                      "debitTotal": null,
+                      "accountName": "売上",
+                      "creditTotal": null,
+                      "creditBalance": 380000
+                    }
+                  },
+                  {
+                    "key": "r7",
+                    "cells": {
+                      "debitBalance": null,
+                      "debitTotal": null,
+                      "accountName": "資本金",
+                      "creditTotal": null,
+                      "creditBalance": 600000
+                    }
+                  },
+                  {
+                    "key": "r-total",
+                    "cells": {
+                      "debitBalance": null,
+                      "debitTotal": null,
+                      "accountName": "合 計",
+                      "creditTotal": null,
+                      "creditBalance": 1080000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.debitBalance",
+                "input": "numpad",
+                "answer": 650000
+              },
+              {
+                "ref": "r2.debitBalance",
+                "input": "numpad",
+                "answer": 80000
+              },
+              {
+                "ref": "r5.creditBalance",
+                "input": "numpad",
+                "answer": 100000
+              },
+              {
+                "ref": "r-total.debitBalance",
+                "input": "numpad",
+                "answer": 1080000
+              }
+            ]
+          },
+          "explanation": "科目ごとに、借方（左）に書いた合計から貸方（右）に書いた合計を引いて残高を出します。借方（左）の残高の合計と貸方（右）の残高の合計は、必ず同じになります。",
+          "id": "b3-u02-n2-q1",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "6月の取引から、6月30日の残高試算表を作る。\n6/1 店主が現金1,000,000円を出した\n6/3 商品400,000円を掛けで仕入れた\n6/9 商品620,000円を掛けで売った\n6/12 備品180,000円を現金で買った\n6/20 売掛金450,000円を現金で回収した\n6/28 買掛金250,000円を現金で払った"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "trial_balance",
+              "data": {
+                "variant": "balance",
+                "header": {
+                  "title": "残高試算表",
+                  "company": "あかり写真館",
+                  "period": "×1年6月30日",
+                  "unit": "(単位：円)"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "debitBalance": null,
+                      "debitTotal": null,
+                      "accountName": "現金",
+                      "creditTotal": null,
+                      "creditBalance": null
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "debitBalance": null,
+                      "debitTotal": null,
+                      "accountName": "売掛金",
+                      "creditTotal": null,
+                      "creditBalance": null
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "debitBalance": 180000,
+                      "debitTotal": null,
+                      "accountName": "備品",
+                      "creditTotal": null,
+                      "creditBalance": null
+                    }
+                  },
+                  {
+                    "key": "r4",
+                    "cells": {
+                      "debitBalance": 400000,
+                      "debitTotal": null,
+                      "accountName": "仕入",
+                      "creditTotal": null,
+                      "creditBalance": null
+                    }
+                  },
+                  {
+                    "key": "r5",
+                    "cells": {
+                      "debitBalance": null,
+                      "debitTotal": null,
+                      "accountName": "買掛金",
+                      "creditTotal": null,
+                      "creditBalance": null
+                    }
+                  },
+                  {
+                    "key": "r6",
+                    "cells": {
+                      "debitBalance": null,
+                      "debitTotal": null,
+                      "accountName": "売上",
+                      "creditTotal": null,
+                      "creditBalance": null
+                    }
+                  },
+                  {
+                    "key": "r7",
+                    "cells": {
+                      "debitBalance": null,
+                      "debitTotal": null,
+                      "accountName": "資本金",
+                      "creditTotal": null,
+                      "creditBalance": 1000000
+                    }
+                  },
+                  {
+                    "key": "r-total",
+                    "cells": {
+                      "debitBalance": 1770000,
+                      "debitTotal": null,
+                      "accountName": "合 計",
+                      "creditTotal": null,
+                      "creditBalance": 1770000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.debitBalance",
+                "input": "numpad",
+                "answer": 1020000
+              },
+              {
+                "ref": "r2.debitBalance",
+                "input": "numpad",
+                "answer": 170000
+              },
+              {
+                "ref": "r5.creditBalance",
+                "input": "numpad",
+                "answer": 150000
+              },
+              {
+                "ref": "r6.creditBalance",
+                "input": "numpad",
+                "answer": 620000
+              }
+            ]
+          },
+          "explanation": "現金は入った分から出た分を引き、売掛金は売った分から回収した分を引きます。買掛金は仕入れた分から払った分を引きます。",
+          "id": "b3-u02-n2-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "9月の取引から、9月30日の残高試算表を作る。\n9/1 店主が現金800,000円を出した\n9/4 商品300,000円を掛けで仕入れた\n9/10 商品500,000円を掛けで売った\n9/18 備品150,000円を現金で買った\n9/25 売掛金200,000円を現金で回収した"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "trial_balance",
+              "data": {
+                "variant": "balance",
+                "header": {
+                  "title": "残高試算表",
+                  "company": "みなもと家具店",
+                  "period": "×1年9月30日",
+                  "unit": "(単位：円)"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "debitBalance": 850000,
+                      "debitTotal": null,
+                      "accountName": "現金",
+                      "creditTotal": null,
+                      "creditBalance": null
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "debitBalance": 300000,
+                      "debitTotal": null,
+                      "accountName": "売掛金",
+                      "creditTotal": null,
+                      "creditBalance": null
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "debitBalance": null,
+                      "debitTotal": null,
+                      "accountName": "備品",
+                      "creditTotal": null,
+                      "creditBalance": null
+                    }
+                  },
+                  {
+                    "key": "r4",
+                    "cells": {
+                      "debitBalance": 300000,
+                      "debitTotal": null,
+                      "accountName": null,
+                      "creditTotal": null,
+                      "creditBalance": null
+                    }
+                  },
+                  {
+                    "key": "r5",
+                    "cells": {
+                      "debitBalance": null,
+                      "debitTotal": null,
+                      "accountName": "買掛金",
+                      "creditTotal": null,
+                      "creditBalance": 300000
+                    }
+                  },
+                  {
+                    "key": "r6",
+                    "cells": {
+                      "debitBalance": null,
+                      "debitTotal": null,
+                      "accountName": "売上",
+                      "creditTotal": null,
+                      "creditBalance": null
+                    }
+                  },
+                  {
+                    "key": "r7",
+                    "cells": {
+                      "debitBalance": null,
+                      "debitTotal": null,
+                      "accountName": "資本金",
+                      "creditTotal": null,
+                      "creditBalance": 800000
+                    }
+                  },
+                  {
+                    "key": "r-total",
+                    "cells": {
+                      "debitBalance": 1600000,
+                      "debitTotal": null,
+                      "accountName": "合 計",
+                      "creditTotal": null,
+                      "creditBalance": null
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r4.accountName",
+                "input": "account_picker",
+                "answer": "仕入",
+                "accountOptions": [
+                  "買掛金",
+                  "備品",
+                  "現金",
+                  "資本金",
+                  "仕入",
+                  "売掛金",
+                  "売上"
+                ]
+              },
+              {
+                "ref": "r3.debitBalance",
+                "input": "numpad",
+                "answer": 150000
+              },
+              {
+                "ref": "r6.creditBalance",
+                "input": "numpad",
+                "answer": 500000
+              },
+              {
+                "ref": "r-total.creditBalance",
+                "input": "numpad",
+                "answer": 1600000
+              }
+            ]
+          },
+          "explanation": "費用の仕入は、増えると借方（左）に残ります。借方（左）の合計と貸方（右）の合計が合えば、記入の漏れや逆はありません。",
+          "id": "b3-u02-n2-q3",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b3-u02-n3",
+      "title": "決算で2つ直す",
+      "meta": {
+        "goal": "売れ残りと値下がりを、与えられた数字で直せる",
+        "topic": "決算整理（売れ残りと備品の値下がり）",
+        "minQuestions": 2,
+        "nodeType": "application",
+        "examPart": 3,
+        "introduces": [
+          "繰越商品",
+          "減価償却費"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "たいよう文具店は、決算を迎えた。前の年から繰り越してきた売れ残りの商品40,000円を、今年の費用として仕入に移す。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 40000
+              }
+            ],
+            "credit": [
+              {
+                "account": "繰越商品",
+                "amount": 40000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "備品",
+              "売上",
+              "繰越商品",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "去年の売れ残りは、今年売るために使う分です。今年の費用の仕入に移すので、借方（左）は仕入、貸方（右）は繰越商品です。",
+          "id": "b3-u02-n3-q1",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "繰越商品"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "たいよう文具店は、決算の日に売れ残りの商品を数えたら55,000円分あった。この分を、今年の費用の仕入から外す。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "繰越商品",
+                "amount": 55000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仕入",
+                "amount": 55000
+              }
+            ],
+            "accountOptions": [
+              "備品",
+              "現金",
+              "繰越商品",
+              "仕入",
+              "売上"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売れ残りはまだ売っていない財産なので、今年の費用の仕入から外して繰越商品にして借方（左）に書きます。",
+          "id": "b3-u02-n3-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "すずかけ書房の備品は、1年使って値打ちが60,000円ぶん下がった。備品の金額そのものは減らさず、別の箱に積み上げる方法で書く。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 60000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 60000
+              }
+            ],
+            "accountOptions": [
+              "備品",
+              "現金",
+              "減価償却累計額",
+              "減価償却費",
+              "仕入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "値打ちが下がった分は、その年の費用の減価償却費です。貸方（右）は、備品を直接減らさずに下がった分をためておく箱の減価償却累計額です。",
+          "id": "b3-u02-n3-q3",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "減価償却費",
+            "減価償却累計額"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "決算の2つの直しを、精算表の修正記入に書く。\n売れ残りの商品は期首40,000円、期末55,000円。\n備品の値打ちは60,000円下がった。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "worksheet",
+              "data": {
+                "header": {
+                  "title": "精算表",
+                  "company": "やぶさか商店"
+                },
+                "rows": [
+                  {
+                    "key": "r-kuri",
+                    "cells": {
+                      "accountName": "繰越商品",
+                      "trialBalance": {
+                        "debit": 40000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": 55000,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "r-bihin",
+                    "cells": {
+                      "accountName": "備品",
+                      "trialBalance": {
+                        "debit": 300000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": 300000,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "r-ruikei",
+                    "cells": {
+                      "accountName": "減価償却累計額",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": 60000
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": 60000
+                      }
+                    }
+                  },
+                  {
+                    "key": "r-shiire",
+                    "cells": {
+                      "accountName": "仕入",
+                      "trialBalance": {
+                        "debit": 400000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": 385000,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "r-hiyo",
+                    "cells": {
+                      "accountName": "減価償却費",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": 60000,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r-kuri.adjustment.debit",
+                "input": "numpad",
+                "answer": 55000
+              },
+              {
+                "ref": "r-kuri.adjustment.credit",
+                "input": "numpad",
+                "answer": 40000
+              },
+              {
+                "ref": "r-shiire.adjustment.debit",
+                "input": "numpad",
+                "answer": 40000
+              },
+              {
+                "ref": "r-shiire.adjustment.credit",
+                "input": "numpad",
+                "answer": 55000
+              },
+              {
+                "ref": "r-hiyo.adjustment.debit",
+                "input": "numpad",
+                "answer": 60000
+              }
+            ]
+          },
+          "explanation": "期首の40,000円は仕入へ、期末の55,000円は仕入から繰越商品へ移します。仕入の損益計算書の欄は、400,000＋40,000−55,000で385,000円になります。",
+          "id": "b3-u02-n3-q4",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b3-u02-n4",
+      "title": "成績表と財産表",
+      "meta": {
+        "goal": "損益計算書と貸借対照表を作れる",
+        "topic": "損益計算書と貸借対照表の作成",
+        "minQuestions": 2,
+        "nodeType": "application",
+        "examPart": 3,
+        "introduces": [
+          "繰越利益剰余金"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "やまぶき雑貨店の1年。売れ残りは100,000円、備品の値打ちの下がりは40,000円。損益計算書を作る。\n仕入は600,000円、売上は900,000円。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "pl",
+              "data": {
+                "header": {
+                  "title": "損益計算書",
+                  "company": "やまぶき雑貨店",
+                  "period": "×1年1月1日から×1年12月31日まで",
+                  "unit": "(単位：円)"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "label": "仕入",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d2",
+                    "cells": {
+                      "label": "減価償却費",
+                      "amount": 40000
+                    }
+                  },
+                  {
+                    "key": "d-ni",
+                    "cells": {
+                      "label": "当期純利益",
+                      "amount": null
+                    },
+                    "role": "net_income"
+                  },
+                  {
+                    "key": "d-t",
+                    "cells": {
+                      "label": "計",
+                      "amount": null
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "label": "売上",
+                      "amount": 900000
+                    }
+                  },
+                  {
+                    "key": "c-t",
+                    "cells": {
+                      "label": "計",
+                      "amount": 900000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 500000
+              },
+              {
+                "ref": "d-ni.amount",
+                "input": "numpad",
+                "answer": 360000
+              },
+              {
+                "ref": "d-t.amount",
+                "input": "numpad",
+                "answer": 900000
+              }
+            ]
+          },
+          "explanation": "売れ残りの100,000円は費用から外すので、仕入は600,000−100,000で500,000円です。売上900,000円から費用の合計540,000円を引いた360,000円が利益です。",
+          "id": "b3-u02-n4-q1",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "やまぶき雑貨店の1年の終わりの財産表を作る。\n利益360,000円はためた利益として右側に置く。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "bs",
+              "data": {
+                "header": {
+                  "title": "貸借対照表",
+                  "company": "やまぶき雑貨店",
+                  "period": "×1年12月31日",
+                  "unit": "(単位：円)"
+                },
+                "debit": [
+                  {
+                    "key": "d-cash",
+                    "cells": {
+                      "label": "現金",
+                      "amount": 1050000
+                    }
+                  },
+                  {
+                    "key": "d-ar",
+                    "cells": {
+                      "label": "売掛金",
+                      "amount": 200000
+                    }
+                  },
+                  {
+                    "key": "d-stock",
+                    "cells": {
+                      "label": "繰越商品",
+                      "amount": 100000
+                    }
+                  },
+                  {
+                    "key": "d-eq",
+                    "cells": {
+                      "label": "備品",
+                      "amount": 200000,
+                      "deduction": {
+                        "label": "減価償却累計額",
+                        "amount": 40000
+                      },
+                      "netAmount": null
+                    }
+                  },
+                  {
+                    "key": "d-t",
+                    "cells": {
+                      "label": "計",
+                      "amount": null
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c-ap",
+                    "cells": {
+                      "label": "買掛金",
+                      "amount": 150000
+                    }
+                  },
+                  {
+                    "key": "c-cap",
+                    "cells": {
+                      "label": "資本金",
+                      "amount": 1000000
+                    }
+                  },
+                  {
+                    "key": "c-re",
+                    "cells": {
+                      "label": "繰越利益剰余金",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c-t",
+                    "cells": {
+                      "label": "計",
+                      "amount": 1510000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "c-re.amount",
+                "input": "numpad",
+                "answer": 360000
+              },
+              {
+                "ref": "d-eq.netAmount",
+                "input": "numpad",
+                "answer": 160000
+              },
+              {
+                "ref": "d-t.amount",
+                "input": "numpad",
+                "answer": 1510000
+              }
+            ]
+          },
+          "explanation": "備品は取得したときの金額から値打ちの下がりを引いて160,000円です。借方と貸方の合計は1,510,000円で同じになります。",
+          "id": "b3-u02-n4-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "のはら文具店の1年の終わりの財産表を作る。\n当期の利益は、売上から仕入と値打ちの下がりを引いて自分で出す。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "bs",
+              "data": {
+                "header": {
+                  "title": "貸借対照表",
+                  "company": "のはら文具店",
+                  "period": "×1年12月31日",
+                  "unit": "(単位：円)"
+                },
+                "debit": [
+                  {
+                    "key": "d-cash",
+                    "cells": {
+                      "label": "現金",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "d-ar",
+                    "cells": {
+                      "label": "売掛金",
+                      "amount": 160000
+                    }
+                  },
+                  {
+                    "key": "d-stock",
+                    "cells": {
+                      "label": "繰越商品",
+                      "amount": 70000
+                    }
+                  },
+                  {
+                    "key": "d-eq",
+                    "cells": {
+                      "label": "備品",
+                      "amount": 150000,
+                      "deduction": {
+                        "label": "減価償却累計額",
+                        "amount": 30000
+                      },
+                      "netAmount": 120000
+                    }
+                  },
+                  {
+                    "key": "d-t",
+                    "cells": {
+                      "label": "計",
+                      "amount": 1220000
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c-ap",
+                    "cells": {
+                      "label": "買掛金",
+                      "amount": 120000
+                    }
+                  },
+                  {
+                    "key": "c-cap",
+                    "cells": {
+                      "label": "資本金",
+                      "amount": 800000
+                    }
+                  },
+                  {
+                    "key": "c-re",
+                    "cells": {
+                      "label": "繰越利益剰余金",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c-t",
+                    "cells": {
+                      "label": "計",
+                      "amount": null
+                    },
+                    "role": "total",
+                    "ruledAfter": "double"
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "c-re.amount",
+                "input": "numpad",
+                "answer": 300000
+              },
+              {
+                "ref": "d-cash.amount",
+                "input": "numpad",
+                "answer": 870000
+              },
+              {
+                "ref": "c-t.amount",
+                "input": "numpad",
+                "answer": 1220000
+              }
+            ]
+          },
+          "explanation": "利益は、売上760,000円から仕入430,000円と値打ちの下がり30,000円を引いた300,000円です。財産表の貸方（右）側は、買掛金と資本金と利益の合計になります。",
+          "id": "b3-u02-n4-q3",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    }
+  ]
+}

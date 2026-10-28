@@ -1,0 +1,909 @@
+{
+  "unit": {
+    "id": "b2-u18",
+    "course": "boki2",
+    "chapter": 18,
+    "title": "決算と財務諸表（商業簿記）"
+  },
+  "nodes": [
+    {
+      "id": "b2-u18-n1",
+      "title": "2級の整理事項を並べる",
+      "meta": {
+        "goal": "3級の整理事項に、引当金、有価証券、リース、税効果を加えて、1項目1仕訳で並べられる",
+        "topic": "2級の決算整理仕訳の列挙",
+        "minQuestions": 2,
+        "nodeType": "application",
+        "examPart": 3,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "あおぞら商会の決算。売掛金の期末残高1,500,000円に5％の貸倒引当金を設定する。貸倒引当金の期末残高は30,000円で、差額を補充する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "貸倒引当金繰入",
+                "amount": 45000
+              }
+            ],
+            "credit": [
+              {
+                "account": "貸倒引当金",
+                "amount": 45000
+              }
+            ],
+            "accountOptions": [
+              "売掛金",
+              "貸倒引当金繰入",
+              "貸倒引当金",
+              "貸倒損失"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "設定額から今ある残高を引いた差額を補充します。借方（左）は貸倒引当金繰入、貸方（右）は貸倒引当金です。",
+          "source": "generated",
+          "id": "b2-u18-n1-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "つくし商店の決算。売掛金の期末残高6,000,000円に5％の貸倒引当金を設定する。貸倒引当金の期末残高は200,000円で、差額を補充する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "貸倒引当金繰入",
+                "amount": 100000
+              }
+            ],
+            "credit": [
+              {
+                "account": "貸倒引当金",
+                "amount": 100000
+              }
+            ],
+            "accountOptions": [
+              "貸倒損失",
+              "貸倒引当金繰入",
+              "売掛金",
+              "貸倒引当金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "設定額から今ある残高を引いた差額を補充します。借方（左）は貸倒引当金繰入、貸方（右）は貸倒引当金です。",
+          "source": "generated",
+          "id": "b2-u18-n1-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "かえで商事の決算。6か月分の賞与の支給見込額1,800,000円のうち、当期に4か月分が経過している。賞与引当金を設定する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "賞与引当金繰入",
+                "amount": 1200000
+              }
+            ],
+            "credit": [
+              {
+                "account": "賞与引当金",
+                "amount": 1200000
+              }
+            ],
+            "accountOptions": [
+              "賞与引当金繰入",
+              "給料",
+              "未払金",
+              "賞与引当金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "当期にあたる4か月分を見積もって、引当金に計上します。借方（左）は賞与引当金繰入、貸方（右）は賞与引当金です。",
+          "source": "generated",
+          "id": "b2-u18-n1-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あおぞら商会の決算。6か月分の賞与の支給見込額7,200,000円のうち、当期に4か月分が経過している。賞与引当金を設定する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "賞与引当金繰入",
+                "amount": 4800000
+              }
+            ],
+            "credit": [
+              {
+                "account": "賞与引当金",
+                "amount": 4800000
+              }
+            ],
+            "accountOptions": [
+              "給料",
+              "賞与引当金",
+              "未払金",
+              "賞与引当金繰入"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "当期にあたる4か月分を見積もって、引当金に計上します。借方（左）は賞与引当金繰入、貸方（右）は賞与引当金です。",
+          "source": "generated",
+          "id": "b2-u18-n1-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "なでしこ商事の決算。支払った保険料（支払保険料）のうち、翌期分の240,000円を次期に繰り延べる。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "前払保険料",
+                "amount": 240000
+              }
+            ],
+            "credit": [
+              {
+                "account": "支払保険料",
+                "amount": 240000
+              }
+            ],
+            "accountOptions": [
+              "支払保険料",
+              "未払家賃",
+              "前受地代",
+              "前払保険料"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "翌期の分は当期の費用にしないので、借方（左）は前払保険料、貸方（右）は支払保険料です。",
+          "source": "generated",
+          "id": "b2-u18-n1-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あおぞら商会の決算。法人税、住民税及び事業税の計算額は450,000円で、中間納付額（仮払法人税等）が350,000円ある。残りは未払とする。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "法人税、住民税及び事業税",
+                "amount": 450000
+              }
+            ],
+            "credit": [
+              {
+                "account": "仮払法人税等",
+                "amount": 350000
+              },
+              {
+                "account": "未払法人税等",
+                "amount": 100000
+              }
+            ],
+            "accountOptions": [
+              "繰延税金資産",
+              "法人税、住民税及び事業税",
+              "仮払法人税等",
+              "未払法人税等",
+              "法人税等調整額"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "納める税額の全部を借方（左）の法人税、住民税及び事業税に書きます。貸方（右）は、払った分の仮払法人税等と、まだの未払法人税等です。",
+          "source": "generated",
+          "id": "b2-u18-n1-q6",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "みどり商店の決算。減価償却費の損金不算入額により、将来の税金を減らす効果が140,000円と見積もられた（税効果会計）。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "繰延税金資産",
+                "amount": 140000
+              }
+            ],
+            "credit": [
+              {
+                "account": "法人税等調整額",
+                "amount": 140000
+              }
+            ],
+            "accountOptions": [
+              "法人税、住民税及び事業税",
+              "繰延税金資産",
+              "未払法人税等",
+              "法人税等調整額"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "将来の税金が減る分を資産に計上するので、借方（左）は繰延税金資産です。貸方（右）は法人税等調整額です。",
+          "source": "original",
+          "id": "b2-u18-n1-q7",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あおぞら商会の決算整理。期首商品400,000円を仕入に振り替え、期末商品250,000円を繰越商品に計上する。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "仕入",
+                "amount": 400000
+              },
+              {
+                "account": "繰越商品",
+                "amount": 250000
+              }
+            ],
+            "credit": [
+              {
+                "account": "繰越商品",
+                "amount": 400000
+              },
+              {
+                "account": "仕入",
+                "amount": 250000
+              }
+            ],
+            "accountOptions": [
+              "商品評価損",
+              "売上",
+              "仕入",
+              "繰越商品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "期首を仕入に足し、期末を仕入から引きます。借方（左）は仕入と繰越商品、貸方（右）は繰越商品と仕入です。",
+          "source": "original",
+          "id": "b2-u18-n1-q8",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u18-n2",
+      "title": "精算表",
+      "meta": {
+        "goal": "整理事項10項目前後の精算表を作れる",
+        "topic": "2級の精算表",
+        "minQuestions": 2,
+        "nodeType": "application",
+        "examPart": 3,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "精算表の作成。売掛金の残高が7,000,000円、貸倒引当金の残高が250,000円である。売掛金の5％を貸倒引当金とするとき、修正記入欄に書く貸倒引当金繰入は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 100000
+          },
+          "explanation": "設定額から残高を引いた差額が、貸倒引当金繰入です。",
+          "source": "generated",
+          "id": "b2-u18-n2-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "精算表の作成。売掛金の残高が5,000,000円、貸倒引当金の残高が150,000円である。売掛金の5％を貸倒引当金とするとき、修正記入欄に書く貸倒引当金繰入は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 100000
+          },
+          "explanation": "設定額から残高を引いた差額が、貸倒引当金繰入です。",
+          "source": "generated",
+          "id": "b2-u18-n2-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "精算表の作成。備品の取得原価6,000,000円、残存価額は取得原価の10％、耐用年数10年で、定額法で減価償却する。修正記入欄に書く減価償却費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 540000
+          },
+          "explanation": "取得原価から残存価額を引いて、耐用年数で割ります。",
+          "source": "generated",
+          "id": "b2-u18-n2-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "精算表の作成。備品の取得原価5,000,000円、残存価額は取得原価の10％、耐用年数10年で、定額法で減価償却する。修正記入欄に書く減価償却費は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 450000
+          },
+          "explanation": "取得原価から残存価額を引いて、耐用年数で割ります。",
+          "source": "generated",
+          "id": "b2-u18-n2-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "精算表の作成。期首商品が140,000円、当期の仕入が1,400,000円、期末商品が190,000円のとき、損益計算書欄に書く売上原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1350000
+          },
+          "explanation": "期首商品に仕入を足し、期末商品を引いたものが売上原価です。",
+          "source": "generated",
+          "id": "b2-u18-n2-q5",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "なでしこ商事の精算表（一部）。売掛金3,500,000円に2％の貸倒引当金を設定する（貸倒引当金の残高は10,000円）。空欄を埋める。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "worksheet",
+              "data": {
+                "header": {
+                  "title": "精算表",
+                  "unit": "(単位：円)"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "accountName": "売掛金",
+                      "trialBalance": {
+                        "debit": 3500000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": 3500000,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "accountName": "貸倒引当金",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": 10000
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": 60000
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "accountName": "貸倒引当金繰入",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r2.balanceSheet.credit",
+                "input": "numpad",
+                "answer": 70000
+              },
+              {
+                "ref": "r3.adjustment.debit",
+                "input": "numpad",
+                "answer": 60000
+              },
+              {
+                "ref": "r3.incomeStatement.debit",
+                "input": "numpad",
+                "answer": 60000
+              }
+            ]
+          },
+          "explanation": "貸倒引当金は、設定額から残高を引いた差額を補充します。修正記入の借方（左）と貸方（右）を、損益計算書と貸借対照表の欄へ移します。",
+          "source": "original",
+          "id": "b2-u18-n2-q6",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ひまわり物産の精算表（一部）。売掛金3,500,000円に2％の貸倒引当金を設定する（貸倒引当金の残高は50,000円）。備品は取得原価5,000,000円、残存価額は10％、耐用年数10年で定額法により償却する。空欄を埋める。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "worksheet",
+              "data": {
+                "header": {
+                  "title": "精算表",
+                  "unit": "(単位：円)"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "accountName": "売掛金",
+                      "trialBalance": {
+                        "debit": 3500000,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": 3500000,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "accountName": "貸倒引当金",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": 50000
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "accountName": "貸倒引当金繰入",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  },
+                  {
+                    "key": "r4",
+                    "cells": {
+                      "accountName": "減価償却費",
+                      "trialBalance": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "adjustment": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "incomeStatement": {
+                        "debit": null,
+                        "credit": null
+                      },
+                      "balanceSheet": {
+                        "debit": null,
+                        "credit": null
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r2.adjustment.credit",
+                "input": "numpad",
+                "answer": 20000
+              },
+              {
+                "ref": "r2.balanceSheet.credit",
+                "input": "numpad",
+                "answer": 70000
+              },
+              {
+                "ref": "r3.adjustment.debit",
+                "input": "numpad",
+                "answer": 20000
+              },
+              {
+                "ref": "r3.incomeStatement.debit",
+                "input": "numpad",
+                "answer": 20000
+              },
+              {
+                "ref": "r4.adjustment.debit",
+                "input": "numpad",
+                "answer": 450000
+              },
+              {
+                "ref": "r4.incomeStatement.debit",
+                "input": "numpad",
+                "answer": 450000
+              }
+            ]
+          },
+          "explanation": "貸倒引当金は、設定額から残高を引いた差額を補充します。修正記入の借方（左）と貸方（右）を、損益計算書と貸借対照表の欄へ移します。",
+          "source": "original",
+          "id": "b2-u18-n2-q7",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u18-n3",
+      "title": "製造業の決算",
+      "meta": {
+        "goal": "製品、仕掛品、材料の期末残高から、当期製品製造原価と売上原価を出せる",
+        "topic": "製造業の決算",
+        "minQuestions": 2,
+        "nodeType": "application",
+        "examPart": 3,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "製造業のすずらん商会の決算。期首仕掛品260,000円、当期総製造費用4,700,000円、期末仕掛品190,000円のとき、当期製品製造原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 4770000
+          },
+          "explanation": "期首の仕掛品に当期総製造費用を足し、期末の仕掛品を引きます。",
+          "source": "generated",
+          "id": "b2-u18-n3-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造業のなでしこ商事の決算。期首仕掛品120,000円、当期総製造費用2,450,000円、期末仕掛品100,000円のとき、当期製品製造原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 2470000
+          },
+          "explanation": "期首の仕掛品に当期総製造費用を足し、期末の仕掛品を引きます。",
+          "source": "generated",
+          "id": "b2-u18-n3-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造業のうみかぜ商会の決算。製品の期首棚卸高100,000円、当期製品製造原価4,850,000円、製品の期末棚卸高140,000円のとき、売上原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 4810000
+          },
+          "explanation": "製品の期首に当期製品製造原価を足し、製品の期末を引きます。",
+          "source": "generated",
+          "id": "b2-u18-n3-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造業のかえで商事の決算。製品の期首棚卸高370,000円、当期製品製造原価2,300,000円、製品の期末棚卸高170,000円のとき、売上原価は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 2500000
+          },
+          "explanation": "製品の期首に当期製品製造原価を足し、製品の期末を引きます。",
+          "source": "generated",
+          "id": "b2-u18-n3-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "製造業のなでしこ商事の決算。売上高7,700,000円、売上原価3,000,000円のとき、売上総利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 4700000
+          },
+          "explanation": "売上高から売上原価を引いたものが売上総利益です。",
+          "source": "generated",
+          "id": "b2-u18-n3-q5",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u18-n4",
+      "title": "損益計算書と貸借対照表",
+      "meta": {
+        "goal": "報告式の損益計算書と、区分表示した貸借対照表を作れる",
+        "topic": "2級の損益計算書と貸借対照表",
+        "minQuestions": 2,
+        "nodeType": "application",
+        "examPart": 3,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "報告式の損益計算書。売上高10,000,000円、売上原価5,600,000円、販売費及び一般管理費1,400,000円のとき、営業利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 3000000
+          },
+          "explanation": "売上総利益から販売費及び一般管理費を引いたものが営業利益です。",
+          "source": "generated",
+          "id": "b2-u18-n4-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "報告式の損益計算書。営業利益1,050,000円、営業外収益40,000円、営業外費用50,000円のとき、経常利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 1040000
+          },
+          "explanation": "営業利益に営業外収益を足し、営業外費用を引きます。",
+          "source": "generated",
+          "id": "b2-u18-n4-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "報告式の損益計算書。税引前当期純利益800,000円、法人税、住民税及び事業税が税引前当期純利益の30％のとき、当期純利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 560000
+          },
+          "explanation": "税引前当期純利益から法人税、住民税及び事業税を引きます。",
+          "source": "generated",
+          "id": "b2-u18-n4-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "区分表示した貸借対照表。資産の合計が15,500,000円、負債の合計が3,000,000円のとき、純資産の合計は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 12500000
+          },
+          "explanation": "資産の合計から負債の合計を引いたものが純資産です。",
+          "source": "generated",
+          "id": "b2-u18-n4-q4",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "貸借対照表。流動資産3,600,000円、固定資産8,800,000円、繰延資産はないとき、資産の合計は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 12400000
+          },
+          "explanation": "流動資産と固定資産を足します。",
+          "source": "original",
+          "id": "b2-u18-n4-q5",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u18-n5",
+      "title": "決算整理後残高試算表",
+      "meta": {
+        "goal": "整理後の残高試算表を作れる",
+        "topic": "2級の決算整理後残高試算表",
+        "minQuestions": 2,
+        "nodeType": "application",
+        "examPart": 3,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "決算整理後残高試算表。売掛金4,500,000円に5％の貸倒引当金が設定された。貸借対照表に表示する売掛金の純額（売掛金から貸倒引当金を引いた額）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 4275000
+          },
+          "explanation": "売掛金から貸倒引当金を差し引いた額が、貸借対照表の純額です。",
+          "source": "generated",
+          "id": "b2-u18-n5-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "決算整理後残高試算表。売掛金7,500,000円に2％の貸倒引当金が設定された。貸借対照表に表示する売掛金の純額（売掛金から貸倒引当金を引いた額）は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 7350000
+          },
+          "explanation": "売掛金から貸倒引当金を差し引いた額が、貸借対照表の純額です。",
+          "source": "generated",
+          "id": "b2-u18-n5-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "決算整理後残高試算表。備品の取得原価6,000,000円、減価償却累計額1,200,000円のとき、貸借対照表に表示する備品の帳簿価額は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 4800000
+          },
+          "explanation": "取得原価から減価償却累計額を引いた額が帳簿価額です。",
+          "source": "generated",
+          "id": "b2-u18-n5-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "決算整理後残高試算表。備品の取得原価7,000,000円、減価償却累計額1,200,000円のとき、貸借対照表に表示する備品の帳簿価額は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 5800000
+          },
+          "explanation": "取得原価から減価償却累計額を引いた額が帳簿価額です。",
+          "source": "generated",
+          "id": "b2-u18-n5-q4",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b2-u18-n6",
+      "title": "第3問の形を通す",
+      "meta": {
+        "goal": "整理前の試算表と整理事項から、財務諸表を一通り作れる",
+        "topic": "第3問の形の通し",
+        "minQuestions": 2,
+        "nodeType": "application",
+        "examPart": 3,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "つくし商店の決算。整理前の試算表では、売上6,400,000円、売上原価4,600,000円、販売費及び一般管理費1,400,000円である。決算整理で貸倒引当金繰入50,000円と減価償却費70,000円が加わる。営業利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 280000
+          },
+          "explanation": "整理で増えた費用は、販売費及び一般管理費に加えて、営業利益から引きます。",
+          "source": "generated",
+          "id": "b2-u18-n6-q1",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "みどり商店の決算。整理前の試算表では、売上10,800,000円、売上原価4,600,000円、販売費及び一般管理費2,100,000円である。決算整理で貸倒引当金繰入30,000円と減価償却費130,000円が加わる。営業利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 3940000
+          },
+          "explanation": "整理で増えた費用は、販売費及び一般管理費に加えて、営業利益から引きます。",
+          "source": "generated",
+          "id": "b2-u18-n6-q2",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "すずらん商会の決算。売上9,600,000円、売上原価3,700,000円、販売費及び一般管理費1,900,000円、営業外損益はなく、法人税、住民税及び事業税は税引前当期純利益の30％である。当期純利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 2800000
+          },
+          "explanation": "営業利益がそのまま税引前当期純利益になり、そこから法人税、住民税及び事業税を引きます。",
+          "source": "generated",
+          "id": "b2-u18-n6-q3",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "かえで商事の決算。売上6,400,000円、売上原価4,600,000円、販売費及び一般管理費1,200,000円、営業外損益はなく、法人税、住民税及び事業税は税引前当期純利益の30％である。当期純利益は何円か。"
+          },
+          "task": {
+            "kind": "calc",
+            "answer": 420000
+          },
+          "explanation": "営業利益がそのまま税引前当期純利益になり、そこから法人税、住民税及び事業税を引きます。",
+          "source": "generated",
+          "id": "b2-u18-n6-q4",
+          "sanitized": true
+        }
+      ]
+    }
+  ]
+}

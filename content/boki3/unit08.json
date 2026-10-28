@@ -1,0 +1,1663 @@
+{
+  "unit": {
+    "id": "b3-u08",
+    "course": "boki3",
+    "chapter": 8,
+    "title": "固定資産"
+  },
+  "nodes": [
+    {
+      "id": "b3-u08-n1",
+      "title": "買う",
+      "meta": {
+        "goal": "付随費用を取得原価に含められる。代金を後で払う場合も",
+        "topic": "固定資産の取得原価",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "建物",
+          "車両運搬具",
+          "土地",
+          "未払金"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "あけぼの運送が、駐車場にする土地3,000,000円を買い、仲介手数料と登記料の合計150,000円とあわせて、普通預金から払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "土地",
+                "amount": 3150000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 3150000
+              }
+            ],
+            "accountOptions": [
+              "車両運搬具",
+              "買掛金",
+              "未払金",
+              "土地",
+              "現金",
+              "建物",
+              "普通預金",
+              "備品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "土地を使えるようにするためにかかった仲介手数料や登記料は、土地の値段に足します。借方（左）は3,150,000円の土地です。",
+          "id": "b3-u08-n1-q1",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "土地"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "ひらけごま配送が、トラック1,200,000円を買い、登録費用80,000円とあわせて、普通預金から払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "車両運搬具",
+                "amount": 1280000
+              }
+            ],
+            "credit": [
+              {
+                "account": "普通預金",
+                "amount": 1280000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "備品",
+              "車両運搬具",
+              "未払金",
+              "建物",
+              "買掛金",
+              "土地",
+              "普通預金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "トラックを走らせるための登録費用は、トラックの値段に足します。借方（左）は1,280,000円の車両運搬具です。",
+          "id": "b3-u08-n1-q2",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "車両運搬具"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "そらいろ不動産が、事務所の建物8,000,000円を買った。代金は来月に払う。仲介手数料400,000円は現金で払った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "建物",
+                "amount": 8400000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払金",
+                "amount": 8000000
+              },
+              {
+                "account": "現金",
+                "amount": 400000
+              }
+            ],
+            "accountOptions": [
+              "買掛金",
+              "未払金",
+              "備品",
+              "普通預金",
+              "建物",
+              "土地",
+              "現金",
+              "車両運搬具"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "仲介手数料は建物の値段に足します。代金をあとで払う約束は、商品でなく建物なので、買掛金でなく未払金です。",
+          "id": "b3-u08-n1-q3",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "建物",
+            "未払金"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "しらさぎ事務所が、パソコン280,000円を買い、据付費用20,000円は現金で払った。パソコン代金は月末に払う。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "備品",
+                "amount": 300000
+              }
+            ],
+            "credit": [
+              {
+                "account": "未払金",
+                "amount": 280000
+              },
+              {
+                "account": "現金",
+                "amount": 20000
+              }
+            ],
+            "accountOptions": [
+              "車両運搬具",
+              "土地",
+              "未払金",
+              "備品",
+              "普通預金",
+              "建物",
+              "現金",
+              "買掛金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "据付費用も、パソコンを使えるようにするための費用なので、備品の値段に足します。パソコン代金は、あとで払う約束なので未払金です。",
+          "id": "b3-u08-n1-q4",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b3-u08-n2",
+      "title": "定額法",
+      "meta": {
+        "goal": "期中に買った場合の月割を含めて、減価償却を書ける",
+        "topic": "定額法の月割",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "減価償却累計額"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "あおやぎ商事は、決算で、建物（取得価額5,000,000円、耐用年数20年、残存価額0円）の減価償却を、定額法で行う。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 250000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 250000
+              }
+            ],
+            "accountOptions": [
+              "車両運搬具",
+              "現金",
+              "減価償却累計額",
+              "備品",
+              "建物",
+              "減価償却費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "5,000,000円を20年で使い切ると考えるので、1年あたり250,000円です。借方（左）は減価償却費、貸方（右）は建物の値打ちが下がった分をためる減価償却累計額です。",
+          "id": "b3-u08-n2-q1",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ことのは文具店は、決算で、備品（取得価額600,000円、耐用年数5年、残存価額0円）の減価償却を、定額法で行う。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 120000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 120000
+              }
+            ],
+            "accountOptions": [
+              "建物",
+              "減価償却費",
+              "車両運搬具",
+              "備品",
+              "現金",
+              "減価償却累計額"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "600,000円を5年で使い切ると考えるので、1年あたり120,000円です。借方（左）は減価償却費、貸方（右）は減価償却累計額です。",
+          "id": "b3-u08-n2-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "みなづき書店は、決算日（3月31日）の半年前の10月1日に、備品480,000円（耐用年数4年、残存価額0円）を買った。当期の減価償却を定額法で行う。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 60000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 60000
+              }
+            ],
+            "accountOptions": [
+              "建物",
+              "備品",
+              "減価償却費",
+              "現金",
+              "車両運搬具",
+              "減価償却累計額"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "1年あたり480,000÷4で120,000円。買ったのは10月1日で、決算まで6か月なので、120,000円×6/12で60,000円です。",
+          "id": "b3-u08-n2-q3",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "いちょう工房は、決算で、車両運搬具（取得価額1,500,000円、耐用年数5年、残存価額は取得価額の10%）の減価償却を、定額法で行う。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 270000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 270000
+              }
+            ],
+            "accountOptions": [
+              "減価償却累計額",
+              "現金",
+              "備品",
+              "建物",
+              "減価償却費",
+              "車両運搬具"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "使い終わったあとに残ると見込む金額が150,000円なので、(1,500,000−150,000)÷5で、1年あたり270,000円です。",
+          "id": "b3-u08-n2-q4",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ひだまり堂の備品の減価償却累計額勘定（2年分）。\n備品は取得価額600,000円、耐用年数5年、残存価額0円。\n1年目と2年目の決算で、定額法の減価償却を行った。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "減価償却累計額"
+                },
+                "debit": [],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "3/31",
+                      "counterAccount": null,
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "3/31",
+                      "counterAccount": "減価償却費",
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 120000
+              },
+              {
+                "ref": "c2.amount",
+                "input": "numpad",
+                "answer": 120000
+              },
+              {
+                "ref": "c1.counterAccount",
+                "input": "account_picker",
+                "answer": "減価償却費",
+                "accountOptions": [
+                  "備品",
+                  "減価償却費",
+                  "現金",
+                  "売上"
+                ]
+              }
+            ]
+          },
+          "explanation": "毎年120,000円ずつ、減価償却累計額の貸方（右）側に積み重なります。2年目の終わりには240,000円になり、備品の帳簿価額は360,000円です。",
+          "id": "b3-u08-n2-q5",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "id": "b3-u08-n2-teigaku-s201",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "期首（4月1日）に建物13460円を購入していた（耐用年数6年、残存価額500円）。決算日は3月31日、定額法・間接法で、購入した年度の減価償却を月割で行う。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 2160
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 2160
+              }
+            ],
+            "accountOptions": [
+              "減価償却費",
+              "減価償却累計額",
+              "建物",
+              "修繕費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "1年分は(13460円 − 500円)÷6年＝2160円。12か月ぶんなので2160円×12／12＝2160円。間接法だから、建物は減らさず減価償却累計額を貸方に置くよ。",
+          "generated": {
+            "generator": "b3-u08-n2-teigaku",
+            "seed": 201
+          }
+        },
+        {
+          "id": "b3-u08-n2-teigaku-s202",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "7月1日に備品14500円を購入していた（耐用年数10年、残存価額100円）。決算日は3月31日、定額法・間接法で、購入した年度の減価償却を月割で行う。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 1080
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 1080
+              }
+            ],
+            "accountOptions": [
+              "減価償却費",
+              "減価償却累計額",
+              "備品",
+              "修繕費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "1年分は(14500円 − 100円)÷10年＝1440円。9か月ぶんなので1440円×9／12＝1080円。間接法だから、備品は減らさず減価償却累計額を貸方に置くよ。",
+          "generated": {
+            "generator": "b3-u08-n2-teigaku",
+            "seed": 202
+          }
+        },
+        {
+          "id": "b3-u08-n2-teigaku-s203",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "12月1日に車両運搬具10200円を購入していた（耐用年数5年、残存価額ゼロ）。決算日は3月31日、定額法・間接法で、購入した年度の減価償却を月割で行う。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 680
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 680
+              }
+            ],
+            "accountOptions": [
+              "減価償却費",
+              "減価償却累計額",
+              "車両運搬具",
+              "修繕費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "1年分は(10200円 − 0円)÷5年＝2040円。4か月ぶんなので2040円×4／12＝680円。間接法だから、車両運搬具は減らさず減価償却累計額を貸方に置くよ。",
+          "generated": {
+            "generator": "b3-u08-n2-teigaku",
+            "seed": 203
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-u08-n3",
+      "title": "定率法",
+      "meta": {
+        "goal": "与えられた償却率で、未償却残高から計算できる",
+        "topic": "定率法",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [],
+        "isNew": true
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "あまやどり商会は、決算で、備品（取得価額400,000円、1年目）の減価償却を、定率法（償却率40%）で行う。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 160000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 160000
+              }
+            ],
+            "accountOptions": [
+              "減価償却累計額",
+              "建物",
+              "備品",
+              "車両運搬具",
+              "減価償却費",
+              "現金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "定率法は、まだ下がっていない金額に、毎年同じ割合をかけます。1年目は、400,000円×40%で160,000円です。",
+          "id": "b3-u08-n3-q1",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "あまやどり商会は、2年目の決算で、同じ備品（取得価額400,000円、期首の減価償却累計額160,000円）の減価償却を、定率法（償却率40%）で行う。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 96000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 96000
+              }
+            ],
+            "accountOptions": [
+              "減価償却費",
+              "現金",
+              "車両運搬具",
+              "備品",
+              "建物",
+              "減価償却累計額"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "まだ下がっていない金額は、400,000−160,000で240,000円です。これに40%をかけた96,000円が、2年目の減価償却費です。",
+          "id": "b3-u08-n3-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "うぐいす運輸は、決算で、車両運搬具（取得価額1,000,000円、期首の減価償却累計額200,000円）の減価償却を、定率法（償却率20%）で行う。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 160000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 160000
+              }
+            ],
+            "accountOptions": [
+              "車両運搬具",
+              "減価償却累計額",
+              "現金",
+              "減価償却費",
+              "備品",
+              "建物"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "まだ下がっていない金額は、1,000,000−200,000で800,000円です。これに20%をかけた160,000円が、当期の減価償却費です。",
+          "id": "b3-u08-n3-q3",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "かげろう機械店は、決算で、備品（取得価額600,000円、期首の減価償却累計額360,000円）の減価償却を、定率法（償却率25%）で行う。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 60000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 60000
+              }
+            ],
+            "accountOptions": [
+              "建物",
+              "減価償却累計額",
+              "現金",
+              "車両運搬具",
+              "備品",
+              "減価償却費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "まだ下がっていない金額は、600,000−360,000で240,000円です。これに25%をかけた60,000円が、当期の減価償却費です。",
+          "id": "b3-u08-n3-q4",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ほたるの湯の備品の減価償却累計額勘定。\n備品は取得価額400,000円。定率法（償却率40%）。\n1年目と2年目の決算で減価償却を行った。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "減価償却累計額"
+                },
+                "debit": [],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "1年目 3/31",
+                      "counterAccount": "減価償却費",
+                      "amount": null
+                    }
+                  },
+                  {
+                    "key": "c2",
+                    "cells": {
+                      "date": "2年目 3/31",
+                      "counterAccount": null,
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 160000
+              },
+              {
+                "ref": "c2.amount",
+                "input": "numpad",
+                "answer": 96000
+              },
+              {
+                "ref": "c2.counterAccount",
+                "input": "account_picker",
+                "answer": "減価償却費",
+                "accountOptions": [
+                  "売上",
+                  "現金",
+                  "減価償却費",
+                  "備品"
+                ]
+              }
+            ]
+          },
+          "explanation": "1年目は400,000円×40%の160,000円、2年目は、まだ下がっていない240,000円×40%の96,000円です。年がたつほど償却額が小さくなります。",
+          "id": "b3-u08-n3-q5",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "id": "b3-u08-n3-teiritsu-s301",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "車両運搬具（取得原価3,000,000円）について、定率法（償却率25%）で1年目の減価償却を行う。間接法で記帳する。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 750000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 750000
+              }
+            ],
+            "accountOptions": [
+              "減価償却費",
+              "減価償却累計額",
+              "車両運搬具",
+              "修繕費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "定率法は「未償却残高×償却率」。未償却残高は3,000,000円−0円＝3,000,000円、これに25%を掛けて750,000円。間接法だから、貸方は減価償却累計額だよ。",
+          "generated": {
+            "generator": "b3-u08-n3-teiritsu",
+            "seed": 301
+          }
+        },
+        {
+          "id": "b3-u08-n3-teiritsu-s302",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "備品（取得原価1,600,000円）について、定率法（償却率50%）で3年目の減価償却を行う。前年度までの減価償却累計額は1,200,000円。間接法で記帳する。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 200000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 200000
+              }
+            ],
+            "accountOptions": [
+              "減価償却費",
+              "減価償却累計額",
+              "備品",
+              "修繕費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "定率法は「未償却残高×償却率」。未償却残高は1,600,000円−1,200,000円＝400,000円、これに50%を掛けて200,000円。間接法だから、貸方は減価償却累計額だよ。",
+          "generated": {
+            "generator": "b3-u08-n3-teiritsu",
+            "seed": 302
+          }
+        },
+        {
+          "id": "b3-u08-n3-teiritsu-s303",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "車両運搬具（取得原価2,000,000円）について、定率法（償却率50%）で3年目の減価償却を行う。前年度までの減価償却累計額は1,500,000円。間接法で記帳する。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却費",
+                "amount": 250000
+              }
+            ],
+            "credit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 250000
+              }
+            ],
+            "accountOptions": [
+              "減価償却費",
+              "減価償却累計額",
+              "車両運搬具",
+              "修繕費"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "定率法は「未償却残高×償却率」。未償却残高は2,000,000円−1,500,000円＝500,000円、これに50%を掛けて250,000円。間接法だから、貸方は減価償却累計額だよ。",
+          "generated": {
+            "generator": "b3-u08-n3-teiritsu",
+            "seed": 303
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-u08-n4",
+      "title": "売る",
+      "meta": {
+        "goal": "帳簿価額との差から売却損益を出せる。代金が後で入る場合も",
+        "topic": "固定資産の売却",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "固定資産売却益",
+          "固定資産売却損",
+          "未収入金"
+        ],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "つむじ風商店が、備品（取得価額500,000円、減価償却累計額300,000円）を250,000円で売り、代金は現金で受け取った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 250000
+              },
+              {
+                "account": "減価償却累計額",
+                "amount": 300000
+              }
+            ],
+            "credit": [
+              {
+                "account": "備品",
+                "amount": 500000
+              },
+              {
+                "account": "固定資産売却益",
+                "amount": 50000
+              }
+            ],
+            "accountOptions": [
+              "車両運搬具",
+              "減価償却累計額",
+              "現金",
+              "未収入金",
+              "備品",
+              "固定資産売却益",
+              "減価償却費",
+              "固定資産売却損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "帳簿価額は500,000−300,000で200,000円で、250,000円で売れたので、差の50,000円が売却益です。備品と累計額は、どちらも帳簿から消します。",
+          "id": "b3-u08-n4-q1",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "固定資産売却益"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "こだま洋品店が、備品（取得価額400,000円、減価償却累計額240,000円）を120,000円で売り、代金は現金で受け取った。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 120000
+              },
+              {
+                "account": "減価償却累計額",
+                "amount": 240000
+              },
+              {
+                "account": "固定資産売却損",
+                "amount": 40000
+              }
+            ],
+            "credit": [
+              {
+                "account": "備品",
+                "amount": 400000
+              }
+            ],
+            "accountOptions": [
+              "減価償却費",
+              "固定資産売却損",
+              "車両運搬具",
+              "減価償却累計額",
+              "固定資産売却益",
+              "現金",
+              "備品",
+              "未収入金"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "帳簿価額は、400,000−240,000で160,000円です。120,000円でしか売れなかったので、差の40,000円が売却損です。",
+          "id": "b3-u08-n4-q2",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "固定資産売却損"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "ゆうなぎ運輸が、トラック（取得価額1,000,000円、減価償却累計額600,000円）を450,000円で売った。代金は来月に受け取る。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "未収入金",
+                "amount": 450000
+              },
+              {
+                "account": "減価償却累計額",
+                "amount": 600000
+              }
+            ],
+            "credit": [
+              {
+                "account": "車両運搬具",
+                "amount": 1000000
+              },
+              {
+                "account": "固定資産売却益",
+                "amount": 50000
+              }
+            ],
+            "accountOptions": [
+              "固定資産売却損",
+              "減価償却費",
+              "減価償却累計額",
+              "未収入金",
+              "固定資産売却益",
+              "車両運搬具",
+              "現金",
+              "備品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "帳簿価額は400,000円で、450,000円で売れたので、50,000円の売却益です。代金は商品の売掛金ではなく、あとでもらう約束の未収入金です。",
+          "id": "b3-u08-n4-q3",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "未収入金"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "たまゆら文具店は、決算日（3月31日）の半年前の9月30日に、備品（取得価額600,000円、耐用年数5年、残存価額0円、期首の減価償却累計額240,000円）を280,000円で売り、代金は現金で受け取った。当期の減価償却は月割りで行う。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "現金",
+                "amount": 280000
+              },
+              {
+                "account": "減価償却累計額",
+                "amount": 240000
+              },
+              {
+                "account": "減価償却費",
+                "amount": 60000
+              },
+              {
+                "account": "固定資産売却損",
+                "amount": 20000
+              }
+            ],
+            "credit": [
+              {
+                "account": "備品",
+                "amount": 600000
+              }
+            ],
+            "accountOptions": [
+              "減価償却累計額",
+              "減価償却費",
+              "固定資産売却益",
+              "固定資産売却損",
+              "現金",
+              "車両運搬具",
+              "未収入金",
+              "備品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "売る日までの6か月ぶんの減価償却費は、120,000円×6/12で60,000円です。帳簿価額は600,000−240,000−60,000で300,000円なので、280,000円で売れると20,000円の売却損です。",
+          "id": "b3-u08-n4-q4",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "ひだまり商店の減価償却累計額勘定。\n3年間で、減価償却費を合わせて300,000円ためてきた\n10/1 その備品を売った"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "t_account",
+              "data": {
+                "header": {
+                  "subject": "減価償却累計額"
+                },
+                "debit": [
+                  {
+                    "key": "d1",
+                    "cells": {
+                      "date": "10/1",
+                      "counterAccount": null,
+                      "amount": null
+                    }
+                  }
+                ],
+                "credit": [
+                  {
+                    "key": "c1",
+                    "cells": {
+                      "date": "3/31",
+                      "counterAccount": "減価償却費",
+                      "amount": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "c1.amount",
+                "input": "numpad",
+                "answer": 300000
+              },
+              {
+                "ref": "d1.amount",
+                "input": "numpad",
+                "answer": 300000
+              },
+              {
+                "ref": "d1.counterAccount",
+                "input": "account_picker",
+                "answer": "備品",
+                "accountOptions": [
+                  "備品",
+                  "固定資産売却益",
+                  "売上",
+                  "現金"
+                ]
+              }
+            ]
+          },
+          "explanation": "売った備品の減価償却累計額は、ためてきた分を全部消すので借方（左）に写します。相手の科目は、帳簿から消す備品です。",
+          "id": "b3-u08-n4-q5",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "id": "b3-u08-n4-baikyaku-s401",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "建物（取得原価800,000円、減価償却累計額560,000円）を280,000円で売却し、代金は現金で受け取った。当期分の減価償却は済んでおり、間接法で記帳している。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 560000
+              },
+              {
+                "account": "現金",
+                "amount": 280000
+              }
+            ],
+            "credit": [
+              {
+                "account": "建物",
+                "amount": 800000
+              },
+              {
+                "account": "固定資産売却益",
+                "amount": 40000
+              }
+            ],
+            "accountOptions": [
+              "建物",
+              "減価償却累計額",
+              "現金",
+              "未収入金",
+              "固定資産売却益",
+              "固定資産売却損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "帳簿価額は800,000円−560,000円＝240,000円。売却価額のほうが40,000円高いので売却益だよ。建物と減価償却累計額を消して、受け取る分と損益を書くと、借方と貸方が合うよ。",
+          "generated": {
+            "generator": "b3-u08-n4-baikyaku",
+            "seed": 401
+          }
+        },
+        {
+          "id": "b3-u08-n4-baikyaku-s402",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "建物（取得原価900,000円、減価償却累計額630,000円）を230,000円で売却し、代金はあとで受け取ることにした。当期分の減価償却は済んでおり、間接法で記帳している。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 630000
+              },
+              {
+                "account": "未収入金",
+                "amount": 230000
+              },
+              {
+                "account": "固定資産売却損",
+                "amount": 40000
+              }
+            ],
+            "credit": [
+              {
+                "account": "建物",
+                "amount": 900000
+              }
+            ],
+            "accountOptions": [
+              "建物",
+              "減価償却累計額",
+              "現金",
+              "未収入金",
+              "固定資産売却益",
+              "固定資産売却損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "帳簿価額は900,000円−630,000円＝270,000円。売却価額のほうが40,000円低いので売却損だよ。建物と減価償却累計額を消して、受け取る分と損益を書くと、借方と貸方が合うよ。",
+          "generated": {
+            "generator": "b3-u08-n4-baikyaku",
+            "seed": 402
+          }
+        },
+        {
+          "id": "b3-u08-n4-baikyaku-s403",
+          "source": "generated",
+          "sanitized": true,
+          "stimulus": {
+            "text": "備品（取得原価700,000円、減価償却累計額210,000円）を460,000円で売却し、代金はあとで受け取ることにした。当期分の減価償却は済んでおり、間接法で記帳している。仕訳しよう。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 210000
+              },
+              {
+                "account": "未収入金",
+                "amount": 460000
+              },
+              {
+                "account": "固定資産売却損",
+                "amount": 30000
+              }
+            ],
+            "credit": [
+              {
+                "account": "備品",
+                "amount": 700000
+              }
+            ],
+            "accountOptions": [
+              "備品",
+              "減価償却累計額",
+              "現金",
+              "未収入金",
+              "固定資産売却益",
+              "固定資産売却損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "帳簿価額は700,000円−210,000円＝490,000円。売却価額のほうが30,000円低いので売却損だよ。備品と減価償却累計額を消して、受け取る分と損益を書くと、借方と貸方が合うよ。",
+          "generated": {
+            "generator": "b3-u08-n4-baikyaku",
+            "seed": 403
+          }
+        }
+      ]
+    },
+    {
+      "id": "b3-u08-n5",
+      "title": "捨てる",
+      "meta": {
+        "goal": "除却と廃棄で、累計額を消し、処分価額を貯蔵品にできる",
+        "topic": "除却と廃棄",
+        "minQuestions": 4,
+        "nodeType": "basic",
+        "examPart": 1,
+        "introduces": [
+          "固定資産除却損"
+        ],
+        "isNew": true
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "はなぞの食堂が、使わなくなった備品（取得価額300,000円、減価償却累計額270,000円）を、売らずに除却した。処分して得られる価額はない。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 270000
+              },
+              {
+                "account": "固定資産除却損",
+                "amount": 30000
+              }
+            ],
+            "credit": [
+              {
+                "account": "備品",
+                "amount": 300000
+              }
+            ],
+            "accountOptions": [
+              "固定資産除却損",
+              "現金",
+              "減価償却累計額",
+              "固定資産売却損",
+              "車両運搬具",
+              "備品",
+              "貯蔵品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "帳簿価額は300,000−270,000で30,000円で、処分しても価値がないので、全額を除却損にします。備品と累計額は、帳簿から消します。",
+          "id": "b3-u08-n5-q1",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "固定資産除却損"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "まどか書店が、備品（取得価額500,000円、減価償却累計額400,000円）を除却した。処分して得られる価額は20,000円と見積もった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 400000
+              },
+              {
+                "account": "貯蔵品",
+                "amount": 20000
+              },
+              {
+                "account": "固定資産除却損",
+                "amount": 80000
+              }
+            ],
+            "credit": [
+              {
+                "account": "備品",
+                "amount": 500000
+              }
+            ],
+            "accountOptions": [
+              "固定資産除却損",
+              "固定資産売却損",
+              "車両運搬具",
+              "減価償却累計額",
+              "備品",
+              "現金",
+              "貯蔵品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "帳簿価額は100,000円で、うち20,000円分の価値が残るので、財産の貯蔵品に移します。残りの80,000円が除却損です。",
+          "id": "b3-u08-n5-q2",
+          "source": "generated",
+          "sanitized": true,
+          "newAccounts": [
+            "貯蔵品"
+          ]
+        },
+        {
+          "stimulus": {
+            "text": "みちしるべ運輸が、走れなくなったトラック（取得価額800,000円、減価償却累計額720,000円）を廃棄した。処分して得られる価額はない。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 720000
+              },
+              {
+                "account": "固定資産除却損",
+                "amount": 80000
+              }
+            ],
+            "credit": [
+              {
+                "account": "車両運搬具",
+                "amount": 800000
+              }
+            ],
+            "accountOptions": [
+              "貯蔵品",
+              "固定資産除却損",
+              "車両運搬具",
+              "現金",
+              "減価償却累計額",
+              "固定資産売却損",
+              "備品"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "廃棄しても処分価額はないので、帳簿価額の80,000円（800,000−720,000）がそのまま損になります。除却損として書きます。",
+          "id": "b3-u08-n5-q3",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "かやぶき製作所が、車両運搬具（取得価額900,000円、減価償却累計額810,000円）を除却した。処分して得られる価額は30,000円と見積もった。"
+          },
+          "task": {
+            "kind": "journal",
+            "debit": [
+              {
+                "account": "減価償却累計額",
+                "amount": 810000
+              },
+              {
+                "account": "貯蔵品",
+                "amount": 30000
+              },
+              {
+                "account": "固定資産除却損",
+                "amount": 60000
+              }
+            ],
+            "credit": [
+              {
+                "account": "車両運搬具",
+                "amount": 900000
+              }
+            ],
+            "accountOptions": [
+              "現金",
+              "車両運搬具",
+              "減価償却累計額",
+              "備品",
+              "貯蔵品",
+              "固定資産除却損",
+              "固定資産売却損"
+            ],
+            "amountInput": "numpad"
+          },
+          "explanation": "帳簿価額は90,000円で、うち30,000円分の価値が残るので貯蔵品に移します。残りの60,000円が除却損です。",
+          "id": "b3-u08-n5-q4",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    },
+    {
+      "id": "b3-u08-n6",
+      "title": "固定資産台帳",
+      "meta": {
+        "goal": "取得、償却、売却を台帳に記入できる",
+        "topic": "固定資産台帳の記入",
+        "minQuestions": 2,
+        "nodeType": "ledger",
+        "examPart": 2,
+        "introduces": [],
+        "isNew": false
+      },
+      "questions": [
+        {
+          "stimulus": {
+            "text": "いろは商店の固定資産台帳。残存価額は0円で、定額法。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "fixed_asset_ledger",
+              "data": {
+                "header": {
+                  "title": "固定資産台帳",
+                  "period": "×3年4月1日から×4年3月31日まで"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "acquiredOn": "×1年4月1日",
+                      "name": "備品A",
+                      "quantity": 2,
+                      "method": "定額法",
+                      "usefulLife": "5年",
+                      "cost": 1000000,
+                      "openingAccumulated": 400000,
+                      "openingBookValue": 600000,
+                      "depreciation": null,
+                      "closingBookValue": null
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "acquiredOn": "×2年4月1日",
+                      "name": "備品B",
+                      "quantity": 1,
+                      "method": "定額法",
+                      "usefulLife": "4年",
+                      "cost": 480000,
+                      "openingAccumulated": 120000,
+                      "openingBookValue": null,
+                      "depreciation": 120000,
+                      "closingBookValue": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.depreciation",
+                "input": "numpad",
+                "answer": 200000
+              },
+              {
+                "ref": "r1.closingBookValue",
+                "input": "numpad",
+                "answer": 400000
+              },
+              {
+                "ref": "r2.openingBookValue",
+                "input": "numpad",
+                "answer": 360000
+              },
+              {
+                "ref": "r2.closingBookValue",
+                "input": "numpad",
+                "answer": 240000
+              }
+            ]
+          },
+          "explanation": "備品Aは、1,000,000÷5年で毎年200,000円です。期末の帳簿価額は、期首の600,000円から当期の償却額を引いた400,000円です。",
+          "id": "b3-u08-n6-q1",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "おとぎ書房の固定資産台帳。残存価額は0円で、定額法。備品Dは当期の10月1日に買った。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "fixed_asset_ledger",
+              "data": {
+                "header": {
+                  "title": "固定資産台帳",
+                  "period": "×3年4月1日から×4年3月31日まで"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "acquiredOn": "×1年4月1日",
+                      "name": "備品C",
+                      "quantity": 1,
+                      "method": "定額法",
+                      "usefulLife": "5年",
+                      "cost": 750000,
+                      "openingAccumulated": 300000,
+                      "openingBookValue": null,
+                      "depreciation": null,
+                      "closingBookValue": 300000
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "acquiredOn": "×3年10月1日",
+                      "name": "備品D",
+                      "quantity": 1,
+                      "method": "定額法",
+                      "usefulLife": "5年",
+                      "cost": 600000,
+                      "openingAccumulated": null,
+                      "openingBookValue": null,
+                      "depreciation": null,
+                      "closingBookValue": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.openingBookValue",
+                "input": "numpad",
+                "answer": 450000
+              },
+              {
+                "ref": "r1.depreciation",
+                "input": "numpad",
+                "answer": 150000
+              },
+              {
+                "ref": "r2.depreciation",
+                "input": "numpad",
+                "answer": 60000
+              },
+              {
+                "ref": "r2.closingBookValue",
+                "input": "numpad",
+                "answer": 540000
+              }
+            ]
+          },
+          "explanation": "備品Dは、1年あたり120,000円で、買ってから決算まで6か月なので、60,000円です。当期に買ったので、期首の欄は空のままで、期末の帳簿価額は600,000−60,000で540,000円です。",
+          "id": "b3-u08-n6-q2",
+          "source": "generated",
+          "sanitized": true
+        },
+        {
+          "stimulus": {
+            "text": "こもれびカフェの固定資産台帳。残存価額は0円で、定額法。"
+          },
+          "task": {
+            "kind": "form_fill",
+            "document": {
+              "type": "fixed_asset_ledger",
+              "data": {
+                "header": {
+                  "title": "固定資産台帳",
+                  "period": "×4年4月1日から×5年3月31日まで"
+                },
+                "rows": [
+                  {
+                    "key": "r1",
+                    "cells": {
+                      "acquiredOn": "×2年4月1日",
+                      "name": "備品E",
+                      "quantity": 3,
+                      "method": null,
+                      "usefulLife": "6年",
+                      "cost": 1080000,
+                      "openingAccumulated": 360000,
+                      "openingBookValue": 720000,
+                      "depreciation": 180000,
+                      "closingBookValue": 540000
+                    }
+                  },
+                  {
+                    "key": "r2",
+                    "cells": {
+                      "acquiredOn": "×3年4月1日",
+                      "name": "備品F",
+                      "quantity": 1,
+                      "method": "定額法",
+                      "usefulLife": "5年",
+                      "cost": 350000,
+                      "openingAccumulated": 70000,
+                      "openingBookValue": 280000,
+                      "depreciation": null,
+                      "closingBookValue": 210000
+                    }
+                  },
+                  {
+                    "key": "r3",
+                    "cells": {
+                      "acquiredOn": "×4年4月1日",
+                      "name": "備品G",
+                      "quantity": 2,
+                      "method": "定額法",
+                      "usefulLife": "4年",
+                      "cost": 800000,
+                      "openingAccumulated": 0,
+                      "openingBookValue": 800000,
+                      "depreciation": null,
+                      "closingBookValue": null
+                    }
+                  }
+                ]
+              }
+            },
+            "blanks": [
+              {
+                "ref": "r1.method",
+                "input": "chips",
+                "answer": "定額法",
+                "options": [
+                  "定率法",
+                  "生産高比例法",
+                  "定額法"
+                ]
+              },
+              {
+                "ref": "r2.depreciation",
+                "input": "numpad",
+                "answer": 70000
+              },
+              {
+                "ref": "r3.depreciation",
+                "input": "numpad",
+                "answer": 200000
+              },
+              {
+                "ref": "r3.closingBookValue",
+                "input": "numpad",
+                "answer": 600000
+              }
+            ]
+          },
+          "explanation": "備品Fは350,000÷5年で毎年70,000円。備品Gは800,000÷4年で毎年200,000円で、期末の帳簿価額は800,000−200,000で600,000円です。",
+          "id": "b3-u08-n6-q3",
+          "source": "generated",
+          "sanitized": true
+        }
+      ]
+    }
+  ]
+}
